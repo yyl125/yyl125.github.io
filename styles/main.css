@@ -886,13 +886,13 @@ a.badge-dark:focus {
 .lantern-box-left {
   position: fixed;
   top: -30px;
-  left: 250px;
+  left: 20px;
   z-index: 9999;
 }
 .lantern-box-right {
   position: fixed;
   top: -30px;
-  right: 250px;
+  right: 10px;
   z-index: 9999;
 }
 .lantern-box-right .lantern {
