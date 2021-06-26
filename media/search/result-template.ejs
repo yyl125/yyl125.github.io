@@ -1,0 +1,21 @@
+<div class="post-list-container">
+  <div class="post-inner">
+    <div class="md:rounded-lg -mx-1 md:mx-0 md:px-0">
+    <% posts.forEach(function(post, index) { %>
+      <div class="pb-5 flex relative overflow-hidden">
+        <div class="flex-1">
+          <a href="<%= post.link %>" class="text-gray-700 dark:text-gray-200 border-b-2 border-dotted border-gray-200 dark:border-gray-400 dark:hover:border-gray-200 hover:border-gray-600 transition-all duration-100">
+            <%= post.title %>
+          </a>
+          <div class="gt-post-content post-abstract gt-c-content-color-second">
+            <p><%- post.searchedPreview %></p>
+          </div>
+          <div class="text-gray-400 text-sm mr-4">
+            <%= post.dateFormat %> · <% post.tags.forEach(function(tag) { %><%= tag.name %><% }); %>
+          </div>
+        </div>
+      </div>
+    <% }); %>
+    </div>
+  </div>
+</div>
