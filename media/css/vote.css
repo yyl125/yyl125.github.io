@@ -4,6 +4,20 @@ h5 {
   line-height: 1.2
 }
 
+.votelist {
+  margin-bottom:2rem;
+  background-color:rgb(250, 249, 247);
+  border: 1px solid rgba(0, 0, 0, 0.125);
+  border-radius: .25rem;
+  box-shadow:0 6px 14px 0 rgba(0,0,0,.04);
+}
+
+@media (prefers-color-scheme: dark) {
+  .votelist {
+    background-color: rgb(51, 51, 51)
+  }
+}
+
 .card {
   position:relative;
   display:flex;
