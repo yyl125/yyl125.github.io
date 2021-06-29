@@ -17,11 +17,14 @@
 
   <script async src="https://www.googletagmanager.com/gtag/js?id=UA-183237417-1"></script>
   <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-  
-    gtag('config', 'UA-183237417-1');
+    var host = window.location.hostname;
+    if(host != "localhost")
+    {
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'UA-183237417-1');
+    }
   </script>
 
 
@@ -55,12 +58,12 @@
         </div>
 
         <div style="text-align:center">
-          <form id="gridea-search-form" data-update="1624807843594" action="/search/">
+          <form id="gridea-search-form" data-update="1624969026627" action="/search/">
             <input class="search-input" autocomplete="off" spellcheck="false" name="q" placeholder="请输入关键词"/>
           </form>
         </div>
 
-        <div id="gridea-search-result" data-update="1624807843594">
+        <div id="gridea-search-result" data-update="1624969026627">
           <div class="searching" style="display:none;text-align:center">
               <i class="ri-search-line"></i> 搜索中......
           </div>

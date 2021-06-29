@@ -17,11 +17,14 @@
 
   <script async src="https://www.googletagmanager.com/gtag/js?id=UA-183237417-1"></script>
   <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-  
-    gtag('config', 'UA-183237417-1');
+    var host = window.location.hostname;
+    if(host != "localhost")
+    {
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'UA-183237417-1');
+    }
   </script>
 
 
@@ -187,12 +190,12 @@
 <h3 id="to-do-列表">To-Do 列表</h3>
 <p>用 <code>~- [ ]</code> 或 <code>~ [x]</code> 表示 To-Do 列表。形如：</p>
 <ul class="contains-task-list">
-<li class="task-list-item"><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox" id="task-item-7275358"><label class="task-list-item-label" for="task-item-7275358"> 需求分析</label></li>
-<li class="task-list-item"><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox" id="task-item-4676679"><label class="task-list-item-label" for="task-item-4676679"> 系统设计</label></li>
-<li class="task-list-item"><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox" id="task-item-1523132"><label class="task-list-item-label" for="task-item-1523132"> 详细设计</label></li>
-<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-2979471"><label class="task-list-item-label" for="task-item-2979471"> 编码</label></li>
-<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-896815"><label class="task-list-item-label" for="task-item-896815"> 测试</label></li>
-<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-4871490"><label class="task-list-item-label" for="task-item-4871490"> 交付</label></li>
+<li class="task-list-item"><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox" id="task-item-5512552"><label class="task-list-item-label" for="task-item-5512552"> 需求分析</label></li>
+<li class="task-list-item"><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox" id="task-item-1950779"><label class="task-list-item-label" for="task-item-1950779"> 系统设计</label></li>
+<li class="task-list-item"><input class="task-list-item-checkbox" checked="" disabled="" type="checkbox" id="task-item-7331440"><label class="task-list-item-label" for="task-item-7331440"> 详细设计</label></li>
+<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-5954909"><label class="task-list-item-label" for="task-item-5954909"> 编码</label></li>
+<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-8754547"><label class="task-list-item-label" for="task-item-8754547"> 测试</label></li>
+<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox" id="task-item-2833706"><label class="task-list-item-label" for="task-item-2833706"> 交付</label></li>
 </ul>
 <h3 id="略缩信息">略缩信息</h3>
 <p>缩略信息紧跟在内容后面的一行，以 <code>*[缩略词]:缩略内容</code> 为格式。形如：</p>
