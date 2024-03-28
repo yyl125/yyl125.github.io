@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Awesome-pyecharts</title>
+                <script type="text/javascript" src="https://assets.pyecharts.org/assets/v5/echarts.min.js"></script>
+            <script type="text/javascript" src="https://assets.pyecharts.org/assets/v5/maps/china-cities.js"></script>
+
+</head>
+<body >
+    <div id="ce884b8aebc140dfb251ad279d575406" class="chart-container" style="width:900px; height:500px; "></div>
+    <script>
+        var chart_ce884b8aebc140dfb251ad279d575406 = echarts.init(
+            document.getElementById('ce884b8aebc140dfb251ad279d575406'), 'white', {renderer: 'canvas'});
+        var option_ce884b8aebc140dfb251ad279d575406 = {
+    "animation": true,
+    "animationThreshold": 2000,
+    "animationDuration": 1000,
+    "animationEasing": "cubicOut",
+    "animationDelay": 0,
+    "animationDurationUpdate": 300,
+    "animationEasingUpdate": "cubicOut",
+    "animationDelayUpdate": 0,
+    "aria": {
+        "enabled": false
+    },
+    "color": [
+        "#5470c6",
+        "#91cc75",
+        "#fac858",
+        "#ee6666",
+        "#73c0de",
+        "#3ba272",
+        "#fc8452",
+        "#9a60b4",
+        "#ea7ccc"
+    ],
+    "series": [
+        {
+            "type": "map",
+            "name": "\u4e2d\u56fd\u5730\u56fe",
+            "label": {
+                "show": false,
+                "margin": 8
+            },
+            "map": "china-cities",
+            "data": [
+                {
+                    "name": "\u5317\u4eac\u5e02",
+                    "value": 100
+                },
+                {
+                    "name": "\u5357\u4eac\u5e02",
+                    "value": 100
+                },
+                {
+                    "name": "\u5408\u80a5\u5e02",
+                    "value": 100
+                },
+                {
+                    "name": "\u9ec4\u5c71\u5e02",
+                    "value": 100
+                },
+                {
+                    "name": "\u676d\u5dde\u5e02",
+                    "value": 100
+                },
+                {
+                    "name": "\u82cf\u5dde\u5e02",
+                    "value": 100
+                },
+                {
+                    "name": "\u9752\u5c9b\u5e02",
+                    "value": 100
+                },
+                {
+                    "name": "\u6b66\u6c49\u5e02",
+                    "value": 100
+                },
+                {
+                    "name": "\u5927\u8fde\u5e02",
+                    "value": 100
+                },
+                {
+                    "name": "\u5e38\u5dde\u5e02",
+                    "value": 100
+                }
+            ],
+            "roam": true,
+            "aspectScale": 0.75,
+            "nameProperty": "name",
+            "selectedMode": false,
+            "zoom": 1,
+            "zlevel": 0,
+            "z": 2,
+            "seriesLayoutBy": "column",
+            "datasetIndex": 0,
+            "mapValueCalculation": "sum",
+            "showLegendSymbol": false,
+            "emphasis": {},
+            "rippleEffect": {
+                "show": true,
+                "brushType": "stroke",
+                "scale": 2.5,
+                "period": 4
+            }
+        }
+    ],
+    "legend": [
+        {
+            "data": [
+                "\u4e2d\u56fd\u5730\u56fe"
+            ],
+            "selected": {},
+            "show": false,
+            "padding": 5,
+            "itemGap": 10,
+            "itemWidth": 25,
+            "itemHeight": 14,
+            "backgroundColor": "transparent",
+            "borderColor": "#ccc",
+            "borderRadius": 0,
+            "pageButtonItemGap": 5,
+            "pageButtonPosition": "end",
+            "pageFormatter": "{current}/{total}",
+            "pageIconColor": "#2f4554",
+            "pageIconInactiveColor": "#aaa",
+            "pageIconSize": 15,
+            "animationDurationUpdate": 800,
+            "selector": false,
+            "selectorPosition": "auto",
+            "selectorItemGap": 7,
+            "selectorButtonGap": 10
+        }
+    ],
+    "tooltip": {
+        "show": true,
+        "trigger": "item",
+        "triggerOn": "mousemove|click",
+        "axisPointer": {
+            "type": "line"
+        },
+        "showContent": true,
+        "alwaysShowContent": false,
+        "showDelay": 0,
+        "hideDelay": 100,
+        "enterable": false,
+        "confine": false,
+        "appendToBody": false,
+        "transitionDuration": 0.4,
+        "textStyle": {
+            "fontSize": 14
+        },
+        "borderWidth": 0,
+        "padding": 5,
+        "order": "seriesAsc"
+    },
+    "title": [
+        {
+            "show": false,
+            "text": "City Footprint",
+            "target": "blank",
+            "subtarget": "blank",
+            "padding": 5,
+            "itemGap": 10,
+            "textAlign": "auto",
+            "textVerticalAlign": "auto",
+            "triggerEvent": false
+        }
+    ],
+    "visualMap": {
+        "show": false,
+        "type": "continuous",
+        "min": 0,
+        "max": 100,
+        "inRange": {
+            "color": [
+                "#50a3ba",
+                "#eac763",
+                "#d94e5d"
+            ]
+        },
+        "calculable": true,
+        "inverse": false,
+        "splitNumber": 5,
+        "hoverLink": true,
+        "orient": "vertical",
+        "padding": 5,
+        "showLabel": true,
+        "itemWidth": 20,
+        "itemHeight": 140,
+        "borderWidth": 0
+    }
+};
+        chart_ce884b8aebc140dfb251ad279d575406.setOption(option_ce884b8aebc140dfb251ad279d575406);
+    </script>
+    <script>   
+            var x=window.innerWidth;
+        function resizeFresh(){
+            if(x!=window.innerWidth)
+                location.reload();
+        }
+    </script>
+</body>
+</html>
