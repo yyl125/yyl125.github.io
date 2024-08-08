@@ -1,0 +1,982 @@
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<meta name="google-site-verification" content="mzGZdCiBsXZ5XSYVt7eh7KL8L64yuidUoeBNw_53XHk" />
+<meta name="referrer" content="same-origin">
+<title>想用 iPhone 或 Apple Watch 乘坐全国公共交通？Apple Pay 交通联合卡了解一下 - Benjamin&#39;s Blog</title>
+<link rel="shortcut icon" href="https://yyl125.top/favicon.ico">
+<link href="https://cdn.jsdelivr.net/npm/remixicon@latest/fonts/remixicon.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.7.2/animate.min.css">
+<link rel="stylesheet" href="https://yyl125.top/media/css/tailwind.css">
+<link rel="stylesheet" href="https://yyl125.top/styles/main.css">
+
+
+<link rel="alternate" type="application/atom+xml" title="想用 iPhone 或 Apple Watch 乘坐全国公共交通？Apple Pay 交通联合卡了解一下 - Benjamin&#39;s Blog - Atom Feed" href="https://yyl125.top/atom.xml">
+<script src="https://yyl125.top/media/scripts/bootstrap.bundle.min.js"></script>
+
+
+  
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-Q6KYP4QSBH"></script>
+    <script>
+      var host = window.location.hostname;
+      if(host != "localhost")
+      {
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-Q6KYP4QSBH');
+      }
+    </script>
+  
+
+<script defer>
+(function (document) {
+  const SOURCE = 'https://cdn.jsdelivr.net';
+  const DEST = 'https://gcore.jsdelivr.net';
+  const $ = document.querySelectorAll.bind(document);
+  const checkAvailable = (callback) => {
+    let timeoutId;
+    const newNode = document.createElement('link');
+    newNode.rel = 'stylesheet';
+    newNode.text = 'text/css';
+    const onError = () => {
+      if (!timeoutId) {
+        return;
+      }
+
+      clearTimeout(timeoutId);
+      timeoutId = 0;
+      newNode.href = 'about:blank';
+      newNode.remove();
+      callback(false);
+    };
+
+    timeoutId = setTimeout(onError, 2000);
+    newNode.addEventListener('error', onError);
+    newNode.addEventListener('load', function () {
+      newNode.remove();
+      clearTimeout(timeoutId);
+      callback(true);
+    });
+
+    newNode.href =
+      SOURCE +
+      '/gh/PipecraftNet/jsdelivr-auto-fallback@main/empty.css?' +
+      Date.now();
+    document.head.insertAdjacentElement('afterbegin', newNode);
+  };
+
+  const replaceElementSrc = () => {
+    for (const element of $('link[rel="stylesheet"]')) {
+      if (element.href && element.href.includes(SOURCE)) {
+        element.href = element.href.replace(SOURCE, DEST);
+      }
+    }
+
+    for (const element of $('script')) {
+      if (element.src && element.src.includes(SOURCE)) {
+        const newNode = document.createElement('script');
+        newNode.src = element.src.replace(SOURCE, DEST);
+        element.defer = true;
+        element.src = '';
+        element.before(newNode);
+        element.remove();
+      }
+    }
+
+    for (const element of $('img')) {
+      if (element.src && element.src.includes(SOURCE)) {
+        const source = element.src;
+        // Used to cancel loading. Without this line it will remain pending status.
+        element.src = '';
+        element.src = source.replace(SOURCE, DEST);
+      }
+    }
+  };
+
+  checkAvailable(function (isAvailable) {
+    if (isAvailable) {
+      return;
+    }
+
+    console.warn(SOURCE + ' is not available.');
+
+    replaceElementSrc();
+    // Replace dynamically added elements
+    setInterval(replaceElementSrc, 500);
+  });
+})(document);
+</script>
+  <meta name="description" content="用一卡刷遍全国公共交通
+
+
+由于本文涉及较多复杂内容，更新可能不及时，部分内容仍需以实际为准。如在使用交通联合卡过程中遇到任何问题，请联系当地相关运营商了解详情
+
+
+
+本文将随具体进展保持更新
+
+更新日志
+
+2020 年 8 月 26 日，..." />
+  <meta property="og:title" content="想用 iPhone 或 Apple Watch 乘坐全国公共交通？Apple Pay 交通联合卡了解一下 - Benjamin&#39;s Blog">
+  <meta property="og:description" content="用一卡刷遍全国公共交通
+
+
+由于本文涉及较多复杂内容，更新可能不及时，部分内容仍需以实际为准。如在使用交通联合卡过程中遇到任何问题，请联系当地相关运营商了解详情
+
+
+
+本文将随具体进展保持更新
+
+更新日志
+
+2020 年 8 月 26 日，..." />
+  <meta property="og:type" content="articles">
+  <meta property="og:url" content="https://yyl125.top/post/the_introduction_of_apple_pay_transit_in_china/" />
+  <meta property="og:image" content="https://personalblogmedia.oss-cn-hangzhou.aliyuncs.com/img/post/Ingenious_Skills/The_Introduction_of_Apple_Pay_Transit_in_China/The_Introduction_of_Apple_Pay_Transit_in_China_Banner.png">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:width" content="1200">
+  <meta name="twitter:title" content="想用 iPhone 或 Apple Watch 乘坐全国公共交通？Apple Pay 交通联合卡了解一下 - Benjamin&#39;s Blog">
+  <meta name="twitter:description" content="用一卡刷遍全国公共交通
+
+
+由于本文涉及较多复杂内容，更新可能不及时，部分内容仍需以实际为准。如在使用交通联合卡过程中遇到任何问题，请联系当地相关运营商了解详情
+
+
+
+本文将随具体进展保持更新
+
+更新日志
+
+2020 年 8 月 26 日，...">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="canonical" href="https://yyl125.top/post/the_introduction_of_apple_pay_transit_in_china/">
+
+  <script src="https://cdn.jsdelivr.net/npm/vanilla-lazyload@17.8.8/dist/lazyload.min.js"></script>
+
+  <script type="module" src="https://yyl125.top/media/scripts/emaction.js"></script>
+
+  
+    <link rel="stylesheet" href="https://yyl125.top/media/css/prism-atom-dark.css">
+  
+
+  
+</head>
+
+<body>
+  <div class="antialiased flex flex-col min-h-screen" id="app">
+    <a href="https://yyl125.top" class="fixed top-0 left-0 mt-4 bg-black text-white dark:text-gray-700 dark:bg-yellow-50 dark:hover:bg-black dark:hover:text-white inline-flex p-2 pl-8 hover:text-gray-700 hover:bg-yellow-50 font-bold z-10 transition-fast animated fadeInLeft">
+      Benjamin&#39;s Blog
+    </a>
+    <div class="max-w-4xl w-full mx-auto">
+      <div class="shadow-box bg-white dark:bg-gray-600 rounded-lg pt-32 md:pt-64 px-4 md:px-8 pb-8 animated fadeIn mb-8">
+        <h1 class="text-5xl font-semibold leading-normal pb-8 mb-8 border-b-8 border-gray-700">
+          想用 iPhone 或 Apple Watch 乘坐全国公共交通？Apple Pay 交通联合卡了解一下
+        </h1>
+        
+          <img src="https://personalblogmedia.oss-cn-hangzhou.aliyuncs.com/img/post/Ingenious_Skills/The_Introduction_of_Apple_Pay_Transit_in_China/The_Introduction_of_Apple_Pay_Transit_in_China_Banner.png" alt="想用 iPhone 或 Apple Watch 乘坐全国公共交通？Apple Pay 交通联合卡了解一下" class="block w-full mb-8">
+        
+        <div class="mb-8 flex flex-wrap">
+          <div class="text-gray-400 text-sm mr-4"><i class="ri-calendar-2-line"></i> 2020-08-25 · <i class="ri-timer-line"></i> 22 min read</div>
+          
+            <a href="https://yyl125.top/tag/Ingenious_skills/" class="text-gray-700 dark:text-gray-200 text-sm hover:transition-all duration-100 inline-flex mr-2">
+              <i class="ri-hashtag"></i>
+              Ingenious Skills
+            </a>
+          
+        </div>
+        
+        <div class="jumbotron">
+          <div class="container">
+            <p><i class="ri-time-line"></i> 这是一篇发布于 4 年前的文章，其中的信息可能已经有所发展或是发生改变</p>
+          </div>
+        </div>
+
+        
+
+        
+        
+        <div class="markdown mb-8" v-pre>
+          <p>用一卡刷遍全国公共交通</p>
+<!-- more -->
+<div class="alert alert-success" role="alert">
+<p>由于本文涉及较多复杂内容，更新可能不及时，部分内容仍需以实际为准。如在使用交通联合卡过程中遇到任何问题，请联系当地相关运营商了解详情</p>
+<br>
+<hr>
+<br>
+<p>本文将随具体进展保持更新</p>
+</div>
+<h2 id="更新日志">更新日志</h2>
+<ol>
+<li>2020 年 8 月 26 日，更新「<a href="#%E5%8E%A6%E9%97%A8-e-%E9%80%9A%E5%8D%A1">厦门 e 通卡</a>」</li>
+<li>2020 年 9 月 21 日，更新「<a href="#%E5%A4%A9%E6%B4%A5%E4%BA%92%E8%81%94%E4%BA%92%E9%80%9A%E5%9F%8E%E5%B8%82%E5%8D%A1">天津互联互通城市卡</a>」；</li>
+<li>2020 年 9 月 28 日，更新「<a href="#%E6%BD%87%E6%B9%98%E5%8D%A1%E5%85%AC%E5%85%B1%E4%BA%A4%E9%80%9A%E5%8D%A1">潇湘卡·公共交通卡</a>」；</li>
+<li>2020 年 10 月 30 日，更新「<a href="#%E7%87%95%E8%B5%B5%E9%80%9A">燕赵通卡</a>」；</li>
+<li>2020 年 11 月 19 日，更新「<a href="#%E9%95%BF%E5%AE%89%E9%80%9A">长安通</a>」；</li>
+<li>2020 年 12 月 2 日，更新「<a href="#%E9%87%91%E9%99%B5%E9%80%9A">金陵通</a>」和「<a href="#%E6%B1%9F%E8%8B%8F%E4%B8%80%E5%8D%A1%E9%80%9A%E5%B8%B8%E5%B7%9E">江苏一卡通·常州</a>」；</li>
+<li>2020 年 12 月 23 日，更新「<a href="#%E6%B1%9F%E8%8B%8F%E4%BA%A4%E9%80%9A%E4%B8%80%E5%8D%A1%E9%80%9A%E6%B7%AE%E5%AE%89%E9%80%9A">江苏交通一卡通·淮海通</a>」；</li>
+<li>2021 年 5 月 10 日，更新「<a href="#%E4%B8%8A%E6%B5%B7%E5%85%AC%E5%85%B1%E4%BA%A4%E9%80%9A%E5%8D%A1">上海公共交通卡</a>」；</li>
+<li>2021 年 6 月 15 日，更新「<a href="#%E5%A4%A7%E8%BF%9E%E6%98%8E%E7%8F%A0%E5%8D%A1">大连明珠卡</a>」</li>
+<li>2021 年 8 月 26 日，更新「<a href="#%E5%B2%AD%E5%8D%97%E9%80%9A">岭南通</a>」</li>
+<li>2021 年 9 月 28 日，更新「<a href="#%E6%B3%89%E5%9F%8E%E9%80%9A">泉城通</a>」和「<a href="#%E6%B4%AA%E5%9F%8E%E4%B8%80%E5%8D%A1%E9%80%9A">洪城一卡通</a>」</li>
+<li>2021 年 12 月 19 日，更新「<a href="#%E7%94%AC%E5%9F%8E%E9%80%9A%E4%BA%A4%E9%80%9A%E5%8D%A1">甬城通</a>」</li>
+<li>2022 年 6 月 28 日，更新「<a href="#%E8%A5%BF%E8%97%8F%E4%BA%A4%E9%80%9A%E4%B8%80%E5%8D%A1%E9%80%9A">西藏交通一卡通</a>」</li>
+<li>2022 年 8 月 9 日，更新「<a href="#%E5%8F%B0%E5%B7%9E%E5%85%AC%E5%85%B1%E4%BA%A4%E9%80%9A%E5%8D%A1">台州公共交通卡</a>」</li>
+<li>2022 年 12 月 8 日，更新「<a href="#%E5%90%89%E6%9E%97%E9%80%9A">吉林通</a>」</li>
+<li>2023 年 9 月 20 日，更新「<a href="#%E9%87%91%E5%8D%8E%E5%B8%82%E6%B0%91%E5%8D%A1%E5%85%AB%E5%A9%BA%E9%80%9A%E4%BA%A4%E8%81%94%E7%89%88">金华市民卡·八婺通交联版</a>」</li>
+<li>2023 年 11 月 9 日，更新「<a href="#%E7%90%B4%E5%B2%9B%E9%80%9A%E5%85%AC%E4%BA%A4%E5%8D%A1">琴岛通·公交卡</a>」</li>
+</ol>
+<h2 id="目录">目录</h2>
+<p><ul class="markdownIt-TOC">
+<li>
+<ul>
+<li><a href="#%E6%9B%B4%E6%96%B0%E6%97%A5%E5%BF%97">更新日志</a></li>
+<li><a href="#%E7%9B%AE%E5%BD%95">目录</a></li>
+<li><a href="#%E4%BB%80%E4%B9%88%E6%98%AF%E4%BA%A4%E9%80%9A%E8%81%94%E5%90%88">什么是交通联合</a></li>
+<li><a href="#apple-pay-%E4%BA%A4%E9%80%9A%E5%8D%A1%E5%9C%A8%E5%9B%BD%E5%86%85%E7%9A%84%E5%8F%91%E5%B1%95">Apple Pay 交通卡在国内的发展</a></li>
+<li><a href="#%E4%BD%BF%E7%94%A8-apple-pay-%E4%BA%A4%E9%80%9A%E5%8D%A1%E4%B8%8E%E4%BD%BF%E7%94%A8-apple-pay-%E4%B9%8B%E9%97%B4%E7%9A%84%E5%8C%BA%E5%88%AB">使用 Apple Pay 交通卡与使用 Apple Pay 之间的区别</a></li>
+<li><a href="#%E5%A6%82%E4%BD%95%E6%B7%BB%E5%8A%A0%E5%92%8C%E4%BD%BF%E7%94%A8-apple-pay-%E4%BA%A4%E9%80%9A%E5%8D%A1">如何添加和使用 Apple Pay 交通卡</a></li>
+<li><a href="#%E5%90%84-apple-pay-%E4%BA%A4%E9%80%9A%E5%8D%A1%E8%AF%A6%E7%BB%86%E4%BB%8B%E7%BB%8D">各 Apple Pay 交通卡详细介绍</a>
+<ul>
+<li><a href="#%E4%B8%8A%E6%B5%B7%E4%BA%A4%E9%80%9A%E5%8D%A1%E5%85%A8%E5%9B%BD%E4%BA%A4%E8%81%94%E7%89%88">上海交通卡·全国交联版</a>
+<ul>
+<li><a href="#%E9%80%82%E7%94%A8%E8%8C%83%E5%9B%B4">适用范围</a></li>
+<li><a href="#%E4%BC%98%E6%83%A0%E6%94%BF%E7%AD%96">优惠政策</a></li>
+</ul>
+</li>
+<li><a href="#%E4%BA%AC%E6%B4%A5%E5%86%80%E4%BA%92%E8%81%94%E4%BA%92%E9%80%9A%E5%8D%A1">京津冀互联互通卡</a>
+<ul>
+<li><a href="#%E9%80%82%E7%94%A8%E8%8C%83%E5%9B%B4-2">适用范围</a></li>
+<li><a href="#%E4%BC%98%E6%83%A0%E6%94%BF%E7%AD%96-2">优惠政策</a></li>
+</ul>
+</li>
+<li><a href="#%E5%B2%AD%E5%8D%97%E9%80%9A">岭南通</a>
+<ul>
+<li><a href="#%E9%80%82%E7%94%A8%E8%8C%83%E5%9B%B4-3">适用范围</a></li>
+<li><a href="#%E4%BC%98%E6%83%A0%E6%94%BF%E7%AD%96-3">优惠政策</a></li>
+</ul>
+</li>
+<li><a href="#%E5%8E%A6%E9%97%A8-e-%E9%80%9A%E5%8D%A1">厦门 e 通卡</a>
+<ul>
+<li><a href="#%E9%80%82%E7%94%A8%E8%8C%83%E5%9B%B4-4">适用范围</a></li>
+<li><a href="#%E4%BC%98%E6%83%A0%E6%94%BF%E7%AD%96-4">优惠政策</a></li>
+</ul>
+</li>
+<li><a href="#%E6%B7%B1%E5%9C%B3%E9%80%9A%E4%BA%92%E8%81%94%E4%BA%92%E9%80%9A%E5%8D%A1">深圳通互联互通卡</a>
+<ul>
+<li><a href="#%E9%80%82%E7%94%A8%E8%8C%83%E5%9B%B4-5">适用范围</a></li>
+<li><a href="#%E4%BC%98%E6%83%A0%E6%94%BF%E7%AD%96-5">优惠政策</a></li>
+</ul>
+</li>
+<li><a href="#%E7%90%B4%E5%B2%9B%E9%80%9A%E5%85%AC%E4%BA%A4%E5%8D%A1">琴岛通·公交卡</a>
+<ul>
+<li><a href="#%E9%80%82%E7%94%A8%E8%8C%83%E5%9B%B4-6">适用范围</a></li>
+<li><a href="#%E4%BC%98%E6%83%A0%E6%94%BF%E7%AD%96-6">优惠政策</a></li>
+</ul>
+</li>
+<li><a href="#%E5%A4%A9%E6%B4%A5%E4%BA%92%E8%81%94%E4%BA%92%E9%80%9A%E5%9F%8E%E5%B8%82%E5%8D%A1">天津互联互通城市卡</a>
+<ul>
+<li><a href="#%E9%80%82%E7%94%A8%E8%8C%83%E5%9B%B4-7">适用范围</a></li>
+<li><a href="#%E4%BC%98%E6%83%A0%E6%94%BF%E7%AD%96-7">优惠政策</a></li>
+</ul>
+</li>
+<li><a href="#%E6%BD%87%E6%B9%98%E5%8D%A1%E5%85%AC%E5%85%B1%E4%BA%A4%E9%80%9A%E5%8D%A1">潇湘卡·公共交通卡</a>
+<ul>
+<li><a href="#%E6%B7%BB%E5%8A%A0%E9%A1%BB%E7%9F%A5">添加须知</a></li>
+<li><a href="#%E9%80%82%E7%94%A8%E8%8C%83%E5%9B%B4-8">适用范围</a></li>
+<li><a href="#%E4%BC%98%E6%83%A0%E6%94%BF%E7%AD%96-8">优惠政策</a></li>
+</ul>
+</li>
+<li><a href="#%E7%87%95%E8%B5%B5%E9%80%9A">燕赵通</a>
+<ul>
+<li><a href="#%E9%80%82%E7%94%A8%E8%8C%83%E5%9B%B4-9">适用范围</a></li>
+<li><a href="#%E4%BC%98%E6%83%A0%E6%94%BF%E7%AD%96-9">优惠政策</a></li>
+</ul>
+</li>
+<li><a href="#%E7%94%AC%E5%9F%8E%E9%80%9A%E4%BA%A4%E9%80%9A%E5%8D%A1">甬城通交通卡</a>
+<ul>
+<li><a href="#%E9%80%82%E7%94%A8%E8%8C%83%E5%9B%B4-10">适用范围</a></li>
+<li><a href="#%E4%BC%98%E6%83%A0%E6%94%BF%E7%AD%96-10">优惠政策</a></li>
+</ul>
+</li>
+<li><a href="#%E9%87%91%E9%99%B5%E9%80%9A%E4%BA%A4%E9%80%9A%E5%8D%A1">金陵通交通卡</a>
+<ul>
+<li><a href="#%E9%80%82%E7%94%A8%E8%8C%83%E5%9B%B4-11">适用范围</a></li>
+<li><a href="#%E4%BC%98%E6%83%A0%E6%94%BF%E7%AD%96-11">优惠政策</a></li>
+</ul>
+</li>
+<li><a href="#%E5%8F%B0%E5%B7%9E%E5%85%AC%E5%85%B1%E4%BA%A4%E9%80%9A%E5%8D%A1">台州公共交通卡</a>
+<ul>
+<li><a href="#%E9%80%82%E7%94%A8%E8%8C%83%E5%9B%B4-12">适用范围</a></li>
+<li><a href="#%E4%BC%98%E6%83%A0%E6%94%BF%E7%AD%96-12">优惠政策</a></li>
+</ul>
+</li>
+<li><a href="#%E9%95%BF%E5%AE%89%E9%80%9A">长安通</a>
+<ul>
+<li><a href="#%E9%80%82%E7%94%A8%E8%8C%83%E5%9B%B4-13">适用范围</a></li>
+<li><a href="#%E4%BC%98%E6%83%A0%E6%94%BF%E7%AD%96-13">优惠政策</a></li>
+</ul>
+</li>
+<li><a href="#%E5%A4%A7%E8%BF%9E%E6%98%8E%E7%8F%A0%E5%8D%A1">大连明珠卡</a>
+<ul>
+<li><a href="#%E9%80%82%E7%94%A8%E8%8C%83%E5%9B%B4-14">适用范围</a></li>
+<li><a href="#%E4%BC%98%E6%83%A0%E6%94%BF%E7%AD%96-14">优惠政策</a></li>
+</ul>
+</li>
+<li><a href="#%E6%B3%89%E5%9F%8E%E9%80%9A">泉城通</a>
+<ul>
+<li><a href="#%E9%80%82%E7%94%A8%E8%8C%83%E5%9B%B4-15">适用范围</a></li>
+<li><a href="#%E4%BC%98%E6%83%A0%E6%94%BF%E7%AD%96-15">优惠政策</a></li>
+</ul>
+</li>
+<li><a href="#%E6%B4%AA%E5%9F%8E%E4%B8%80%E5%8D%A1%E9%80%9A">洪城一卡通</a>
+<ul>
+<li><a href="#%E9%80%82%E7%94%A8%E8%8C%83%E5%9B%B4-16">适用范围</a></li>
+<li><a href="#%E4%BC%98%E6%83%A0%E6%94%BF%E7%AD%96-16">优惠政策</a></li>
+</ul>
+</li>
+<li><a href="#%E6%B1%9F%E8%8B%8F%E4%BA%A4%E9%80%9A%E4%B8%80%E5%8D%A1%E9%80%9A%E8%8B%8F%E5%B7%9E">江苏交通一卡通·苏州</a>
+<ul>
+<li><a href="#%E9%80%82%E7%94%A8%E8%8C%83%E5%9B%B4-17">适用范围</a></li>
+<li><a href="#%E4%BC%98%E6%83%A0%E6%94%BF%E7%AD%96-17">优惠政策</a></li>
+<li><a href="#%E7%89%B9%E6%AE%8A%E5%8A%9F%E8%83%BD">特殊功能</a></li>
+</ul>
+</li>
+<li><a href="#%E6%B1%9F%E8%8B%8F%E4%B8%80%E5%8D%A1%E9%80%9A%E5%B8%B8%E5%B7%9E">江苏一卡通·常州</a>
+<ul>
+<li><a href="#%E9%80%82%E7%94%A8%E8%8C%83%E5%9B%B4-18">适用范围</a></li>
+<li><a href="#%E4%BC%98%E6%83%A0%E6%94%BF%E7%AD%96-18">优惠政策</a></li>
+</ul>
+</li>
+<li><a href="#%E6%B1%9F%E8%8B%8F%E4%BA%A4%E9%80%9A%E4%B8%80%E5%8D%A1%E9%80%9A%E6%B7%AE%E5%AE%89%E9%80%9A">江苏交通一卡通·淮安通</a>
+<ul>
+<li><a href="#%E9%80%82%E7%94%A8%E8%8C%83%E5%9B%B4-19">适用范围</a></li>
+<li><a href="#%E4%BC%98%E6%83%A0%E6%94%BF%E7%AD%96-19">优惠政策</a></li>
+</ul>
+</li>
+<li><a href="#%E8%A5%BF%E8%97%8F%E4%BA%A4%E9%80%9A%E4%B8%80%E5%8D%A1%E9%80%9A">西藏交通一卡通</a>
+<ul>
+<li><a href="#%E9%80%82%E7%94%A8%E8%8C%83%E5%9B%B4-20">适用范围</a></li>
+<li><a href="#%E4%BC%98%E6%83%A0%E6%94%BF%E7%AD%96-20">优惠政策</a></li>
+</ul>
+</li>
+<li><a href="#%E5%90%89%E6%9E%97%E9%80%9A">吉林通</a>
+<ul>
+<li><a href="#%E9%80%82%E7%94%A8%E8%8C%83%E5%9B%B4-21">适用范围</a></li>
+<li><a href="#%E4%BC%98%E6%83%A0%E6%94%BF%E7%AD%96-21">优惠政策</a></li>
+</ul>
+</li>
+<li><a href="#%E9%87%91%E5%8D%8E%E5%B8%82%E6%B0%91%E5%8D%A1%E5%85%AB%E5%A9%BA%E9%80%9A%E4%BA%A4%E8%81%94%E7%89%88">金华市民卡·八婺通交联版</a>
+<ul>
+<li><a href="#%E9%80%82%E7%94%A8%E8%8C%83%E5%9B%B4-22">适用范围</a></li>
+<li><a href="#%E4%BC%98%E6%83%A0%E6%94%BF%E7%AD%96-22">优惠政策</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</p>
+<h2 id="什么是交通联合">什么是交通联合</h2>
+<p>2002 年，中华人民共和国建设部召开全国建设事业IC卡应用模式和技术发展研讨会，而后陆续颁布 14 项国家行业标准，形成了一套针对城镇建设智能卡的标准体系。2008 年的国务院大部制改革，将原建设部改为了住房和城乡建设部（简称住建部）。其中，管辖城市交通的职能由原建设部转移到了新组建的交通运输部，但住建部在此之后仍在推行着自己的标准（全国城市一卡通互联互通）</p>
+<p>2013 年，交通运输部对公交行业的管理也启用了卡片形式，并推出了自己的密钥体系。次年，交通运输部印发了《交通运输部关于做好 &lt;城市公共交通 IC 卡技术规范（试行）&gt; 验证工作的通知》，进一步规范了一卡通的技术标准</p>
+<p>正因如此，许多城市出现了使用住房与城乡建设部标准或交通运输部标准的一卡通给公共交通一卡通在全国范围内的互联互通造成困扰。而为排除密钥体系系统不同带来的困扰，部分发卡机构发行的公交卡内既包含住建部密钥体系又容纳交通部密钥体系</p>
+<p>而「交通联合」即是由交通运输部主导的，可以在支持交通联合的城市的公共交通系统（公交、出租、轨道交通、轮渡等）使用的一类系统的统称。全称为「全国交通一卡通互联互通（交通联合）」</p>
+<p>2015 年 12 月 30 日，京津冀地区发行了京津冀互联互通一卡通，并启用了交通联合系统</p>
+<h2 id="apple-pay-交通卡在国内的发展">Apple Pay 交通卡在国内的发展</h2>
+<p>先来说说 Apple Pay。2015 年 12 月 18 日，Apple 宣布与银联合作，在中国大陆地区推出 Apple Pay。Apple Pay 在 2016 年 2 月 18 日正式在中国大陆地区提供服务。只要是使用 iOS 11.2 及以上版本的 iPhone、iPad 就能够使用 Apple Pay</p>
+<p>2018 年 3 月 30 日，在 iOS 11.3 与 watchOS 4.3 更新中，包含了 Apple Pay 交通功能。但当时的交通卡只支持北京市政交通一卡通和上海公共交通卡，且均不支持在全国交通联合</p>
+<p>而在今年（2020 年）4 月 8 日，Apple 通过热更新的方式上线了京津冀互联互通卡（原北京市政交通一卡通仅在已添加设备中显示）和深圳通（交通联合），正式支持了交通联合</p>
+<p>紧接着，5 月 20 日当天，Apple 再次通过热更新的方式上线了岭南通·羊城通。但此卡为内置岭南通模块，无法享受异地的岭南通乘车优惠。7 月 22 日和 9 月 21 日，Apple 再次以热更新的方式分别上线了江苏交通一卡通·苏州和天津互联互通城市卡，标志着 Apple Pay 正在开始逐渐发力全国</p>
+<h2 id="使用-apple-pay-交通卡与使用-apple-pay-之间的区别">使用 Apple Pay 交通卡与使用 Apple Pay 之间的区别</h2>
+<p>当年，虽然 Apple 只带来了北京市政交通一卡通和上海公共交通卡这两张卡，但使用各地银联推广的「银联闪付 UniPay QuickPass」方案也一样可以在支持此种方式的全国各地公共交通服务中使用</p>
+<p>闪付方案需要扫描二维码（云闪付）或者在 Apple Pay 中先通过安全验证，才能使用。而 Apple Pay 交通卡则可以实现无需解锁、无需打开 App、无需扫码、也无需停下手上的工作等诸多特性<sup class="footnote-ref"><a href="#fn1" id="fnref1">[1]</a></sup></p>
+<h2 id="如何添加和使用-apple-pay-交通卡">如何添加和使用 Apple Pay 交通卡</h2>
+<p>有关如何在支持设备上添加 Apple Pay 交通卡，请参考：<a href="https://support.apple.com/zh-cn/HT208538" target="_blank">在中国大陆为 Apple Pay 添加交通卡</a></p>
+<p>如果在添加 Apple Pay 交通卡时遇到问题，请参考：<a href="https://support.apple.com/zh-cn/HT208540" target="_blank">如果您无法在中国大陆向 iPhone 或 Apple Watch 中添加交通卡或从中移除交通卡</a></p>
+<p>有关快捷交通卡功能，请参考：<a href="https://support.apple.com/zh-cn/HT208539" target="_blank">在中国大陆使用 Apple Pay 快捷交通卡功能</a></p>
+<p>在使用 Apple Pay 交通卡前，有几个需要注意的地方：</p>
+<ol>
+<li>在钱包 App 内开卡、绑定交通卡前需确保钱包内<strong>已绑定一张银行卡</strong>。而在对应的交通卡 App 内开卡则可直接使用<strong>微信、支付宝支付</strong>开卡；</li>
+<li>使用交通联合需要使用 <strong>iPhone 6s、SE 及更新型号的 iPhone</strong>、<strong>Series 1（非初代）及更新型号的 Apple Watch</strong>；</li>
+<li>不同的操作系统版本，钱包 App 内可添加的交通卡的城市会有所不同。<strong>iOS 13.4 及更新版本操作系统可添加交通联合卡，iOS 13.6 及更新版本操作系统可以添加所有卡</strong>；</li>
+<li>在钱包 App 内移除交通卡，并不是真正的移除，而是将卡连同卡内余额移动到所登录使用的 iCloud。移除卡片需要在对应的交通卡 App 内操作，移除后原卡片的余额会<strong>按原付款渠道</strong>退回；</li>
+<li>在钱包 App 中移除交通卡后，可在另一部支持设备上登录<strong>相同的 iCloud</strong> 以将移除的交通卡迁移至新设备；</li>
+<li>在设备恢复后，可直接将<strong>已添加的</strong>银行卡和交通卡从 iCloud 还原</li>
+<li>交通卡申请成功后会默认打开快捷交通卡功能，可实现<strong>息屏直刷</strong>功能。多个交通卡存在时需要在<strong>快捷交通卡设置中设置和调整默认卡</strong>（直接在钱包 App 中上下移动移动调整无效，但普通银行卡可使用此方法快速调整默认卡）；</li>
+<li>当设备<strong>因电量原因自动关机</strong>后，交通卡仍将可在 <strong>iPhone Xr、iPhone SE gen2 及更新型号的 iPhone</strong> 上继续使用 5 小时。手动关机则将<strong>直接无效</strong>；</li>
+<li>在没有添加任何银行卡的情况下，<strong>iPhone 8 及更新型号的 iPhone</strong> 上最多可同时添加 12 张交通联合卡，其它支持型号的 iPhone 可同时添加 8 张交通联合卡；</li>
+<li>在支持城市使用交通联合卡<strong>可直接在当地公共交通服务中使用</strong>，<strong>是否适用当地的优惠政策取决于当地的政策安排</strong>。使用中如遇到任何问题，可在钱包 App 中对应交通卡的详情页面选择「<strong>打开服务模式</strong>」后联系相关运营人员或自助服务终端协助处理问题</li>
+</ol>
+<p>交通互联支持城市请访问以下任一站点查询：</p>
+<div class="alert alert-warning">
+  <i class="ri-global-line"></i>
+  <strong>访问受限</strong> 以下内容可能需要特殊网络环境
+</div>
+<ul>
+<li><a href="https://ipt.kopisee.com/canton/zh-cn/t-union" target="_blank">公共交通信息</a></li>
+<li><a href="https://www.tunionfans.com/record/index.php" target="_blank">交联面条站</a></li>
+<li><a href="https://zh.wikipedia.org/zh-cn/%E5%85%A8%E5%9B%BD%E4%BA%A4%E9%80%9A%E4%B8%80%E5%8D%A1%E9%80%9A%E4%BA%92%E8%81%94%E4%BA%92%E9%80%9A#%E8%A6%86%E7%9B%96%E7%9A%84%E5%9F%8E%E5%B8%82" target="_blank">全国交通一卡通互联互通 - 覆盖的城市</a></li>
+</ul>
+<h2 id="各-apple-pay-交通卡详细介绍">各 Apple Pay 交通卡详细介绍</h2>
+<h3 id="上海交通卡全国交联版">上海交通卡·全国交联版</h3>
+<h4 id="适用范围">适用范围</h4>
+<p>上海交通卡·全国交联版属于交通部标准，支持使用交通部或兼容交通部标准的城市（互联互通城市）。具体包括：</p>
+<ul>
+<li>上海</li>
+<li>其它互联互通城市</li>
+</ul>
+<h4 id="优惠政策">优惠政策</h4>
+<ul>
+<li>上海地铁：当月累计消费满 70 元后，即可享受 9 折优惠</li>
+<li>公交：120 分钟内换乘 2 辆优惠范围内的空调车可优惠 1 元；</li>
+<li>公交、地铁：120 分钟内换乘优惠 1 元；</li>
+<li>上海轮渡：当月累计消费满 20 次后，可享受 8 折优惠；满 40 次后恢复原票价；满 60 次后可再次享受 8 折优惠；一个自然月内每张交通卡最多的优惠次数不超过 60 次；</li>
+<li>磁悬浮：享受 8 折优惠，即单程 40 元</li>
+</ul>
+<h3 id="京津冀互联互通卡">京津冀互联互通卡</h3>
+<h4 id="适用范围-2">适用范围</h4>
+<p>京津冀互联互通卡属于交通部标准，支持使用交通部或兼容交通部标准的城市（互联互通城市）。具体包括：</p>
+<ul>
+<li>北京；</li>
+<li>其它互联互通城市</li>
+</ul>
+<h4 id="优惠政策-2">优惠政策</h4>
+<ul>
+<li>北京公交：市域内路段 5 折优惠，市域外路段 8 折优惠；</li>
+<li>北京地铁：与实体北京一卡通享受同等累计优惠。（累计优惠政策说明：每自然月内，乘客使用同一张一卡通卡乘坐轨道交通支出累计满  100 元后，从下一次乘车时给予 8 折优惠；满  150 元后，从下一次乘车时给予 5 折优惠；支出累计达到 400 元后，不再享受打折优惠。一卡通卡轨道交通支出累计记录每自然月底清零，下自然月重新累计）；</li>
+<li>长沙地铁 9 折优惠、南通市区公交 7 折优惠</li>
+</ul>
+<h3 id="岭南通">岭南通</h3>
+<p>「岭南通」目前包括「羊城通」（广州）、「五邑通」（江门）、「岭云通」（云浮）、「广佛通」（佛山）、「榕江通」（揭阳）、「河源粤支付」（河源）、「潮州通」（潮州）、「红海通」（汕尾）、「茂城通」（茂名）和「韶关通」（韶关）</p>
+<h4 id="适用范围-3">适用范围</h4>
+<p>岭南通属于交通部标准，支持使用交通部或兼容交通部标准的城市（互联互通城市）。具体包括：</p>
+<ul>
+<li>广州、佛山、肇庆、江门、汕尾、惠州、茂名、珠海、韶关、中山、清远、云浮、揭阳、阳江、河源、梅州、湛江、潮州、汕头范围内的公交、地铁；</li>
+<li>深圳（地铁和城区一票制公交）；</li>
+<li>东莞公交；</li>
+<li>其它交通互联城市</li>
+</ul>
+<h4 id="优惠政策-3">优惠政策</h4>
+<ul>
+<li>前 15 次公交原价，地铁 9.5 折。一个自然月内搭乘广州本地公交地铁联乘超过 15 次，第 16 次起享受票价 6 折优惠；</li>
+<li>佛山市禅城、南海区公交享受 7 折优惠，一小时内换乘 0.7 元；</li>
+<li>长沙地铁 9 折优惠</li>
+<li>
+<ul>
+<li>其它优惠详见 <a href="https://zh.wikipedia.org/wiki/岭南通#優惠政策" target="_blank">岭南通优惠政策</a></li>
+</ul>
+</li>
+</ul>
+<h3 id="厦门-e-通卡">厦门 e 通卡</h3>
+<h4 id="适用范围-4">适用范围</h4>
+<p>厦门 e 通卡属于交通部标准，支持使用交通部或兼容交通部标准的城市（互联互通城市）。具体包括：</p>
+<ul>
+<li>厦门市公交（含 BRT 快速公交、海沧农客）、地铁、轮渡、出租车</li>
+<li>漳州市公交</li>
+<li>泉州市公交</li>
+<li>南安市公交</li>
+<li>晋江市公交</li>
+<li>其它交通互联城市</li>
+</ul>
+<h4 id="优惠政策-4">优惠政策</h4>
+<ul>
+<li>市内常规公交、BRT、地铁等享受 9 折优惠</li>
+<li>在公交、地铁或 BRT 间换乘时，在现行票价优惠基础上减去 0.8 元</li>
+</ul>
+<h3 id="深圳通互联互通卡">深圳通互联互通卡</h3>
+<h4 id="适用范围-5">适用范围</h4>
+<p>深圳通互联互通卡属于交通部标准，支持使用交通部或兼容交通部标准的城市（互联互通城市）。具体包括：</p>
+<ul>
+<li>深圳市内公交、地铁、有轨电车（地铁 11 号线商务车厢以及上下车均需要刷卡的东部集团 M447/M165、巴士集团 M488/358 线路暂不支持）；</li>
+<li>其它交通互联城市</li>
+</ul>
+<h4 id="优惠政策-5">优惠政策</h4>
+<ul>
+<li>深圳公交：票价 3 元以下（含 3 元）部分 8 折优惠， 3 元以上 6 元以下（含 6 元）部分 7.5 折优惠， 6 元以上部分 6.5 折优惠；</li>
+<li>深圳地铁：9.5 折优惠；</li>
+<li>深圳有轨电车：9.5 折优惠；</li>
+<li>长沙地铁：9 折优惠；</li>
+<li>换乘优惠：在刷卡后 90 分钟内，在不同的公交线路间、在公交线路与地铁间、在地铁与公交线路间换乘，在刷卡优惠的基础上，给予 0.4 元/人次的换乘优惠</li>
+</ul>
+<h3 id="琴岛通公交卡">琴岛通·公交卡</h3>
+<h4 id="适用范围-6">适用范围</h4>
+<p>琴岛通·公交卡属于交通部标准，支持使用交通部或兼容交通部标准的城市（互联互通城市）。具体包括：</p>
+<ul>
+<li>青岛市内公交、地铁、有轨电车；</li>
+<li>其它交通互联城市</li>
+</ul>
+<h4 id="优惠政策-6">优惠政策</h4>
+<ul>
+<li>市内五区乘坐公交车（含有轨电车）给予 8 折优惠</li>
+<li>地铁同一张卡实际支出累计 100 元以内的乘次，票价给予 9 折优惠；100~200 元之间部分给予 8 折优惠；200~300 元之间部分给予 7 折优惠；超过 300 元部分恢复 9 折优惠</li>
+<li>一小时换乘优惠：在一小时内，持卡换乘其他公共交通工具，给予减免换乘前交通工具所使用的金额，最高减免 0.9 元，优惠一次</li>
+</ul>
+<h3 id="天津互联互通城市卡">天津互联互通城市卡</h3>
+<h4 id="适用范围-7">适用范围</h4>
+<p>天津互联互通城市卡属于交通部标准，支持使用交通部或兼容交通部标准的城市（互联互通城市）。具体包括：</p>
+<ul>
+<li>天津市公交、滨海公交的全部线路以及地铁运营线路（北京顺义暂不支持）；</li>
+<li>其它交通互联城市</li>
+</ul>
+<h4 id="优惠政策-7">优惠政策</h4>
+<ul>
+<li>天津公交：95 折优惠；</li>
+<li>天津地铁、轻轨：9 折优惠；</li>
+<li>滨海公交：9 折优惠</li>
+</ul>
+<h3 id="潇湘卡公共交通卡">潇湘卡·公共交通卡</h3>
+<h4 id="添加须知">添加须知</h4>
+<p>潇湘卡·公共交通卡要求 iPhone 使用 iOS 14.0 及更高版本的 iOS，Apple Watch 要求使用 watchOS 7 及更高版本的 watchOS</p>
+<p>用于管理卡片的「潇湘一卡通」App 要求使用 1.0.0 及更高版本</p>
+<h4 id="适用范围-8">适用范围</h4>
+<p>潇湘卡·公共交通卡属于交通部标准，支持使用交通部或兼容交通部标准的城市（互联互通城市）。具体包括：</p>
+<ul>
+<li>长沙市内公交、地铁、磁悬浮；</li>
+<li>其它交通互联城市</li>
+</ul>
+<h4 id="优惠政策-8">优惠政策</h4>
+<ul>
+<li>长沙公交：7 折优惠；</li>
+<li>长沙地铁、磁悬浮：9 折优惠</li>
+</ul>
+<h3 id="燕赵通">燕赵通</h3>
+<h4 id="适用范围-9">适用范围</h4>
+<p>燕赵通属于交通部标准，支持使用交通部或兼容交通部标准的城市（互联互通城市）。具体包括：</p>
+<ul>
+<li>石家庄、辛集、晋州、承德、张家口、秦皇岛、唐山、廊坊、保定、沧州、衡水、邢台、邯郸等河北省的城市；</li>
+<li>其它交通互联城市</li>
+</ul>
+<h4 id="优惠政策-9">优惠政策</h4>
+<ul>
+<li>石家庄市区、辛集、晋州公交：9 折优惠；</li>
+<li>秦皇岛公交：空调期空调线路 8 折优惠，非空调期空调线路 7.5 折优惠，非空调期 9.5 折优惠；</li>
+<li>唐山、沧州、邢台公交：9 折优惠；</li>
+<li>廊坊公交：8 折优惠；</li>
+<li>保定公交：7.5 折优惠；</li>
+<li>邯郸市区公交：8 折优惠，城乡公交 9.5 折优惠；</li>
+<li>异地交通联合卡公交 9 折优惠</li>
+</ul>
+<h3 id="甬城通交通卡">甬城通交通卡</h3>
+<h4 id="适用范围-10">适用范围</h4>
+<p>甬城通交通卡属于交通部标准，支持使用交通部或兼容交通部标准的城市（互联互通城市）。具体包括：</p>
+<ul>
+<li>宁波公交（公交总公司、公运公交、城乡公交、北仑公交、东方巴士、奉化公交）、地铁、宁波至余姚城际铁路、公共自行车和部分出租车</li>
+<li>上海市的公交、地铁（仅限持有并激活「City Union」标志的卡片）</li>
+<li>其它交通互联互通城市</li>
+</ul>
+<h4 id="优惠政策-10">优惠政策</h4>
+<ul>
+<li>宁波公交：6 折优惠。换乘城六区公交时，如果首次下车时间和第二次上车时间小于 1 个小时，只需支付两次车费中的较高值。奉化区公交线路优惠额度与其它五区不同，具体请咨询当地运营公司</li>
+<li>宁波地铁：9.5 折优惠</li>
+<li>宁波至余姚城际铁路：9.5 折优惠。</li>
+<li>宁波公共自行车：200 元押金，1 小时内租金为免费，此后逐级递增。使用甬城通租借公共自行车均需本人持卡并提交联系方式</li>
+</ul>
+<h3 id="金陵通交通卡">金陵通交通卡</h3>
+<h4 id="适用范围-11">适用范围</h4>
+<p>金陵通交通卡属于交通部标准，支持使用交通部或兼容交通部标准的城市（互联互通城市）。具体包括：</p>
+<ul>
+<li>南京市内公交、地铁；</li>
+<li>其它交通互联城市</li>
+</ul>
+<h4 id="优惠政策-11">优惠政策</h4>
+<ul>
+<li>南京公交：9.5 折优惠；</li>
+<li>南京、扬州、镇江公交：8 折优惠；</li>
+<li>南京范围内，首次刷卡计时 90 分钟之内，公交、地铁换乘公交，优惠 1.6 元/人次。公交换乘地铁优惠 1 元/人次</li>
+</ul>
+<h3 id="台州公共交通卡">台州公共交通卡</h3>
+<h4 id="适用范围-12">适用范围</h4>
+<p>台州公共交通卡属于交通部标准，支持使用交通部或兼容交通部标准的城市（互联互通城市）。具体包括：</p>
+<ul>
+<li>台州市内的公交</li>
+<li>其它交通互联城市</li>
+</ul>
+<h4 id="优惠政策-12">优惠政策</h4>
+<p>台州公交：6 折优惠</p>
+<h3 id="长安通">长安通</h3>
+<h4 id="适用范围-13">适用范围</h4>
+<p>长安通属于交通部标准，支持使用交通部或兼容交通部标准的城市（互联互通城市）。具体包括：</p>
+<ul>
+<li>西安、咸阳市内的地铁、公交</li>
+<li>其它交通互联城市</li>
+</ul>
+<h4 id="优惠政策-13">优惠政策</h4>
+<ul>
+<li>西安公交：5 折优惠；</li>
+<li>西安地铁：9 折优惠；</li>
+<li>停车：9 折优惠</li>
+</ul>
+<h3 id="大连明珠卡">大连明珠卡</h3>
+<h4 id="适用范围-14">适用范围</h4>
+<p>大连明珠卡属于交通部标准，支持使用交通部或兼容交通部标准的城市（互联互通城市）。具体包括：</p>
+<ul>
+<li>苏州、无锡、常州、南京优惠；</li>
+<li>其它交通互联城市</li>
+</ul>
+<h4 id="优惠政策-14">优惠政策</h4>
+<ul>
+<li>大连公交：视线路不同享受 9 折至 9.5 折优惠</li>
+<li>大连地铁：1 号线、2 号线、12 号线享受 8 折优惠，在 3 号线用卡享受 9 折优惠</li>
+</ul>
+<h3 id="泉城通">泉城通</h3>
+<h4 id="适用范围-15">适用范围</h4>
+<p>泉城通属于交通部标准，支持使用交通部或兼容交通部标准的城市（互联互通城市）。具体包括：</p>
+<ul>
+<li>济南优惠；</li>
+<li>其它交通互联城市</li>
+</ul>
+<h4 id="优惠政策-15">优惠政策</h4>
+<ul>
+<li>济南公交：乘坐票价 1 元、2 元、3 元的公交线路实行一卡一人 8 折优惠。乘坐 2 元（含）以下公交线路，在 2 小时内换乘时，可以享受 6 折优惠；当多人共用一张卡刷卡换乘时，只有一人次享受换乘优惠。乘坐 K301、K302 路时可享受 9 折优惠</li>
+<li>济南地铁：8 折优惠</li>
+</ul>
+<h3 id="洪城一卡通">洪城一卡通</h3>
+<h4 id="适用范围-16">适用范围</h4>
+<p>洪城一卡通属于交通部标准，支持使用交通部或兼容交通部标准的城市（互联互通城市）。具体包括：</p>
+<ul>
+<li>南昌优惠；</li>
+<li>其它交通互联城市</li>
+</ul>
+<h4 id="优惠政策-16">优惠政策</h4>
+<ul>
+<li>南昌公交：7 折优惠；</li>
+<li>南昌地铁：9 折优惠；</li>
+</ul>
+<h3 id="江苏交通一卡通苏州">江苏交通一卡通·苏州</h3>
+<h4 id="适用范围-17">适用范围</h4>
+<p>江苏交通一卡通·苏州属于交通部标准，支持使用交通部或兼容交通部标准的城市（互联互通城市）。具体包括：</p>
+<ul>
+<li>苏州、无锡、常州、南京优惠；</li>
+<li>其它交通互联城市</li>
+</ul>
+<h4 id="优惠政策-17">优惠政策</h4>
+<ul>
+<li>苏州公交：苏州市区 6 折优惠；</li>
+<li>苏州地铁：9.5 折优惠；</li>
+<li>苏州有轨电车：7 折优惠；</li>
+<li>换乘优惠：除地铁之间换乘外，其它换乘 90 分钟内，基础票价减 2 元后仍享受折扣优惠，江苏其它城市的江苏一卡通同样支持换乘优惠；</li>
+<li>无锡、常州、江阴、宜兴公交 6 折优惠，溧阳、金坛、常熟公交 8 折，张家港、昆山公交 9.5 折优惠；</li>
+<li>无锡、常州、南京地铁 9.5 折优惠、长沙地铁 9 折优惠</li>
+</ul>
+<h4 id="特殊功能">特殊功能</h4>
+<p>微付充 App 已支持江苏一卡通·苏州实体卡的贴卡充值功能</p>
+<h3 id="江苏一卡通常州">江苏一卡通·常州</h3>
+<h4 id="适用范围-18">适用范围</h4>
+<p>江苏一卡通·常州属于交通部标准，支持使用交通部或兼容交通部标准的城市（互联互通城市）。具体包括：</p>
+<ul>
+<li>常州市内公交、地铁；</li>
+<li>其它交通互联城市</li>
+</ul>
+<h4 id="优惠政策-18">优惠政策</h4>
+<ul>
+<li>常州、苏州、无锡公交 6 折优惠（金坛溧阳公交 8 折优惠）;</li>
+<li>苏州、无锡、常州、南京地铁享受 9.5 折优惠</li>
+</ul>
+<h3 id="江苏交通一卡通淮安通">江苏交通一卡通·淮安通</h3>
+<h4 id="适用范围-19">适用范围</h4>
+<p>江苏交通一卡通·淮安通属于交通部标准，支持使用交通部或兼容交通部标准的城市（互联互通城市）。具体包括：</p>
+<ul>
+<li>徐州市内公交、地铁</li>
+<li>其它交通互联城市</li>
+</ul>
+<h4 id="优惠政策-19">优惠政策</h4>
+<ul>
+<li>徐州地铁：9.5 折优惠；</li>
+<li>徐州公交：7 折优惠；</li>
+<li>淮安、宿迁、连云港公交享受片区 8 折优惠</li>
+</ul>
+<h3 id="西藏交通一卡通">西藏交通一卡通</h3>
+<h4 id="适用范围-20">适用范围</h4>
+<p>西藏交通一卡通属于交通部标准，支持使用交通部或兼容交通部标准的城市（互联互通城市）。具体包括：</p>
+<ul>
+<li>拉萨市内公交、地铁</li>
+<li>其它交通互联城市</li>
+</ul>
+<h4 id="优惠政策-20">优惠政策</h4>
+<p>暂不了解</p>
+<h3 id="吉林通">吉林通</h3>
+<h4 id="适用范围-21">适用范围</h4>
+<p>吉林通属于交通部标准，支持使用交通部或兼容交通部标准的城市（互联互通城市）。具体包括：</p>
+<ul>
+<li>吉林市、长春市部分公交</li>
+<li>其它交通互联城市</li>
+</ul>
+<h4 id="优惠政策-21">优惠政策</h4>
+<ul>
+<li>吉林市、长春市部分公交 9 折优惠</li>
+</ul>
+<h3 id="金华市民卡八婺通交联版">金华市民卡·八婺通交联版</h3>
+<h4 id="适用范围-22">适用范围</h4>
+<p>金华市民卡·八婺通交联版属于交通部标准，支持使用交通部或兼容交通部标准的城市（互联互通城市）。具体包括：</p>
+<ul>
+<li>金华市、浦江县及义乌市部分公交（含 BRT）</li>
+<li>市域铁路（仅本地卡可用）</li>
+<li>其它交通互联城市</li>
+</ul>
+<h4 id="优惠政策-22">优惠政策</h4>
+<ul>
+<li>金华市部分公交 8 折优惠</li>
+<li>义乌市部分公交 9 折优惠，60 分钟内公交间换乘享 7 折换乘优惠</li>
+</ul>
+<hr class="footnotes-sep">
+<section class="footnotes">
+<ol class="footnotes-list">
+<li id="fn1" class="footnote-item"><p>需要为交通卡打开「快捷交通卡」功能 <a href="#fnref1" class="footnote-backref">↩︎</a></p>
+</li>
+</ol>
+</section>
+
+        </div>
+
+        <div class="jumbotron">
+          <div class="container">
+            <p><i class="ri-article-line"></i> <a href="https://yyl125.top/post/the_introduction_of_apple_pay_transit_in_china/" target="_blank">想用 iPhone 或 Apple Watch 乘坐全国公共交通？Apple Pay 交通联合卡了解一下</a></p>
+            <p><i class="ri-creative-commons-line"></i> 许可协议：<a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" target="_blank">CC BY-NC-SA 4.0</a>。欲了解更多相关信息，详见 <a href="https://yyl125.top/copyright/" target="_blank">版权信息与资源使用说明</a> 页面</p>
+            <p><i class="ri-error-warning-line"></i> 本站所有内容除特别说明外，皆为原创发布。欢迎尊重原创作者版权的转载或引用。转载或引用时请注明出处</p>
+            <br>
+            <p><i class="ri-feedback-line"></i> 出现了影响阅读的问题？不妨 <a href="mailto:yylyingyunlong@hotmail.com?subject=Benjamin's%20Blog%20%E9%97%AE%E9%A2%98%E5%8F%8D%E9%A6%88" target="_blank" rel="noreferrer noopener">反馈</a> 一下吧</p>
+          </div>
+        </div>
+
+        
+          <div class="text-center text-gray-400">
+            <i class="ri-eye-line"></i> 本文已被阅读 <span id="twikoo_visitors">0</span> 次，该数据仅供参考
+          </div>
+        
+
+        <emoji-reaction theme="system"></emoji-reaction>
+        
+      </div>
+
+      <div class="jumbotron-comment">
+        <div class="container">
+          <p><i class="ri-message-3-line"></i> 我们欢迎任何与文章内容相关并保持尊重的评论，评论时请遵守我们的 <a href="https://yyl125.top/comment_policy/">评论准则</a>！</p>
+        </div>
+      </div>
+
+      
+
+      
+        <div id="tcomment"></div>
+      
+      
+      <footer class="py-12 text-center px-4 md:px-0" v-pre>
+  共 23 篇文章｜<a href="https://yyl125.top/copyright" target="_blank">版权信息与资源使用说明</a>｜<i class="ri-rss-line"></i> <a href="https://yyl125.top/atom.xml" target="_blank">RSS</a><br>Copyright © 2024 Benjamin. All rights reserved.
+</footer>
+
+
+    </div>
+
+    <!-- TOC Container -->
+    <div class="fixed right-0 bottom-0 mb-16 mr-4 shadow w-8 h-8 rounded-full flex justify-center items-center z-10 cursor-pointer bg-white dark:bg-gray-500 dark:text-gray-200 hover:shadow-lg transition-all animated fadeInRight" @click="showToc = true">
+      <i class="ri-file-list-line"></i>
+    </div>
+
+    <div class="fixed right-0 top-0 bottom-0 overflow-y-auto w-64 bg-white dark:bg-gray-800 p-4 border-l border-gray-100 dark:border-gray-600 z-10 transition-fast" :class="{ '-mr-64': !showToc }">
+      <div class="flex mb-4 justify-end">
+        <div class="w-8 h-8 inline-flex justify-center items-center rounded-full cursor-pointer hover:bg-gray-200 dark:hover:bg-gray-600 transition-fast" @click="showToc = false">
+          <i class="ri-close-line text-lg"></i>
+        </div>
+      </div>
+      <div class="post-toc-container">
+        <ul class="markdownIt-TOC">
+<li>
+<ul>
+<li><a href="#%E6%9B%B4%E6%96%B0%E6%97%A5%E5%BF%97">更新日志</a></li>
+<li><a href="#%E7%9B%AE%E5%BD%95">目录</a></li>
+<li><a href="#%E4%BB%80%E4%B9%88%E6%98%AF%E4%BA%A4%E9%80%9A%E8%81%94%E5%90%88">什么是交通联合</a></li>
+<li><a href="#apple-pay-%E4%BA%A4%E9%80%9A%E5%8D%A1%E5%9C%A8%E5%9B%BD%E5%86%85%E7%9A%84%E5%8F%91%E5%B1%95">Apple Pay 交通卡在国内的发展</a></li>
+<li><a href="#%E4%BD%BF%E7%94%A8-apple-pay-%E4%BA%A4%E9%80%9A%E5%8D%A1%E4%B8%8E%E4%BD%BF%E7%94%A8-apple-pay-%E4%B9%8B%E9%97%B4%E7%9A%84%E5%8C%BA%E5%88%AB">使用 Apple Pay 交通卡与使用 Apple Pay 之间的区别</a></li>
+<li><a href="#%E5%A6%82%E4%BD%95%E6%B7%BB%E5%8A%A0%E5%92%8C%E4%BD%BF%E7%94%A8-apple-pay-%E4%BA%A4%E9%80%9A%E5%8D%A1">如何添加和使用 Apple Pay 交通卡</a></li>
+<li><a href="#%E5%90%84-apple-pay-%E4%BA%A4%E9%80%9A%E5%8D%A1%E8%AF%A6%E7%BB%86%E4%BB%8B%E7%BB%8D">各 Apple Pay 交通卡详细介绍</a>
+<ul>
+<li><a href="#%E4%B8%8A%E6%B5%B7%E4%BA%A4%E9%80%9A%E5%8D%A1%E5%85%A8%E5%9B%BD%E4%BA%A4%E8%81%94%E7%89%88">上海交通卡·全国交联版</a>
+<ul>
+<li><a href="#%E9%80%82%E7%94%A8%E8%8C%83%E5%9B%B4">适用范围</a></li>
+<li><a href="#%E4%BC%98%E6%83%A0%E6%94%BF%E7%AD%96">优惠政策</a></li>
+</ul>
+</li>
+<li><a href="#%E4%BA%AC%E6%B4%A5%E5%86%80%E4%BA%92%E8%81%94%E4%BA%92%E9%80%9A%E5%8D%A1">京津冀互联互通卡</a>
+<ul>
+<li><a href="#%E9%80%82%E7%94%A8%E8%8C%83%E5%9B%B4-2">适用范围</a></li>
+<li><a href="#%E4%BC%98%E6%83%A0%E6%94%BF%E7%AD%96-2">优惠政策</a></li>
+</ul>
+</li>
+<li><a href="#%E5%B2%AD%E5%8D%97%E9%80%9A">岭南通</a>
+<ul>
+<li><a href="#%E9%80%82%E7%94%A8%E8%8C%83%E5%9B%B4-3">适用范围</a></li>
+<li><a href="#%E4%BC%98%E6%83%A0%E6%94%BF%E7%AD%96-3">优惠政策</a></li>
+</ul>
+</li>
+<li><a href="#%E5%8E%A6%E9%97%A8-e-%E9%80%9A%E5%8D%A1">厦门 e 通卡</a>
+<ul>
+<li><a href="#%E9%80%82%E7%94%A8%E8%8C%83%E5%9B%B4-4">适用范围</a></li>
+<li><a href="#%E4%BC%98%E6%83%A0%E6%94%BF%E7%AD%96-4">优惠政策</a></li>
+</ul>
+</li>
+<li><a href="#%E6%B7%B1%E5%9C%B3%E9%80%9A%E4%BA%92%E8%81%94%E4%BA%92%E9%80%9A%E5%8D%A1">深圳通互联互通卡</a>
+<ul>
+<li><a href="#%E9%80%82%E7%94%A8%E8%8C%83%E5%9B%B4-5">适用范围</a></li>
+<li><a href="#%E4%BC%98%E6%83%A0%E6%94%BF%E7%AD%96-5">优惠政策</a></li>
+</ul>
+</li>
+<li><a href="#%E7%90%B4%E5%B2%9B%E9%80%9A%E5%85%AC%E4%BA%A4%E5%8D%A1">琴岛通·公交卡</a>
+<ul>
+<li><a href="#%E9%80%82%E7%94%A8%E8%8C%83%E5%9B%B4-6">适用范围</a></li>
+<li><a href="#%E4%BC%98%E6%83%A0%E6%94%BF%E7%AD%96-6">优惠政策</a></li>
+</ul>
+</li>
+<li><a href="#%E5%A4%A9%E6%B4%A5%E4%BA%92%E8%81%94%E4%BA%92%E9%80%9A%E5%9F%8E%E5%B8%82%E5%8D%A1">天津互联互通城市卡</a>
+<ul>
+<li><a href="#%E9%80%82%E7%94%A8%E8%8C%83%E5%9B%B4-7">适用范围</a></li>
+<li><a href="#%E4%BC%98%E6%83%A0%E6%94%BF%E7%AD%96-7">优惠政策</a></li>
+</ul>
+</li>
+<li><a href="#%E6%BD%87%E6%B9%98%E5%8D%A1%E5%85%AC%E5%85%B1%E4%BA%A4%E9%80%9A%E5%8D%A1">潇湘卡·公共交通卡</a>
+<ul>
+<li><a href="#%E6%B7%BB%E5%8A%A0%E9%A1%BB%E7%9F%A5">添加须知</a></li>
+<li><a href="#%E9%80%82%E7%94%A8%E8%8C%83%E5%9B%B4-8">适用范围</a></li>
+<li><a href="#%E4%BC%98%E6%83%A0%E6%94%BF%E7%AD%96-8">优惠政策</a></li>
+</ul>
+</li>
+<li><a href="#%E7%87%95%E8%B5%B5%E9%80%9A">燕赵通</a>
+<ul>
+<li><a href="#%E9%80%82%E7%94%A8%E8%8C%83%E5%9B%B4-9">适用范围</a></li>
+<li><a href="#%E4%BC%98%E6%83%A0%E6%94%BF%E7%AD%96-9">优惠政策</a></li>
+</ul>
+</li>
+<li><a href="#%E7%94%AC%E5%9F%8E%E9%80%9A%E4%BA%A4%E9%80%9A%E5%8D%A1">甬城通交通卡</a>
+<ul>
+<li><a href="#%E9%80%82%E7%94%A8%E8%8C%83%E5%9B%B4-10">适用范围</a></li>
+<li><a href="#%E4%BC%98%E6%83%A0%E6%94%BF%E7%AD%96-10">优惠政策</a></li>
+</ul>
+</li>
+<li><a href="#%E9%87%91%E9%99%B5%E9%80%9A%E4%BA%A4%E9%80%9A%E5%8D%A1">金陵通交通卡</a>
+<ul>
+<li><a href="#%E9%80%82%E7%94%A8%E8%8C%83%E5%9B%B4-11">适用范围</a></li>
+<li><a href="#%E4%BC%98%E6%83%A0%E6%94%BF%E7%AD%96-11">优惠政策</a></li>
+</ul>
+</li>
+<li><a href="#%E5%8F%B0%E5%B7%9E%E5%85%AC%E5%85%B1%E4%BA%A4%E9%80%9A%E5%8D%A1">台州公共交通卡</a>
+<ul>
+<li><a href="#%E9%80%82%E7%94%A8%E8%8C%83%E5%9B%B4-12">适用范围</a></li>
+<li><a href="#%E4%BC%98%E6%83%A0%E6%94%BF%E7%AD%96-12">优惠政策</a></li>
+</ul>
+</li>
+<li><a href="#%E9%95%BF%E5%AE%89%E9%80%9A">长安通</a>
+<ul>
+<li><a href="#%E9%80%82%E7%94%A8%E8%8C%83%E5%9B%B4-13">适用范围</a></li>
+<li><a href="#%E4%BC%98%E6%83%A0%E6%94%BF%E7%AD%96-13">优惠政策</a></li>
+</ul>
+</li>
+<li><a href="#%E5%A4%A7%E8%BF%9E%E6%98%8E%E7%8F%A0%E5%8D%A1">大连明珠卡</a>
+<ul>
+<li><a href="#%E9%80%82%E7%94%A8%E8%8C%83%E5%9B%B4-14">适用范围</a></li>
+<li><a href="#%E4%BC%98%E6%83%A0%E6%94%BF%E7%AD%96-14">优惠政策</a></li>
+</ul>
+</li>
+<li><a href="#%E6%B3%89%E5%9F%8E%E9%80%9A">泉城通</a>
+<ul>
+<li><a href="#%E9%80%82%E7%94%A8%E8%8C%83%E5%9B%B4-15">适用范围</a></li>
+<li><a href="#%E4%BC%98%E6%83%A0%E6%94%BF%E7%AD%96-15">优惠政策</a></li>
+</ul>
+</li>
+<li><a href="#%E6%B4%AA%E5%9F%8E%E4%B8%80%E5%8D%A1%E9%80%9A">洪城一卡通</a>
+<ul>
+<li><a href="#%E9%80%82%E7%94%A8%E8%8C%83%E5%9B%B4-16">适用范围</a></li>
+<li><a href="#%E4%BC%98%E6%83%A0%E6%94%BF%E7%AD%96-16">优惠政策</a></li>
+</ul>
+</li>
+<li><a href="#%E6%B1%9F%E8%8B%8F%E4%BA%A4%E9%80%9A%E4%B8%80%E5%8D%A1%E9%80%9A%E8%8B%8F%E5%B7%9E">江苏交通一卡通·苏州</a>
+<ul>
+<li><a href="#%E9%80%82%E7%94%A8%E8%8C%83%E5%9B%B4-17">适用范围</a></li>
+<li><a href="#%E4%BC%98%E6%83%A0%E6%94%BF%E7%AD%96-17">优惠政策</a></li>
+<li><a href="#%E7%89%B9%E6%AE%8A%E5%8A%9F%E8%83%BD">特殊功能</a></li>
+</ul>
+</li>
+<li><a href="#%E6%B1%9F%E8%8B%8F%E4%B8%80%E5%8D%A1%E9%80%9A%E5%B8%B8%E5%B7%9E">江苏一卡通·常州</a>
+<ul>
+<li><a href="#%E9%80%82%E7%94%A8%E8%8C%83%E5%9B%B4-18">适用范围</a></li>
+<li><a href="#%E4%BC%98%E6%83%A0%E6%94%BF%E7%AD%96-18">优惠政策</a></li>
+</ul>
+</li>
+<li><a href="#%E6%B1%9F%E8%8B%8F%E4%BA%A4%E9%80%9A%E4%B8%80%E5%8D%A1%E9%80%9A%E6%B7%AE%E5%AE%89%E9%80%9A">江苏交通一卡通·淮安通</a>
+<ul>
+<li><a href="#%E9%80%82%E7%94%A8%E8%8C%83%E5%9B%B4-19">适用范围</a></li>
+<li><a href="#%E4%BC%98%E6%83%A0%E6%94%BF%E7%AD%96-19">优惠政策</a></li>
+</ul>
+</li>
+<li><a href="#%E8%A5%BF%E8%97%8F%E4%BA%A4%E9%80%9A%E4%B8%80%E5%8D%A1%E9%80%9A">西藏交通一卡通</a>
+<ul>
+<li><a href="#%E9%80%82%E7%94%A8%E8%8C%83%E5%9B%B4-20">适用范围</a></li>
+<li><a href="#%E4%BC%98%E6%83%A0%E6%94%BF%E7%AD%96-20">优惠政策</a></li>
+</ul>
+</li>
+<li><a href="#%E5%90%89%E6%9E%97%E9%80%9A">吉林通</a>
+<ul>
+<li><a href="#%E9%80%82%E7%94%A8%E8%8C%83%E5%9B%B4-21">适用范围</a></li>
+<li><a href="#%E4%BC%98%E6%83%A0%E6%94%BF%E7%AD%96-21">优惠政策</a></li>
+</ul>
+</li>
+<li><a href="#%E9%87%91%E5%8D%8E%E5%B8%82%E6%B0%91%E5%8D%A1%E5%85%AB%E5%A9%BA%E9%80%9A%E4%BA%A4%E8%81%94%E7%89%88">金华市民卡·八婺通交联版</a>
+<ul>
+<li><a href="#%E9%80%82%E7%94%A8%E8%8C%83%E5%9B%B4-22">适用范围</a></li>
+<li><a href="#%E4%BC%98%E6%83%A0%E6%94%BF%E7%AD%96-22">优惠政策</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+      </div>
+    </div>
+
+    <!-- Back to top -->
+    <div class="fixed right-0 bottom-0 mb-4 mr-4 shadow w-8 h-8 rounded-full flex justify-center items-center z-10 cursor-pointer bg-white hover:shadow-lg transition-all dark:bg-gray-500 dark:text-gray-200" @click="backToUp" v-show="scrolled">
+      <i class="ri-arrow-up-line"></i>
+    </div>
+
+  </div>
+
+<!--  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script> -->
+  <script src="https://yyl125.top/media/scripts/vue.js"></script>
+  <script src="https://yyl125.top/media/scripts/main.js"></script>
+  <script src="https://yyl125.top/media/scripts/view-image.min.js"></script>
+  <script>
+    window.ViewImage && ViewImage.init('.markdown img');
+    var lazyLoadInstance = new LazyLoad({});
+    lazyLoadInstance.update();
+  </script>
+  
+  <!-- Mermaid -->
+  
+
+  <!-- Code Highlight -->
+  
+    <script src="https://yyl125.top/media/scripts/prism.js"></script>
+    <script>
+      Prism.highlightAll()
+    </script>
+  
+
+  <!-- Twikoo -->
+  
+    <script src="https://cdn.jsdelivr.net/npm/twikoo@1.6.38/dist/twikoo.min.js"></script>
+<script>
+  twikoo.init({
+    envId: 'https://twikoo-deploy-one.vercel.app',
+    el: '#tcomment'
+  })
+</script>
+  
+
+</body>
+
+</html>
