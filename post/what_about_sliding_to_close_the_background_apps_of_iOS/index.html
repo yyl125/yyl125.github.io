@@ -1,0 +1,310 @@
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<meta name="google-site-verification" content="mzGZdCiBsXZ5XSYVt7eh7KL8L64yuidUoeBNw_53XHk" />
+<meta name="referrer" content="same-origin">
+<title>从 iOS 相关机制的设计来看待滑动关闭后台 App - Benjamin&#39;s Blog</title>
+<link rel="shortcut icon" href="https://yyl125.top/favicon.ico">
+<link href="https://cdn.jsdelivr.net/npm/remixicon@latest/fonts/remixicon.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.7.2/animate.min.css">
+<link rel="stylesheet" href="https://yyl125.top/media/css/tailwind.css">
+<link rel="stylesheet" href="https://yyl125.top/styles/main.css">
+
+
+<link rel="alternate" type="application/atom+xml" title="从 iOS 相关机制的设计来看待滑动关闭后台 App - Benjamin&#39;s Blog - Atom Feed" href="https://yyl125.top/atom.xml">
+<!----<script src="https://yyl125.top/media/scripts/bootstrap.bundle.min.js"></script>---->
+
+
+  
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-Q6KYP4QSBH"></script>
+    <script>
+      var host = window.location.hostname;
+      if(host != "localhost")
+      {
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-Q6KYP4QSBH');
+      }
+    </script>
+  
+
+<script defer>
+(function (document) {
+  const SOURCE = 'https://cdn.jsdelivr.net';
+  const DEST = 'https://gcore.jsdelivr.net';
+  const $ = document.querySelectorAll.bind(document);
+  const checkAvailable = (callback) => {
+    let timeoutId;
+    const newNode = document.createElement('link');
+    newNode.rel = 'stylesheet';
+    newNode.text = 'text/css';
+    const onError = () => {
+      if (!timeoutId) {
+        return;
+      }
+
+      clearTimeout(timeoutId);
+      timeoutId = 0;
+      newNode.href = 'about:blank';
+      newNode.remove();
+      callback(false);
+    };
+
+    timeoutId = setTimeout(onError, 2000);
+    newNode.addEventListener('error', onError);
+    newNode.addEventListener('load', function () {
+      newNode.remove();
+      clearTimeout(timeoutId);
+      callback(true);
+    });
+
+    newNode.href =
+      SOURCE +
+      '/gh/PipecraftNet/jsdelivr-auto-fallback@main/empty.css?' +
+      Date.now();
+    document.head.insertAdjacentElement('afterbegin', newNode);
+  };
+
+  const replaceElementSrc = () => {
+    for (const element of $('link[rel="stylesheet"]')) {
+      if (element.href && element.href.includes(SOURCE)) {
+        element.href = element.href.replace(SOURCE, DEST);
+      }
+    }
+
+    for (const element of $('script')) {
+      if (element.src && element.src.includes(SOURCE)) {
+        const newNode = document.createElement('script');
+        newNode.src = element.src.replace(SOURCE, DEST);
+        element.defer = true;
+        element.src = '';
+        element.before(newNode);
+        element.remove();
+      }
+    }
+
+    for (const element of $('img')) {
+      if (element.src && element.src.includes(SOURCE)) {
+        const source = element.src;
+        // Used to cancel loading. Without this line it will remain pending status.
+        element.src = '';
+        element.src = source.replace(SOURCE, DEST);
+      }
+    }
+  };
+
+  checkAvailable(function (isAvailable) {
+    if (isAvailable) {
+      return;
+    }
+
+    console.warn(SOURCE + ' is not available.');
+
+    replaceElementSrc();
+    // Replace dynamically added elements
+    setInterval(replaceElementSrc, 500);
+  });
+})(document);
+</script>
+  <meta name="description" content="害，都是玄学
+
+这件事情其实是一个老调重弹的这么一个话题，早在前几年就有过类似的讨论。最近这事突然又被炒上热搜（不知道某为是不是最近又要上新机了🙄️）
+回顾
+最近的热搜其实是这样的。先是一些自媒体以「苹果建议不要滑动关闭后台程序」为题目或..." />
+  <meta property="og:title" content="从 iOS 相关机制的设计来看待滑动关闭后台 App - Benjamin&#39;s Blog">
+  <meta property="og:description" content="害，都是玄学
+
+这件事情其实是一个老调重弹的这么一个话题，早在前几年就有过类似的讨论。最近这事突然又被炒上热搜（不知道某为是不是最近又要上新机了🙄️）
+回顾
+最近的热搜其实是这样的。先是一些自媒体以「苹果建议不要滑动关闭后台程序」为题目或..." />
+  <meta property="og:type" content="articles">
+  <meta property="og:url" content="https://yyl125.top/post/what_about_sliding_to_close_the_background_apps_of_iOS/" />
+  <meta property="og:image" content="https://oss.yyl125.cc/blog/img/post/Perspective/What_About_Sliding_to_Close_the_Background_Apps_of_iOS/What_About_Sliding_to_Close_the_Background_Apps_of_iOS_Banner.jpg">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:width" content="1200">
+  <meta name="twitter:title" content="从 iOS 相关机制的设计来看待滑动关闭后台 App - Benjamin&#39;s Blog">
+  <meta name="twitter:description" content="害，都是玄学
+
+这件事情其实是一个老调重弹的这么一个话题，早在前几年就有过类似的讨论。最近这事突然又被炒上热搜（不知道某为是不是最近又要上新机了🙄️）
+回顾
+最近的热搜其实是这样的。先是一些自媒体以「苹果建议不要滑动关闭后台程序」为题目或...">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="canonical" href="https://yyl125.top/post/what_about_sliding_to_close_the_background_apps_of_iOS/">
+
+  <script src="https://cdn.jsdelivr.net/npm/vanilla-lazyload@17.8.8/dist/lazyload.min.js"></script>
+  <script type="module" src="https://yyl125.top/media/scripts/emaction.js"></script>
+
+  
+    <link rel="stylesheet" href="https://yyl125.top/media/css/prism-atom-dark.css">
+  
+
+  
+</head>
+
+<body>
+  <div class="antialiased flex flex-col min-h-screen" id="app">
+    <a href="https://yyl125.top" class="fixed top-0 left-0 mt-4 bg-black text-white dark:text-gray-700 dark:bg-yellow-50 dark:hover:bg-black dark:hover:text-white inline-flex p-2 pl-8 hover:text-gray-700 hover:bg-yellow-50 font-bold z-10 transition-fast animated fadeInLeft">
+      Benjamin&#39;s Blog
+    </a>
+    <div class="max-w-4xl w-full mx-auto">
+      <div class="shadow-box bg-white dark:bg-gray-600 rounded-lg pt-32 md:pt-64 px-4 md:px-8 pb-8 animated fadeIn mb-8">
+        <h1 class="text-5xl font-semibold leading-normal pb-8 mb-8 border-b-8 border-gray-700">
+          从 iOS 相关机制的设计来看待滑动关闭后台 App
+        </h1>
+        
+          <img src="https://oss.yyl125.cc/blog/img/post/Perspective/What_About_Sliding_to_Close_the_Background_Apps_of_iOS/What_About_Sliding_to_Close_the_Background_Apps_of_iOS_Banner.jpg" alt="从 iOS 相关机制的设计来看待滑动关闭后台 App" class="block w-full mb-8">
+        
+        <div class="mb-8 flex flex-wrap">
+          <div class="text-gray-400 text-sm mr-4"><i class="ri-calendar-2-line"></i> 2020-02-29 · <i class="ri-timer-line"></i> 6 min read · <i class="ri-eye-line"></i> <span id="twikoo_visitors">0</span></div>
+          
+            <a href="https://yyl125.top/tag/perspective/" class="text-gray-700 dark:text-gray-200 text-sm hover:transition-all duration-100 inline-flex mr-2">
+              <i class="ri-hashtag"></i>
+              Perspective
+            </a>
+          
+        </div>
+        
+        <div class="jumbotron">
+          <div class="container">
+            <p><i class="ri-time-line"></i> 这是一篇发布于 6 年前的文章，其中的信息可能已经有所发展或是发生改变</p>
+          </div>
+        </div>
+
+        
+
+        
+        
+        <div class="markdown mb-8" v-pre id="post-content">
+          <p>害，都是玄学</p>
+<!-- more -->
+<p>这件事情其实是一个老调重弹的这么一个话题，早在前几年就有过类似的讨论。最近这事突然又被炒上热搜（不知道某为是不是最近又要上新机了🙄️）</p>
+<h2 id="回顾">回顾</h2>
+<p>最近的热搜其实是这样的。先是一些自媒体以「苹果建议不要滑动关闭后台程序」为题目或话题发布文章称，在 Apple 支持的一篇 <a href="https://support.apple.com/zh-cn/HT201330" target="_blank">如何在 iPhone、iPad 或 iPod touch 上强制关闭 App</a> 的文章中称：</p>
+<blockquote>
+<p>仅当某个 App 没有响应时，您才应该强制关闭它。</p>
+</blockquote>
+<p>这样一句话瞬间就被解读为「苹果建议不要滑动关闭后台程序」，我太佩服现在的所谓「自媒体」了🙄️</p>
+<h2 id="观点">观点</h2>
+<p>首先，相关报道提到的文章的最后修改日期是北京时间 2019 年 10 月 30 日，Apple US 官网的相关文章的最后修改日期是当地时间（应该指的是太平洋时间） Oct. 18,2019。所以这篇文章并不「新」</p>
+<p>其次，如果说这句话说明「退出 App 后台的操作对于<strong>电池续航</strong>没有积极意义」，那么我无比赞同这个观点。因为理论上冷启动比复活更消耗资源</p>
+<p>但有些自媒体因此推导得出「退出 App 后台的操作对于<strong>电池寿命</strong>没有积极意义」这样的结论，我并不认同。原因是：Apple 并没有在它的<strong>任何</strong>电池类技术支持文档中提到所谓退出 App 的后台对设备的电池寿命有影响。而「电池续航」和「电池寿命」这两个词也并不能够混为一谈</p>
+<h2 id="依据">依据</h2>
+<p>在 iOS 现行的应用程序机制下，一个 App 要在系统政策的监管之下运行。App 需要遵守 iOS 自己的规则调度。除了常见的沙箱机制（Sandbox）外，还有 MACF、TAL（Transparent Application Lifecycle，透明的应用程序生命周期）、DAS（Duet Activity Scheduler，双重行为调度）等等这些机制。再加上 Apple 对于一个 App 上架到 App Store 的审核其实是非常严格的，所以作为用户的我们，其实没必要担心那么多</p>
+<p>简单点来讲，一个 App 一般有两种行为：前台和后台。前台是指这个 App 在用户看得见的比如「窗口」或者「活动任务线程」。后台包括一些音乐类 App 的「后台播放」、Safari 浏览器的「下载」和一些「网络活动」等。这些后台内容基本都是由 iOS 自己调度的</p>
+<p>一个 App 在从前台切换到后台后，一定时间内（通常是 5 s，但一些特定的 App 可以在设计和提交程序时决定和声明需要 10 min 的较长时间）它都是存活的，App 在后台并不真正运行。iOS 会将被中止（指从前台切换到后台）的 App 所占用的系统资源（通常指内存）释放，同时将该 App Suspended 化（即「暂停」）。因此，当你返回主屏幕（Home）时，原来的 App 会退到后台。如果它有额外的后台执行任务作业，超过 10 分钟也还是会被 iOS 中止。这也就是所谓的「墓碑机制」</p>
+<p>在某些例外情况下，如持续在后台播放音乐的 App、使用 GPS 定位（已授权始终获取位置）的 App、VOIP App 以及一些周边配件附属的程序，是被允许在后台中持续执行的。但只要这些 App 不再执行动作，就会立刻被 iOS 中止，比如音乐播放完了、内容下载完了……</p>
+<p><strong>整个 iOS 里，唯二有完整的桌面级别多任务的 App，一个是 Safari 浏览器，一个是 Mail 邮件</strong>。这两个 App「几乎」处于无限制状态，它们是真正意义上会占用内存的 App。但它俩也会在任意时间从内存中被释放，具体取决于用户是否打开了其它 App 而导致内存资源不足。<strong>唯一不会被释放内存资源的是 Apple 的通知服务</strong></p>
+<h2 id="关于国内生态下前后台的一点看法">关于国内生态下「前后台」的一点看法</h2>
+<p>在 Apple 生态下使用国内的某些 App 时，相信你一定会有这样的经验：你在后台播放着自己喜欢的歌曲，打开一个国内的 App 后，音乐被暂停了</p>
+<p>对于以「各种手段」尝试延长自己驻留周期的 App，比如之前很多 App 通过调用 coreaudio 播放一个并没有任何声音的音频文件以达到让 iOS 以为它要在后台播放音频而长时间驻留后台的目的。这些 App 还是早退出早干净</p>
+<p>Apple 的审核虽然严格，但它也并非能够一击命中那些找各种手段尝试与 Apple 博弈的 App，因为存在一定的误杀。和审核较劲也一直就是个猫鼠游戏。不让用或者开始严格检查这个了，就又换下一个……以前文所述的通过在后台播放无声音频的方式尝试驻留的国内 App 也不少，比如联通营业厅（我是移动，目前还未发现）</p>
+<p>国内的 App 生态一直处于一个很有意思的状态，无论是 iOS 还是 Android。厂商或者系统授权商总是在想办法限制开发者的不规范行为，开发者也总是在想如何与审核博弈，似乎永无止境。Android 在国内由于某些众所周知的原因，无法使用 FCM 功能在后台「安静且无害」获取最新的通知，而是需要尝试激活一个甚至是数个服务来尝试驻留后台，这无疑进一步加剧了 Android 设备的耗电并带来一定程度上的安全与隐私风险。国内后来也尝试推出了统一推送系统等一系列政策，但似乎没有看到任何成效</p>
+<p>如果你非要问我 Android 要怎么办？或许只能求助于厂商了……</p>
+
+        </div>
+
+        <div class="jumbotron">
+          <div class="container">
+            <p><i class="ri-article-line"></i> <a href="https://yyl125.top/post/what_about_sliding_to_close_the_background_apps_of_iOS/" target="_blank">从 iOS 相关机制的设计来看待滑动关闭后台 App</a></p>
+            <p><i class="ri-creative-commons-line"></i> 许可协议：<a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" target="_blank">CC BY-NC-SA 4.0</a>。欲了解更多相关信息，详见 <a href="https://yyl125.top/copyright/" target="_blank">版权信息与资源使用说明</a> 页面</p>
+            <p><i class="ri-error-warning-line"></i> 本站所有内容除特别说明外，皆为原创发布。欢迎尊重原创作者版权的转载或引用。转载或引用时请注明出处</p>
+            <br>
+            <p><i class="ri-feedback-line"></i> 出现了影响阅读的问题？不妨 <a href="mailto:support@yyl125.cc?subject=Benjamin's%20Blog%20%E9%97%AE%E9%A2%98%E5%8F%8D%E9%A6%88" target="_blank" rel="noreferrer noopener">反馈</a> 一下吧</p>
+          </div>
+        </div>
+
+        
+        
+      </div>
+
+      <div class="jumbotron-comment">
+        <div class="container">
+          <p><i class="ri-message-3-line"></i> 欢迎任何与文章内容相关并保持尊重的评论，评论时请遵守 <a href="https://yyl125.top/comment_policy/">评论准则</a></p>
+        </div>
+      </div>
+
+      
+
+      
+        <div id="tcomment"></div>
+      
+      
+      <footer class="py-12 text-center px-4 md:px-0" v-pre>
+  共 24 篇文章｜<a href="https://yyl125.top/copyright" target="_blank">版权信息与资源使用说明</a>｜<i class="ri-rss-line"></i> <a href="https://yyl125.top/atom.xml" target="_blank">RSS</a><br>Copyright © 2026 Benjamin. All rights reserved.
+</footer>
+
+
+    </div>
+
+    <!-- TOC Container -->
+    <div class="fixed right-0 bottom-0 mb-16 mr-4 shadow w-8 h-8 rounded-full flex justify-center items-center z-10 cursor-pointer bg-white dark:bg-gray-500 dark:text-gray-200 hover:shadow-lg transition-all animated fadeInRight" @click="showToc = true">
+      <i class="ri-file-list-line"></i>
+    </div>
+
+    <div class="fixed right-0 top-0 bottom-0 overflow-y-auto w-64 bg-white dark:bg-gray-800 p-4 border-l border-gray-100 dark:border-gray-600 z-10 transition-fast" :class="{ '-mr-64': !showToc }">
+      <div class="flex mb-4 justify-end">
+        <div class="w-8 h-8 inline-flex justify-center items-center rounded-full cursor-pointer hover:bg-gray-200 dark:hover:bg-gray-600 transition-fast" @click="showToc = false">
+          <i class="ri-close-line text-lg"></i>
+        </div>
+      </div>
+      <div class="post-toc-container">
+        <ul class="markdownIt-TOC">
+<li>
+<ul>
+<li><a href="#%E5%9B%9E%E9%A1%BE">回顾</a></li>
+<li><a href="#%E8%A7%82%E7%82%B9">观点</a></li>
+<li><a href="#%E4%BE%9D%E6%8D%AE">依据</a></li>
+<li><a href="#%E5%85%B3%E4%BA%8E%E5%9B%BD%E5%86%85%E7%94%9F%E6%80%81%E4%B8%8B%E5%89%8D%E5%90%8E%E5%8F%B0%E7%9A%84%E4%B8%80%E7%82%B9%E7%9C%8B%E6%B3%95">关于国内生态下「前后台」的一点看法</a></li>
+</ul>
+</li>
+</ul>
+
+      </div>
+    </div>
+
+    <!-- Back to top -->
+    <div class="fixed right-0 bottom-0 mb-4 mr-4 shadow w-8 h-8 rounded-full flex justify-center items-center z-10 cursor-pointer bg-white hover:shadow-lg transition-all dark:bg-gray-500 dark:text-gray-200" @click="backToUp" v-show="scrolled">
+      <i class="ri-arrow-up-line"></i>
+    </div>
+
+  </div>
+
+<!--  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script> -->
+  <script src="https://yyl125.top/media/scripts/vue.js"></script>
+  <script src="https://yyl125.top/media/scripts/main.js"></script>
+  <script src="https://yyl125.top/media/scripts/linkcard.js"></script>
+  <script src="https://yyl125.top/media/scripts/view-image.min.js"></script>
+  <script>
+    window.ViewImage && ViewImage.init('.markdown img');
+    var lazyLoadInstance = new LazyLoad({});
+    lazyLoadInstance.update();
+  </script>
+  
+  <!-- Mermaid -->
+  
+
+  <!-- Code Highlight -->
+  
+    <script src="https://yyl125.top/media/scripts/prism.js"></script>
+    <script>
+      Prism.highlightAll()
+    </script>
+  
+
+  <!-- Twikoo -->
+  
+    <script src="https://cdn.jsdelivr.net/npm/twikoo@1.6.44/dist/twikoo.min.js"></script>
+<script>
+  twikoo.init({
+    envId: 'https://twikoo-deploy-one.vercel.app',
+    el: '#tcomment'
+  })
+</script>
+  
+
+</body>
+
+</html>

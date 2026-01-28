@@ -1,0 +1,336 @@
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<meta name="google-site-verification" content="mzGZdCiBsXZ5XSYVt7eh7KL8L64yuidUoeBNw_53XHk" />
+<meta name="referrer" content="same-origin">
+<title>折腾 Steam Deck 二三事 - Benjamin&#39;s Blog</title>
+<link rel="shortcut icon" href="https://yyl125.top/favicon.ico">
+<link href="https://cdn.jsdelivr.net/npm/remixicon@latest/fonts/remixicon.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.7.2/animate.min.css">
+<link rel="stylesheet" href="https://yyl125.top/media/css/tailwind.css">
+<link rel="stylesheet" href="https://yyl125.top/styles/main.css">
+
+
+<link rel="alternate" type="application/atom+xml" title="折腾 Steam Deck 二三事 - Benjamin&#39;s Blog - Atom Feed" href="https://yyl125.top/atom.xml">
+<!----<script src="https://yyl125.top/media/scripts/bootstrap.bundle.min.js"></script>---->
+
+
+  
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-Q6KYP4QSBH"></script>
+    <script>
+      var host = window.location.hostname;
+      if(host != "localhost")
+      {
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-Q6KYP4QSBH');
+      }
+    </script>
+  
+
+<script defer>
+(function (document) {
+  const SOURCE = 'https://cdn.jsdelivr.net';
+  const DEST = 'https://gcore.jsdelivr.net';
+  const $ = document.querySelectorAll.bind(document);
+  const checkAvailable = (callback) => {
+    let timeoutId;
+    const newNode = document.createElement('link');
+    newNode.rel = 'stylesheet';
+    newNode.text = 'text/css';
+    const onError = () => {
+      if (!timeoutId) {
+        return;
+      }
+
+      clearTimeout(timeoutId);
+      timeoutId = 0;
+      newNode.href = 'about:blank';
+      newNode.remove();
+      callback(false);
+    };
+
+    timeoutId = setTimeout(onError, 2000);
+    newNode.addEventListener('error', onError);
+    newNode.addEventListener('load', function () {
+      newNode.remove();
+      clearTimeout(timeoutId);
+      callback(true);
+    });
+
+    newNode.href =
+      SOURCE +
+      '/gh/PipecraftNet/jsdelivr-auto-fallback@main/empty.css?' +
+      Date.now();
+    document.head.insertAdjacentElement('afterbegin', newNode);
+  };
+
+  const replaceElementSrc = () => {
+    for (const element of $('link[rel="stylesheet"]')) {
+      if (element.href && element.href.includes(SOURCE)) {
+        element.href = element.href.replace(SOURCE, DEST);
+      }
+    }
+
+    for (const element of $('script')) {
+      if (element.src && element.src.includes(SOURCE)) {
+        const newNode = document.createElement('script');
+        newNode.src = element.src.replace(SOURCE, DEST);
+        element.defer = true;
+        element.src = '';
+        element.before(newNode);
+        element.remove();
+      }
+    }
+
+    for (const element of $('img')) {
+      if (element.src && element.src.includes(SOURCE)) {
+        const source = element.src;
+        // Used to cancel loading. Without this line it will remain pending status.
+        element.src = '';
+        element.src = source.replace(SOURCE, DEST);
+      }
+    }
+  };
+
+  checkAvailable(function (isAvailable) {
+    if (isAvailable) {
+      return;
+    }
+
+    console.warn(SOURCE + ' is not available.');
+
+    replaceElementSrc();
+    // Replace dynamically added elements
+    setInterval(replaceElementSrc, 500);
+  });
+})(document);
+</script>
+  <meta name="description" content="买 Steam Deck，学 Linux 技术
+
+Steam Deck 可谓是过去很长一段时间以来，游戏掌机市场的一个「里程碑式」产品。国内的 Steam Deck 玩家众多，我也趁热买了一台 Steam Deck 填补我在去年 4 月出售..." />
+  <meta property="og:title" content="折腾 Steam Deck 二三事 - Benjamin&#39;s Blog">
+  <meta property="og:description" content="买 Steam Deck，学 Linux 技术
+
+Steam Deck 可谓是过去很长一段时间以来，游戏掌机市场的一个「里程碑式」产品。国内的 Steam Deck 玩家众多，我也趁热买了一台 Steam Deck 填补我在去年 4 月出售..." />
+  <meta property="og:type" content="articles">
+  <meta property="og:url" content="https://yyl125.top/post/some_things_happened_to_steam_deck/" />
+  <meta property="og:image" content="https://oss.yyl125.cc/blog/img/post/Ingenious_Skills/Some_Things_Happened_to_Steam_Deck/Some_Things_Happened_to_Steam_Deck_Banner.jpg">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:width" content="1200">
+  <meta name="twitter:title" content="折腾 Steam Deck 二三事 - Benjamin&#39;s Blog">
+  <meta name="twitter:description" content="买 Steam Deck，学 Linux 技术
+
+Steam Deck 可谓是过去很长一段时间以来，游戏掌机市场的一个「里程碑式」产品。国内的 Steam Deck 玩家众多，我也趁热买了一台 Steam Deck 填补我在去年 4 月出售...">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="canonical" href="https://yyl125.top/post/some_things_happened_to_steam_deck/">
+
+  <script src="https://cdn.jsdelivr.net/npm/vanilla-lazyload@17.8.8/dist/lazyload.min.js"></script>
+  <script type="module" src="https://yyl125.top/media/scripts/emaction.js"></script>
+
+  
+    <link rel="stylesheet" href="https://yyl125.top/media/css/prism-atom-dark.css">
+  
+
+  
+</head>
+
+<body>
+  <div class="antialiased flex flex-col min-h-screen" id="app">
+    <a href="https://yyl125.top" class="fixed top-0 left-0 mt-4 bg-black text-white dark:text-gray-700 dark:bg-yellow-50 dark:hover:bg-black dark:hover:text-white inline-flex p-2 pl-8 hover:text-gray-700 hover:bg-yellow-50 font-bold z-10 transition-fast animated fadeInLeft">
+      Benjamin&#39;s Blog
+    </a>
+    <div class="max-w-4xl w-full mx-auto">
+      <div class="shadow-box bg-white dark:bg-gray-600 rounded-lg pt-32 md:pt-64 px-4 md:px-8 pb-8 animated fadeIn mb-8">
+        <h1 class="text-5xl font-semibold leading-normal pb-8 mb-8 border-b-8 border-gray-700">
+          折腾 Steam Deck 二三事
+        </h1>
+        
+          <img src="https://oss.yyl125.cc/blog/img/post/Ingenious_Skills/Some_Things_Happened_to_Steam_Deck/Some_Things_Happened_to_Steam_Deck_Banner.jpg" alt="折腾 Steam Deck 二三事" class="block w-full mb-8">
+        
+        <div class="mb-8 flex flex-wrap">
+          <div class="text-gray-400 text-sm mr-4"><i class="ri-calendar-2-line"></i> 2024-03-25 · <i class="ri-timer-line"></i> 6 min read · <i class="ri-eye-line"></i> <span id="twikoo_visitors">0</span></div>
+          
+            <a href="https://yyl125.top/tag/Ingenious_skills/" class="text-gray-700 dark:text-gray-200 text-sm hover:transition-all duration-100 inline-flex mr-2">
+              <i class="ri-hashtag"></i>
+              Ingenious Skills
+            </a>
+          
+        </div>
+        
+        <div class="jumbotron">
+          <div class="container">
+            <p><i class="ri-time-line"></i> 这是一篇发布于 2 年前的文章，其中的信息可能已经有所发展或是发生改变</p>
+          </div>
+        </div>
+
+        
+
+        
+        
+        <div class="markdown mb-8" v-pre id="post-content">
+          <p>买 Steam Deck，学 Linux 技术</p>
+<!-- more -->
+<p>Steam Deck 可谓是过去很长一段时间以来，游戏掌机市场的一个「里程碑式」产品。国内的 Steam Deck 玩家众多，我也<s>趁热</s>买了一台 Steam Deck 填补我在去年 4 月出售 AYANEO Air 后的游戏掌机空白</p>
+<p>但是，当我真正上手 Steam Deck 后，还是发现由于一些特殊的原因，国内的 Steam Deck 和 SteamOS 体验还是在很多方面需要作出改进，无法做到真正的「开箱即用」。以下是我记录的从我初次上手到目前位置共计一周左右时间对 Steam Deck 进行的一系列操作和调整</p>
+<h2 id="开机联网">开机联网</h2>
+<p>没错，我上手后遇到的第一个问题是无法联网</p>
+<p>原因是 Steam Deck 没有硬件上的键盘和鼠标，初次上手时也无法调用 SteamOS 内置的软键盘<sup class="footnote-ref"><a href="#fn1" id="fnref1">[1]</a></sup>。所以，初次开机时我还是通过 USB-C 扩展坞（<s>此时真庆幸我因为使用 MacBook 而拥有 USB-C 扩展坞</s>）连接了我的实体键盘来为 Steam Deck 连接 Wi-Fi 网络</p>
+<p>当然，你也可以通过购买带有 RJ45 端口的 USB-C 扩展坞来为 Steam Deck 连接以太网</p>
+<h2 id="为-discover-软件管理中心更换国内镜像软件包源地址">为 Discover 软件管理中心更换国内镜像软件包源地址</h2>
+<p>由于 SteamOS 其实是基于 Arch Linux 开发的，而「软件包」则是 Linux、BSD 以及其它类似操作系统中对于一种软件所进行打包的方式。在很多时候，善于使用 CLI 或 GUI 方式来为 Linux 安装软件不失为用户日常使用过程中的一种进阶操作（<s>其实应该算是基础操作</s>）</p>
+<p>而对于 Steam Deck 所搭载的 SteamOS 而言，显然其还需要在很多方面作出改进。比如，当你第一次在 Steam Deck 中退出 Steam 或者需要一些进阶操作而需要回到桌面模式时会发现，默认被固定在底部的 Firefox 居然只是一个「安装链接」。实际轻点底部的 Firefox 图标后只会打开 SteamOS 自带的 Discover 软件管理中心的 Firefox 安装界面。而因为一些特殊的原因，国内打开 Discover 软件管理中心通常来说都会失败，那么将系统默认的软件包源地址更改为国内镜像站的地址就是一项「基础中的基础操作」了</p>
+<p>在 SteamOS 中更换 Discover 软件管理中心的软件包源地址的方式比较特别，你需要按照如下的操作来进行：</p>
+<ol>
+<li>进入 Steam Deck 的桌面模式</li>
+<li>轻点 Steam Deck 左下角的 Deck 图标，在 App 分类中选择 System &gt; Konsole，打开 Terminal 终端</li>
+<li>输入 <code>passwd</code> 设置你的管理员密码并回车确认，提示 <code>passwd: password updated successfully</code> 即表明管理员密码设置成功</li>
+<li>输入 <code>sudo steamos-readonly disable</code>，回车确认并输入在前述步骤中设置的管理员密码来关闭 SteamOS 对于系统文件的只读权限</li>
+<li>输入 <code>flatpak remote-modify flathub --url=https://mirror.sjtu.edu.cn/flathub</code></li>
+<li>重新启动 Steam Deck</li>
+</ol>
+<p>如果需要恢复官方软件包源，可以输入 <code>sudo flatpak remote-modify flathub --url=https://flathub.org/repo</code></p>
+<p>更换完软件包源地址后，你就可以进入 Discover 软件管理中心安装 Firefox 等应用程序了。当然，你也可以通过透明代理等方式来解决 Discover 软件管理中心使用国外软件包源地址而导致的无法打开商店或下载速度慢等问题</p>
+<h2 id="为-steam-deck-安装插件">为 Steam Deck 安装插件</h2>
+<p>Steam Deck 中有很多社区开发者开发的十分好用的 Steam Deck 插件，但是这些插件由于并没有所谓的「官方商店」可供其上架，因此还需要我们为此进行一番折腾来将其启用</p>
+<p>以安装 TO MOON 插件为例，你需要按照如下的操作来进行：</p>
+<ol>
+<li>在 Steam Deck 的「Gaming Mode」（即 Steam Deck 开机自启的 Steam）界面下，按下 Steam Deck 的「Steam」键</li>
+<li>点选「设置」</li>
+<li>在设置中，继续选择「系统」</li>
+<li>向下滑动，在「系统设置」部分启用「启用开发者模式」</li>
+<li>在设置的汉堡菜单中点选新出现的「开发者」</li>
+<li>向下滑动，在「杂项」部分启用「CEF 远程调试」</li>
+<li>重新启动 Steam Deck，并在重启后进入桌面模式</li>
+<li>轻点 Steam Deck 左下角的 Deck 图标，在 App 分类中选择 System &gt; Konsole，打开 Terminal 终端</li>
+<li>输入 <code>curl -L http://dl.ohmydeck.net | sh</code> 安装 Plugin Loader 插件功能</li>
+<li>输入 <code>curl -L http://i.ohmydeck.net | sh</code> 安装 TO MOON 插件</li>
+<li>点击桌面的「Return to Gaming Mode」回到 Steam Deck 的 Gaming Mode</li>
+<li>按下 Steam Deck 的「…」键</li>
+<li>轻点左侧的 Plugin 图标，进入 Decky 插件页面</li>
+</ol>
+<p>这样，你就为 Steam Deck 启动了插件功能并安装了 TO MOON 插件。点击 Plugin 页面的商店图标，可以继续探索由社区开发者开发的各式各样的 Steam Deck 插件</p>
+<p>以下，为你推荐一些我安装的插件：</p>
+<ul>
+<li>To Moon：解决在无法进行透明代理的位置为 Steam Deck 进行代理</li>
+<li>ProtonDB Badges：在游戏详情页上显示其与 Steam Deck 的兼容情况，数据来源于此前的 ProtonDB</li>
+<li>Battery Tracker：跟踪 Steam Deck 的电量使用情况，辅助你更好的调整 Steam Deck 的能耗平衡</li>
+<li>Controller Tools：为 Steam Deck 引入第三方的控制器管理功能</li>
+<li>SteamGridDB：为你的游戏匹配更多适合的海报等内容</li>
+<li>Wine Cellar：获取你的 Steam Deck 所安装的所有支持的 Wine 等兼容层版本</li>
+</ul>
+<p>接下来，只管在 Steam Deck 中享受游戏即可～</p>
+<hr class="footnotes-sep">
+<section class="footnotes">
+<ol class="footnotes-list">
+<li id="fn1" class="footnote-item"><p>SteamOS 的软键盘需要在 Gaming Mode（或者说打开并登录 Steam）下才能通过「Steam」+「X」键打开 <a href="#fnref1" class="footnote-backref">↩︎</a></p>
+</li>
+</ol>
+</section>
+
+        </div>
+
+        <div class="jumbotron">
+          <div class="container">
+            <p><i class="ri-article-line"></i> <a href="https://yyl125.top/post/some_things_happened_to_steam_deck/" target="_blank">折腾 Steam Deck 二三事</a></p>
+            <p><i class="ri-creative-commons-line"></i> 许可协议：<a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" target="_blank">CC BY-NC-SA 4.0</a>。欲了解更多相关信息，详见 <a href="https://yyl125.top/copyright/" target="_blank">版权信息与资源使用说明</a> 页面</p>
+            <p><i class="ri-error-warning-line"></i> 本站所有内容除特别说明外，皆为原创发布。欢迎尊重原创作者版权的转载或引用。转载或引用时请注明出处</p>
+            <br>
+            <p><i class="ri-feedback-line"></i> 出现了影响阅读的问题？不妨 <a href="mailto:support@yyl125.cc?subject=Benjamin's%20Blog%20%E9%97%AE%E9%A2%98%E5%8F%8D%E9%A6%88" target="_blank" rel="noreferrer noopener">反馈</a> 一下吧</p>
+          </div>
+        </div>
+
+        
+        
+      </div>
+
+      <div class="jumbotron-comment">
+        <div class="container">
+          <p><i class="ri-message-3-line"></i> 欢迎任何与文章内容相关并保持尊重的评论，评论时请遵守 <a href="https://yyl125.top/comment_policy/">评论准则</a></p>
+        </div>
+      </div>
+
+      
+
+      
+        <div id="tcomment"></div>
+      
+      
+      <footer class="py-12 text-center px-4 md:px-0" v-pre>
+  共 24 篇文章｜<a href="https://yyl125.top/copyright" target="_blank">版权信息与资源使用说明</a>｜<i class="ri-rss-line"></i> <a href="https://yyl125.top/atom.xml" target="_blank">RSS</a><br>Copyright © 2026 Benjamin. All rights reserved.
+</footer>
+
+
+    </div>
+
+    <!-- TOC Container -->
+    <div class="fixed right-0 bottom-0 mb-16 mr-4 shadow w-8 h-8 rounded-full flex justify-center items-center z-10 cursor-pointer bg-white dark:bg-gray-500 dark:text-gray-200 hover:shadow-lg transition-all animated fadeInRight" @click="showToc = true">
+      <i class="ri-file-list-line"></i>
+    </div>
+
+    <div class="fixed right-0 top-0 bottom-0 overflow-y-auto w-64 bg-white dark:bg-gray-800 p-4 border-l border-gray-100 dark:border-gray-600 z-10 transition-fast" :class="{ '-mr-64': !showToc }">
+      <div class="flex mb-4 justify-end">
+        <div class="w-8 h-8 inline-flex justify-center items-center rounded-full cursor-pointer hover:bg-gray-200 dark:hover:bg-gray-600 transition-fast" @click="showToc = false">
+          <i class="ri-close-line text-lg"></i>
+        </div>
+      </div>
+      <div class="post-toc-container">
+        <ul class="markdownIt-TOC">
+<li>
+<ul>
+<li><a href="#%E5%BC%80%E6%9C%BA%E8%81%94%E7%BD%91">开机联网</a></li>
+<li><a href="#%E4%B8%BA-discover-%E8%BD%AF%E4%BB%B6%E7%AE%A1%E7%90%86%E4%B8%AD%E5%BF%83%E6%9B%B4%E6%8D%A2%E5%9B%BD%E5%86%85%E9%95%9C%E5%83%8F%E8%BD%AF%E4%BB%B6%E5%8C%85%E6%BA%90%E5%9C%B0%E5%9D%80">为 Discover 软件管理中心更换国内镜像软件包源地址</a></li>
+<li><a href="#%E4%B8%BA-steam-deck-%E5%AE%89%E8%A3%85%E6%8F%92%E4%BB%B6">为 Steam Deck 安装插件</a></li>
+</ul>
+</li>
+</ul>
+
+      </div>
+    </div>
+
+    <!-- Back to top -->
+    <div class="fixed right-0 bottom-0 mb-4 mr-4 shadow w-8 h-8 rounded-full flex justify-center items-center z-10 cursor-pointer bg-white hover:shadow-lg transition-all dark:bg-gray-500 dark:text-gray-200" @click="backToUp" v-show="scrolled">
+      <i class="ri-arrow-up-line"></i>
+    </div>
+
+  </div>
+
+<!--  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script> -->
+  <script src="https://yyl125.top/media/scripts/vue.js"></script>
+  <script src="https://yyl125.top/media/scripts/main.js"></script>
+  <script src="https://yyl125.top/media/scripts/linkcard.js"></script>
+  <script src="https://yyl125.top/media/scripts/view-image.min.js"></script>
+  <script>
+    window.ViewImage && ViewImage.init('.markdown img');
+    var lazyLoadInstance = new LazyLoad({});
+    lazyLoadInstance.update();
+  </script>
+  
+  <!-- Mermaid -->
+  
+
+  <!-- Code Highlight -->
+  
+    <script src="https://yyl125.top/media/scripts/prism.js"></script>
+    <script>
+      Prism.highlightAll()
+    </script>
+  
+
+  <!-- Twikoo -->
+  
+    <script src="https://cdn.jsdelivr.net/npm/twikoo@1.6.44/dist/twikoo.min.js"></script>
+<script>
+  twikoo.init({
+    envId: 'https://twikoo-deploy-one.vercel.app',
+    el: '#tcomment'
+  })
+</script>
+  
+
+</body>
+
+</html>

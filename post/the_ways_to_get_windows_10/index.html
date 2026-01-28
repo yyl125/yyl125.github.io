@@ -1,0 +1,352 @@
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<meta name="google-site-verification" content="mzGZdCiBsXZ5XSYVt7eh7KL8L64yuidUoeBNw_53XHk" />
+<meta name="referrer" content="same-origin">
+<title>获取 Windows 10 副本的几种方式 - Benjamin&#39;s Blog</title>
+<link rel="shortcut icon" href="https://yyl125.top/favicon.ico">
+<link href="https://cdn.jsdelivr.net/npm/remixicon@latest/fonts/remixicon.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.7.2/animate.min.css">
+<link rel="stylesheet" href="https://yyl125.top/media/css/tailwind.css">
+<link rel="stylesheet" href="https://yyl125.top/styles/main.css">
+
+
+<link rel="alternate" type="application/atom+xml" title="获取 Windows 10 副本的几种方式 - Benjamin&#39;s Blog - Atom Feed" href="https://yyl125.top/atom.xml">
+<!----<script src="https://yyl125.top/media/scripts/bootstrap.bundle.min.js"></script>---->
+
+
+  
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-Q6KYP4QSBH"></script>
+    <script>
+      var host = window.location.hostname;
+      if(host != "localhost")
+      {
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-Q6KYP4QSBH');
+      }
+    </script>
+  
+
+<script defer>
+(function (document) {
+  const SOURCE = 'https://cdn.jsdelivr.net';
+  const DEST = 'https://gcore.jsdelivr.net';
+  const $ = document.querySelectorAll.bind(document);
+  const checkAvailable = (callback) => {
+    let timeoutId;
+    const newNode = document.createElement('link');
+    newNode.rel = 'stylesheet';
+    newNode.text = 'text/css';
+    const onError = () => {
+      if (!timeoutId) {
+        return;
+      }
+
+      clearTimeout(timeoutId);
+      timeoutId = 0;
+      newNode.href = 'about:blank';
+      newNode.remove();
+      callback(false);
+    };
+
+    timeoutId = setTimeout(onError, 2000);
+    newNode.addEventListener('error', onError);
+    newNode.addEventListener('load', function () {
+      newNode.remove();
+      clearTimeout(timeoutId);
+      callback(true);
+    });
+
+    newNode.href =
+      SOURCE +
+      '/gh/PipecraftNet/jsdelivr-auto-fallback@main/empty.css?' +
+      Date.now();
+    document.head.insertAdjacentElement('afterbegin', newNode);
+  };
+
+  const replaceElementSrc = () => {
+    for (const element of $('link[rel="stylesheet"]')) {
+      if (element.href && element.href.includes(SOURCE)) {
+        element.href = element.href.replace(SOURCE, DEST);
+      }
+    }
+
+    for (const element of $('script')) {
+      if (element.src && element.src.includes(SOURCE)) {
+        const newNode = document.createElement('script');
+        newNode.src = element.src.replace(SOURCE, DEST);
+        element.defer = true;
+        element.src = '';
+        element.before(newNode);
+        element.remove();
+      }
+    }
+
+    for (const element of $('img')) {
+      if (element.src && element.src.includes(SOURCE)) {
+        const source = element.src;
+        // Used to cancel loading. Without this line it will remain pending status.
+        element.src = '';
+        element.src = source.replace(SOURCE, DEST);
+      }
+    }
+  };
+
+  checkAvailable(function (isAvailable) {
+    if (isAvailable) {
+      return;
+    }
+
+    console.warn(SOURCE + ' is not available.');
+
+    replaceElementSrc();
+    // Replace dynamically added elements
+    setInterval(replaceElementSrc, 500);
+  });
+})(document);
+</script>
+  <meta name="description" content="了解获取 Windows 10 副本的几种方式
+
+概述
+技术术语
+对于 Windows 10 副本，你需了解以下几个技术术语：
+
+Windows 生命周期：每个 Windows 产品都有生命周期。生命周期从产品发布时算起，直至完全失去微软官..." />
+  <meta property="og:title" content="获取 Windows 10 副本的几种方式 - Benjamin&#39;s Blog">
+  <meta property="og:description" content="了解获取 Windows 10 副本的几种方式
+
+概述
+技术术语
+对于 Windows 10 副本，你需了解以下几个技术术语：
+
+Windows 生命周期：每个 Windows 产品都有生命周期。生命周期从产品发布时算起，直至完全失去微软官..." />
+  <meta property="og:type" content="articles">
+  <meta property="og:url" content="https://yyl125.top/post/the_ways_to_get_windows_10/" />
+  <meta property="og:image" content="https://oss.yyl125.cc/blog/img/post/Ingenious_Skills/The_Ways_to_Get_Windows_10/The_Ways_to_Get_Windows_10_Banner.jpeg">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:width" content="1200">
+  <meta name="twitter:title" content="获取 Windows 10 副本的几种方式 - Benjamin&#39;s Blog">
+  <meta name="twitter:description" content="了解获取 Windows 10 副本的几种方式
+
+概述
+技术术语
+对于 Windows 10 副本，你需了解以下几个技术术语：
+
+Windows 生命周期：每个 Windows 产品都有生命周期。生命周期从产品发布时算起，直至完全失去微软官...">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="canonical" href="https://yyl125.top/post/the_ways_to_get_windows_10/">
+
+  <script src="https://cdn.jsdelivr.net/npm/vanilla-lazyload@17.8.8/dist/lazyload.min.js"></script>
+  <script type="module" src="https://yyl125.top/media/scripts/emaction.js"></script>
+
+  
+    <link rel="stylesheet" href="https://yyl125.top/media/css/prism-atom-dark.css">
+  
+
+  
+</head>
+
+<body>
+  <div class="antialiased flex flex-col min-h-screen" id="app">
+    <a href="https://yyl125.top" class="fixed top-0 left-0 mt-4 bg-black text-white dark:text-gray-700 dark:bg-yellow-50 dark:hover:bg-black dark:hover:text-white inline-flex p-2 pl-8 hover:text-gray-700 hover:bg-yellow-50 font-bold z-10 transition-fast animated fadeInLeft">
+      Benjamin&#39;s Blog
+    </a>
+    <div class="max-w-4xl w-full mx-auto">
+      <div class="shadow-box bg-white dark:bg-gray-600 rounded-lg pt-32 md:pt-64 px-4 md:px-8 pb-8 animated fadeIn mb-8">
+        <h1 class="text-5xl font-semibold leading-normal pb-8 mb-8 border-b-8 border-gray-700">
+          获取 Windows 10 副本的几种方式
+        </h1>
+        
+          <img src="https://oss.yyl125.cc/blog/img/post/Ingenious_Skills/The_Ways_to_Get_Windows_10/The_Ways_to_Get_Windows_10_Banner.jpeg" alt="获取 Windows 10 副本的几种方式" class="block w-full mb-8">
+        
+        <div class="mb-8 flex flex-wrap">
+          <div class="text-gray-400 text-sm mr-4"><i class="ri-calendar-2-line"></i> 2020-02-14 · <i class="ri-timer-line"></i> 8 min read · <i class="ri-eye-line"></i> <span id="twikoo_visitors">0</span></div>
+          
+            <a href="https://yyl125.top/tag/Ingenious_skills/" class="text-gray-700 dark:text-gray-200 text-sm hover:transition-all duration-100 inline-flex mr-2">
+              <i class="ri-hashtag"></i>
+              Ingenious Skills
+            </a>
+          
+        </div>
+        
+        <div class="jumbotron">
+          <div class="container">
+            <p><i class="ri-time-line"></i> 这是一篇发布于 6 年前的文章，其中的信息可能已经有所发展或是发生改变</p>
+          </div>
+        </div>
+
+        
+
+        
+        
+        <div class="markdown mb-8" v-pre id="post-content">
+          <p>了解获取 Windows 10 副本的几种方式</p>
+<!-- more -->
+<h2 id="概述">概述</h2>
+<h3 id="技术术语">技术术语</h3>
+<p>对于 Windows 10 副本，你需了解以下几个技术术语：</p>
+<ul>
+<li>Windows 生命周期：每个 Windows 产品都有生命周期。生命周期从产品发布时算起，直至完全失去微软官方提供的安全更新为止。了解生命周期的关键日期可帮助你在对软件进行更新、升级或其他更改时，做出明智的决策。你可以在 <a href="https://support.microsoft.com/zh-cn/help/13853/windows-lifecycle-fact-sheet" target="_blank"> Microsoft 官网</a> 了解更多有关 Windows 生命周期的信息</li>
+<li>ISO：光盘映像文件。在实际应用中，ISO 文件可直接通过 Windows 资源管理器或提供压缩解压缩服务的应用程序打开。ISO 文件还可用于制作 U 盘/光盘形式的 Windows 启动盘</li>
+<li>Windows 激活：Windows 需要正版密钥才可以有效激活使用。对于 Windows 而言，只有使用从 Microsoft 或 Microsoft 授权经销商处获取的正版密钥来激活 Windows 才算是<strong>真正法律意义上的</strong>激活。具体内容可以参考<a href="#%E5%86%99%E5%9C%A8%E6%9C%80%E5%90%8E">我的个人理解</a></li>
+<li>Windows 10 版本：广义上，Windows 10 版本分为 企业版/教育版/专业版/专业教育版/专业工作站版/家庭版 和 企业 LTSC/LTSB 版本。除企业 LTSC/LTSB 版本外，可统称为「Windows 10 半年频道」。针对 Windows 10 的功能更新每年将通过半年频道发布两次，定于每年的 3 月和 9 月。特殊情况下可能会推迟发布，但总体保持每年两次功能更新的节奏</li>
+</ul>
+<h3 id="声明">声明</h3>
+<p><strong>所有副本均为试用版，如有正版密钥可以有效激活，在此不提供任何激活和相关服务</strong>商业等用途的 Windows 10，请从 Microsoft 或 Microsoft 授权提供商处获取正版 Windows 10。<strong>本站不对非法使用 Windows 10 的行为负责</strong></p>
+<h2 id="windows-媒体创建工具">Windows 媒体创建工具</h2>
+<p>此工具可用于下载 Windows 10 版本的系统 ISO 副本文件，同时可在工具内选择直接封装于 U 盘等可移动设备以用作启动工具</p>
+<p>Windows 媒体创建工具支持 32 位和 64 位不同版本的 Windows 10 ISO 内容创建</p>
+<p>你可以在这个 <a href="https://www.microsoft.com/zh-cn/software-download/windows10" target="_blank">页面</a> 获取到最新版本的 Windows 媒体创建工具。你需要使用 Windows 设备访问这个页面</p>
+<h2 id="iso-文件">ISO 文件</h2>
+<p>ISO 文件是可以直接打开进行安装的一类文件，又名「光盘映像文件」。通过 Windows 媒体创建工具所获取到的 Windows 副本可以直接在媒体创建工具中转换为 ISO 文件存储</p>
+<p>另外，你可以在这个 <a href="https://www.microsoft.com/zh-cn/software-download/windows10ISO" target="_blank">页面</a> 获取到 ISO 文件。不限设备访问</p>
+<h2 id="msdn-订阅">MSDN 订阅</h2>
+<p>除了使用 Microsoft 官方提供的媒体创建工具获取镜像副本外，你还可以通过 MSDN 订阅或通过 <a href="https://msdn.itellyou.cn/" target="_blank">MSDN,I tell you</a> 获取 MSDN 版本的镜像副本。两者所获取到的镜像副本内容完全相同，且相较于媒体创建工具更加灵活。通过 MSDN 订阅获取到的文件均为 ISO 文件，开箱即用</p>
+<ol>
+<li>打开 MSND，I tell you；</li>
+<li>在左侧的类别选项中选择「操作系统」；</li>
+<li>向下滚动步进器，然后选择你需要的 Windows 10 版本；</li>
+<li>在右侧的详细信息栏中选择你需要的具体版本。「Consumer Editions」指消费者版本，「Business Editions」指商务版本。一般用户选择合适的体系架构的消费者版本即可；</li>
+<li>点击对应项目下的「详细信息」按钮，复制下方提供 ed2k 链接至支持的下载工具进行下载即可</li>
+</ol>
+<h2 id="写在最后">写在最后</h2>
+<h3 id="正版和盗版是针对授权维度">正版和盗版是针对「授权」维度</h3>
+<p>「授权」的含义简单来说是「获得许可」，其表现形式通常是一段固定格式的非公开代码，俗称「激活码」（又被叫做「密钥（yuè）」）。由此正版可以理解为「已获得合法许可」，盗版则为「未获得合法许可」。至于是谁授权给谁，谁可以合法使用则是根据各个软件厂商对自己授权的定义。有的针对设备授权，有的针对个人或企业授权，并不是完全都相同，还有不同的版本区分</p>
+<blockquote>
+<p>比如说厂商 A 将软件使用授权给企业 B，其授权范围为企业 B 下所有职工，那么员工 C 在入职企业 B 后即获得使用授权，在离职后即失去使用授权，在此期间任意使用都算是正版。如果授权的版本是「标准版」，而员工使用的是「高级版」，那么就属于盗版。如果电脑是员工 C 自行购买，入职时安装了该软件，离职时未删除，并且之后还继续使用该软件，那么也属于盗版</p>
+</blockquote>
+<p>有一些企业早已经为自己员工购买了使用授权，而员工自己却以为使用的是盗版。这种情况也时有发生</p>
+<p>厂商发行软件、发放激活码通常是两个独立行为。软件则一般具备对激活码的验证功能，验证通过则允许使用软件功能，不通过则阻止继续使用或自动关闭。但是软件只能做到验证激活码是否有效，不能验证其获得渠道是否合法，如果渠道非法，也是盗版</p>
+<h3 id="原版-纯净版-精简版-破解版-汉化版是针对软件维度">原版、纯净版、精简版、破解版、汉化版是针对「软件」维度</h3>
+<p>一般软件可以理解为「源码」、「编译」、「封装」、「发行」几个部分，其过程均为同一人/团队/单位/合作伙伴单独或共同完成</p>
+<p>「原版」即为此过程经发行后的最终版本，每一个最终版本都有一个「文件指纹」，任何一个过程产生变化，最终文件指纹也会随之变化</p>
+<p>在MSDN上，这个指纹就是 SHA1，是已知的作为验证原版的唯一手段</p>
+<p>SHA1 只是一种指纹的算法，长度 40 位，常见的还有 MD5（长度 32 位）、SHA256（长度 64 位）、SHA384（长度 96 位）、SHA512（长度 128 位）等。MD5 是已知非安全算法，可以伪造出相同 MD5 值。但实际的文件不同，只能参考，不建议再作为唯一依据。SHA1 目前是发现有相同 SHA1 值的不同文件，但还不能指定一个 SHA1 值进行文件伪造，尚属安全</p>
+<p>与原版相对应的版本我都归结为「修改版」，含义是对原版软件进行了二次修改，并已导致指纹与原版不同，文件名的修改不会影响指纹</p>
+<p>因此也就至少存在三个方面无法验证。修改前的内容是什么？被修改的内容是什么？有没有一些没有说明出来但也修改了的内容？比如添加了恶意软件、木马、病毒？判断是否可信的依据仅为主观的对修改者的取信程度。根据个人 10 多年的软件使用经验，使用好评 10 万+，可能都是来自同一台电脑。通常很难验证的软件，就需要抱有怀疑态度。一般表面合理的修改只是为了掩饰潜在的目的</p>
+<p>「纯净版」其中有一些人指的是原版，还有一些人指的是文件已经过修改，指纹也已经发生变化，但文件内所包含的内容均与原版一致。如果是指原版，可以按上述指纹验证，如果另一部分就很难验证</p>
+<p>「精简版」已明确是属于修改版，通常针对软件中不经常使用的部分进行删除或屏蔽，意义在于节省软件运行过程中占用的资源</p>
+<p>「破解版」已明确是属于修改版，通常仅针对软件中验证激活码的功能进行修改，意义在于不需要进行激活码验证，或者使用假激活码也可能验证通过，从而使用软件功能</p>
+<p>「汉化版」含义是汉字化，中文化。其中有一部分是指软件是原版，但不是中文，只加入了中文对照。这种情况其实很少，常规操作是翻译人员向软件的官方提交中文对照，以语言包的形式提供。更多的另一部分通常是针对软件本身的操作界面进行修改，变更为中文使用更方便</p>
+<p>综上，所有的修改，都需要对修改者的诚信进行判断</p>
+<p>本人不对修改行为进行评价，毕竟有可信的，也有不可信的，是不是违反软件使用协议也不一定，开源软件还特别鼓励对软件进行修改。修改版也未必比原版差，原版的好处只是来源可信，有可验证的方法</p>
+
+        </div>
+
+        <div class="jumbotron">
+          <div class="container">
+            <p><i class="ri-article-line"></i> <a href="https://yyl125.top/post/the_ways_to_get_windows_10/" target="_blank">获取 Windows 10 副本的几种方式</a></p>
+            <p><i class="ri-creative-commons-line"></i> 许可协议：<a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" target="_blank">CC BY-NC-SA 4.0</a>。欲了解更多相关信息，详见 <a href="https://yyl125.top/copyright/" target="_blank">版权信息与资源使用说明</a> 页面</p>
+            <p><i class="ri-error-warning-line"></i> 本站所有内容除特别说明外，皆为原创发布。欢迎尊重原创作者版权的转载或引用。转载或引用时请注明出处</p>
+            <br>
+            <p><i class="ri-feedback-line"></i> 出现了影响阅读的问题？不妨 <a href="mailto:support@yyl125.cc?subject=Benjamin's%20Blog%20%E9%97%AE%E9%A2%98%E5%8F%8D%E9%A6%88" target="_blank" rel="noreferrer noopener">反馈</a> 一下吧</p>
+          </div>
+        </div>
+
+        
+        
+      </div>
+
+      <div class="jumbotron-comment">
+        <div class="container">
+          <p><i class="ri-message-3-line"></i> 欢迎任何与文章内容相关并保持尊重的评论，评论时请遵守 <a href="https://yyl125.top/comment_policy/">评论准则</a></p>
+        </div>
+      </div>
+
+      
+
+      
+        <div id="tcomment"></div>
+      
+      
+      <footer class="py-12 text-center px-4 md:px-0" v-pre>
+  共 24 篇文章｜<a href="https://yyl125.top/copyright" target="_blank">版权信息与资源使用说明</a>｜<i class="ri-rss-line"></i> <a href="https://yyl125.top/atom.xml" target="_blank">RSS</a><br>Copyright © 2026 Benjamin. All rights reserved.
+</footer>
+
+
+    </div>
+
+    <!-- TOC Container -->
+    <div class="fixed right-0 bottom-0 mb-16 mr-4 shadow w-8 h-8 rounded-full flex justify-center items-center z-10 cursor-pointer bg-white dark:bg-gray-500 dark:text-gray-200 hover:shadow-lg transition-all animated fadeInRight" @click="showToc = true">
+      <i class="ri-file-list-line"></i>
+    </div>
+
+    <div class="fixed right-0 top-0 bottom-0 overflow-y-auto w-64 bg-white dark:bg-gray-800 p-4 border-l border-gray-100 dark:border-gray-600 z-10 transition-fast" :class="{ '-mr-64': !showToc }">
+      <div class="flex mb-4 justify-end">
+        <div class="w-8 h-8 inline-flex justify-center items-center rounded-full cursor-pointer hover:bg-gray-200 dark:hover:bg-gray-600 transition-fast" @click="showToc = false">
+          <i class="ri-close-line text-lg"></i>
+        </div>
+      </div>
+      <div class="post-toc-container">
+        <ul class="markdownIt-TOC">
+<li>
+<ul>
+<li><a href="#%E6%A6%82%E8%BF%B0">概述</a>
+<ul>
+<li><a href="#%E6%8A%80%E6%9C%AF%E6%9C%AF%E8%AF%AD">技术术语</a></li>
+<li><a href="#%E5%A3%B0%E6%98%8E">声明</a></li>
+</ul>
+</li>
+<li><a href="#windows-%E5%AA%92%E4%BD%93%E5%88%9B%E5%BB%BA%E5%B7%A5%E5%85%B7">Windows 媒体创建工具</a></li>
+<li><a href="#iso-%E6%96%87%E4%BB%B6">ISO 文件</a></li>
+<li><a href="#msdn-%E8%AE%A2%E9%98%85">MSDN 订阅</a></li>
+<li><a href="#%E5%86%99%E5%9C%A8%E6%9C%80%E5%90%8E">写在最后</a>
+<ul>
+<li><a href="#%E6%AD%A3%E7%89%88%E5%92%8C%E7%9B%97%E7%89%88%E6%98%AF%E9%92%88%E5%AF%B9%E6%8E%88%E6%9D%83%E7%BB%B4%E5%BA%A6">正版和盗版是针对「授权」维度</a></li>
+<li><a href="#%E5%8E%9F%E7%89%88-%E7%BA%AF%E5%87%80%E7%89%88-%E7%B2%BE%E7%AE%80%E7%89%88-%E7%A0%B4%E8%A7%A3%E7%89%88-%E6%B1%89%E5%8C%96%E7%89%88%E6%98%AF%E9%92%88%E5%AF%B9%E8%BD%AF%E4%BB%B6%E7%BB%B4%E5%BA%A6">原版、纯净版、精简版、破解版、汉化版是针对「软件」维度</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+      </div>
+    </div>
+
+    <!-- Back to top -->
+    <div class="fixed right-0 bottom-0 mb-4 mr-4 shadow w-8 h-8 rounded-full flex justify-center items-center z-10 cursor-pointer bg-white hover:shadow-lg transition-all dark:bg-gray-500 dark:text-gray-200" @click="backToUp" v-show="scrolled">
+      <i class="ri-arrow-up-line"></i>
+    </div>
+
+  </div>
+
+<!--  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script> -->
+  <script src="https://yyl125.top/media/scripts/vue.js"></script>
+  <script src="https://yyl125.top/media/scripts/main.js"></script>
+  <script src="https://yyl125.top/media/scripts/linkcard.js"></script>
+  <script src="https://yyl125.top/media/scripts/view-image.min.js"></script>
+  <script>
+    window.ViewImage && ViewImage.init('.markdown img');
+    var lazyLoadInstance = new LazyLoad({});
+    lazyLoadInstance.update();
+  </script>
+  
+  <!-- Mermaid -->
+  
+
+  <!-- Code Highlight -->
+  
+    <script src="https://yyl125.top/media/scripts/prism.js"></script>
+    <script>
+      Prism.highlightAll()
+    </script>
+  
+
+  <!-- Twikoo -->
+  
+    <script src="https://cdn.jsdelivr.net/npm/twikoo@1.6.44/dist/twikoo.min.js"></script>
+<script>
+  twikoo.init({
+    envId: 'https://twikoo-deploy-one.vercel.app',
+    el: '#tcomment'
+  })
+</script>
+  
+
+</body>
+
+</html>

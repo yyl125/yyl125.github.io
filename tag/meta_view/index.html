@@ -1,0 +1,279 @@
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<meta name="google-site-verification" content="mzGZdCiBsXZ5XSYVt7eh7KL8L64yuidUoeBNw_53XHk" />
+<meta name="referrer" content="same-origin">
+<title>Benjamin&#39;s Blog</title>
+<link rel="shortcut icon" href="https://yyl125.top/favicon.ico">
+<link href="https://cdn.jsdelivr.net/npm/remixicon@latest/fonts/remixicon.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.7.2/animate.min.css">
+<link rel="stylesheet" href="https://yyl125.top/media/css/tailwind.css">
+<link rel="stylesheet" href="https://yyl125.top/styles/main.css">
+
+
+<link rel="alternate" type="application/atom+xml" title="Benjamin&#39;s Blog - Atom Feed" href="https://yyl125.top/atom.xml">
+<!----<script src="https://yyl125.top/media/scripts/bootstrap.bundle.min.js"></script>---->
+
+
+  
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-Q6KYP4QSBH"></script>
+    <script>
+      var host = window.location.hostname;
+      if(host != "localhost")
+      {
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-Q6KYP4QSBH');
+      }
+    </script>
+  
+
+<script defer>
+(function (document) {
+  const SOURCE = 'https://cdn.jsdelivr.net';
+  const DEST = 'https://gcore.jsdelivr.net';
+  const $ = document.querySelectorAll.bind(document);
+  const checkAvailable = (callback) => {
+    let timeoutId;
+    const newNode = document.createElement('link');
+    newNode.rel = 'stylesheet';
+    newNode.text = 'text/css';
+    const onError = () => {
+      if (!timeoutId) {
+        return;
+      }
+
+      clearTimeout(timeoutId);
+      timeoutId = 0;
+      newNode.href = 'about:blank';
+      newNode.remove();
+      callback(false);
+    };
+
+    timeoutId = setTimeout(onError, 2000);
+    newNode.addEventListener('error', onError);
+    newNode.addEventListener('load', function () {
+      newNode.remove();
+      clearTimeout(timeoutId);
+      callback(true);
+    });
+
+    newNode.href =
+      SOURCE +
+      '/gh/PipecraftNet/jsdelivr-auto-fallback@main/empty.css?' +
+      Date.now();
+    document.head.insertAdjacentElement('afterbegin', newNode);
+  };
+
+  const replaceElementSrc = () => {
+    for (const element of $('link[rel="stylesheet"]')) {
+      if (element.href && element.href.includes(SOURCE)) {
+        element.href = element.href.replace(SOURCE, DEST);
+      }
+    }
+
+    for (const element of $('script')) {
+      if (element.src && element.src.includes(SOURCE)) {
+        const newNode = document.createElement('script');
+        newNode.src = element.src.replace(SOURCE, DEST);
+        element.defer = true;
+        element.src = '';
+        element.before(newNode);
+        element.remove();
+      }
+    }
+
+    for (const element of $('img')) {
+      if (element.src && element.src.includes(SOURCE)) {
+        const source = element.src;
+        // Used to cancel loading. Without this line it will remain pending status.
+        element.src = '';
+        element.src = source.replace(SOURCE, DEST);
+      }
+    }
+  };
+
+  checkAvailable(function (isAvailable) {
+    if (isAvailable) {
+      return;
+    }
+
+    console.warn(SOURCE + ' is not available.');
+
+    replaceElementSrc();
+    // Replace dynamically added elements
+    setInterval(replaceElementSrc, 500);
+  });
+})(document);
+</script>
+  <meta name="description" content="Stay hungry. Stay foolish." />
+</head>
+<body>
+  <div class="antialiased flex flex-col min-h-screen" id="app">
+
+    <div class="nav py-3 md:py-8 fixed w-full z-10 bg-gray-50 dark:bg-gray-700 transition-all duration-300" :class="{ 'scroll': scrolled }">
+  <div class="flex justify-end px-4">
+    <div class="w-8 h-8 flex justify-center items-center rounded-full md:hidden" @click="showMenu = !showMenu">
+      <i class="ri-close-line" v-show="showMenu"></i>
+      <i class="ri-menu-3-line" v-show="!showMenu"></i>
+    </div>
+  </div>
+  <nav class="max-w-6xl w-full mx-auto text-center flex flex-col md:flex-row justify-center md:block" :class="`${ showMenu ? 'block' : 'hidden' }`">
+    
+      <a href="/" target="" class="py-2 md:py-1 px-4 mx-4 inline-flex transition font-semibold rounded dark:hover:bg-gray-600 hover:bg-gray-200">
+        首页
+      </a>
+    
+      <a href="/tags" target="" class="py-2 md:py-1 px-4 mx-4 inline-flex transition font-semibold rounded dark:hover:bg-gray-600 hover:bg-gray-200">
+        标签
+      </a>
+    
+      <a href="/archives" target="" class="py-2 md:py-1 px-4 mx-4 inline-flex transition font-semibold rounded dark:hover:bg-gray-600 hover:bg-gray-200">
+        归档
+      </a>
+    
+      <a href="/gallery" target="" class="py-2 md:py-1 px-4 mx-4 inline-flex transition font-semibold rounded dark:hover:bg-gray-600 hover:bg-gray-200">
+        相册
+      </a>
+    
+      <a href="/reflection" target="" class="py-2 md:py-1 px-4 mx-4 inline-flex transition font-semibold rounded dark:hover:bg-gray-600 hover:bg-gray-200">
+        随想
+      </a>
+    
+      <a href="/record" target="" class="py-2 md:py-1 px-4 mx-4 inline-flex transition font-semibold rounded dark:hover:bg-gray-600 hover:bg-gray-200">
+        记录
+      </a>
+    
+      <a href="/collection" target="" class="py-2 md:py-1 px-4 mx-4 inline-flex transition font-semibold rounded dark:hover:bg-gray-600 hover:bg-gray-200">
+        收藏
+      </a>
+    
+      <a href="/about" target="" class="py-2 md:py-1 px-4 mx-4 inline-flex transition font-semibold rounded dark:hover:bg-gray-600 hover:bg-gray-200">
+        关于
+      </a>
+    
+  </nav>
+</div>
+
+
+    <div class="max-w-4xl w-full mx-auto pt-32">
+      <h1 class="text-2xl font-bold pb-8 flex justify-center items-center">
+        <i class="ri-hashtag"></i>
+        Meta View
+      </h1>
+      <div class="shadow-box bg-white dark:bg-gray-600 border-gray-300 rounded-none md:rounded-lg -mx-1 md:mx-0 md:px-0">
+        
+  <div class="p-8 border-b border-gray-200 dark:border-gray-700 flex relative overflow-hidden flex-col md:flex-row animated fadeIn">
+    
+      <i class="ri-article-line text-orange-200 absolute text-2xl left-0 ml-1 rotate-90"></i>
+    
+    <div class="flex-1 order-2 md:order-1">
+      <h2 class="text-2xl font-semibold mb-4">
+        <a href="https://yyl125.top/post/who_is_suitable_for_mac/" class="text-gray-700 dark:text-gray-200 hover:transition-all duration-100">
+          适合用 Mac 的是哪些人
+        </a>
+      </h2>
+      <div class="mb-4 text-xs text-gray-500 dark:text-gray-300">2022-03-17 · Meta View</div>
+      <div class="mb-4 text-gray-500 dark:text-gray-300">
+        <p>Mac 就像一个偏科生，其通用性确实有待提高</p>
+
+      </div>
+      <a href="https://yyl125.top/post/who_is_suitable_for_mac/" class="btn">
+        Read More
+      </a>
+    </div>
+    
+      <img class="flex-shrink-0 self-start md:ml-4 mb-4 md:mb-0 rounded-sm object-cover featured-img order-1 md:order-2 w-full h-40 md:w-56 md:h-32" loading="lazy" src="https://oss.yyl125.cc/blog/img/post/Meta_View/Who_is_Suitable_for_Mac/Who_is_Suitable_for_Mac_Banner.jpg" alt="适合用 Mac 的是哪些人">
+    
+  </div>
+
+  <div class="p-8 border-b border-gray-200 dark:border-gray-700 flex relative overflow-hidden flex-col md:flex-row animated fadeIn">
+    
+      <i class="ri-article-line text-orange-200 absolute text-2xl left-0 ml-1 rotate-90"></i>
+    
+    <div class="flex-1 order-2 md:order-1">
+      <h2 class="text-2xl font-semibold mb-4">
+        <a href="https://yyl125.top/post/not_easy_to_say_goodbye_to_flash/" class="text-gray-700 dark:text-gray-200 hover:transition-all duration-100">
+          Adobe Flash，想说「再见」不容易
+        </a>
+      </h2>
+      <div class="mb-4 text-xs text-gray-500 dark:text-gray-300">2020-07-15 · Meta View</div>
+      <div class="mb-4 text-gray-500 dark:text-gray-300">
+        <p>该进坟墓的，就不要再续命了</p>
+
+      </div>
+      <a href="https://yyl125.top/post/not_easy_to_say_goodbye_to_flash/" class="btn">
+        Read More
+      </a>
+    </div>
+    
+      <img class="flex-shrink-0 self-start md:ml-4 mb-4 md:mb-0 rounded-sm object-cover featured-img order-1 md:order-2 w-full h-40 md:w-56 md:h-32" loading="lazy" src="https://oss.yyl125.cc/blog/img/post/Meta_View/Not_Easy_to_Say_Goodbye_to_Flash/Not_Easy_to_Say_Goodbye_to_Flash_Banner.jpg" alt="Adobe Flash，想说「再见」不容易">
+    
+  </div>
+
+  <div class="p-8 border-b border-gray-200 dark:border-gray-700 flex relative overflow-hidden flex-col md:flex-row animated fadeIn">
+    
+      <i class="ri-article-line text-orange-200 absolute text-2xl left-0 ml-1 rotate-90"></i>
+    
+    <div class="flex-1 order-2 md:order-1">
+      <h2 class="text-2xl font-semibold mb-4">
+        <a href="https://yyl125.top/post/the_meaning_of_iPhone_SE/" class="text-gray-700 dark:text-gray-200 hover:transition-all duration-100">
+          iPhone SE 系列存在的意义
+        </a>
+      </h2>
+      <div class="mb-4 text-xs text-gray-500 dark:text-gray-300">2020-04-19 · Meta View</div>
+      <div class="mb-4 text-gray-500 dark:text-gray-300">
+        <p>iPhone SE（第二代）一经发布，即引发了众多讨论。在如今这个「大屏当道」的时代，这台手机看起来就像是个穿越而来的设备，多少显得有些格格不入。有人觉得它「真香」，也有人认为它是「智商鉴定机」。两种差异观点的背后，更多的是人们对「需求」的理解与认识的不同</p>
+
+      </div>
+      <a href="https://yyl125.top/post/the_meaning_of_iPhone_SE/" class="btn">
+        Read More
+      </a>
+    </div>
+    
+      <img class="flex-shrink-0 self-start md:ml-4 mb-4 md:mb-0 rounded-sm object-cover featured-img order-1 md:order-2 w-full h-40 md:w-56 md:h-32" loading="lazy" src="https://oss.yyl125.cc/blog/img/post/Meta_View/iPhone_SE_gen2/iPhone_SE_Banner.jpg" alt="iPhone SE 系列存在的意义">
+    
+  </div>
+
+  <div class="p-8 border-b border-gray-200 dark:border-gray-700 flex relative overflow-hidden flex-col md:flex-row animated fadeIn">
+    
+      <i class="ri-article-line text-orange-200 absolute text-2xl left-0 ml-1 rotate-90"></i>
+    
+    <div class="flex-1 order-2 md:order-1">
+      <h2 class="text-2xl font-semibold mb-4">
+        <a href="https://yyl125.top/post/think_about_the_new_subscribe_way/" class="text-gray-700 dark:text-gray-200 hover:transition-all duration-100">
+          新型订阅制的涌现，能否完善传统订阅制的不足？
+        </a>
+      </h2>
+      <div class="mb-4 text-xs text-gray-500 dark:text-gray-300">2020-04-17 · Meta View</div>
+      <div class="mb-4 text-gray-500 dark:text-gray-300">
+        <p>曾经很长一段时间，对于具有虚拟属性的软件或应用，都在使用买断制作为自己的商业模式。从 2016 年 App Store 改版带来的推送效应，如今从买断制转向订阅制的软件或应用越来越多，却又带来了种种思考</p>
+
+      </div>
+      <a href="https://yyl125.top/post/think_about_the_new_subscribe_way/" class="btn">
+        Read More
+      </a>
+    </div>
+    
+      <img class="flex-shrink-0 self-start md:ml-4 mb-4 md:mb-0 rounded-sm object-cover featured-img order-1 md:order-2 w-full h-40 md:w-56 md:h-32" loading="lazy" src="https://oss.yyl125.cc/blog/img/post/Meta_View/Think_About_The_New_Subscribe_Way/Think_About_The_New_Subscribe_Way_Banner.jpg" alt="新型订阅制的涌现，能否完善传统订阅制的不足？">
+    
+  </div>
+
+  
+      </div>
+
+      
+      <footer class="py-12 text-center px-4 md:px-0" v-pre>
+  共 24 篇文章｜<a href="https://yyl125.top/copyright" target="_blank">版权信息与资源使用说明</a>｜<i class="ri-rss-line"></i> <a href="https://yyl125.top/atom.xml" target="_blank">RSS</a><br>Copyright © 2026 Benjamin. All rights reserved.
+</footer>
+
+
+    </div>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+  <script src="https://yyl125.top/media/scripts/main.js"></script>
+</body>
+</html>

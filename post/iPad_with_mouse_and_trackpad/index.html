@@ -1,0 +1,300 @@
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<meta name="google-site-verification" content="mzGZdCiBsXZ5XSYVt7eh7KL8L64yuidUoeBNw_53XHk" />
+<meta name="referrer" content="same-origin">
+<title>当 iPad 遇上鼠标和触控板 - Benjamin&#39;s Blog</title>
+<link rel="shortcut icon" href="https://yyl125.top/favicon.ico">
+<link href="https://cdn.jsdelivr.net/npm/remixicon@latest/fonts/remixicon.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.7.2/animate.min.css">
+<link rel="stylesheet" href="https://yyl125.top/media/css/tailwind.css">
+<link rel="stylesheet" href="https://yyl125.top/styles/main.css">
+
+
+<link rel="alternate" type="application/atom+xml" title="当 iPad 遇上鼠标和触控板 - Benjamin&#39;s Blog - Atom Feed" href="https://yyl125.top/atom.xml">
+<!----<script src="https://yyl125.top/media/scripts/bootstrap.bundle.min.js"></script>---->
+
+
+  
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-Q6KYP4QSBH"></script>
+    <script>
+      var host = window.location.hostname;
+      if(host != "localhost")
+      {
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-Q6KYP4QSBH');
+      }
+    </script>
+  
+
+<script defer>
+(function (document) {
+  const SOURCE = 'https://cdn.jsdelivr.net';
+  const DEST = 'https://gcore.jsdelivr.net';
+  const $ = document.querySelectorAll.bind(document);
+  const checkAvailable = (callback) => {
+    let timeoutId;
+    const newNode = document.createElement('link');
+    newNode.rel = 'stylesheet';
+    newNode.text = 'text/css';
+    const onError = () => {
+      if (!timeoutId) {
+        return;
+      }
+
+      clearTimeout(timeoutId);
+      timeoutId = 0;
+      newNode.href = 'about:blank';
+      newNode.remove();
+      callback(false);
+    };
+
+    timeoutId = setTimeout(onError, 2000);
+    newNode.addEventListener('error', onError);
+    newNode.addEventListener('load', function () {
+      newNode.remove();
+      clearTimeout(timeoutId);
+      callback(true);
+    });
+
+    newNode.href =
+      SOURCE +
+      '/gh/PipecraftNet/jsdelivr-auto-fallback@main/empty.css?' +
+      Date.now();
+    document.head.insertAdjacentElement('afterbegin', newNode);
+  };
+
+  const replaceElementSrc = () => {
+    for (const element of $('link[rel="stylesheet"]')) {
+      if (element.href && element.href.includes(SOURCE)) {
+        element.href = element.href.replace(SOURCE, DEST);
+      }
+    }
+
+    for (const element of $('script')) {
+      if (element.src && element.src.includes(SOURCE)) {
+        const newNode = document.createElement('script');
+        newNode.src = element.src.replace(SOURCE, DEST);
+        element.defer = true;
+        element.src = '';
+        element.before(newNode);
+        element.remove();
+      }
+    }
+
+    for (const element of $('img')) {
+      if (element.src && element.src.includes(SOURCE)) {
+        const source = element.src;
+        // Used to cancel loading. Without this line it will remain pending status.
+        element.src = '';
+        element.src = source.replace(SOURCE, DEST);
+      }
+    }
+  };
+
+  checkAvailable(function (isAvailable) {
+    if (isAvailable) {
+      return;
+    }
+
+    console.warn(SOURCE + ' is not available.');
+
+    replaceElementSrc();
+    // Replace dynamically added elements
+    setInterval(replaceElementSrc, 500);
+  });
+})(document);
+</script>
+  <meta name="description" content="Jobs 在初代 iPad 发布会时介绍 iPad 是介于手机和电脑之间生存的一种设备。这几年随着 iPad Pro 的发布，一次一次引领整个 iPad 家族向生产力方向引导。这次，iPad 与鼠标和触控板又不知会搭配创造出何种化学反应……..." />
+  <meta property="og:title" content="当 iPad 遇上鼠标和触控板 - Benjamin&#39;s Blog">
+  <meta property="og:description" content="Jobs 在初代 iPad 发布会时介绍 iPad 是介于手机和电脑之间生存的一种设备。这几年随着 iPad Pro 的发布，一次一次引领整个 iPad 家族向生产力方向引导。这次，iPad 与鼠标和触控板又不知会搭配创造出何种化学反应……..." />
+  <meta property="og:type" content="articles">
+  <meta property="og:url" content="https://yyl125.top/post/iPad_with_mouse_and_trackpad/" />
+  <meta property="og:image" content="https://oss.yyl125.cc/blog/img/post/Perspective/iPad_with_Mouse_and_Trackpad/iPad_with_Mouse_and_Trackpad_Banner.jpg">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:width" content="1200">
+  <meta name="twitter:title" content="当 iPad 遇上鼠标和触控板 - Benjamin&#39;s Blog">
+  <meta name="twitter:description" content="Jobs 在初代 iPad 发布会时介绍 iPad 是介于手机和电脑之间生存的一种设备。这几年随着 iPad Pro 的发布，一次一次引领整个 iPad 家族向生产力方向引导。这次，iPad 与鼠标和触控板又不知会搭配创造出何种化学反应……...">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="canonical" href="https://yyl125.top/post/iPad_with_mouse_and_trackpad/">
+
+  <script src="https://cdn.jsdelivr.net/npm/vanilla-lazyload@17.8.8/dist/lazyload.min.js"></script>
+  <script type="module" src="https://yyl125.top/media/scripts/emaction.js"></script>
+
+  
+    <link rel="stylesheet" href="https://yyl125.top/media/css/prism-atom-dark.css">
+  
+
+  
+</head>
+
+<body>
+  <div class="antialiased flex flex-col min-h-screen" id="app">
+    <a href="https://yyl125.top" class="fixed top-0 left-0 mt-4 bg-black text-white dark:text-gray-700 dark:bg-yellow-50 dark:hover:bg-black dark:hover:text-white inline-flex p-2 pl-8 hover:text-gray-700 hover:bg-yellow-50 font-bold z-10 transition-fast animated fadeInLeft">
+      Benjamin&#39;s Blog
+    </a>
+    <div class="max-w-4xl w-full mx-auto">
+      <div class="shadow-box bg-white dark:bg-gray-600 rounded-lg pt-32 md:pt-64 px-4 md:px-8 pb-8 animated fadeIn mb-8">
+        <h1 class="text-5xl font-semibold leading-normal pb-8 mb-8 border-b-8 border-gray-700">
+          当 iPad 遇上鼠标和触控板
+        </h1>
+        
+          <img src="https://oss.yyl125.cc/blog/img/post/Perspective/iPad_with_Mouse_and_Trackpad/iPad_with_Mouse_and_Trackpad_Banner.jpg" alt="当 iPad 遇上鼠标和触控板" class="block w-full mb-8">
+        
+        <div class="mb-8 flex flex-wrap">
+          <div class="text-gray-400 text-sm mr-4"><i class="ri-calendar-2-line"></i> 2020-03-25 · <i class="ri-timer-line"></i> 5 min read · <i class="ri-eye-line"></i> <span id="twikoo_visitors">0</span></div>
+          
+            <a href="https://yyl125.top/tag/perspective/" class="text-gray-700 dark:text-gray-200 text-sm hover:transition-all duration-100 inline-flex mr-2">
+              <i class="ri-hashtag"></i>
+              Perspective
+            </a>
+          
+        </div>
+        
+        <div class="jumbotron">
+          <div class="container">
+            <p><i class="ri-time-line"></i> 这是一篇发布于 6 年前的文章，其中的信息可能已经有所发展或是发生改变</p>
+          </div>
+        </div>
+
+        
+
+        
+        
+        <div class="markdown mb-8" v-pre id="post-content">
+          <p>Jobs 在初代 iPad 发布会时介绍 iPad 是介于手机和电脑之间生存的一种设备。这几年随着 iPad Pro 的发布，一次一次引领整个 iPad 家族向生产力方向引导。这次，iPad 与鼠标和触控板又不知会搭配创造出何种化学反应……</p>
+<!-- more -->
+<h2 id="ipados-的问世">iPadOS 的问世</h2>
+<p>去年 6 月的 WWDC 19，Apple 发布了在 iOS 基础上进一步优化而来的 iPadOS。iPadOS 支持侧拉和分屏浏览，可以将像是备忘录这样的轻量级 App 直接以桌面小插件的方式悬浮在应用上层，这种悬浮应用还可以像在全面屏 iPhone 上那样使用手势操作进行切换</p>
+<p>iPadOS 还加入了对外部存储器的支持，可直接外接 U 盘、SD 卡甚至相机，并通过文件 App 直接将你的素材导入进 App 中。这样的操作基本上使得 iPad 相当于一台小型「电脑」了，并且，iPadOS 还开放了 Safari 的文件下载功能。可以说，Apple 始终在努力改善 iPad 和 iPadOS 以将 iPad 介绍给那些生产力用户</p>
+<img src="https://oss.yyl125.cc/blog/img/post/Perspective/iPad_with_Mouse_and_Trackpad/iPad_with_Mouse_and_Trackpad_01.jpg">
+<p class="media-description">iPadOS 的外部存储器支持功能。图片来自 Apple 官网</p>
+<p>与其说 iPadOS 是一个新的系统，不如说 iPadOS 是 Apple 在iOS 上针对 iPad 的重设计。哪怕你的 iPad 并不是 iPad Pro，而是像我一样的 iPad mini 或者 iPad Air、iPad，只要这些设备能够更新至 iPadOS，你都可以体验 iPadOS 中几乎所有的功能</p>
+<h2 id="从简单的-touch-到-apple-pencil再到鼠标与触控板">从简单的 Touch 到 Apple Pencil，再到鼠标与触控板</h2>
+<p>初代的 iPad 和 iPhone 一样，只支持手指触控，这种当初在 iPhone 上首次面世、十分简单的操作方式，给用户带来了可观而震撼的使用体验</p>
+<p>也正因如此，许多人一直纠结 iPad Pro 是否一定需要搭配一支 Apple Pencil，其实本质上还是需要根据自己的使用场景决定的。标准的创意用户，比如插画师、设计师这种就不用说了，基本上应该已经是人手一个「iPad Pro + Apple Pencil」组合了</p>
+<img src="https://oss.yyl125.cc/blog/img/post/Perspective/iPad_with_Mouse_and_Trackpad/iPad_with_Mouse_and_Trackpad_02.jpg">
+<p class="media-description">图片来自 Apple 官网</p>
+<p>那么，普通用户呢？</p>
+<p>Jobs 曾经说过「最好的触控笔，就是我们的手指」，因为 Jobs 的理念是表达完成「点击」这个操作，最好的工具是手指。可见 Apple Pencil 的本质并不是「点击」，而是「滑动」。准确画出一条直线、一条曲线、一个字或者一幅画或许是 Apple Pencil 这种配件最好的使用目的。归根结底，Apple Pencil 并不是要替换手指或者鼠标，而是替代纸和笔。Apple Pencil 灵敏的斜度和力度感应，出色的低延迟表现，让专业用户能够在 iPad 上尝试各种形式的艺术创作。哪怕你并不是创意工作者，上课记笔记、画张生日卡片、修修照片什么的，使用 iPad 和 Apple Pencil 也很合适</p>
+<p>最近，在少数派上寻得一款很适合 iPad + Apple Pencil 用户使用的简约手写笔记应用「<a href="https://apps.apple.com/cn/app/id1481732301" target="_blank">书空</a>」，详细的介绍，你可以在 <a href="https://sspai.com/post/59404" target="_blank">这篇</a> 少数派文章中继续了解</p>
+<p>如今，随着 2020 款 iPad Pro 和 3 月 25 日凌晨 iPadOS 13.4 的发布，Apple 又给 iPad 带来了鼠标和触控板支持。相比于之前 iPadOS 中出现在「辅助功能」里的指针功能来说，这一次 iPad 对鼠标和触控板的支持显然更佳开放和大胆。在 iPadOS 13.4 中，当你连接上 Magic Mouse 妙控鼠标或其它第三方鼠标之后，在「设置」&gt;「通用」中就会出现新的针对鼠标和触控板的设置调整选项。光标可根据按钮、App 图标和文本等内容灵活变化形态。在光标移动到按钮、App 图标或文本上时，会自动变为恰当的工具</p>
+<div class="alert alert-info">
+  <i class="ri-money-cny-circle-line"></i>
+  <strong>流量提醒</strong> 以下内容可能造成较大的流量消耗
+</div>
+<p><video src="https://oss.yyl125.cc/blog/video/post/Perspective/iPad_with_Mouse_and_Trackpad/The_Chages_of_Mouse_and_Trackpad_on_iPadOS.mp4" width="100%" controls="controls" loop="loop" autoplay="autoplay"></video></p>
+<p>不过这项功能目前仍然需要软件开发者的适配，并且目前最新的 Apple iWork 套件也并未对 iPadOS 的鼠标和触控板功能提供支持。因此，这项功能究竟何时会正式完善，可能要等到今年 5 月全新的带有触控板的 Smart Keyboard 发布了</p>
+<h2 id="写在最后">写在最后</h2>
+<p>这次 iPad Pro 2020 和 iPadOS 13.4 的发布给了我们更多的关于 iPad 究竟能用来干什么的想象。经常在网络上听到这样一种调侃：「买前生产力，买后爱奇艺」。其实很多时候，「生产力」离我们并不遥远。那些真的一天到晚「爱奇艺」的人也不用有所怀疑，可能更多是没有遇上生产力场景虽然这个词的确听起来有些高大上，但只要能够帮助我们完成我们所思所想的事物，为我们的每一篇文章、每一幅画作、每一条笔记做出可圈可点的贡献，都能够算作是「生产力」</p>
+<img src="https://oss.yyl125.cc/blog/img/post/Perspective/iPad_with_Mouse_and_Trackpad/iPad_with_Mouse_and_Trackpad_03.jpg">
+<p class="media-description">图片来自 Apple 官网</p>
+<p>对于鼠标和触控板的支持给了 iPad 家族和 iPadOS 新的活力，也给予了它们与更多事物碰撞的机会。不同的材料放在一起可能会发生不同的化学反应，而无论最后是何结果，都是一笔宝贵的财富</p>
+
+        </div>
+
+        <div class="jumbotron">
+          <div class="container">
+            <p><i class="ri-article-line"></i> <a href="https://yyl125.top/post/iPad_with_mouse_and_trackpad/" target="_blank">当 iPad 遇上鼠标和触控板</a></p>
+            <p><i class="ri-creative-commons-line"></i> 许可协议：<a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" target="_blank">CC BY-NC-SA 4.0</a>。欲了解更多相关信息，详见 <a href="https://yyl125.top/copyright/" target="_blank">版权信息与资源使用说明</a> 页面</p>
+            <p><i class="ri-error-warning-line"></i> 本站所有内容除特别说明外，皆为原创发布。欢迎尊重原创作者版权的转载或引用。转载或引用时请注明出处</p>
+            <br>
+            <p><i class="ri-feedback-line"></i> 出现了影响阅读的问题？不妨 <a href="mailto:support@yyl125.cc?subject=Benjamin's%20Blog%20%E9%97%AE%E9%A2%98%E5%8F%8D%E9%A6%88" target="_blank" rel="noreferrer noopener">反馈</a> 一下吧</p>
+          </div>
+        </div>
+
+        
+        
+      </div>
+
+      <div class="jumbotron-comment">
+        <div class="container">
+          <p><i class="ri-message-3-line"></i> 欢迎任何与文章内容相关并保持尊重的评论，评论时请遵守 <a href="https://yyl125.top/comment_policy/">评论准则</a></p>
+        </div>
+      </div>
+
+      
+
+      
+        <div id="tcomment"></div>
+      
+      
+      <footer class="py-12 text-center px-4 md:px-0" v-pre>
+  共 24 篇文章｜<a href="https://yyl125.top/copyright" target="_blank">版权信息与资源使用说明</a>｜<i class="ri-rss-line"></i> <a href="https://yyl125.top/atom.xml" target="_blank">RSS</a><br>Copyright © 2026 Benjamin. All rights reserved.
+</footer>
+
+
+    </div>
+
+    <!-- TOC Container -->
+    <div class="fixed right-0 bottom-0 mb-16 mr-4 shadow w-8 h-8 rounded-full flex justify-center items-center z-10 cursor-pointer bg-white dark:bg-gray-500 dark:text-gray-200 hover:shadow-lg transition-all animated fadeInRight" @click="showToc = true">
+      <i class="ri-file-list-line"></i>
+    </div>
+
+    <div class="fixed right-0 top-0 bottom-0 overflow-y-auto w-64 bg-white dark:bg-gray-800 p-4 border-l border-gray-100 dark:border-gray-600 z-10 transition-fast" :class="{ '-mr-64': !showToc }">
+      <div class="flex mb-4 justify-end">
+        <div class="w-8 h-8 inline-flex justify-center items-center rounded-full cursor-pointer hover:bg-gray-200 dark:hover:bg-gray-600 transition-fast" @click="showToc = false">
+          <i class="ri-close-line text-lg"></i>
+        </div>
+      </div>
+      <div class="post-toc-container">
+        <ul class="markdownIt-TOC">
+<li>
+<ul>
+<li><a href="#ipados-%E7%9A%84%E9%97%AE%E4%B8%96">iPadOS 的问世</a></li>
+<li><a href="#%E4%BB%8E%E7%AE%80%E5%8D%95%E7%9A%84-touch-%E5%88%B0-apple-pencil%E5%86%8D%E5%88%B0%E9%BC%A0%E6%A0%87%E4%B8%8E%E8%A7%A6%E6%8E%A7%E6%9D%BF">从简单的 Touch 到 Apple Pencil，再到鼠标与触控板</a></li>
+<li><a href="#%E5%86%99%E5%9C%A8%E6%9C%80%E5%90%8E">写在最后</a></li>
+</ul>
+</li>
+</ul>
+
+      </div>
+    </div>
+
+    <!-- Back to top -->
+    <div class="fixed right-0 bottom-0 mb-4 mr-4 shadow w-8 h-8 rounded-full flex justify-center items-center z-10 cursor-pointer bg-white hover:shadow-lg transition-all dark:bg-gray-500 dark:text-gray-200" @click="backToUp" v-show="scrolled">
+      <i class="ri-arrow-up-line"></i>
+    </div>
+
+  </div>
+
+<!--  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script> -->
+  <script src="https://yyl125.top/media/scripts/vue.js"></script>
+  <script src="https://yyl125.top/media/scripts/main.js"></script>
+  <script src="https://yyl125.top/media/scripts/linkcard.js"></script>
+  <script src="https://yyl125.top/media/scripts/view-image.min.js"></script>
+  <script>
+    window.ViewImage && ViewImage.init('.markdown img');
+    var lazyLoadInstance = new LazyLoad({});
+    lazyLoadInstance.update();
+  </script>
+  
+  <!-- Mermaid -->
+  
+
+  <!-- Code Highlight -->
+  
+    <script src="https://yyl125.top/media/scripts/prism.js"></script>
+    <script>
+      Prism.highlightAll()
+    </script>
+  
+
+  <!-- Twikoo -->
+  
+    <script src="https://cdn.jsdelivr.net/npm/twikoo@1.6.44/dist/twikoo.min.js"></script>
+<script>
+  twikoo.init({
+    envId: 'https://twikoo-deploy-one.vercel.app',
+    el: '#tcomment'
+  })
+</script>
+  
+
+</body>
+
+</html>

@@ -1,0 +1,328 @@
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<meta name="google-site-verification" content="mzGZdCiBsXZ5XSYVt7eh7KL8L64yuidUoeBNw_53XHk" />
+<meta name="referrer" content="same-origin">
+<title>登录邮箱修改记 - Benjamin&#39;s Blog</title>
+<link rel="shortcut icon" href="https://yyl125.top/favicon.ico">
+<link href="https://cdn.jsdelivr.net/npm/remixicon@latest/fonts/remixicon.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.7.2/animate.min.css">
+<link rel="stylesheet" href="https://yyl125.top/media/css/tailwind.css">
+<link rel="stylesheet" href="https://yyl125.top/styles/main.css">
+
+
+<link rel="alternate" type="application/atom+xml" title="登录邮箱修改记 - Benjamin&#39;s Blog - Atom Feed" href="https://yyl125.top/atom.xml">
+<!----<script src="https://yyl125.top/media/scripts/bootstrap.bundle.min.js"></script>---->
+
+
+  
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-Q6KYP4QSBH"></script>
+    <script>
+      var host = window.location.hostname;
+      if(host != "localhost")
+      {
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-Q6KYP4QSBH');
+      }
+    </script>
+  
+
+<script defer>
+(function (document) {
+  const SOURCE = 'https://cdn.jsdelivr.net';
+  const DEST = 'https://gcore.jsdelivr.net';
+  const $ = document.querySelectorAll.bind(document);
+  const checkAvailable = (callback) => {
+    let timeoutId;
+    const newNode = document.createElement('link');
+    newNode.rel = 'stylesheet';
+    newNode.text = 'text/css';
+    const onError = () => {
+      if (!timeoutId) {
+        return;
+      }
+
+      clearTimeout(timeoutId);
+      timeoutId = 0;
+      newNode.href = 'about:blank';
+      newNode.remove();
+      callback(false);
+    };
+
+    timeoutId = setTimeout(onError, 2000);
+    newNode.addEventListener('error', onError);
+    newNode.addEventListener('load', function () {
+      newNode.remove();
+      clearTimeout(timeoutId);
+      callback(true);
+    });
+
+    newNode.href =
+      SOURCE +
+      '/gh/PipecraftNet/jsdelivr-auto-fallback@main/empty.css?' +
+      Date.now();
+    document.head.insertAdjacentElement('afterbegin', newNode);
+  };
+
+  const replaceElementSrc = () => {
+    for (const element of $('link[rel="stylesheet"]')) {
+      if (element.href && element.href.includes(SOURCE)) {
+        element.href = element.href.replace(SOURCE, DEST);
+      }
+    }
+
+    for (const element of $('script')) {
+      if (element.src && element.src.includes(SOURCE)) {
+        const newNode = document.createElement('script');
+        newNode.src = element.src.replace(SOURCE, DEST);
+        element.defer = true;
+        element.src = '';
+        element.before(newNode);
+        element.remove();
+      }
+    }
+
+    for (const element of $('img')) {
+      if (element.src && element.src.includes(SOURCE)) {
+        const source = element.src;
+        // Used to cancel loading. Without this line it will remain pending status.
+        element.src = '';
+        element.src = source.replace(SOURCE, DEST);
+      }
+    }
+  };
+
+  checkAvailable(function (isAvailable) {
+    if (isAvailable) {
+      return;
+    }
+
+    console.warn(SOURCE + ' is not available.');
+
+    replaceElementSrc();
+    // Replace dynamically added elements
+    setInterval(replaceElementSrc, 500);
+  });
+})(document);
+</script>
+  <meta name="description" content="信都收不到，我还要它干啥？
+
+描述一下问题的背景
+最近 Epic Games 不是每周送游戏大作嘛（不是吧？真有人领了还把它下载下来玩？🤣），之前也在 Epic Games 上领了很多免费游戏，但是从这次活动开始，领取游戏之前要先设置双因..." />
+  <meta property="og:title" content="登录邮箱修改记 - Benjamin&#39;s Blog">
+  <meta property="og:description" content="信都收不到，我还要它干啥？
+
+描述一下问题的背景
+最近 Epic Games 不是每周送游戏大作嘛（不是吧？真有人领了还把它下载下来玩？🤣），之前也在 Epic Games 上领了很多免费游戏，但是从这次活动开始，领取游戏之前要先设置双因..." />
+  <meta property="og:type" content="articles">
+  <meta property="og:url" content="https://yyl125.top/post/transfer_to_outlook/" />
+  <meta property="og:image" content="https://oss.yyl125.cc/blog/img/post/Narrative/Transfer_To_Outlook/Transfer_To_Outlook_Banner.png">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:width" content="1200">
+  <meta name="twitter:title" content="登录邮箱修改记 - Benjamin&#39;s Blog">
+  <meta name="twitter:description" content="信都收不到，我还要它干啥？
+
+描述一下问题的背景
+最近 Epic Games 不是每周送游戏大作嘛（不是吧？真有人领了还把它下载下来玩？🤣），之前也在 Epic Games 上领了很多免费游戏，但是从这次活动开始，领取游戏之前要先设置双因...">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="canonical" href="https://yyl125.top/post/transfer_to_outlook/">
+
+  <script src="https://cdn.jsdelivr.net/npm/vanilla-lazyload@17.8.8/dist/lazyload.min.js"></script>
+  <script type="module" src="https://yyl125.top/media/scripts/emaction.js"></script>
+
+  
+    <link rel="stylesheet" href="https://yyl125.top/media/css/prism-atom-dark.css">
+  
+
+  
+</head>
+
+<body>
+  <div class="antialiased flex flex-col min-h-screen" id="app">
+    <a href="https://yyl125.top" class="fixed top-0 left-0 mt-4 bg-black text-white dark:text-gray-700 dark:bg-yellow-50 dark:hover:bg-black dark:hover:text-white inline-flex p-2 pl-8 hover:text-gray-700 hover:bg-yellow-50 font-bold z-10 transition-fast animated fadeInLeft">
+      Benjamin&#39;s Blog
+    </a>
+    <div class="max-w-4xl w-full mx-auto">
+      <div class="shadow-box bg-white dark:bg-gray-600 rounded-lg pt-32 md:pt-64 px-4 md:px-8 pb-8 animated fadeIn mb-8">
+        <h1 class="text-5xl font-semibold leading-normal pb-8 mb-8 border-b-8 border-gray-700">
+          登录邮箱修改记
+        </h1>
+        
+          <img src="https://oss.yyl125.cc/blog/img/post/Narrative/Transfer_To_Outlook/Transfer_To_Outlook_Banner.png" alt="登录邮箱修改记" class="block w-full mb-8">
+        
+        <div class="mb-8 flex flex-wrap">
+          <div class="text-gray-400 text-sm mr-4"><i class="ri-calendar-2-line"></i> 2020-06-08 · <i class="ri-timer-line"></i> 7 min read · <i class="ri-eye-line"></i> <span id="twikoo_visitors">0</span></div>
+          
+            <a href="https://yyl125.top/tag/narrative/" class="text-gray-700 dark:text-gray-200 text-sm hover:transition-all duration-100 inline-flex mr-2">
+              <i class="ri-hashtag"></i>
+              Narrative
+            </a>
+          
+        </div>
+        
+        <div class="jumbotron">
+          <div class="container">
+            <p><i class="ri-time-line"></i> 这是一篇发布于 6 年前的文章，其中的信息可能已经有所发展或是发生改变</p>
+          </div>
+        </div>
+
+        
+
+        
+        
+        <div class="markdown mb-8" v-pre id="post-content">
+          <p>信都收不到，我还要它干啥？</p>
+<!-- more -->
+<h2 id="描述一下问题的背景">描述一下问题的背景</h2>
+<p>最近 Epic Games 不是每周送游戏大作嘛（不是吧？真有人领了还把它下载下来玩？🤣），之前也在 Epic Games 上领了很多免费游戏，但是从这次活动开始，领取游戏之前要先设置双因素验证了</p>
+<p>于是……我等了将近一个晚上，愣是没收到任何来自 Epic Games 的验证邮件。找了垃圾邮箱，也找了 QQ 邮箱自己的收信和拦截记录，依旧没有。遂放弃，转而使用 Microsoft 的验证器应用开启双因素验证</p>
+<p>其实我之前也遇到过 QQ 邮箱收不到信的问题，无论信是来自国内还是国外，但当时没怎么在意。这里说的是<strong>压根收不到信，而不是那种过了很长时间之后堵在路上的信一窝蜂全来了这种情况</strong></p>
+<p>之前还有过另一种情况，给别人发邮件，我邮件投出去几天了，愣是没收到回信。一直以为是对方时间所以没看或者什么其它的情况。结果后来联系对方，对方摊手说是<strong>压根就没收到，也并不在垃圾邮箱里</strong>……（而 QQ 邮箱发件记录居然还清楚地写着「<strong>投递成功</strong>」🙄️）</p>
+<h2 id="确定方案开始人工智障般的修改">确定方案，开始人工智障般的修改</h2>
+<p>由于我一共拥有 3 个邮箱，一个 QQ 邮箱（即将修改的那个）、一个 Outlook（平时有的时候注册账户时会直接上这个邮箱）和一个 Gmail（好像也就 Setapp 和一些用 Google 登录的内容会用到这个邮箱，比如 Notion）。因此，我就直接选择了「使用 Outlook 代替 QQ 邮箱」的方案</p>
+<p>无论我如何选择方案，我都只能一个一个手动的去修改绑定的邮箱地址，就如同一个智障一般……</p>
+<h2 id="修改邮箱地址时遇到的种种问题">修改邮箱地址时遇到的种种问题</h2>
+<p>虽然说修改的步骤如同智障一般，但在修改邮箱的时候也遇到了一些「奇奇怪怪」、让我充分开动脑筋解除修改过程中「乏味感」的各种问题</p>
+<h3 id="压根不给我修改的机会">压根不给我修改的机会</h3>
+<p>这个问题嘛……还真是无法解决🤷‍♂️。不过好在这样的网站不多，我自己用的也不多</p>
+<h3 id="修改入口设置的奇奇怪怪还不支持某些邮箱域名">修改入口设置的奇奇怪怪，还不支持某些邮箱域名</h3>
+<p>要说这个问题，某国内最大的中文搜索引擎绝对是榜单第一名。那奇奇怪怪的修改入口就算了（害，<strong>没给个二维码让我下载手机 XX App 继续操作我就已经得谢谢它了</strong>），居然还不支持 Outlook……看了半天，除了 QQ 邮箱外，其它支持的几个邮箱都是奇奇怪怪的邮箱域名，查了一下，大多是国内的</p>
+<p>我曾经碰到过注册时不允许我使用自己的阿里域名邮箱的，但是不支持 Outlook 这样的邮箱的也太奇怪了吧……</p>
+<img src="https://oss.yyl125.cc/blog/img/post/Narrative/Transfer_To_Outlook/Transfer_To_Outlook_01.png">
+<p class="media-description">看了一遍，支持的都是国内的各种邮箱……</p>
+<p>既然不支持，那就只好作罢。反正这个「国内最大的中文搜索引擎」也已经是被我边缘化的东西了</p>
+<h3 id="修改入口找到了但是死活收不到验证邮件">修改入口找到了，但是……死活收不到验证邮件</h3>
+<p>一部分网站的账号修改邮箱地址，是需要之前绑定的邮箱收取一个验证码验证本人操作的。但是……有的网站更改完邮箱地址后我一直收不到后续的确认邮件</p>
+<p><strong>可是让我想修改登录地址的就是因为这个原因啊</strong>！！！</p>
+<p>在这个问题上我要点名那个由两位曾经模范恩爱的夫妻共同经营，现在没事就摔个杯子、夺个公章、发条微博互相爆料对方私生活的某电商网站。其实后来有了 Kindle 之后就不怎么在它家买书了，而且现在配送速度也已经远远不是刚刚有名气那个时候的配送速度了，可惜啊……</p>
+<h2 id="修改基本完成但我仍然需要保有-qq-邮箱">修改基本完成，但我仍然需要保有 QQ 邮箱</h2>
+<p>花了将近 1 个半小时的时间，可算是把这个机械化的项目完成的差不多了。将近 130 个网站、App 的绑定邮箱/登录邮箱全部从 QQ 邮箱转到了 Microsoft 的 Outlook。但因为有一些软件授权的关系，我<strong>仍然需要继续保有这个邮箱</strong></p>
+<img src="https://oss.yyl125.cc/blog/img/post/Narrative/Transfer_To_Outlook/Transfer_To_Outlook_02.png">
+<p class="media-description">修改之后，顺眼多了～</p>
+<p>这年头，大家 QQ、WeChat 啥的 App 一大堆，但我仍然建议对于那些不重要的、不急的事情，用邮箱联系我。不用在意什么格式，<strong>只要你用的是中文或者英文，我都能看懂</strong>……</p>
+<h2 id="写在最后回答几个问题">写在最后，回答几个问题……</h2>
+<p>Q：现在手机号登录这么好用，为什么不干脆用手机号登录呢？</p>
+<p>A：不是吧？不是吧？你登录一次就要收一条手机验证码，不觉得这个设定很烦而且很没有效率吗？</p>
+<p>很多国外的服务是不支持你用手机号注册登录的（例子太多，不举了）。我承认手机号码有很多优点，比如说不用再记密码了。但是，手机号登录这个方法真的不适合我。你能想象你每次手机号登录完，删短信的痛苦吗？？？</p>
+<p><strong>何况我手机删除一遍，Apple Watch 上还要再删除一遍</strong>！！！（🌶️🐔🍎💊）</p>
+<p>Q：哪一个账号是你最先修改的？解释一下为什么</p>
+<p>A：第一个修改的账号当然是我的 Apple ID。虽然是国区账号（话说国区账号好像一直都在一个隐形的「鄙视链」的最底层），但里面包含我几乎所有与 Apple 设备有关的内容（主要是很多已购买的项目）。至于为什么不直接转外区，实在不是不想转，而是本人实在是没什么条件能够解决转区后的支付问题，而直接抛弃国区账号好像有点「矫枉过正」，也实在是有点对不起我那干瘪的钱包……因此 Apple ID 是我最先修改的账号</p>
+<p>由于我另外有一个香港区的 Apple ID（你懂的～），用的是 Outlook，所以国区的这个账号也就无法使用 Outlook 了。遂尝试使用 Gmail，试了一下发现也不行（好像是因为被我那个香港区的 Apple ID 作为备用救援邮箱啥的了，总之就是被占用了），所以只能使用当时注册 Apple ID 时同时设置的 iCloud 邮箱了（我其实一直觉得这个 iCloud 邮箱没什么用，当时注册纯粹是因为好奇。我也不清楚现在注册的 Apple ID 有没有还同时获得一个 iCloud 邮箱了，反正我注册香港区 Apple ID 的时候没有这个要求）</p>
+<p>当然，这个方案也有一个缺点，<strong>修改为 iCloud 邮箱作为自己的 Apple ID 后，就再也无法变更自己的 Apple ID 地址了</strong>。据说是在 iOS 11 还是 12 的时候，新注册的 Apple ID 支持使用手机号注册（中国大陆特供）。我知道有这个功能，但我的账号是早先注册的旧账号，Apple 也<strong>不提供将 Apple ID 修改为手机号码</strong>这个功能</p>
+<p>说来奇怪，自从我 Apple ID 变为 iCloud 邮箱后，以前那些每隔一段时间就会收到的什么澳门赌场、在线发牌之类的广告 iMessage 和日历项目就再也没收到过……</p>
+
+        </div>
+
+        <div class="jumbotron">
+          <div class="container">
+            <p><i class="ri-article-line"></i> <a href="https://yyl125.top/post/transfer_to_outlook/" target="_blank">登录邮箱修改记</a></p>
+            <p><i class="ri-creative-commons-line"></i> 许可协议：<a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" target="_blank">CC BY-NC-SA 4.0</a>。欲了解更多相关信息，详见 <a href="https://yyl125.top/copyright/" target="_blank">版权信息与资源使用说明</a> 页面</p>
+            <p><i class="ri-error-warning-line"></i> 本站所有内容除特别说明外，皆为原创发布。欢迎尊重原创作者版权的转载或引用。转载或引用时请注明出处</p>
+            <br>
+            <p><i class="ri-feedback-line"></i> 出现了影响阅读的问题？不妨 <a href="mailto:support@yyl125.cc?subject=Benjamin's%20Blog%20%E9%97%AE%E9%A2%98%E5%8F%8D%E9%A6%88" target="_blank" rel="noreferrer noopener">反馈</a> 一下吧</p>
+          </div>
+        </div>
+
+        
+        
+      </div>
+
+      <div class="jumbotron-comment">
+        <div class="container">
+          <p><i class="ri-message-3-line"></i> 欢迎任何与文章内容相关并保持尊重的评论，评论时请遵守 <a href="https://yyl125.top/comment_policy/">评论准则</a></p>
+        </div>
+      </div>
+
+      
+
+      
+        <div id="tcomment"></div>
+      
+      
+      <footer class="py-12 text-center px-4 md:px-0" v-pre>
+  共 24 篇文章｜<a href="https://yyl125.top/copyright" target="_blank">版权信息与资源使用说明</a>｜<i class="ri-rss-line"></i> <a href="https://yyl125.top/atom.xml" target="_blank">RSS</a><br>Copyright © 2026 Benjamin. All rights reserved.
+</footer>
+
+
+    </div>
+
+    <!-- TOC Container -->
+    <div class="fixed right-0 bottom-0 mb-16 mr-4 shadow w-8 h-8 rounded-full flex justify-center items-center z-10 cursor-pointer bg-white dark:bg-gray-500 dark:text-gray-200 hover:shadow-lg transition-all animated fadeInRight" @click="showToc = true">
+      <i class="ri-file-list-line"></i>
+    </div>
+
+    <div class="fixed right-0 top-0 bottom-0 overflow-y-auto w-64 bg-white dark:bg-gray-800 p-4 border-l border-gray-100 dark:border-gray-600 z-10 transition-fast" :class="{ '-mr-64': !showToc }">
+      <div class="flex mb-4 justify-end">
+        <div class="w-8 h-8 inline-flex justify-center items-center rounded-full cursor-pointer hover:bg-gray-200 dark:hover:bg-gray-600 transition-fast" @click="showToc = false">
+          <i class="ri-close-line text-lg"></i>
+        </div>
+      </div>
+      <div class="post-toc-container">
+        <ul class="markdownIt-TOC">
+<li>
+<ul>
+<li><a href="#%E6%8F%8F%E8%BF%B0%E4%B8%80%E4%B8%8B%E9%97%AE%E9%A2%98%E7%9A%84%E8%83%8C%E6%99%AF">描述一下问题的背景</a></li>
+<li><a href="#%E7%A1%AE%E5%AE%9A%E6%96%B9%E6%A1%88%E5%BC%80%E5%A7%8B%E4%BA%BA%E5%B7%A5%E6%99%BA%E9%9A%9C%E8%88%AC%E7%9A%84%E4%BF%AE%E6%94%B9">确定方案，开始人工智障般的修改</a></li>
+<li><a href="#%E4%BF%AE%E6%94%B9%E9%82%AE%E7%AE%B1%E5%9C%B0%E5%9D%80%E6%97%B6%E9%81%87%E5%88%B0%E7%9A%84%E7%A7%8D%E7%A7%8D%E9%97%AE%E9%A2%98">修改邮箱地址时遇到的种种问题</a>
+<ul>
+<li><a href="#%E5%8E%8B%E6%A0%B9%E4%B8%8D%E7%BB%99%E6%88%91%E4%BF%AE%E6%94%B9%E7%9A%84%E6%9C%BA%E4%BC%9A">压根不给我修改的机会</a></li>
+<li><a href="#%E4%BF%AE%E6%94%B9%E5%85%A5%E5%8F%A3%E8%AE%BE%E7%BD%AE%E7%9A%84%E5%A5%87%E5%A5%87%E6%80%AA%E6%80%AA%E8%BF%98%E4%B8%8D%E6%94%AF%E6%8C%81%E6%9F%90%E4%BA%9B%E9%82%AE%E7%AE%B1%E5%9F%9F%E5%90%8D">修改入口设置的奇奇怪怪，还不支持某些邮箱域名</a></li>
+<li><a href="#%E4%BF%AE%E6%94%B9%E5%85%A5%E5%8F%A3%E6%89%BE%E5%88%B0%E4%BA%86%E4%BD%86%E6%98%AF%E6%AD%BB%E6%B4%BB%E6%94%B6%E4%B8%8D%E5%88%B0%E9%AA%8C%E8%AF%81%E9%82%AE%E4%BB%B6">修改入口找到了，但是……死活收不到验证邮件</a></li>
+</ul>
+</li>
+<li><a href="#%E4%BF%AE%E6%94%B9%E5%9F%BA%E6%9C%AC%E5%AE%8C%E6%88%90%E4%BD%86%E6%88%91%E4%BB%8D%E7%84%B6%E9%9C%80%E8%A6%81%E4%BF%9D%E6%9C%89-qq-%E9%82%AE%E7%AE%B1">修改基本完成，但我仍然需要保有 QQ 邮箱</a></li>
+<li><a href="#%E5%86%99%E5%9C%A8%E6%9C%80%E5%90%8E%E5%9B%9E%E7%AD%94%E5%87%A0%E4%B8%AA%E9%97%AE%E9%A2%98">写在最后，回答几个问题……</a></li>
+</ul>
+</li>
+</ul>
+
+      </div>
+    </div>
+
+    <!-- Back to top -->
+    <div class="fixed right-0 bottom-0 mb-4 mr-4 shadow w-8 h-8 rounded-full flex justify-center items-center z-10 cursor-pointer bg-white hover:shadow-lg transition-all dark:bg-gray-500 dark:text-gray-200" @click="backToUp" v-show="scrolled">
+      <i class="ri-arrow-up-line"></i>
+    </div>
+
+  </div>
+
+<!--  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script> -->
+  <script src="https://yyl125.top/media/scripts/vue.js"></script>
+  <script src="https://yyl125.top/media/scripts/main.js"></script>
+  <script src="https://yyl125.top/media/scripts/linkcard.js"></script>
+  <script src="https://yyl125.top/media/scripts/view-image.min.js"></script>
+  <script>
+    window.ViewImage && ViewImage.init('.markdown img');
+    var lazyLoadInstance = new LazyLoad({});
+    lazyLoadInstance.update();
+  </script>
+  
+  <!-- Mermaid -->
+  
+
+  <!-- Code Highlight -->
+  
+    <script src="https://yyl125.top/media/scripts/prism.js"></script>
+    <script>
+      Prism.highlightAll()
+    </script>
+  
+
+  <!-- Twikoo -->
+  
+    <script src="https://cdn.jsdelivr.net/npm/twikoo@1.6.44/dist/twikoo.min.js"></script>
+<script>
+  twikoo.init({
+    envId: 'https://twikoo-deploy-one.vercel.app',
+    el: '#tcomment'
+  })
+</script>
+  
+
+</body>
+
+</html>

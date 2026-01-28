@@ -1,0 +1,361 @@
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<meta name="google-site-verification" content="mzGZdCiBsXZ5XSYVt7eh7KL8L64yuidUoeBNw_53XHk" />
+<meta name="referrer" content="same-origin">
+<title>新型订阅制的涌现，能否完善传统订阅制的不足？ - Benjamin&#39;s Blog</title>
+<link rel="shortcut icon" href="https://yyl125.top/favicon.ico">
+<link href="https://cdn.jsdelivr.net/npm/remixicon@latest/fonts/remixicon.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.7.2/animate.min.css">
+<link rel="stylesheet" href="https://yyl125.top/media/css/tailwind.css">
+<link rel="stylesheet" href="https://yyl125.top/styles/main.css">
+
+
+<link rel="alternate" type="application/atom+xml" title="新型订阅制的涌现，能否完善传统订阅制的不足？ - Benjamin&#39;s Blog - Atom Feed" href="https://yyl125.top/atom.xml">
+<!----<script src="https://yyl125.top/media/scripts/bootstrap.bundle.min.js"></script>---->
+
+
+  
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-Q6KYP4QSBH"></script>
+    <script>
+      var host = window.location.hostname;
+      if(host != "localhost")
+      {
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-Q6KYP4QSBH');
+      }
+    </script>
+  
+
+<script defer>
+(function (document) {
+  const SOURCE = 'https://cdn.jsdelivr.net';
+  const DEST = 'https://gcore.jsdelivr.net';
+  const $ = document.querySelectorAll.bind(document);
+  const checkAvailable = (callback) => {
+    let timeoutId;
+    const newNode = document.createElement('link');
+    newNode.rel = 'stylesheet';
+    newNode.text = 'text/css';
+    const onError = () => {
+      if (!timeoutId) {
+        return;
+      }
+
+      clearTimeout(timeoutId);
+      timeoutId = 0;
+      newNode.href = 'about:blank';
+      newNode.remove();
+      callback(false);
+    };
+
+    timeoutId = setTimeout(onError, 2000);
+    newNode.addEventListener('error', onError);
+    newNode.addEventListener('load', function () {
+      newNode.remove();
+      clearTimeout(timeoutId);
+      callback(true);
+    });
+
+    newNode.href =
+      SOURCE +
+      '/gh/PipecraftNet/jsdelivr-auto-fallback@main/empty.css?' +
+      Date.now();
+    document.head.insertAdjacentElement('afterbegin', newNode);
+  };
+
+  const replaceElementSrc = () => {
+    for (const element of $('link[rel="stylesheet"]')) {
+      if (element.href && element.href.includes(SOURCE)) {
+        element.href = element.href.replace(SOURCE, DEST);
+      }
+    }
+
+    for (const element of $('script')) {
+      if (element.src && element.src.includes(SOURCE)) {
+        const newNode = document.createElement('script');
+        newNode.src = element.src.replace(SOURCE, DEST);
+        element.defer = true;
+        element.src = '';
+        element.before(newNode);
+        element.remove();
+      }
+    }
+
+    for (const element of $('img')) {
+      if (element.src && element.src.includes(SOURCE)) {
+        const source = element.src;
+        // Used to cancel loading. Without this line it will remain pending status.
+        element.src = '';
+        element.src = source.replace(SOURCE, DEST);
+      }
+    }
+  };
+
+  checkAvailable(function (isAvailable) {
+    if (isAvailable) {
+      return;
+    }
+
+    console.warn(SOURCE + ' is not available.');
+
+    replaceElementSrc();
+    // Replace dynamically added elements
+    setInterval(replaceElementSrc, 500);
+  });
+})(document);
+</script>
+  <meta name="description" content="曾经很长一段时间，对于具有虚拟属性的软件或应用，都在使用买断制作为自己的商业模式。从 2016 年 App Store 改版带来的推送效应，如今从买断制转向订阅制的软件或应用越来越多，却又带来了种种思考
+
+为什么会出现「订阅制」？
+在聊订阅..." />
+  <meta property="og:title" content="新型订阅制的涌现，能否完善传统订阅制的不足？ - Benjamin&#39;s Blog">
+  <meta property="og:description" content="曾经很长一段时间，对于具有虚拟属性的软件或应用，都在使用买断制作为自己的商业模式。从 2016 年 App Store 改版带来的推送效应，如今从买断制转向订阅制的软件或应用越来越多，却又带来了种种思考
+
+为什么会出现「订阅制」？
+在聊订阅..." />
+  <meta property="og:type" content="articles">
+  <meta property="og:url" content="https://yyl125.top/post/think_about_the_new_subscribe_way/" />
+  <meta property="og:image" content="https://oss.yyl125.cc/blog/img/post/Meta_View/Think_About_The_New_Subscribe_Way/Think_About_The_New_Subscribe_Way_Banner.jpg">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:width" content="1200">
+  <meta name="twitter:title" content="新型订阅制的涌现，能否完善传统订阅制的不足？ - Benjamin&#39;s Blog">
+  <meta name="twitter:description" content="曾经很长一段时间，对于具有虚拟属性的软件或应用，都在使用买断制作为自己的商业模式。从 2016 年 App Store 改版带来的推送效应，如今从买断制转向订阅制的软件或应用越来越多，却又带来了种种思考
+
+为什么会出现「订阅制」？
+在聊订阅...">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="canonical" href="https://yyl125.top/post/think_about_the_new_subscribe_way/">
+
+  <script src="https://cdn.jsdelivr.net/npm/vanilla-lazyload@17.8.8/dist/lazyload.min.js"></script>
+  <script type="module" src="https://yyl125.top/media/scripts/emaction.js"></script>
+
+  
+    <link rel="stylesheet" href="https://yyl125.top/media/css/prism-atom-dark.css">
+  
+
+  
+</head>
+
+<body>
+  <div class="antialiased flex flex-col min-h-screen" id="app">
+    <a href="https://yyl125.top" class="fixed top-0 left-0 mt-4 bg-black text-white dark:text-gray-700 dark:bg-yellow-50 dark:hover:bg-black dark:hover:text-white inline-flex p-2 pl-8 hover:text-gray-700 hover:bg-yellow-50 font-bold z-10 transition-fast animated fadeInLeft">
+      Benjamin&#39;s Blog
+    </a>
+    <div class="max-w-4xl w-full mx-auto">
+      <div class="shadow-box bg-white dark:bg-gray-600 rounded-lg pt-32 md:pt-64 px-4 md:px-8 pb-8 animated fadeIn mb-8">
+        <h1 class="text-5xl font-semibold leading-normal pb-8 mb-8 border-b-8 border-gray-700">
+          新型订阅制的涌现，能否完善传统订阅制的不足？
+        </h1>
+        
+          <img src="https://oss.yyl125.cc/blog/img/post/Meta_View/Think_About_The_New_Subscribe_Way/Think_About_The_New_Subscribe_Way_Banner.jpg" alt="新型订阅制的涌现，能否完善传统订阅制的不足？" class="block w-full mb-8">
+        
+        <div class="mb-8 flex flex-wrap">
+          <div class="text-gray-400 text-sm mr-4"><i class="ri-calendar-2-line"></i> 2020-04-17 · <i class="ri-timer-line"></i> 13 min read · <i class="ri-eye-line"></i> <span id="twikoo_visitors">0</span></div>
+          
+            <a href="https://yyl125.top/tag/meta_view/" class="text-gray-700 dark:text-gray-200 text-sm hover:transition-all duration-100 inline-flex mr-2">
+              <i class="ri-hashtag"></i>
+              Meta View
+            </a>
+          
+        </div>
+        
+        <div class="jumbotron">
+          <div class="container">
+            <p><i class="ri-time-line"></i> 这是一篇发布于 6 年前的文章，其中的信息可能已经有所发展或是发生改变</p>
+          </div>
+        </div>
+
+        
+
+        
+        
+        <div class="markdown mb-8" v-pre id="post-content">
+          <p>曾经很长一段时间，对于具有虚拟属性的软件或应用，都在使用买断制作为自己的商业模式。从 2016 年 App Store 改版带来的推送效应，如今从买断制转向订阅制的软件或应用越来越多，却又带来了种种思考</p>
+<!-- more -->
+<h2 id="为什么会出现订阅制">为什么会出现「订阅制」？</h2>
+<p>在聊订阅制之前，咱们还是得先谈谈订阅制为何会出现</p>
+<p>在早期互联网还不太算发达的时代，软件基本是以光盘或类似于 U 盘那样的存储介质来售卖的。我还记得自己小时候见过的各种游戏和软件光盘，购买后直接光盘或其它存储介质激活游戏或软件</p>
+<p>在这种模式下，想要获取新的版本就需要重新购买包含新内容的光盘或其它存储介质。这样的模式决定了开发者或发行公司会在推出前期持续打磨服务以尽力完善服务质量</p>
+<p>在互联网的逐渐发展下，早前的实体介质发行方式逐步转向通过网络进行下载。有的是通过提交邮箱地址获取激活码，有的则是通过像 Apple Store 或 Google Play Store 这样的应用商店对应的账户来验证用户的购买</p>
+<p>在这种转变下，曾经只能重新购买全新内容安装介质的方式也被逐步淘汰，更新软件/应用变得简单许多。在这种模式下，开发者或发行公司一般会选择将小功能以及 Bug 修复等作为免费更新来推送，而将较大功能留在新版软件中作为付费更新供用户选择。「买断+大版本付费更新」这种新型模式也基本成为了软件付费商业模式的主流</p>
+<p>但是，这种模式也并不是没有它的潜在风险，主要有以下几点：</p>
+<ol>
+<li>造成开发者，尤其是个人开发者的收入不稳定。买断制的软件往往只能在发布初期获得一笔可观的收入，而后则会陷入波谷。想要解决这个问题，只能不断依靠费时费力的市场推广、新功能的持续推出和大版本更新等行为再次获得新的收入</li>
+<li>造成软件背后的服务器成本等入不敷出，并且这些支出是持续性且无法中断。随着用户量的不断增长，这些背后的持续性支出还会继续增加</li>
+</ol>
+<p>综上，订阅制逐步出现，并且较好地解决了这两个问题。开发者通过用户持续的订阅，能够获得持续且稳定的收入。在这种情况下，开发团队也可以减少风险，并快速调整开发节奏和进度。当软件或应用的开发成本长期大于收益的时候，生态可能就会开始走向崩溃，即：软件收益持续小于开发成本 &gt; 开发者开始无心维护软件 &gt; 导致软件不再迭代 &gt; 用户不再能获得良好的体验或无法获得更好的体验 &gt; 用户不再使用软件或减少使用软件 &gt; 开发者不再获得收益 &gt; 导致软件「流产」</p>
+<h2 id="围绕传统订阅制引发的种种思考">围绕传统订阅制引发的种种思考</h2>
+<p>虽然订阅制可以较好地解决买断制造成的开发者或发行公司的收入和支出成本等问题，但订阅制这种商业模式本身也引起了一些争论和思考</p>
+<h3 id="订阅价格和持续支出">订阅价格和持续支出</h3>
+<p>不难发现，订阅制得以持续的关键核心是<strong>用户需要不断花钱</strong>。在买断制中，用户一次消费就可以获得所购软件或应用的永久使用权。尽管软件或应用可能会在未来的某个时日推出带有全新功能和体验的全新版本，但对于消费者或者用户来说，并不一定会选择立即付费来获得新功能的使用权，他们大可以硬着头皮继续使用不包含新功能和体验的较旧版本</p>
+<p>在订阅制出现之前，较为普遍的一种解决软件更新这一生态的方式，就是开发者或发行公司再发布新的付费软件或应用，并让老用户优惠升级。但这种方案看起来虽然不错，但仍有明显的缺陷。如前文所说，用户大可以在大版本更新时不再继续购买，但这会导致老版本和老版本用户被抛弃。这实际是在<strong>逼迫用户做出选择</strong>，即「出钱升级」或者「放弃使用」</p>
+<p>这里不得不提一下 Parallels Desktop，作为 macOS 平台性能首屈一指的虚拟机工具，它的每一次大版本都以支持 macOS 最新版本为「更新基石」。如果用户不再继续购买后续的大版本，也就意味着无法在最新的 macOS 的版本上使用 Parallels Desktop。随后，Parallels Desktop 推出了订阅制服务，在一年期的订阅周期内，Parallels Desktop 软件本身免费更新，可激活一台设备。但同时，用户也可以选择买断制</p>
+<p>其次，对于个别用户在购买软件或应用后，软件或应用即发布新的需付费更新的版本。这种情况相对较少，但仍然存在。试想一下，你在一个软件或应用的更新末期购买了它，但很快开发者或发行公司就发布了全新版本，且仍然需要付费，你怎么看待这个问题？</p>
+<h3 id="对工具类软件或应用订阅的问题">对工具类软件或应用订阅的问题</h3>
+<p>通常的，用户认为当一款软件由持续支出时，才有资格采用订阅制，这类软件或应用通常被称为「服务」，比如 Dropbox、iCloud 等网盘服务有存储成本，IFTTT 等在线自动化平台有处理数据的成本。这些软件采用订阅制比较合乎情理，也能够使用户容易接受</p>
+<p>但像 UIysses、Bear、VSCO X 等这些没有储存成本，没有处理成本，也没有同步成本的工具类软件或应用也开始转向订阅制，难免会使用户产生一定的抵制情绪</p>
+<h3 id="软件或应用使用权的顾虑">软件或应用使用权的顾虑</h3>
+<p>由于价格等原因不再付费后，用户原本所拥有的软件的使用权即会被中止。这样来看，从买断制到订阅制的转变，可以简单理解为从购买后永久使用向购买后以近乎「租赁」的方式使用</p>
+<p>一般而言，对于买断制的软件或应用，用户可以在他们付费后一直使用，直至软件版本不再适用于最新的操作系统或其它原因。但转为订阅制后，不继续付费则意味着你用户<strong>对这个软件的使用权的丧失</strong>，甚至有些软件或应用还无法让用户导出他们的数据</p>
+<p>比如密码管理工具 1Password（于 2016 年 8 月推出订阅制），在用户停止继续订阅其服务后，用户账号将进入只读模式，可以查看和复制现有的密码，但无法添加新的密码和编辑其现有项目</p>
+<p>再比如写作软件 UIysses（于 2017 年 8 月转为订阅制），在用户停止继续订阅其服务后，UIysses 会变成只读模式，无法新建和编辑文档。虽然 UIysses 提供了导出功能，但估计也没有人会愿意动不动就迁移多年的文档库，更何况导出后，也要考虑其它写作软件的文档兼容性</p>
+<p>这种对应用使用权的顾虑也在流媒体服务最初涌现时出现过</p>
+<h2 id="新式的订阅制涌现">新式的订阅制涌现</h2>
+<h3 id="何为新型订阅制">何为「新型订阅制」</h3>
+<p>这里以一款 App 来给大家解释何为「新式的订阅制」——JSBox</p>
+<p>在 JSBox 发布如今的 2.0 版本之前，JSBox 的付费模式是买断制。即以固定价格购买 JSBox 后，所有功能永久可用，且后期版本免费更新</p>
+<p>在 JSBox 2.0 上线后，作者钟颖为 JSBox 带来了众多的新功能，主要做了两件事情：</p>
+<ul>
+<li>支持 Node.js</li>
+<li>改变了原本的付费模式</li>
+</ul>
+<p>JSBox 2.0 所采用的「订阅更新制」，按照钟颖自己的话来说，就是：</p>
+<blockquote>
+<p>付费解锁当前版本的所有功能及订阅期内的所有更新，解锁过的功能永久可用</p>
+</blockquote>
+<p>这种方式几乎可以解决前文所说的传统订阅制的所有问题：</p>
+<ul>
+<li>不会造成老版本被遗弃</li>
+<li>老用户和新用户的权益将得到公平对待，都以时长计算</li>
+<li>只对感兴趣的更新付费，而不会失去已经得到的功能</li>
+</ul>
+<p>举个简单的例子，如果用户不需要 JSBox 2.0 里面新发布的 Node.js 功能，订阅也恰好过期了，则可以忽略这次更新，不需要付费。而用户之前可以使用的功能，都还可以继续使用，之后的适配和修复也不会减少</p>
+<p>如果之后的某次更新有用户感兴趣的高级功能，可以付费解锁，用户将自动获得当前的全部功能（包括上述例子中用户忽略的那一次更新），以及接下来的一年更新。没有任何强迫，决定权完全在用户自己手里</p>
+<p>这种新形式的订阅制目前仍处于探索时期，但已有一部分的软件或应用开始尝试使用这一方式进行订阅制更新了。比如 Sketch、Working Copy 和 Surge 等</p>
+<h3 id="改变对订阅制的观念">改变对订阅制的观念</h3>
+<p>以前用户认为只有服务材质的订阅。但一些像 Office 系列和 Adobe 系列这些极其昂贵而又充满工具属性的订阅制软件或应用的出现，让目标用户不得不乖乖掏钱。慢慢地，用户的观念也从原先的「服务才值得订阅」转变为了「必备的生产力工具也可以订阅」</p>
+<p>每个人对于「必备的生产力工具」的标准也是不同的。在如今，软件或应用越来越多的强调多平台、同步、云属性。这些新的特性也为这些软件或应用带来了越来越多的<strong>持续性支出</strong>：</p>
+<ul>
+<li>新版本操作系统特性的适配。每年，Apple 和 Google 都会推出旗下操作系统的全新版本。新系统肯定会有新特性，也很可能带来新的 Bug，开发者每年也需要不断地进行适配</li>
+<li>多平台适配。将一个款软件或应用适配到新的平台是个很大的工作量，哪怕是 Apple 推出的 Project Catalyst 也并不是点按一个开关就能搞定的</li>
+<li>新机型的适配。除了新版本操作系统特性的适配，厂商每年也会推出新机型。这些新机型可能会有诸如屏幕分辨率这样的兼容性变化，这也需要开发者不断适配</li>
+</ul>
+<p>在这些持续的成本之下，软件已经越来越向综合性服务靠近。如果一款软件提供了多平台客户端、每年都会努力地适配新系统、并且推出新功能，即使它没有明显的服务器支出，我们也会比较容易接受，比如前面提到的 Bear 就是这类服务属性不明显的订阅制软件</p>
+<p>当软件逐渐向服务靠拢、持续支出成本越来越多时，如果没有稳定的收入，开发者的开发动力很容易被消磨殆尽。赤裸一点说，有钱赚才会继续开发。假如开发者做了一款很棒的软件，卖得很便宜甚至不卖钱，那么可以赢得大家的叫好和称赞声。但是光靠这份名声，以及开发者自己的热情，可能撑不了太久，更像是「用爱发电」。有一部分开发者在一开始就承诺了「一次买断，终身更新」，但这至少不是每个开发者的<strong>义务</strong>。所以我尤其敬佩那些纯靠热情支撑着多年维护软件更新的开发者，但我们不能以此作为标准去要求所有开发者</p>
+<p>订阅制的第二个好处是开发者不用再憋大招放到大版本更新，它们可以把用户急需的新功能、开发者想到的新点子，更快速地迭代到现有版本上，而不是收着掩着留到大版本更新再放出来。能够及时地用上新功能，也会让用户获得满足感</p>
+<p>对于开发者来说，这种及时更新的模式，也让他们的目标更加明确——为现有的用户提供更好的服务和细节，优化软件、修复 bug，而不是一味地想着怎么吸引新用户</p>
+<p>人们对于订阅制的抵触，主要在于价格、租赁感、和观念。价格会由市场调节，用户根据自己的需要理性选择即可；新型订阅制为租赁模式带来了希望，但目前还不会被完全解决，我们也只能慢慢习惯</p>
+<h2 id="写在最后">写在最后</h2>
+<p>这篇文章不是在为所有采用订阅制的软件找理由，有的软件当然价格很不合理，也有的软件在转向订阅制之后更新频率依旧很松散，更新的内容也乏善可陈，这些订阅制软件理应受到谴责。盲目转向订阅制也会失去用户，失去名声</p>
+<p>但是，我想表达的是我们没必要一味地抵制「订阅制」这个概念。个人的力量很难对抗历史的潮流，当订阅制正在成为一种趋势、并且它确实存在一定合理性时，我们不应该一味地拒绝它。这与其说是进步，不如说是没得选。软件早已不再是单纯的工具，而是慢慢地变成综合性的服务了</p>
+
+        </div>
+
+        <div class="jumbotron">
+          <div class="container">
+            <p><i class="ri-article-line"></i> <a href="https://yyl125.top/post/think_about_the_new_subscribe_way/" target="_blank">新型订阅制的涌现，能否完善传统订阅制的不足？</a></p>
+            <p><i class="ri-creative-commons-line"></i> 许可协议：<a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" target="_blank">CC BY-NC-SA 4.0</a>。欲了解更多相关信息，详见 <a href="https://yyl125.top/copyright/" target="_blank">版权信息与资源使用说明</a> 页面</p>
+            <p><i class="ri-error-warning-line"></i> 本站所有内容除特别说明外，皆为原创发布。欢迎尊重原创作者版权的转载或引用。转载或引用时请注明出处</p>
+            <br>
+            <p><i class="ri-feedback-line"></i> 出现了影响阅读的问题？不妨 <a href="mailto:support@yyl125.cc?subject=Benjamin's%20Blog%20%E9%97%AE%E9%A2%98%E5%8F%8D%E9%A6%88" target="_blank" rel="noreferrer noopener">反馈</a> 一下吧</p>
+          </div>
+        </div>
+
+        
+        
+      </div>
+
+      <div class="jumbotron-comment">
+        <div class="container">
+          <p><i class="ri-message-3-line"></i> 欢迎任何与文章内容相关并保持尊重的评论，评论时请遵守 <a href="https://yyl125.top/comment_policy/">评论准则</a></p>
+        </div>
+      </div>
+
+      
+
+      
+        <div id="tcomment"></div>
+      
+      
+      <footer class="py-12 text-center px-4 md:px-0" v-pre>
+  共 24 篇文章｜<a href="https://yyl125.top/copyright" target="_blank">版权信息与资源使用说明</a>｜<i class="ri-rss-line"></i> <a href="https://yyl125.top/atom.xml" target="_blank">RSS</a><br>Copyright © 2026 Benjamin. All rights reserved.
+</footer>
+
+
+    </div>
+
+    <!-- TOC Container -->
+    <div class="fixed right-0 bottom-0 mb-16 mr-4 shadow w-8 h-8 rounded-full flex justify-center items-center z-10 cursor-pointer bg-white dark:bg-gray-500 dark:text-gray-200 hover:shadow-lg transition-all animated fadeInRight" @click="showToc = true">
+      <i class="ri-file-list-line"></i>
+    </div>
+
+    <div class="fixed right-0 top-0 bottom-0 overflow-y-auto w-64 bg-white dark:bg-gray-800 p-4 border-l border-gray-100 dark:border-gray-600 z-10 transition-fast" :class="{ '-mr-64': !showToc }">
+      <div class="flex mb-4 justify-end">
+        <div class="w-8 h-8 inline-flex justify-center items-center rounded-full cursor-pointer hover:bg-gray-200 dark:hover:bg-gray-600 transition-fast" @click="showToc = false">
+          <i class="ri-close-line text-lg"></i>
+        </div>
+      </div>
+      <div class="post-toc-container">
+        <ul class="markdownIt-TOC">
+<li>
+<ul>
+<li><a href="#%E4%B8%BA%E4%BB%80%E4%B9%88%E4%BC%9A%E5%87%BA%E7%8E%B0%E8%AE%A2%E9%98%85%E5%88%B6">为什么会出现「订阅制」？</a></li>
+<li><a href="#%E5%9B%B4%E7%BB%95%E4%BC%A0%E7%BB%9F%E8%AE%A2%E9%98%85%E5%88%B6%E5%BC%95%E5%8F%91%E7%9A%84%E7%A7%8D%E7%A7%8D%E6%80%9D%E8%80%83">围绕传统订阅制引发的种种思考</a>
+<ul>
+<li><a href="#%E8%AE%A2%E9%98%85%E4%BB%B7%E6%A0%BC%E5%92%8C%E6%8C%81%E7%BB%AD%E6%94%AF%E5%87%BA">订阅价格和持续支出</a></li>
+<li><a href="#%E5%AF%B9%E5%B7%A5%E5%85%B7%E7%B1%BB%E8%BD%AF%E4%BB%B6%E6%88%96%E5%BA%94%E7%94%A8%E8%AE%A2%E9%98%85%E7%9A%84%E9%97%AE%E9%A2%98">对工具类软件或应用订阅的问题</a></li>
+<li><a href="#%E8%BD%AF%E4%BB%B6%E6%88%96%E5%BA%94%E7%94%A8%E4%BD%BF%E7%94%A8%E6%9D%83%E7%9A%84%E9%A1%BE%E8%99%91">软件或应用使用权的顾虑</a></li>
+</ul>
+</li>
+<li><a href="#%E6%96%B0%E5%BC%8F%E7%9A%84%E8%AE%A2%E9%98%85%E5%88%B6%E6%B6%8C%E7%8E%B0">新式的订阅制涌现</a>
+<ul>
+<li><a href="#%E4%BD%95%E4%B8%BA%E6%96%B0%E5%9E%8B%E8%AE%A2%E9%98%85%E5%88%B6">何为「新型订阅制」</a></li>
+<li><a href="#%E6%94%B9%E5%8F%98%E5%AF%B9%E8%AE%A2%E9%98%85%E5%88%B6%E7%9A%84%E8%A7%82%E5%BF%B5">改变对订阅制的观念</a></li>
+</ul>
+</li>
+<li><a href="#%E5%86%99%E5%9C%A8%E6%9C%80%E5%90%8E">写在最后</a></li>
+</ul>
+</li>
+</ul>
+
+      </div>
+    </div>
+
+    <!-- Back to top -->
+    <div class="fixed right-0 bottom-0 mb-4 mr-4 shadow w-8 h-8 rounded-full flex justify-center items-center z-10 cursor-pointer bg-white hover:shadow-lg transition-all dark:bg-gray-500 dark:text-gray-200" @click="backToUp" v-show="scrolled">
+      <i class="ri-arrow-up-line"></i>
+    </div>
+
+  </div>
+
+<!--  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script> -->
+  <script src="https://yyl125.top/media/scripts/vue.js"></script>
+  <script src="https://yyl125.top/media/scripts/main.js"></script>
+  <script src="https://yyl125.top/media/scripts/linkcard.js"></script>
+  <script src="https://yyl125.top/media/scripts/view-image.min.js"></script>
+  <script>
+    window.ViewImage && ViewImage.init('.markdown img');
+    var lazyLoadInstance = new LazyLoad({});
+    lazyLoadInstance.update();
+  </script>
+  
+  <!-- Mermaid -->
+  
+
+  <!-- Code Highlight -->
+  
+    <script src="https://yyl125.top/media/scripts/prism.js"></script>
+    <script>
+      Prism.highlightAll()
+    </script>
+  
+
+  <!-- Twikoo -->
+  
+    <script src="https://cdn.jsdelivr.net/npm/twikoo@1.6.44/dist/twikoo.min.js"></script>
+<script>
+  twikoo.init({
+    envId: 'https://twikoo-deploy-one.vercel.app',
+    el: '#tcomment'
+  })
+</script>
+  
+
+</body>
+
+</html>

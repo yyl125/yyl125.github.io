@@ -1,0 +1,325 @@
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<meta name="google-site-verification" content="mzGZdCiBsXZ5XSYVt7eh7KL8L64yuidUoeBNw_53XHk" />
+<meta name="referrer" content="same-origin">
+<title>对 Dark Mode 深色模式以及消息二次传播的一点个人理解 - Benjamin&#39;s Blog</title>
+<link rel="shortcut icon" href="https://yyl125.top/favicon.ico">
+<link href="https://cdn.jsdelivr.net/npm/remixicon@latest/fonts/remixicon.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.7.2/animate.min.css">
+<link rel="stylesheet" href="https://yyl125.top/media/css/tailwind.css">
+<link rel="stylesheet" href="https://yyl125.top/styles/main.css">
+
+
+<link rel="alternate" type="application/atom+xml" title="对 Dark Mode 深色模式以及消息二次传播的一点个人理解 - Benjamin&#39;s Blog - Atom Feed" href="https://yyl125.top/atom.xml">
+<!----<script src="https://yyl125.top/media/scripts/bootstrap.bundle.min.js"></script>---->
+
+
+  
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-Q6KYP4QSBH"></script>
+    <script>
+      var host = window.location.hostname;
+      if(host != "localhost")
+      {
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-Q6KYP4QSBH');
+      }
+    </script>
+  
+
+<script defer>
+(function (document) {
+  const SOURCE = 'https://cdn.jsdelivr.net';
+  const DEST = 'https://gcore.jsdelivr.net';
+  const $ = document.querySelectorAll.bind(document);
+  const checkAvailable = (callback) => {
+    let timeoutId;
+    const newNode = document.createElement('link');
+    newNode.rel = 'stylesheet';
+    newNode.text = 'text/css';
+    const onError = () => {
+      if (!timeoutId) {
+        return;
+      }
+
+      clearTimeout(timeoutId);
+      timeoutId = 0;
+      newNode.href = 'about:blank';
+      newNode.remove();
+      callback(false);
+    };
+
+    timeoutId = setTimeout(onError, 2000);
+    newNode.addEventListener('error', onError);
+    newNode.addEventListener('load', function () {
+      newNode.remove();
+      clearTimeout(timeoutId);
+      callback(true);
+    });
+
+    newNode.href =
+      SOURCE +
+      '/gh/PipecraftNet/jsdelivr-auto-fallback@main/empty.css?' +
+      Date.now();
+    document.head.insertAdjacentElement('afterbegin', newNode);
+  };
+
+  const replaceElementSrc = () => {
+    for (const element of $('link[rel="stylesheet"]')) {
+      if (element.href && element.href.includes(SOURCE)) {
+        element.href = element.href.replace(SOURCE, DEST);
+      }
+    }
+
+    for (const element of $('script')) {
+      if (element.src && element.src.includes(SOURCE)) {
+        const newNode = document.createElement('script');
+        newNode.src = element.src.replace(SOURCE, DEST);
+        element.defer = true;
+        element.src = '';
+        element.before(newNode);
+        element.remove();
+      }
+    }
+
+    for (const element of $('img')) {
+      if (element.src && element.src.includes(SOURCE)) {
+        const source = element.src;
+        // Used to cancel loading. Without this line it will remain pending status.
+        element.src = '';
+        element.src = source.replace(SOURCE, DEST);
+      }
+    }
+  };
+
+  checkAvailable(function (isAvailable) {
+    if (isAvailable) {
+      return;
+    }
+
+    console.warn(SOURCE + ' is not available.');
+
+    replaceElementSrc();
+    // Replace dynamically added elements
+    setInterval(replaceElementSrc, 500);
+  });
+})(document);
+</script>
+  <meta name="description" content="如有可能，无论是什么信息，获取其最准确的方法都是去现场实地发现和探索，获得一手资料。否则，就请独立思考
+
+好像最近刷屏的消息都和绿色有点关系。一个是美股开市大跌崩盘，触发了史上第二次「熔断机制」；另一个是腾讯微信团队的一条微博：
+
+为了优化..." />
+  <meta property="og:title" content="对 Dark Mode 深色模式以及消息二次传播的一点个人理解 - Benjamin&#39;s Blog">
+  <meta property="og:description" content="如有可能，无论是什么信息，获取其最准确的方法都是去现场实地发现和探索，获得一手资料。否则，就请独立思考
+
+好像最近刷屏的消息都和绿色有点关系。一个是美股开市大跌崩盘，触发了史上第二次「熔断机制」；另一个是腾讯微信团队的一条微博：
+
+为了优化..." />
+  <meta property="og:type" content="articles">
+  <meta property="og:url" content="https://yyl125.top/post/stay_independent/" />
+  <meta property="og:image" content="https://oss.yyl125.cc/blog/img/post/Perspective/Stay_Independent/Stay_Independent_Banner.jpg">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:width" content="1200">
+  <meta name="twitter:title" content="对 Dark Mode 深色模式以及消息二次传播的一点个人理解 - Benjamin&#39;s Blog">
+  <meta name="twitter:description" content="如有可能，无论是什么信息，获取其最准确的方法都是去现场实地发现和探索，获得一手资料。否则，就请独立思考
+
+好像最近刷屏的消息都和绿色有点关系。一个是美股开市大跌崩盘，触发了史上第二次「熔断机制」；另一个是腾讯微信团队的一条微博：
+
+为了优化...">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="canonical" href="https://yyl125.top/post/stay_independent/">
+
+  <script src="https://cdn.jsdelivr.net/npm/vanilla-lazyload@17.8.8/dist/lazyload.min.js"></script>
+  <script type="module" src="https://yyl125.top/media/scripts/emaction.js"></script>
+
+  
+    <link rel="stylesheet" href="https://yyl125.top/media/css/prism-atom-dark.css">
+  
+
+  
+</head>
+
+<body>
+  <div class="antialiased flex flex-col min-h-screen" id="app">
+    <a href="https://yyl125.top" class="fixed top-0 left-0 mt-4 bg-black text-white dark:text-gray-700 dark:bg-yellow-50 dark:hover:bg-black dark:hover:text-white inline-flex p-2 pl-8 hover:text-gray-700 hover:bg-yellow-50 font-bold z-10 transition-fast animated fadeInLeft">
+      Benjamin&#39;s Blog
+    </a>
+    <div class="max-w-4xl w-full mx-auto">
+      <div class="shadow-box bg-white dark:bg-gray-600 rounded-lg pt-32 md:pt-64 px-4 md:px-8 pb-8 animated fadeIn mb-8">
+        <h1 class="text-5xl font-semibold leading-normal pb-8 mb-8 border-b-8 border-gray-700">
+          对 Dark Mode 深色模式以及消息二次传播的一点个人理解
+        </h1>
+        
+          <img src="https://oss.yyl125.cc/blog/img/post/Perspective/Stay_Independent/Stay_Independent_Banner.jpg" alt="对 Dark Mode 深色模式以及消息二次传播的一点个人理解" class="block w-full mb-8">
+        
+        <div class="mb-8 flex flex-wrap">
+          <div class="text-gray-400 text-sm mr-4"><i class="ri-calendar-2-line"></i> 2020-03-11 · <i class="ri-timer-line"></i> 8 min read · <i class="ri-eye-line"></i> <span id="twikoo_visitors">0</span></div>
+          
+            <a href="https://yyl125.top/tag/perspective/" class="text-gray-700 dark:text-gray-200 text-sm hover:transition-all duration-100 inline-flex mr-2">
+              <i class="ri-hashtag"></i>
+              Perspective
+            </a>
+          
+        </div>
+        
+        <div class="jumbotron">
+          <div class="container">
+            <p><i class="ri-time-line"></i> 这是一篇发布于 6 年前的文章，其中的信息可能已经有所发展或是发生改变</p>
+          </div>
+        </div>
+
+        
+
+        
+        
+        <div class="markdown mb-8" v-pre id="post-content">
+          <p>如有可能，无论是什么信息，获取其最准确的方法都是去现场实地发现和探索，获得一手资料。否则，就请独立思考</p>
+<!-- more -->
+<p>好像最近刷屏的消息都和绿色有点关系。一个是美股开市大跌崩盘，触发了史上第二次「熔断机制」；另一个是腾讯微信团队的一条微博：</p>
+<blockquote>
+<p>为了优化用户体验，微信与苹果达成合作，共同探索微信在 iOS 系统的暗黑模式体验，目前该功能已完成开发，将有望在下一个新版本中上线，敬请期待</p>
+</blockquote>
+<p>以前一到晚上关灯后，只要有微信消息，眼睛都能看瞎。似乎除了慢慢习惯于晚上不看手机也没什么太好的解决方法了。这次「国民应用」微信要正式支持 Dark Mode 深色模式自然是一个喜大普奔的事情。作为「有生之年」系列长期霸榜的项目，看来是时候要在清单里把它划掉了</p>
+<p>与此相关的，无论是疫情期间偶尔刷刷的微博还是我几乎不看的微信朋友圈（话说我微信真的用的很少），都在转发着一条消息：</p>
+<blockquote>
+<p>微信坚持不推出夜间模式 苹果：4 月还不适配就下架！</p>
+</blockquote>
+<p>当时看到这条消息的时候还是想了一下的，但是以我对 Apple 与开发者之间关系的理解，Apple 不太可能这么表态。考虑到很多自媒体习惯了用震惊体哗众取宠，我对这样的谣传并不感到意外</p>
+<h2 id="apple-的开发者支持信息里究竟是怎么表述的">Apple 的开发者支持信息里究竟是怎么表述的</h2>
+<p>为了获取最新的一手 Apple 开发者支持信息（即使我并不是开发，只是单纯的感兴趣），我还是在 Reeder 里使用 RSS 关注了 <a href="https://developer.apple.com/news" target="_blank">Apple Developer News</a>。默认的，新闻和更新均以英文方式展现，但你仍可滚动页面至最下方，选择「<a href="https://developer.apple.com/cn/news" target="_blank">简体中文</a>」。简体中文的版本的内容可能会比英文版本的内容少几篇，原因可能和缺失的那几篇文章与中国大陆地区并无太大关系有关</p>
+<p>对应的，今年 3 月 4 日 Apple 更新了这一页面，带来了 4 条新内容，分别与 Sign in with Apple 准则和资源更新、提交 iPhone App 的新要求、提交 iPad App 的新要求和《App Store 审核指南》内容更新有关。引发误解的，自然就是这篇名为 <a href="https://developer.apple.com/cn/news/?id=03042020b" target="_blank">提交您的 iPhone app 至 App Store</a>，全文内容如下：</p>
+<blockquote>
+<p>iOS 13 is now running on 77% of all iOS devices introduced in the last four years, worldwide. Deliver great user experiences by seamlessly integrating with Dark Mode, Sign in with Apple, and the latest advances in ARKit 3, Core ML 3, and Siri. Starting April 30, 2020, all iPhone apps submitted to the App Store must be built with the iOS 13 SDK or later.<br>
+Take advantage of Xcode features such as storyboards (including launch storyboards), Auto Layout, and SwiftUI, to ensure your app’s interface elements and layouts automatically fit the display of all iPhone models, regardless of size or aspect ratio. Starting April 30, 2020, all apps submitted to the App Store must use an Xcode storyboard to provide the app’s launch screen and all iPhone apps must support all iPhone screens.<br>
+在过去四年推出的 iOS 设备当中，iOS 13 的普及率达 77%。通过无缝集成深色模式、“通过 Apple 登录”、以及ARKit 3、Core ML 3 和 Siri 的最新改进，提供出色的用户体验。从 2020 年 4 月 30 日开始，所有提交至 App Store 的 iPhone app 都须使用 iOS 13 SDK 或更高版本来构建。<br>
+充分利用 storyboard（包括 launch storyboard）、自动布局以及 SwiftUI 等 Xcode 功能，确保 app 的界面元素和布局能自动适应所有 iPhone 型号屏幕的大小和宽高比。从 2020 年 4 月 30 日开始，所有提交至 App Store 的 app 都须使用 Xcode storyboard 来提供 app 的启动屏幕，且所有 iPhone app 必须支持所有 iPhone 屏幕。</p>
+</blockquote>
+<p>这个新要求中主要涉及以下几点：</p>
+<ul>
+<li>从 2020 年 4 月 30 日开始，所有提交至 App Store 的 iPhone app 都须使用 iOS 13 SDK 或更高版本来构建；</li>
+<li>从 2020 年 4 月 30 日开始，所有提交至 App Store 的 app 都须使用 Xcode storyboard(故事板) 来提供 app 的启动屏幕；</li>
+<li>且所有 iPhone app 必须支持所有 iPhone 屏幕</li>
+</ul>
+<p>由此可见，在这篇新要求当中并没有提及对 Dark Mode 支持的「强制性」，只是说到了从 4 月 30 日起，所有提交的 iPhone App 都须要使用 iOS 13 SDK 或更高版本来构建。这里有一个很有意思的点，即「使用 iOS 13 SDK」是否等价于「Dark Mode 一定要支持」？</p>
+<p>答案当然……<strong>不是的</strong>。首先，要明白 iOS SDK 13 是什么。简而言之，就是一套每年都会更新的开发工具。开发者可以使用最新版本的 SDK 来获得一些新的功能或者是提高原有功能和系统的契合度。如果开发人员使用 iOS SDK 12 来编译 App，则 Dark Mode 这样的新特性将与这个 App 无任何关系。如果开发人员使用 iOS SDK 13 来编译 App，仅就 Dark Mode 这一点来说，这个 App 可以更好的支持系统级别的 Dark Mode。任何 App 在使用新的 SDK 版本编译时都要考虑兼容性问题。仅就 Dark Mode 这一点来说，如果在不考虑兼容性的前提下直接使用 iOS 13 SDK 来编译 App，那么 App 的主题色彩方案将跟随 iOS 系统设置进行调整，这样会引发一些问题，比如一些界面会出现颜色问题</p>
+<p>事实上，iOS SDK 13 并不只包含了关于 Dark Mode 的内容，还有很多其它的新特性。如果一款 App 暂时不想支持 Dark Mode，或者压根就不想支持 Dark Mode，Apple 甚至还在之前的文章中提及了移除 Dark Mode 支持的 <a href="https://developer.apple.com/cn/news/?id=0829019a" target="_blank">方法</a>（但小组件还是要支持，只不过微信并没有小组件）：</p>
+<blockquote>
+<p>If you need more time to make your app look fantastic in Dark Mode,or if Dark Mode is not suited for your app,you can learn how to opt out.<br>
+如果您需要更多时间调节 app 在深色模式中的外观，或您的 app 不适用于深色模式，您可进一步了解如何停用深色模式</p>
+</blockquote>
+<h2 id="dark-mode-一定要支持吗">Dark Mode 一定要支持吗？</h2>
+<p>很多人可能都误解了 Dark Mode，认为这是每一个 App 都要支持的特性。但这显然是不对的，<strong>并非所有 App 都适合 Dark Mode</strong>。这也说明了为什么 Apple 会给出移除 Dark Mode 支持的方法</p>
+<p>很多人会理所当然的认为「Dark Mode 深色模式不就是把白的变成黑的嘛？」，其实并不尽然。单纯的将所有内容「白变成黑」从设计上讲是会非常「难受」的，因为不同内容所涉及到的交互等内容往往是不同的。具体的，你可以在少数派的这篇 <a href="https://sspai.com/post/59407" target="_blank">文章</a> 中进一步了解</p>
+<h2 id="从最近的一些事情引发的关于消息二次传播的一点个人理解">从最近的一些事情引发的关于消息二次传播的一点个人理解</h2>
+<p>引发很多争论的根源，往往除了没有就事论事外，很多消息的受众获取了大量的「二手信息」。从我接受义务教育学习历史课以来，无一位历史老师没有说过「获取信息最准确的方法是去现场实地发现和探索以获得一手资料」，很多应试题目甚至还以此为题</p>
+<p>俗话说「一万个人有一万种哈姆雷特」。由于翻译水平、理解水平甚至是切入视角的不同，一则消息可能会有不同的理解，继而造成不一样的信息传播和接收。作为消息的传播者，保证内容准确传达、传播是一定要做到的事情，切勿带节奏或盲目跟随</p>
+<p>在当下这个谁都能成为自媒体的时代，作为一位成年人，清晰的辨别「带节奏」和「实事求是」的区别、「如何获取在信息爆炸的时代中提取最有用的信息」、如何对一个问题进行独立的思考是带给我们的必然要求</p>
+
+        </div>
+
+        <div class="jumbotron">
+          <div class="container">
+            <p><i class="ri-article-line"></i> <a href="https://yyl125.top/post/stay_independent/" target="_blank">对 Dark Mode 深色模式以及消息二次传播的一点个人理解</a></p>
+            <p><i class="ri-creative-commons-line"></i> 许可协议：<a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" target="_blank">CC BY-NC-SA 4.0</a>。欲了解更多相关信息，详见 <a href="https://yyl125.top/copyright/" target="_blank">版权信息与资源使用说明</a> 页面</p>
+            <p><i class="ri-error-warning-line"></i> 本站所有内容除特别说明外，皆为原创发布。欢迎尊重原创作者版权的转载或引用。转载或引用时请注明出处</p>
+            <br>
+            <p><i class="ri-feedback-line"></i> 出现了影响阅读的问题？不妨 <a href="mailto:support@yyl125.cc?subject=Benjamin's%20Blog%20%E9%97%AE%E9%A2%98%E5%8F%8D%E9%A6%88" target="_blank" rel="noreferrer noopener">反馈</a> 一下吧</p>
+          </div>
+        </div>
+
+        
+        
+      </div>
+
+      <div class="jumbotron-comment">
+        <div class="container">
+          <p><i class="ri-message-3-line"></i> 欢迎任何与文章内容相关并保持尊重的评论，评论时请遵守 <a href="https://yyl125.top/comment_policy/">评论准则</a></p>
+        </div>
+      </div>
+
+      
+
+      
+        <div id="tcomment"></div>
+      
+      
+      <footer class="py-12 text-center px-4 md:px-0" v-pre>
+  共 24 篇文章｜<a href="https://yyl125.top/copyright" target="_blank">版权信息与资源使用说明</a>｜<i class="ri-rss-line"></i> <a href="https://yyl125.top/atom.xml" target="_blank">RSS</a><br>Copyright © 2026 Benjamin. All rights reserved.
+</footer>
+
+
+    </div>
+
+    <!-- TOC Container -->
+    <div class="fixed right-0 bottom-0 mb-16 mr-4 shadow w-8 h-8 rounded-full flex justify-center items-center z-10 cursor-pointer bg-white dark:bg-gray-500 dark:text-gray-200 hover:shadow-lg transition-all animated fadeInRight" @click="showToc = true">
+      <i class="ri-file-list-line"></i>
+    </div>
+
+    <div class="fixed right-0 top-0 bottom-0 overflow-y-auto w-64 bg-white dark:bg-gray-800 p-4 border-l border-gray-100 dark:border-gray-600 z-10 transition-fast" :class="{ '-mr-64': !showToc }">
+      <div class="flex mb-4 justify-end">
+        <div class="w-8 h-8 inline-flex justify-center items-center rounded-full cursor-pointer hover:bg-gray-200 dark:hover:bg-gray-600 transition-fast" @click="showToc = false">
+          <i class="ri-close-line text-lg"></i>
+        </div>
+      </div>
+      <div class="post-toc-container">
+        <ul class="markdownIt-TOC">
+<li>
+<ul>
+<li><a href="#apple-%E7%9A%84%E5%BC%80%E5%8F%91%E8%80%85%E6%94%AF%E6%8C%81%E4%BF%A1%E6%81%AF%E9%87%8C%E7%A9%B6%E7%AB%9F%E6%98%AF%E6%80%8E%E4%B9%88%E8%A1%A8%E8%BF%B0%E7%9A%84">Apple 的开发者支持信息里究竟是怎么表述的</a></li>
+<li><a href="#dark-mode-%E4%B8%80%E5%AE%9A%E8%A6%81%E6%94%AF%E6%8C%81%E5%90%97">Dark Mode 一定要支持吗？</a></li>
+<li><a href="#%E4%BB%8E%E6%9C%80%E8%BF%91%E7%9A%84%E4%B8%80%E4%BA%9B%E4%BA%8B%E6%83%85%E5%BC%95%E5%8F%91%E7%9A%84%E5%85%B3%E4%BA%8E%E6%B6%88%E6%81%AF%E4%BA%8C%E6%AC%A1%E4%BC%A0%E6%92%AD%E7%9A%84%E4%B8%80%E7%82%B9%E4%B8%AA%E4%BA%BA%E7%90%86%E8%A7%A3">从最近的一些事情引发的关于消息二次传播的一点个人理解</a></li>
+</ul>
+</li>
+</ul>
+
+      </div>
+    </div>
+
+    <!-- Back to top -->
+    <div class="fixed right-0 bottom-0 mb-4 mr-4 shadow w-8 h-8 rounded-full flex justify-center items-center z-10 cursor-pointer bg-white hover:shadow-lg transition-all dark:bg-gray-500 dark:text-gray-200" @click="backToUp" v-show="scrolled">
+      <i class="ri-arrow-up-line"></i>
+    </div>
+
+  </div>
+
+<!--  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script> -->
+  <script src="https://yyl125.top/media/scripts/vue.js"></script>
+  <script src="https://yyl125.top/media/scripts/main.js"></script>
+  <script src="https://yyl125.top/media/scripts/linkcard.js"></script>
+  <script src="https://yyl125.top/media/scripts/view-image.min.js"></script>
+  <script>
+    window.ViewImage && ViewImage.init('.markdown img');
+    var lazyLoadInstance = new LazyLoad({});
+    lazyLoadInstance.update();
+  </script>
+  
+  <!-- Mermaid -->
+  
+
+  <!-- Code Highlight -->
+  
+    <script src="https://yyl125.top/media/scripts/prism.js"></script>
+    <script>
+      Prism.highlightAll()
+    </script>
+  
+
+  <!-- Twikoo -->
+  
+    <script src="https://cdn.jsdelivr.net/npm/twikoo@1.6.44/dist/twikoo.min.js"></script>
+<script>
+  twikoo.init({
+    envId: 'https://twikoo-deploy-one.vercel.app',
+    el: '#tcomment'
+  })
+</script>
+  
+
+</body>
+
+</html>
