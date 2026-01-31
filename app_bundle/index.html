@@ -1,0 +1,202 @@
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<meta name="google-site-verification" content="mzGZdCiBsXZ5XSYVt7eh7KL8L64yuidUoeBNw_53XHk" />
+<meta name="referrer" content="same-origin">
+<title>关于「收藏」中的 App Bundle - Benjamin&#39;s Blog</title>
+<link rel="shortcut icon" href="https://yyl125.top/favicon.ico">
+<link href="https://cdn.jsdelivr.net/npm/remixicon@latest/fonts/remixicon.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.7.2/animate.min.css">
+<link rel="stylesheet" href="https://yyl125.top/media/css/tailwind.css">
+<link rel="stylesheet" href="https://yyl125.top/styles/main.css">
+
+
+<link rel="alternate" type="application/atom+xml" title="关于「收藏」中的 App Bundle - Benjamin&#39;s Blog - Atom Feed" href="https://yyl125.top/atom.xml">
+<!----<script src="https://yyl125.top/media/scripts/bootstrap.bundle.min.js"></script>---->
+
+
+  
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-Q6KYP4QSBH"></script>
+    <script>
+      var host = window.location.hostname;
+      if(host != "localhost")
+      {
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-Q6KYP4QSBH');
+      }
+    </script>
+  
+
+<script defer>
+(function (document) {
+  const SOURCE = 'https://cdn.jsdelivr.net';
+  const DEST = 'https://gcore.jsdelivr.net';
+  const $ = document.querySelectorAll.bind(document);
+  const checkAvailable = (callback) => {
+    let timeoutId;
+    const newNode = document.createElement('link');
+    newNode.rel = 'stylesheet';
+    newNode.text = 'text/css';
+    const onError = () => {
+      if (!timeoutId) {
+        return;
+      }
+
+      clearTimeout(timeoutId);
+      timeoutId = 0;
+      newNode.href = 'about:blank';
+      newNode.remove();
+      callback(false);
+    };
+
+    timeoutId = setTimeout(onError, 2000);
+    newNode.addEventListener('error', onError);
+    newNode.addEventListener('load', function () {
+      newNode.remove();
+      clearTimeout(timeoutId);
+      callback(true);
+    });
+
+    newNode.href =
+      SOURCE +
+      '/gh/PipecraftNet/jsdelivr-auto-fallback@main/empty.css?' +
+      Date.now();
+    document.head.insertAdjacentElement('afterbegin', newNode);
+  };
+
+  const replaceElementSrc = () => {
+    for (const element of $('link[rel="stylesheet"]')) {
+      if (element.href && element.href.includes(SOURCE)) {
+        element.href = element.href.replace(SOURCE, DEST);
+      }
+    }
+
+    for (const element of $('script')) {
+      if (element.src && element.src.includes(SOURCE)) {
+        const newNode = document.createElement('script');
+        newNode.src = element.src.replace(SOURCE, DEST);
+        element.defer = true;
+        element.src = '';
+        element.before(newNode);
+        element.remove();
+      }
+    }
+
+    for (const element of $('img')) {
+      if (element.src && element.src.includes(SOURCE)) {
+        const source = element.src;
+        // Used to cancel loading. Without this line it will remain pending status.
+        element.src = '';
+        element.src = source.replace(SOURCE, DEST);
+      }
+    }
+  };
+
+  checkAvailable(function (isAvailable) {
+    if (isAvailable) {
+      return;
+    }
+
+    console.warn(SOURCE + ' is not available.');
+
+    replaceElementSrc();
+    // Replace dynamically added elements
+    setInterval(replaceElementSrc, 500);
+  });
+})(document);
+</script>
+  <meta name="description" content="Stay hungry. Stay foolish." />
+</head>
+<body>
+  <div class="antialiased flex flex-col min-h-screen" id="app">
+    <a href="https://yyl125.top" class="fixed top-0 left-0 mt-4 bg-black text-white dark:text-gray-700 dark:bg-yellow-50 dark:hover:bg-black dark:hover:text-white inline-flex p-2 pl-8 hover:text-gray-700 hover:bg-yellow-50 font-bold z-10 transition-fast animated fadeInLeft">
+    Benjamin&#39;s Blog
+    </a>
+    <div class="max-w-4xl w-full mx-auto">
+      <div class="shadow-box bg-white dark:bg-gray-600 rounded-lg pt-32 md:pt-64 px-4 md:px-8 pb-8 animated fadeIn mb-8">
+        <h1 class="text-5xl font-semibold leading-normal pb-8 mb-8 border-b-8 border-gray-700">关于「收藏」中的 App Bundle</h1>
+        
+        <div class="markdown mb-8">
+          <div class="jumbotron">
+            <div class="container">
+              <p><i class="ri-information-line"></i> 这是一篇帮助文档，用于指示某些重要信息</p>
+            </div>
+          </div>
+
+          <p>本文介绍了每一个 Benjamin's Blog 「收藏」页面中展示的 App Bundle 中每一款推荐 App 的详细介绍。本文将按照 App Bundle 的编号顺序进行排版</p>
+          <p><strong>App Bundle 推荐仅以个人喜好为基础，绝不含任何付费推广！</strong></p>
+          <h2 id="App_Bundle_1">App Bundle 1</h2>
+          <p>App Bundle 1 中精选了偏向开发、骚扰拦截以及个人日程规划和喜好收藏收集等的工具类 App。具体包括：</p>
+          <ul>
+            <li>使用 <a href="https://apps.apple.com/app/id1501532023" target="_blank">ServerCat</a> 监视你的 Linux 服务、管理 Docker 容器并与服务器进行 SSH 终端连接</li>
+            <li>创新性的使用 CoreML 机器学习框架在 <a href="https://apps.apple.com/app/id1642682818" target="_blank">熊猫吃短信 2</a> 这一熊猫吃短信 App 的迭代版本中，离线拦截垃圾短信。适配 iOS 16 最新短信分类</li>
+            <li>利用 TMDb 的数据库在 <a href="https://apps.apple.com/app/id1616467801" target="_blank">Apollo</a> 记录自己看过的电影/剧集、给已看的电影/剧集添加评分、评论、记录自己的观影方式等。也可以用它来追踪目前在追的剧集的观看进度、或者建立自己的「待看清单」</li>
+            <li><a href="https://apps.apple.com/app/id1104165041" target="_blank">Supershift</a> 是为值班人员设计的日程表，适合日常值班以及倒班制工作的人</li>
+            <li><a href="https://apps.apple.com/app/id1528561380" target="_blank">Bandbreite</a> 是一款官方 Apple Watch 表带收集与记录 App</li>
+            <li>使用 <a href="https://apps.apple.com/app/id1470560916" target="_blank">Pandora</a> 来管理你的订阅服务并在需要续费前得到通知</li>
+          </ul>
+          <h2 id="App_Bundle_2">App Bundle 2</h2>
+          <p>App Bundle 2 中依旧聚焦骚扰拦截、图片处理、信息摘要、旅行轨迹记录以及视频拍摄等的工具类 App。具体包括：</p>
+          <ul>
+            <li><a href="https://apps.apple.com/app/id6476010032" target="_blank">拦截猫</a>是一款短信和电话标记和拦截 App，利用模型有效拦截垃圾电话和短信</li>
+            <li>给 <a href="https://apps.apple.com/app/id1534690075" target="_blank">DAMA</a> 一张图片，自动帮你为隐私信息打码</li>
+            <li>在 AirDrop 因为各种原因发生异常时，<a href="https://apps.apple.com/app/id1661733229" target="_blank">LocalSend</a> 都是其最好的平替。同时多端支持满足了不同生态系统互传文件的传统难题</li>
+            <li>软媒 IT 之家的最新作品<a href="https://apps.apple.com/app/id1618892080" target="_blank">要知</a>，为你提供最近你需要知道的早报内容</li>
+            <li><a href="https://apps.apple.com/app/id6449580241" target="_blank">BlackmagicCam</a> 让 iPhone 的视频拍摄能力带来了更多的专业选择</li>
+            <li><a href="https://apps.apple.com/app/id6473148424" target="_blank">圆周旅迹</a>可以让你将小红书等平台搜集到的旅游攻略，一键分析，为你合理规划行程</li>
+          </ul>
+          <h2 id="App_Bundle_3">App Bundle 3</h2>
+          <p>App Bundle 3 中精选了在日本旅游中可能会用到的 App。具体包括：</p>
+          <ul>
+            <li>如果你需要在日本使用手机支付，<a href="https://apps.apple.com/app/id1160481993" target="_blank">Apple Wallet</a> 中的 Suica 等交通系 IC 和各种绑定的银行卡是一个方便的选择</li>
+            <li>不想旅游时随身携带行李箱？<a href="https://apps.apple.com/app/id1443707795" target="_blank">ecbo cloak</a> 能够帮助你快速找到身边最近的行李寄存柜</li>
+            <li>在日本旅游时，<a href="https://apps.apple.com/app/id585027354" target="_blank">Google 地图</a>是你最好的导航助手，提供详细的公共交通信息和步行路线</li>
+            <li><a href="https://apps.apple.com/app/id350732480" target="_blank">NHK WORLD</a> 可以帮助你了解日本的新闻，接收地震和海啸（津波，つなみ，Tsunami）的权威通知（小区广播亦可）</li>
+            <li><a href="https://apps.apple.com/jp/app/id763377066" target="_blank">Tabelog</a> 可谓是日本的美食「大众点评」，其现在已提供中文预订服务。此 App 只在日本地区提供服务，你可以在微信小程序中进行搜索</li>
+            <li><a href="https://apps.apple.com/app/id1153448703" target="_blank">Shinkansen smartEX</a> 是你在线购买新干线车票的好助手，使用信用卡即可完成交易</li>
+          </ul>
+          <h2 id="App_Bundle_4">App Bundle 4</h2>
+          <p>App Bundle 4 中精选了在香港旅游中可能会用到的 App。具体包括：</p>
+          <ul>
+            <li>拥有着全球众多地区服务的 <a href="https://apps.apple.com/app/id469463298" target="_blank">Citymapper</a> 可为你提供详细的路线指示，帮助你在香港 Citywalk</li>
+            <li>全港分布着众多的免费饮水机，使用 <a href="https://apps.apple.com/app/id1252258619" target="_blank">Water For Free</a>可帮助你快速找到免费饮用水源</li>
+            <li><a href="https://apps.apple.com/app/id361319719" target="_blank">我的天文台</a>可以帮助你了解香港本地以及广东等周边地区的天气消息</li>
+            <li>突然内急想上厕所？快用<a href="https://apps.apple.com/app/id1576799448" target="_blank">ToiletBuddy</a> 找找看吧</li>
+            <li>来香港淘物却怕坐地起价？用 <a href="https://apps.apple.com//app/id455201798" target="_blank">Price</a> 来帮你格价</li>
+            <li><a href="https://apps.apple.com/app/id1505492952" target="_blank">旅客八达通</a>可以帮助你在港期间开通、管理和退还你的八达通</li>
+          </ul>
+          <h2 id="App_Bundle_5">App Bundle 5</h2>
+          <p>App Bundle 5 中精选了在日常旅游中可能会用到的 App。具体包括：</p>
+          <ul>
+            <li>随时预订，即刻出票.<a href="https://apps.apple.com/cn/app/id6449272501" target="_blank">Klook 客路旅行</a>可为你提供一站式服务，助你轻松出行</li>
+            <li>通过 <a href="https://apps.apple.com/cn/app/id401626263" target="_blank">Airbnb 爱彼迎</a>可帮助你选择和预定想要的民宿等房源</li>
+            <li>动动手指即可通过 <a href="https://apps.apple.com/cn/app/id368677368" target="_blank">Uber 优步</a>平台乘车，直达目的地</li>
+            <li>旅行中丢了 Apple 设备？通过<a href="https://apps.apple.com/app/id1514844621" target="_blank">查找</a>查看 Apple 设备的<a href="https://support.apple.com/zh-cn/104978">位置</a>，定位随附 AirTag 的物品或跟踪「Find My」网络配件，更可与亲友共享位置</li>
+            <li>旅行中遇到不会的语言？用<a href="https://apps.apple.com/app/id1514844618" target="_blank">翻译</a> 来帮你</li>
+            <li><a href="https://apps.apple.com/cn/app/id851033695" target="_blank">极简汇率</a>可以帮助你了解各币种之间的汇率</li>
+          </ul>
+        </div>
+      </div>
+
+    </div>
+    
+    <footer class="py-12 text-center px-4 md:px-0" v-pre>
+  共 24 篇文章｜<a href="https://yyl125.top/copyright" target="_blank">版权信息与资源使用说明</a>｜<i class="ri-rss-line"></i> <a href="https://yyl125.top/atom.xml" target="_blank">RSS</a><br>Copyright © 2026 Benjamin. All rights reserved.
+</footer>
+
+    
+    <!-- Back to top -->
+    <div class="fixed right-0 bottom-0 mb-4 mr-4 shadow w-8 h-8 rounded-full flex justify-center items-center z-10 cursor-pointer bg-white hover:shadow-lg transition-all dark:bg-gray-500 dark:text-gray-200" @click="backToUp" v-show="scrolled">
+      <i class="ri-arrow-up-line"></i>
+    </div>
+  </div>
+    
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+  <script src="https://yyl125.top/media/scripts/main.js"></script>
+  
+</body>
+</html>

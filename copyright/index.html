@@ -1,0 +1,210 @@
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<meta name="google-site-verification" content="mzGZdCiBsXZ5XSYVt7eh7KL8L64yuidUoeBNw_53XHk" />
+<meta name="referrer" content="same-origin">
+<title>版权信息与资源使用说明 - Benjamin&#39;s Blog</title>
+<link rel="shortcut icon" href="https://yyl125.top/favicon.ico">
+<link href="https://cdn.jsdelivr.net/npm/remixicon@latest/fonts/remixicon.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.7.2/animate.min.css">
+<link rel="stylesheet" href="https://yyl125.top/media/css/tailwind.css">
+<link rel="stylesheet" href="https://yyl125.top/styles/main.css">
+
+
+<link rel="alternate" type="application/atom+xml" title="版权信息与资源使用说明 - Benjamin&#39;s Blog - Atom Feed" href="https://yyl125.top/atom.xml">
+<!----<script src="https://yyl125.top/media/scripts/bootstrap.bundle.min.js"></script>---->
+
+
+  
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-Q6KYP4QSBH"></script>
+    <script>
+      var host = window.location.hostname;
+      if(host != "localhost")
+      {
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-Q6KYP4QSBH');
+      }
+    </script>
+  
+
+<script defer>
+(function (document) {
+  const SOURCE = 'https://cdn.jsdelivr.net';
+  const DEST = 'https://gcore.jsdelivr.net';
+  const $ = document.querySelectorAll.bind(document);
+  const checkAvailable = (callback) => {
+    let timeoutId;
+    const newNode = document.createElement('link');
+    newNode.rel = 'stylesheet';
+    newNode.text = 'text/css';
+    const onError = () => {
+      if (!timeoutId) {
+        return;
+      }
+
+      clearTimeout(timeoutId);
+      timeoutId = 0;
+      newNode.href = 'about:blank';
+      newNode.remove();
+      callback(false);
+    };
+
+    timeoutId = setTimeout(onError, 2000);
+    newNode.addEventListener('error', onError);
+    newNode.addEventListener('load', function () {
+      newNode.remove();
+      clearTimeout(timeoutId);
+      callback(true);
+    });
+
+    newNode.href =
+      SOURCE +
+      '/gh/PipecraftNet/jsdelivr-auto-fallback@main/empty.css?' +
+      Date.now();
+    document.head.insertAdjacentElement('afterbegin', newNode);
+  };
+
+  const replaceElementSrc = () => {
+    for (const element of $('link[rel="stylesheet"]')) {
+      if (element.href && element.href.includes(SOURCE)) {
+        element.href = element.href.replace(SOURCE, DEST);
+      }
+    }
+
+    for (const element of $('script')) {
+      if (element.src && element.src.includes(SOURCE)) {
+        const newNode = document.createElement('script');
+        newNode.src = element.src.replace(SOURCE, DEST);
+        element.defer = true;
+        element.src = '';
+        element.before(newNode);
+        element.remove();
+      }
+    }
+
+    for (const element of $('img')) {
+      if (element.src && element.src.includes(SOURCE)) {
+        const source = element.src;
+        // Used to cancel loading. Without this line it will remain pending status.
+        element.src = '';
+        element.src = source.replace(SOURCE, DEST);
+      }
+    }
+  };
+
+  checkAvailable(function (isAvailable) {
+    if (isAvailable) {
+      return;
+    }
+
+    console.warn(SOURCE + ' is not available.');
+
+    replaceElementSrc();
+    // Replace dynamically added elements
+    setInterval(replaceElementSrc, 500);
+  });
+})(document);
+</script>
+  <meta name="description" content="Stay hungry. Stay foolish." />
+</head>
+<body>
+  <div class="antialiased flex flex-col min-h-screen" id="app">
+    <a href="https://yyl125.top" class="fixed top-0 left-0 mt-4 bg-black text-white dark:text-gray-700 dark:bg-yellow-50 dark:hover:bg-black dark:hover:text-white inline-flex p-2 pl-8 hover:text-gray-700 hover:bg-yellow-50 font-bold z-10 transition-fast animated fadeInLeft">
+    Benjamin&#39;s Blog
+    </a>
+    <div class="max-w-4xl w-full mx-auto">
+      <div class="shadow-box bg-white dark:bg-gray-600 rounded-lg pt-32 md:pt-64 px-4 md:px-8 pb-8 animated fadeIn mb-8">
+        <h1 class="text-5xl font-semibold leading-normal pb-8 mb-8 border-b-8 border-gray-700">版权信息与资源使用说明</h1>
+        
+        <div class="markdown mb-8">
+          <div class="jumbotron">
+            <div class="container">
+              <p><i class="ri-information-line"></i> 这是一篇帮助文档，用于指示某些重要信息</p>
+            </div>
+          </div>
+          <p>首先，作为原创作者非常感谢你对「Benjamin's Blog」内容的认可。你的支持即是对我最大的鼓励！</p>
+          <h2 id="版权信息">版权信息</h2>
+          <p>Benjamin 支持原创作品，尊重原创作者的劳动成果，帮助维护原创作者的知识产权。创作与生产过程中使用正规来源的资源，尽可能使用经授权的资源。对于无版权内容及未经授权的引用会使用明显的标记进行声明</p>
+          <h3 id="原创作品">原创作品</h3>
+          <p>Benjamin 对网站内的所有原创图片、文字以及音像资源等内容保留最终解释权。「原创作品」指包括但不限于被标有「Benjamin」、「by Benjamin」、「By Benjamin」、「Benjamin Studio」、「由 Benjamin 原创发布」、「Benjamin Original Content」、「Benjamin Produce」、「Benjamin Present」、「Shot by Benjamin」等 Logo、字样、字幕或其它任何形式的版权相关声明内容的最终作品以及与之相关的技术信息，如 EXIF 等</p>
+          <p>Benjamin 可能会将部分原创作品通过其它平台进行分发或授权，如 Unsplash 等。这些原创作品的相关权利除遵循本站的相关原则外，还将遵循各自平台的相关权利规则和相关许可限制（如 <a href="https://unsplash.com/license" target="_blank">Unsplash License</a> 等）</p>
+          <p>除另有特别说明的网站内容外，「Benjamin's Blog」的所有网站内容均基于 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" target="_blank">知识共享许可协议 署名 - 非商业使用 - 相同方式共享 4.0</a>（CC BY-NC-SA 4.0）共享。这意味着只要你遵守以下许可协议条款内容，Benjamin 就无法收回这些权利：
+            <ol>
+              <li><strong>共享</strong>：在任何媒介以任何形式复制、发行网站内容</li>
+              <li><strong>演绎</strong>：修改、转换或以网站内容为基础进行创作</li>
+            </ol>
+          </p>
+          <p>除了上述的许可协议条款内容外，还必须遵守下列条件：
+            <ol>
+              <li><strong>署名</strong>：必须给出适当的署名<sup class="footnote-ref"><a href="#fn1" id="fnref1">[1]</a></sup>，提供指向本许可协议的链接，同时标明是否（对原始作品）作了修改<sup class="footnote-ref"><a href="#fn2" id="fnref2">[2]</a></sup>。你可以用任何合理的方式来署名，但是不得以任何方式暗示许可人为你或你的使用背书</li>
+              <li><strong>非商业性使用</strong>：不得将网站内容用于商业目的<sup class="footnote-ref"><a href="#fn3" id="fnref1">[3]</a></sup></li>
+              <li><strong>相同方式共享</strong>：如果剪切网站内容内容或者基于网站内容进行创作，必须基于与原先许可协议相同或兼容的许可协议分发新的作品</li>
+              <li><strong>没有附加协议</strong>：不得使用法律术语或者技术措施限制其它人做许可协议允许的事情</li>
+            </ol>
+          </p>
+          <p>除此以外，还需要注意：
+            <ol>
+              <li>不必因为公共领域的作品要素而遵守许可协议，或者使用被可适用的例外或限制<sup class="footnote-ref"><a href="#fn4" id="fnref1">[4]</a></sup>所允许</li>
+              <li>不提供担保。许可协议可能不会给意图使用的所必须的所有许可。例如，形象权、隐私权或人格权等其它权利可能限制如何使用作品<sup class="footnote-ref"><a href="#fn5" id="fnref1">[5]</a></sup></li>
+            </ol>
+          </p>
+          <p>如发现任何个人、实体等违规使用「Benjamin's Blog」网站中的任何原创作品、无版权内容及未经授权的引用等相关内容或对与之相关的各项权利有疑问，请 <a href="mailto:support@yyl125.cc?subject=Benjamin's%20Blog%20%E9%97%AE%E9%A2%98%E5%8F%8D%E9%A6%88" target="_blank" rel="noreferrer noopener">邮件</a> 联系 Benjamin，查实后会联系相关内容作者下线相关内容并可能给予信息提供者一定的奖励</p>
+          <h3 id="无版权内容及未经授权的引用">无版权内容及未经授权的引用</h3>
+          <p>对于「Benjamin's Blog」网站内容中的无版权内容及未经授权的引用会使用明显的标记进行声明，也希望所有引用者尊重原作者相关权利</p>
+          <p>如对「Benjamin's Blog」网站中的任何原创作品、无版权内容及未经授权的引用等相关内容或对与之相关的各项权利有疑问，请 <a href="mailto:support@yyl125.cc?subject=Benjamin's%20Blog%20%E9%97%AE%E9%A2%98%E5%8F%8D%E9%A6%88" target="_blank" rel="noreferrer noopener">邮件</a> 联系 Benjamin，查实后会积极修改或下线相关内容并可能给予信息提供者一定的奖励</p>
+          <h2 id="资源使用说明">资源使用说明</h2>
+          <p>Benjamin 通过正规途径获取资源，并按照版权所有者的要求支付非免费资源的使用费。Benjamin 对使用的所有非 Benjamin 原创的图片、文字（含字体）、音像资源负责</p>
+          <h3 id="图片素材使用来源">图片素材使用来源</h3>
+          <ol>
+            <li><a href="https://unsplash.com/" target="_blank">Unsplash</a></li>
+            <li><a href="https://www.wikipedia.org/" target="_blank">wikipedia</a></li>
+            <li><a href="https://www.apple.com/" target="_blank">Apple</a> 官网及其附属网站</li>
+            <li><a href="https://www.microsoft.com/" target="_blank">Microsoft</a> 官网及其附属网站</li>
+            <li><a href="https://worldvectorlogo.com/zh" target="_blank">WorldVectorLogo</a></li>
+            <li><a href="https://neodb.social/" target="_blank">NeoDB</a></li>
+          </ol>
+          <h3 id="文字（含字体）素材使用来源">文字（含字体）素材使用来源</h3>
+          <ol>
+            <li><a href="https://www.foundertype.com/" target="_blank">方正字库</a></li>
+            <li><a href="https://www.hanyi.com.cn/" target="_blank">汉仪字库</a></li>
+          </ol>
+          <h3 id="音视频素材使用来源">音视频素材使用来源</h3>
+          <ol>
+            <li><a href="https://www.musicbed.com/" target="_blank">MusicBed</a></li>
+            <li><a href="https://www.motionelements.com/zh-hant/" target="_blank">MotionElements</a></li>
+          </ol>
+          <hr class="footnotes-sep">
+          <section class="footnotes">
+            <ol class="footnotes-list">
+              <li id="fn1" class="footnote-item"><p>必须提供创作者或署名者的姓名或名称、版权标识、许可协议标识、免责标识和作品链接 <a href="#fnref1" class="footnote-backref">↩︎</a></p></li>
+              <li id="fn2" class="footnote-item"><p>必须明确说明你是否修改了作品。或者请保留此前修改版本中的相关说明<a href="#fnref2" class="footnote-backref">↩︎</a></p></li>
+              <li id="fn3" class="footnote-item"><p>商业性使用是指主要目的为获得商业优势或金钱回报 <a href="#fnref3" class="footnote-backref">↩︎</a></p></li>
+              <li id="fn4" class="footnote-item"><p>根据法律的例外和限制性规则，使用者拥有的权利，例如合理使用和公平交易，不受 CC 许可协议的影响 <a href="#fnref4" class="footnote-backref">↩︎</a></p></li>
+              <li id="fn5" class="footnote-item"><p>在按照需要使用文章前，可能需要得到更多许可 <a href="#fnref5" class="footnote-backref">↩︎</a></p></li>
+            </ol>
+          </section>
+        </div>
+      </div>
+      
+    </div>
+    
+    <footer class="py-12 text-center px-4 md:px-0" v-pre>
+  共 24 篇文章｜<a href="https://yyl125.top/copyright" target="_blank">版权信息与资源使用说明</a>｜<i class="ri-rss-line"></i> <a href="https://yyl125.top/atom.xml" target="_blank">RSS</a><br>Copyright © 2026 Benjamin. All rights reserved.
+</footer>
+
+    
+    <!-- Back to top -->
+    <div class="fixed right-0 bottom-0 mb-4 mr-4 shadow w-8 h-8 rounded-full flex justify-center items-center z-10 cursor-pointer bg-white hover:shadow-lg transition-all dark:bg-gray-500 dark:text-gray-200" @click="backToUp" v-show="scrolled">
+      <i class="ri-arrow-up-line"></i>
+    </div>
+  </div>
+    
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+  <script src="https://yyl125.top/media/scripts/main.js"></script>
+  
+</body>
+</html>

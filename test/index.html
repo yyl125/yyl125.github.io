@@ -1,0 +1,228 @@
+<html lang="zh">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<meta name="google-site-verification" content="mzGZdCiBsXZ5XSYVt7eh7KL8L64yuidUoeBNw_53XHk" />
+<meta name="referrer" content="same-origin">
+<title>技术测试与验证 - Benjamin&#39;s Blog</title>
+<link rel="shortcut icon" href="https://yyl125.top/favicon.ico">
+<link href="https://cdn.jsdelivr.net/npm/remixicon@latest/fonts/remixicon.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.7.2/animate.min.css">
+<link rel="stylesheet" href="https://yyl125.top/media/css/tailwind.css">
+<link rel="stylesheet" href="https://yyl125.top/styles/main.css">
+
+
+<link rel="alternate" type="application/atom+xml" title="技术测试与验证 - Benjamin&#39;s Blog - Atom Feed" href="https://yyl125.top/atom.xml">
+<!----<script src="https://yyl125.top/media/scripts/bootstrap.bundle.min.js"></script>---->
+
+
+  
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-Q6KYP4QSBH"></script>
+    <script>
+      var host = window.location.hostname;
+      if(host != "localhost")
+      {
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-Q6KYP4QSBH');
+      }
+    </script>
+  
+
+<script defer>
+(function (document) {
+  const SOURCE = 'https://cdn.jsdelivr.net';
+  const DEST = 'https://gcore.jsdelivr.net';
+  const $ = document.querySelectorAll.bind(document);
+  const checkAvailable = (callback) => {
+    let timeoutId;
+    const newNode = document.createElement('link');
+    newNode.rel = 'stylesheet';
+    newNode.text = 'text/css';
+    const onError = () => {
+      if (!timeoutId) {
+        return;
+      }
+
+      clearTimeout(timeoutId);
+      timeoutId = 0;
+      newNode.href = 'about:blank';
+      newNode.remove();
+      callback(false);
+    };
+
+    timeoutId = setTimeout(onError, 2000);
+    newNode.addEventListener('error', onError);
+    newNode.addEventListener('load', function () {
+      newNode.remove();
+      clearTimeout(timeoutId);
+      callback(true);
+    });
+
+    newNode.href =
+      SOURCE +
+      '/gh/PipecraftNet/jsdelivr-auto-fallback@main/empty.css?' +
+      Date.now();
+    document.head.insertAdjacentElement('afterbegin', newNode);
+  };
+
+  const replaceElementSrc = () => {
+    for (const element of $('link[rel="stylesheet"]')) {
+      if (element.href && element.href.includes(SOURCE)) {
+        element.href = element.href.replace(SOURCE, DEST);
+      }
+    }
+
+    for (const element of $('script')) {
+      if (element.src && element.src.includes(SOURCE)) {
+        const newNode = document.createElement('script');
+        newNode.src = element.src.replace(SOURCE, DEST);
+        element.defer = true;
+        element.src = '';
+        element.before(newNode);
+        element.remove();
+      }
+    }
+
+    for (const element of $('img')) {
+      if (element.src && element.src.includes(SOURCE)) {
+        const source = element.src;
+        // Used to cancel loading. Without this line it will remain pending status.
+        element.src = '';
+        element.src = source.replace(SOURCE, DEST);
+      }
+    }
+  };
+
+  checkAvailable(function (isAvailable) {
+    if (isAvailable) {
+      return;
+    }
+
+    console.warn(SOURCE + ' is not available.');
+
+    replaceElementSrc();
+    // Replace dynamically added elements
+    setInterval(replaceElementSrc, 500);
+  });
+})(document);
+</script>
+  <meta name="description" content="Stay hungry. Stay foolish."/>
+  <link rel="stylesheet" href="https://yyl125.top/media/css/addition.css">
+</head>
+
+<body>
+  <div class="antialiased flex flex-col min-h-screen" id="app">
+    <a href="https://yyl125.top" class="fixed top-0 left-0 mt-4 bg-black text-white dark:text-gray-700 dark:bg-yellow-50 dark:hover:bg-black dark:hover:text-white inline-flex p-2 pl-8 hover:text-gray-700 hover:bg-yellow-50 font-bold z-10 transition-fast animated fadeInLeft">
+    Benjamin&#39;s Blog
+    </a>
+    <div class="max-w-4xl w-full mx-auto">
+      <div class="shadow-box bg-white dark:bg-gray-600 rounded-lg pt-32 md:pt-64 px-4 md:px-8 pb-8 animated fadeIn mb-8">
+        <h1 class="text-5xl font-semibold leading-normal pb-8 mb-8 border-b-8 border-gray-700">技术测试与验证</h1>
+        
+        <div class="jumbotron">
+          <div class="container">
+            <p><i class="ri-ticket-2-line"></i> 本页面用于测试未来可能会在 Benjamin's Blog 中被正式启用的前瞻性内容</p>
+            <br>
+            <p><small class="text-gray-400">
+              1. 3D 模型来源于 Apple<br>
+              2. Benjamin 对网站内所有图片、文字以及音像资源保留最终解释权。欲了解更多相关信息，详见 <a href="https://yyl125.top/copyright/" target="_blank">版权信息与资源使用说明</a> 页面
+            </small></p>
+          </div>
+        </div>
+        
+        <div class="markdown mb-8">
+          <h2 id="APalyer">APlayer</h2>
+          <div id="aplayer"></div>
+          <h2 id="AR_Quick_Look">AR Quick Look</h2>
+          <p>需要运行 iOS/iPadOS 12 或更高版本的设备，同时需要使用 Safari 浏览器</p>
+          <h3 id="Animations">Animations</h3>
+          <div class="card-columns">
+            <div class="card">
+              <a rel="ar" href="https://oss.yyl125.cc/blog/item/Models/Animations/LunarRover_English.reality">
+                <img src="https://oss.yyl125.cc/blog/item/Models/Animations/Thumbnail/Lunar_Rover.png">
+              </a>
+            </div>
+            <div class="card">
+              <a rel="ar" href="https://oss.yyl125.cc/blog/item/Models/Animations/CosmonautSuit_en.reality">
+                <img src="https://oss.yyl125.cc/blog/item/Models/Animations/Thumbnail/Cosmonaut.png">
+              </a>
+            </div>
+            <div class="card">
+              <a rel="ar" href="https://oss.yyl125.cc/blog/item/Models/Animations/hab_en.reality">
+                <img src="https://oss.yyl125.cc/blog/item/Models/Animations/Thumbnail/Hab.png">
+              </a>
+            </div>
+          </div>
+          <h3 id="3D_Models">3D Models</h3>
+          <div class="card-columns">
+            <div class="card">
+              <a rel="ar" href="https://oss.yyl125.cc/blog/item/Models/3D_Models/redchair.usdz">
+                <img src="https://oss.yyl125.cc/blog/item/Models/3D_Models/Thumbnail/redchair.jpg">
+              </a>
+            </div>
+            <div class="card">
+              <a rel="ar" href="https://oss.yyl125.cc/blog/item/Models/3D_Models/retrotv.usdz">
+                <img src="https://oss.yyl125.cc/blog/item/Models/3D_Models/Thumbnail/retrotv.jpg">
+              </a>
+            </div>
+            <div class="card">
+              <a rel="ar" href="https://oss.yyl125.cc/blog/item/Models/3D_Models/stratocaster.usdz">
+                <img src="https://oss.yyl125.cc/blog/item/Models/3D_Models/Thumbnail/stratocaster.jpg">
+              </a>
+            </div>
+          </div>
+          <h3 id="Banners">Banners</h3>
+          <div class="card-columns">
+            <div class="card">
+              <a rel="ar" id="ApplePay" href="https://oss.yyl125.cc/blog/item/Models/Banners/alarm_clock.usdz#applePayButtonType=plain&checkoutTitle=Retro%20Alarm%20Clock&checkoutSubtitle=With%20built-in%20FM%20tuner&price=$92.50">
+                <img src="https://oss.yyl125.cc/blog/item/Models/Banners/Thumbnail/alarm_clock.png">
+              </a>
+            </div>
+            <div class="card">
+              <a rel="ar" id="CustomAction" href="https://oss.yyl125.cc/blog/item/Models/Banners/kids_slide.usdz#callToAction=Browse%20API&checkoutTitle=Kids%20Slide&checkoutSubtitle=Playground%20in%20your%20backyard&price=$145">
+                <img src="https://oss.yyl125.cc/blog/item/Models/Banners/Thumbnail/kids_slide.png">
+              </a>
+            </div>
+            <div class="card">
+              <a rel="ar" id="CustomBanner" href="https://oss.yyl125.cc/blog/item/Models/Banners/solar_panels.usdz#custom=https://developer.apple.com/augmented-reality/quick-look/models/solar-panels/solar_panels_custom.html&customHeight=small">
+                <img src="https://oss.yyl125.cc/blog/item/Models/Banners/Thumbnail/solar_panels.png">
+              </a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <footer class="py-12 text-center px-4 md:px-0" v-pre>
+  共 24 篇文章｜<a href="https://yyl125.top/copyright" target="_blank">版权信息与资源使用说明</a>｜<i class="ri-rss-line"></i> <a href="https://yyl125.top/atom.xml" target="_blank">RSS</a><br>Copyright © 2026 Benjamin. All rights reserved.
+</footer>
+
+    </div>
+
+    <!-- Back to top -->
+    <div class="fixed right-0 bottom-0 mb-4 mr-4 shadow w-8 h-8 rounded-full flex justify-center items-center z-10 cursor-pointer bg-white hover:shadow-lg transition-all dark:bg-gray-500 dark:text-gray-200" @click="backToUp" v-show="scrolled">
+      <i class="ri-arrow-up-line"></i>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+  <script src="https://yyl125.top/media/scripts/main.js"></script>
+
+  <script>
+    const ap = new APlayer({
+      container: document.getElementById('aplayer'),
+      audio: [{
+        name: 'Moments',
+        artist: 'Christopher',
+        url: 'https://oss.yyl125.cc/blog/audio/test/Moments.mp3',
+        cover: "https://oss.yyl125.cc/blog/img/cover/test/Moments_Cover.jpg",
+      }]
+    });
+  </script>
+  
+</body>
+
+</html>

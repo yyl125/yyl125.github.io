@@ -1,0 +1,538 @@
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<meta name="google-site-verification" content="mzGZdCiBsXZ5XSYVt7eh7KL8L64yuidUoeBNw_53XHk" />
+<meta name="referrer" content="same-origin">
+<title>Benjamin&#39;s Blog</title>
+<link rel="shortcut icon" href="https://yyl125.top/favicon.ico">
+<link href="https://cdn.jsdelivr.net/npm/remixicon@latest/fonts/remixicon.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.7.2/animate.min.css">
+<link rel="stylesheet" href="https://yyl125.top/media/css/tailwind.css">
+<link rel="stylesheet" href="https://yyl125.top/styles/main.css">
+
+
+<link rel="alternate" type="application/atom+xml" title="Benjamin&#39;s Blog - Atom Feed" href="https://yyl125.top/atom.xml">
+<!----<script src="https://yyl125.top/media/scripts/bootstrap.bundle.min.js"></script>---->
+
+
+  
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-Q6KYP4QSBH"></script>
+    <script>
+      var host = window.location.hostname;
+      if(host != "localhost")
+      {
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-Q6KYP4QSBH');
+      }
+    </script>
+  
+
+<script defer>
+(function (document) {
+  const SOURCE = 'https://cdn.jsdelivr.net';
+  const DEST = 'https://gcore.jsdelivr.net';
+  const $ = document.querySelectorAll.bind(document);
+  const checkAvailable = (callback) => {
+    let timeoutId;
+    const newNode = document.createElement('link');
+    newNode.rel = 'stylesheet';
+    newNode.text = 'text/css';
+    const onError = () => {
+      if (!timeoutId) {
+        return;
+      }
+
+      clearTimeout(timeoutId);
+      timeoutId = 0;
+      newNode.href = 'about:blank';
+      newNode.remove();
+      callback(false);
+    };
+
+    timeoutId = setTimeout(onError, 2000);
+    newNode.addEventListener('error', onError);
+    newNode.addEventListener('load', function () {
+      newNode.remove();
+      clearTimeout(timeoutId);
+      callback(true);
+    });
+
+    newNode.href =
+      SOURCE +
+      '/gh/PipecraftNet/jsdelivr-auto-fallback@main/empty.css?' +
+      Date.now();
+    document.head.insertAdjacentElement('afterbegin', newNode);
+  };
+
+  const replaceElementSrc = () => {
+    for (const element of $('link[rel="stylesheet"]')) {
+      if (element.href && element.href.includes(SOURCE)) {
+        element.href = element.href.replace(SOURCE, DEST);
+      }
+    }
+
+    for (const element of $('script')) {
+      if (element.src && element.src.includes(SOURCE)) {
+        const newNode = document.createElement('script');
+        newNode.src = element.src.replace(SOURCE, DEST);
+        element.defer = true;
+        element.src = '';
+        element.before(newNode);
+        element.remove();
+      }
+    }
+
+    for (const element of $('img')) {
+      if (element.src && element.src.includes(SOURCE)) {
+        const source = element.src;
+        // Used to cancel loading. Without this line it will remain pending status.
+        element.src = '';
+        element.src = source.replace(SOURCE, DEST);
+      }
+    }
+  };
+
+  checkAvailable(function (isAvailable) {
+    if (isAvailable) {
+      return;
+    }
+
+    console.warn(SOURCE + ' is not available.');
+
+    replaceElementSrc();
+    // Replace dynamically added elements
+    setInterval(replaceElementSrc, 500);
+  });
+})(document);
+</script>
+  <meta name="description" content="Stay hungry. Stay foolish." />
+  <link rel="stylesheet" href="https://yyl125.top/media/css/addition.css">
+</head>
+<body>
+  <div class="antialiased flex flex-col min-h-screen" id="app">
+
+    <div class="nav py-3 md:py-8 fixed w-full z-10 bg-gray-50 dark:bg-gray-700 transition-all duration-300" :class="{ 'scroll': scrolled }">
+  <div class="flex justify-end px-4">
+    <div class="w-8 h-8 flex justify-center items-center rounded-full md:hidden" @click="showMenu = !showMenu">
+      <i class="ri-close-line" v-show="showMenu"></i>
+      <i class="ri-menu-3-line" v-show="!showMenu"></i>
+    </div>
+  </div>
+  <nav class="max-w-6xl w-full mx-auto text-center flex flex-col md:flex-row justify-center md:block" :class="`${ showMenu ? 'block' : 'hidden' }`">
+    
+      <a href="/" target="" class="py-2 md:py-1 px-4 mx-4 inline-flex transition font-semibold rounded dark:hover:bg-gray-600 hover:bg-gray-200">
+        首页
+      </a>
+    
+      <a href="/tags" target="" class="py-2 md:py-1 px-4 mx-4 inline-flex transition font-semibold rounded dark:hover:bg-gray-600 hover:bg-gray-200">
+        标签
+      </a>
+    
+      <a href="/archives" target="" class="py-2 md:py-1 px-4 mx-4 inline-flex transition font-semibold rounded dark:hover:bg-gray-600 hover:bg-gray-200">
+        归档
+      </a>
+    
+      <a href="/gallery" target="" class="py-2 md:py-1 px-4 mx-4 inline-flex transition font-semibold rounded dark:hover:bg-gray-600 hover:bg-gray-200">
+        相册
+      </a>
+    
+      <a href="/reflection" target="" class="py-2 md:py-1 px-4 mx-4 inline-flex transition font-semibold rounded dark:hover:bg-gray-600 hover:bg-gray-200">
+        随想
+      </a>
+    
+      <a href="/record" target="" class="py-2 md:py-1 px-4 mx-4 inline-flex transition font-semibold rounded dark:hover:bg-gray-600 hover:bg-gray-200">
+        记录
+      </a>
+    
+      <a href="/collection" target="" class="py-2 md:py-1 px-4 mx-4 inline-flex transition font-semibold rounded dark:hover:bg-gray-600 hover:bg-gray-200">
+        收藏
+      </a>
+    
+      <a href="/about" target="" class="py-2 md:py-1 px-4 mx-4 inline-flex transition font-semibold rounded dark:hover:bg-gray-600 hover:bg-gray-200">
+        关于
+      </a>
+    
+  </nav>
+</div>
+
+
+    <div class="max-w-4xl w-full mx-auto ">
+      
+        <header class="flex py-16 md:py-32 mt-12 flex-col md:flex-row px-4 md:px-0 animated fadeIn">
+  <div class="flex-1 order-2 md:order-1 md:pr-16">
+    <div class="text-4xl font-bold text-center md:text-left">
+      Benjamin&#39;s Blog
+    </div>
+    <div class="text-xl text-gray-500 mt-4 text-center md:text-left">
+      Stay hungry. Stay foolish.
+    </div>
+    
+    
+      <div class="mt-8 flex items-center">
+        
+          <div class="text-gray-500 mr-2">
+            Follow me 👉
+          </div>
+        
+        
+          
+            
+              <a href="mailto:hi@yyl125.cc" target="_blank" class="mr-2 w-8 h-8 inline-flex items-center justify-center text-xl rounded hover:bg-gray-200 dark:hover:bg-gray-600 transition-fast">
+                <i class="ri-mail-line"></i>
+              </a>
+            
+          
+        
+          
+        
+          
+        
+          
+        
+          
+            
+              <a href="https://t.me/BenjaminYing" target="_blank" class="mr-2 w-8 h-8 inline-flex items-center justify-center text-xl rounded hover:bg-gray-200 dark:hover:bg-gray-600 transition-fast">
+                <i class="ri-telegram-line"></i>
+              </a>
+            
+          
+        
+          
+        
+          
+        
+          
+            
+              <a href="https://www.instagram.com/yyl125/" target="_blank" class="mr-2 w-8 h-8 inline-flex items-center justify-center text-xl rounded hover:bg-gray-200 dark:hover:bg-gray-600 transition-fast">
+                <i class="ri-instagram-line"></i>
+              </a>
+            
+          
+        
+          
+            
+              <a href="https://unsplash.com/@yyl125" target="_blank" class="mr-2 w-8 h-8 inline-flex items-center justify-center text-xl rounded hover:bg-gray-200 dark:hover:bg-gray-600 transition-fast">
+                <i class="ri-unsplash-line"></i>
+              </a>
+            
+          
+        
+          
+        
+          
+        
+      </div>
+    
+  </div>
+  <div class="md:mx-8 flex-shrink-0 self-start rounded-full border-4 border-dotted border-transparent hover:border-yellow-50 p-2 w-32 h-32 order-1 md:order-2 mx-auto s3-dotted">
+    <img class="rounded-full object-cover" src="https://yyl125.top/images/avatar.png?v=1769849917574" alt="Benjamin&#39;s Blog" width="100%" height="100%">
+  </div>
+</header>
+
+      
+
+      
+      
+      
+
+      
+        <div class="shadow-box bg-white dark:bg-gray-600 border-gray-300 rounded-none md:rounded-lg -mx-1 md:mx-0 md:px-0 my-4">
+          
+          
+          
+          
+            <div class="p-8 border-b border-gray-200 dark:border-gray-700 flex relative overflow-hidden flex-col md:flex-row animated fadeIn">
+              <i class="ri-article-line text-orange-200 absolute text-2xl left-0 ml-1 rotate-90"></i>
+              <div class="flex-1 order-2 md:order-1">
+                <h2 class="text-2xl font-semibold mb-4">
+                  <a href="http://yyl125.top/post/the_introduction_of_apple_pay_transit_in_china/" class="text-gray-700 dark:text-gray-200 hover:transition-all duration-100">
+                    想用 iPhone 和 Apple Watch 乘坐全国公共交通？Apple Pay 交通联合卡了解一下
+                  </a>
+                </h2>
+                <div class="mb-4 text-xs text-gray-500 dark:text-gray-300">重大更新 · Ingenious Skills</div>
+                <div class="mb-4 text-gray-500 dark:text-gray-300">
+                  本文的「Apple Pay 交通卡详细介绍」部分将随具体进展在该<a href="https://a05529nb95.feishu.cn/docx/I7tKdbUvNoC1fWx33bTcqjz0n3f" target="_blank">飞书文档</a>中继续保持更新
+                </div>
+                <a href="https://yyl125.top/post/the_introduction_of_apple_pay_transit_in_china/" class="btn">
+                  Read More
+                </a>
+              </div>
+              <img class="flex-shrink-0 self-start md:ml-4 mb-4 md:mb-0 rounded-sm object-cover featured-img order-1 md:order-2 w-full h-40 md:w-56 md:h-32" loading="lazy" src="https://oss.yyl125.cc/blog/img/post/Ingenious_Skills/The_Introduction_of_Apple_Pay_Transit_in_China/The_Introduction_of_Apple_Pay_Transit_in_China_Banner.png">
+            </div>
+          
+        </div>
+      
+
+      <div class="shadow-box bg-white dark:bg-gray-600 border-gray-300 rounded-none md:rounded-lg -mx-1 md:mx-0 md:px-0">
+        
+  <div class="p-8 border-b border-gray-200 dark:border-gray-700 flex relative overflow-hidden flex-col md:flex-row animated fadeIn">
+    
+      <i class="ri-article-line text-orange-200 absolute text-2xl left-0 ml-1 rotate-90"></i>
+    
+    <div class="flex-1 order-2 md:order-1">
+      <h2 class="text-2xl font-semibold mb-4">
+        <a href="https://yyl125.top/post/bought_recently_002/" class="text-gray-700 dark:text-gray-200 hover:transition-all duration-100">
+          最近买了啥 Vol.002
+        </a>
+      </h2>
+      <div class="mb-4 text-xs text-gray-500 dark:text-gray-300">2025-01-23 · New Stuff</div>
+      <div class="mb-4 text-gray-500 dark:text-gray-300">
+        <p>剁手，剁手～</p>
+
+      </div>
+      <a href="https://yyl125.top/post/bought_recently_002/" class="btn">
+        Read More
+      </a>
+    </div>
+    
+      <img class="flex-shrink-0 self-start md:ml-4 mb-4 md:mb-0 rounded-sm object-cover featured-img order-1 md:order-2 w-full h-40 md:w-56 md:h-32" loading="lazy" src="https://oss.yyl125.cc/blog/img/post/New_Stuff/Bought_Recently/Bought_Recently_Banner.jpg" alt="最近买了啥 Vol.002">
+    
+  </div>
+
+  <div class="p-8 border-b border-gray-200 dark:border-gray-700 flex relative overflow-hidden flex-col md:flex-row animated fadeIn">
+    
+      <i class="ri-article-line text-orange-200 absolute text-2xl left-0 ml-1 rotate-90"></i>
+    
+    <div class="flex-1 order-2 md:order-1">
+      <h2 class="text-2xl font-semibold mb-4">
+        <a href="https://yyl125.top/post/bought_recently_001/" class="text-gray-700 dark:text-gray-200 hover:transition-all duration-100">
+          最近买了啥 Vol.001
+        </a>
+      </h2>
+      <div class="mb-4 text-xs text-gray-500 dark:text-gray-300">2024-05-26 · New Stuff</div>
+      <div class="mb-4 text-gray-500 dark:text-gray-300">
+        <p>剁手，剁手～</p>
+
+      </div>
+      <a href="https://yyl125.top/post/bought_recently_001/" class="btn">
+        Read More
+      </a>
+    </div>
+    
+      <img class="flex-shrink-0 self-start md:ml-4 mb-4 md:mb-0 rounded-sm object-cover featured-img order-1 md:order-2 w-full h-40 md:w-56 md:h-32" loading="lazy" src="https://oss.yyl125.cc/blog/img/post/New_Stuff/Bought_Recently/Bought_Recently_Banner.jpg" alt="最近买了啥 Vol.001">
+    
+  </div>
+
+  <div class="p-8 border-b border-gray-200 dark:border-gray-700 flex relative overflow-hidden flex-col md:flex-row animated fadeIn">
+    
+      <i class="ri-article-line text-orange-200 absolute text-2xl left-0 ml-1 rotate-90"></i>
+    
+    <div class="flex-1 order-2 md:order-1">
+      <h2 class="text-2xl font-semibold mb-4">
+        <a href="https://yyl125.top/post/some_things_happened_to_steam_deck/" class="text-gray-700 dark:text-gray-200 hover:transition-all duration-100">
+          折腾 Steam Deck 二三事
+        </a>
+      </h2>
+      <div class="mb-4 text-xs text-gray-500 dark:text-gray-300">2024-03-25 · Ingenious Skills</div>
+      <div class="mb-4 text-gray-500 dark:text-gray-300">
+        <p>买 Steam Deck，学 Linux 技术</p>
+
+      </div>
+      <a href="https://yyl125.top/post/some_things_happened_to_steam_deck/" class="btn">
+        Read More
+      </a>
+    </div>
+    
+      <img class="flex-shrink-0 self-start md:ml-4 mb-4 md:mb-0 rounded-sm object-cover featured-img order-1 md:order-2 w-full h-40 md:w-56 md:h-32" loading="lazy" src="https://oss.yyl125.cc/blog/img/post/Ingenious_Skills/Some_Things_Happened_to_Steam_Deck/Some_Things_Happened_to_Steam_Deck_Banner.jpg" alt="折腾 Steam Deck 二三事">
+    
+  </div>
+
+  <div class="p-8 border-b border-gray-200 dark:border-gray-700 flex relative overflow-hidden flex-col md:flex-row animated fadeIn">
+    
+      <i class="ri-article-line text-orange-200 absolute text-2xl left-0 ml-1 rotate-90"></i>
+    
+    <div class="flex-1 order-2 md:order-1">
+      <h2 class="text-2xl font-semibold mb-4">
+        <a href="https://yyl125.top/post/remove_completely_macos_system_extensions_and_kext/" class="text-gray-700 dark:text-gray-200 hover:transition-all duration-100">
+          移除 macOS 无用的系统扩展和内核扩展
+        </a>
+      </h2>
+      <div class="mb-4 text-xs text-gray-500 dark:text-gray-300">2023-10-31 · Ingenious Skills</div>
+      <div class="mb-4 text-gray-500 dark:text-gray-300">
+        <p>macOS 虽然安装 App 十分简单方便，但卸载起来真的是让人头大</p>
+
+      </div>
+      <a href="https://yyl125.top/post/remove_completely_macos_system_extensions_and_kext/" class="btn">
+        Read More
+      </a>
+    </div>
+    
+      <img class="flex-shrink-0 self-start md:ml-4 mb-4 md:mb-0 rounded-sm object-cover featured-img order-1 md:order-2 w-full h-40 md:w-56 md:h-32" loading="lazy" src="https://oss.yyl125.cc/blog/img/post/Ingenious_Skills/Remove_Completely_MacOS_System_Extensions_and_Kext/Remove_Completely_MacOS_System_Extensions_and_Kext_Banner.jpg" alt="移除 macOS 无用的系统扩展和内核扩展">
+    
+  </div>
+
+  <div class="p-8 border-b border-gray-200 dark:border-gray-700 flex relative overflow-hidden flex-col md:flex-row animated fadeIn">
+    
+      <i class="ri-article-line text-orange-200 absolute text-2xl left-0 ml-1 rotate-90"></i>
+    
+    <div class="flex-1 order-2 md:order-1">
+      <h2 class="text-2xl font-semibold mb-4">
+        <a href="https://yyl125.top/post/temporary_solution_to_inaccessible_intranet_of_QNAP/" class="text-gray-700 dark:text-gray-200 hover:transition-all duration-100">
+          威联通 QNAP 内网无法访问的临时解决方法
+        </a>
+      </h2>
+      <div class="mb-4 text-xs text-gray-500 dark:text-gray-300">2023-07-27 · Ingenious Skills</div>
+      <div class="mb-4 text-gray-500 dark:text-gray-300">
+        <p>解决了一个困扰许久的问题</p>
+
+      </div>
+      <a href="https://yyl125.top/post/temporary_solution_to_inaccessible_intranet_of_QNAP/" class="btn">
+        Read More
+      </a>
+    </div>
+    
+      <img class="flex-shrink-0 self-start md:ml-4 mb-4 md:mb-0 rounded-sm object-cover featured-img order-1 md:order-2 w-full h-40 md:w-56 md:h-32" loading="lazy" src="https://oss.yyl125.cc/blog/img/post/Ingenious_Skills/Temporary_Solution_To_Inaccessible_Intranet_of_QNAP/Temporary_Solution_To_Inaccessible_Intranet_of_QNAP_Banner.jpg" alt="威联通 QNAP 内网无法访问的临时解决方法">
+    
+  </div>
+
+  <div class="p-8 border-b border-gray-200 dark:border-gray-700 flex relative overflow-hidden flex-col md:flex-row animated fadeIn">
+    
+      <i class="ri-article-line text-orange-200 absolute text-2xl left-0 ml-1 rotate-90"></i>
+    
+    <div class="flex-1 order-2 md:order-1">
+      <h2 class="text-2xl font-semibold mb-4">
+        <a href="https://yyl125.top/post/apple_beta_software_update_reminder/" class="text-gray-700 dark:text-gray-200 hover:transition-all duration-100">
+          Apple 测试版软件备忘录
+        </a>
+      </h2>
+      <div class="mb-4 text-xs text-gray-500 dark:text-gray-300">2023-06-26 · Vanguard Report</div>
+      <div class="mb-4 text-gray-500 dark:text-gray-300">
+        <p>尝鲜有风险，测试需谨慎</p>
+
+      </div>
+      <a href="https://yyl125.top/post/apple_beta_software_update_reminder/" class="btn">
+        Read More
+      </a>
+    </div>
+    
+      <img class="flex-shrink-0 self-start md:ml-4 mb-4 md:mb-0 rounded-sm object-cover featured-img order-1 md:order-2 w-full h-40 md:w-56 md:h-32" loading="lazy" src="https://oss.yyl125.cc/blog/img/post/Vanguard_Report/Apple_Beta_Software_Update_Reminder/Apple_Beta_Software_Update_Reminder_Banner.png" alt="Apple 测试版软件备忘录">
+    
+  </div>
+
+  <div class="p-8 border-b border-gray-200 dark:border-gray-700 flex relative overflow-hidden flex-col md:flex-row animated fadeIn">
+    
+      <i class="ri-article-line text-orange-200 absolute text-2xl left-0 ml-1 rotate-90"></i>
+    
+    <div class="flex-1 order-2 md:order-1">
+      <h2 class="text-2xl font-semibold mb-4">
+        <a href="https://yyl125.top/post/create_windows_boot_media_under_macOS/" class="text-gray-700 dark:text-gray-200 hover:transition-all duration-100">
+          macOS 下创建 Windows 启动介质
+        </a>
+      </h2>
+      <div class="mb-4 text-xs text-gray-500 dark:text-gray-300">2023-05-04 · Ingenious Skills</div>
+      <div class="mb-4 text-gray-500 dark:text-gray-300">
+        <p>利用 wimlib 工具在 macOS 上轻松为 Windows PC 创建启动介质</p>
+
+      </div>
+      <a href="https://yyl125.top/post/create_windows_boot_media_under_macOS/" class="btn">
+        Read More
+      </a>
+    </div>
+    
+      <img class="flex-shrink-0 self-start md:ml-4 mb-4 md:mb-0 rounded-sm object-cover featured-img order-1 md:order-2 w-full h-40 md:w-56 md:h-32" loading="lazy" src="https://oss.yyl125.cc/blog/img/post/Ingenious_Skills/Create_Windows_Boot_Media_Under_macOS/Create_Windows_Boot_Media_Under_macOS_Banner.jpg" alt="macOS 下创建 Windows 启动介质">
+    
+  </div>
+
+  <div class="p-8 border-b border-gray-200 dark:border-gray-700 flex relative overflow-hidden flex-col md:flex-row animated fadeIn">
+    
+      <i class="ri-article-line text-orange-200 absolute text-2xl left-0 ml-1 rotate-90"></i>
+    
+    <div class="flex-1 order-2 md:order-1">
+      <h2 class="text-2xl font-semibold mb-4">
+        <a href="https://yyl125.top/post/the_experience_with_ayaneo_air/" class="text-gray-700 dark:text-gray-200 hover:transition-all duration-100">
+          始于颜值，止于体验｜Ayaneo Air 掌机从入手到出售
+        </a>
+      </h2>
+      <div class="mb-4 text-xs text-gray-500 dark:text-gray-300">2023-04-25 · New Stuff</div>
+      <div class="mb-4 text-gray-500 dark:text-gray-300">
+        <p>2 月购入，4 月售出，净亏 2000……</p>
+
+      </div>
+      <a href="https://yyl125.top/post/the_experience_with_ayaneo_air/" class="btn">
+        Read More
+      </a>
+    </div>
+    
+      <img class="flex-shrink-0 self-start md:ml-4 mb-4 md:mb-0 rounded-sm object-cover featured-img order-1 md:order-2 w-full h-40 md:w-56 md:h-32" loading="lazy" src="https://oss.yyl125.cc/blog/img/post/New_Stuff/The_Experience_with_Ayaneo_Air/The_Experience_of_Ayaneo_Air_Banner.jpg" alt="始于颜值，止于体验｜Ayaneo Air 掌机从入手到出售">
+    
+  </div>
+
+  <div class="p-8 border-b border-gray-200 dark:border-gray-700 flex relative overflow-hidden flex-col md:flex-row animated fadeIn">
+    
+      <i class="ri-article-line text-orange-200 absolute text-2xl left-0 ml-1 rotate-90"></i>
+    
+    <div class="flex-1 order-2 md:order-1">
+      <h2 class="text-2xl font-semibold mb-4">
+        <a href="https://yyl125.top/post/who_is_suitable_for_mac/" class="text-gray-700 dark:text-gray-200 hover:transition-all duration-100">
+          适合用 Mac 的是哪些人
+        </a>
+      </h2>
+      <div class="mb-4 text-xs text-gray-500 dark:text-gray-300">2022-03-17 · Meta View</div>
+      <div class="mb-4 text-gray-500 dark:text-gray-300">
+        <p>Mac 就像一个偏科生，其通用性确实有待提高</p>
+
+      </div>
+      <a href="https://yyl125.top/post/who_is_suitable_for_mac/" class="btn">
+        Read More
+      </a>
+    </div>
+    
+      <img class="flex-shrink-0 self-start md:ml-4 mb-4 md:mb-0 rounded-sm object-cover featured-img order-1 md:order-2 w-full h-40 md:w-56 md:h-32" loading="lazy" src="https://oss.yyl125.cc/blog/img/post/Meta_View/Who_is_Suitable_for_Mac/Who_is_Suitable_for_Mac_Banner.jpg" alt="适合用 Mac 的是哪些人">
+    
+  </div>
+
+  <div class="p-8 border-b border-gray-200 dark:border-gray-700 flex relative overflow-hidden flex-col md:flex-row animated fadeIn">
+    
+      <i class="ri-article-line text-orange-200 absolute text-2xl left-0 ml-1 rotate-90"></i>
+    
+    <div class="flex-1 order-2 md:order-1">
+      <h2 class="text-2xl font-semibold mb-4">
+        <a href="https://yyl125.top/post/small_talk_about_apple_event_2022_mar/" class="text-gray-700 dark:text-gray-200 hover:transition-all duration-100">
+          简单聊聊 Apple 特别活动（2022, Mar 9）
+        </a>
+      </h2>
+      <div class="mb-4 text-xs text-gray-500 dark:text-gray-300">2022-03-09 · Small Talk</div>
+      <div class="mb-4 text-gray-500 dark:text-gray-300">
+        <p>继续简单讲讲今早的 Apple 发布会吧</p>
+
+      </div>
+      <a href="https://yyl125.top/post/small_talk_about_apple_event_2022_mar/" class="btn">
+        Read More
+      </a>
+    </div>
+    
+      <img class="flex-shrink-0 self-start md:ml-4 mb-4 md:mb-0 rounded-sm object-cover featured-img order-1 md:order-2 w-full h-40 md:w-56 md:h-32" loading="lazy" src="https://oss.yyl125.cc/blog/img/post/Small_Talk/Small_Talk_Banner.jpg" alt="简单聊聊 Apple 特别活动（2022, Mar 9）">
+    
+  </div>
+
+
+      </div>
+
+      
+  <div class="my-4 flex justify-between px-4 md:px-0">
+    
+    
+      <a href="https://yyl125.top/page/2" class="btn btn-white">
+        Next
+        <i class="ri-arrow-right-line ml-4"></i>
+      </a>
+    
+  </div>
+
+      <footer class="py-12 text-center px-4 md:px-0" v-pre>
+  共 24 篇文章｜<a href="https://yyl125.top/copyright" target="_blank">版权信息与资源使用说明</a>｜<i class="ri-rss-line"></i> <a href="https://yyl125.top/atom.xml" target="_blank">RSS</a><br>Copyright © 2026 Benjamin. All rights reserved.
+</footer>
+
+
+    </div>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+  <script src="https://yyl125.top/media/scripts/main.js"></script>
+  
+</body>
+
+</html>

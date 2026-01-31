@@ -1,0 +1,161 @@
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<meta name="google-site-verification" content="mzGZdCiBsXZ5XSYVt7eh7KL8L64yuidUoeBNw_53XHk" />
+<meta name="referrer" content="same-origin">
+<title>隐私政策 - Benjamin&#39;s Blog</title>
+<link rel="shortcut icon" href="https://yyl125.top/favicon.ico">
+<link href="https://cdn.jsdelivr.net/npm/remixicon@latest/fonts/remixicon.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.7.2/animate.min.css">
+<link rel="stylesheet" href="https://yyl125.top/media/css/tailwind.css">
+<link rel="stylesheet" href="https://yyl125.top/styles/main.css">
+
+
+<link rel="alternate" type="application/atom+xml" title="隐私政策 - Benjamin&#39;s Blog - Atom Feed" href="https://yyl125.top/atom.xml">
+<!----<script src="https://yyl125.top/media/scripts/bootstrap.bundle.min.js"></script>---->
+
+
+  
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-Q6KYP4QSBH"></script>
+    <script>
+      var host = window.location.hostname;
+      if(host != "localhost")
+      {
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-Q6KYP4QSBH');
+      }
+    </script>
+  
+
+<script defer>
+(function (document) {
+  const SOURCE = 'https://cdn.jsdelivr.net';
+  const DEST = 'https://gcore.jsdelivr.net';
+  const $ = document.querySelectorAll.bind(document);
+  const checkAvailable = (callback) => {
+    let timeoutId;
+    const newNode = document.createElement('link');
+    newNode.rel = 'stylesheet';
+    newNode.text = 'text/css';
+    const onError = () => {
+      if (!timeoutId) {
+        return;
+      }
+
+      clearTimeout(timeoutId);
+      timeoutId = 0;
+      newNode.href = 'about:blank';
+      newNode.remove();
+      callback(false);
+    };
+
+    timeoutId = setTimeout(onError, 2000);
+    newNode.addEventListener('error', onError);
+    newNode.addEventListener('load', function () {
+      newNode.remove();
+      clearTimeout(timeoutId);
+      callback(true);
+    });
+
+    newNode.href =
+      SOURCE +
+      '/gh/PipecraftNet/jsdelivr-auto-fallback@main/empty.css?' +
+      Date.now();
+    document.head.insertAdjacentElement('afterbegin', newNode);
+  };
+
+  const replaceElementSrc = () => {
+    for (const element of $('link[rel="stylesheet"]')) {
+      if (element.href && element.href.includes(SOURCE)) {
+        element.href = element.href.replace(SOURCE, DEST);
+      }
+    }
+
+    for (const element of $('script')) {
+      if (element.src && element.src.includes(SOURCE)) {
+        const newNode = document.createElement('script');
+        newNode.src = element.src.replace(SOURCE, DEST);
+        element.defer = true;
+        element.src = '';
+        element.before(newNode);
+        element.remove();
+      }
+    }
+
+    for (const element of $('img')) {
+      if (element.src && element.src.includes(SOURCE)) {
+        const source = element.src;
+        // Used to cancel loading. Without this line it will remain pending status.
+        element.src = '';
+        element.src = source.replace(SOURCE, DEST);
+      }
+    }
+  };
+
+  checkAvailable(function (isAvailable) {
+    if (isAvailable) {
+      return;
+    }
+
+    console.warn(SOURCE + ' is not available.');
+
+    replaceElementSrc();
+    // Replace dynamically added elements
+    setInterval(replaceElementSrc, 500);
+  });
+})(document);
+</script>
+  <meta name="description" content="Stay hungry. Stay foolish." />
+</head>
+<body>
+  <div class="antialiased flex flex-col min-h-screen" id="app">
+    <a href="https://yyl125.top" class="fixed top-0 left-0 mt-4 bg-black text-white dark:text-gray-700 dark:bg-yellow-50 dark:hover:bg-black dark:hover:text-white inline-flex p-2 pl-8 hover:text-gray-700 hover:bg-yellow-50 font-bold z-10 transition-fast animated fadeInLeft">
+    Benjamin&#39;s Blog
+    </a>
+    <div class="max-w-4xl w-full mx-auto">
+      <div class="shadow-box bg-white dark:bg-gray-600 rounded-lg pt-32 md:pt-64 px-4 md:px-8 pb-8 animated fadeIn mb-8">
+        <h1 class="text-5xl font-semibold leading-normal pb-8 mb-8 border-b-8 border-gray-700">隐私政策</h1>
+        
+        <div class="markdown mb-8">
+          <div class="jumbotron">
+            <div class="container">
+              <p><i class="ri-information-line"></i> 这是一篇帮助文档，用于指示某些重要信息</p>
+            </div>
+          </div>
+          
+          <h2>站点评论</h2>
+          <p>此站点使用现代技术来匿名地标识你，以便在返回我们的网站时识别你的身份。你的匿名身份还将用于支持评论系统和阅读量统计。当访客留下评论时，我们会收集评论表单所显示的数据、访客的 IP 地址及浏览器的 User Agent（UA）字符串来帮助检查垃圾评论，此外，如果你在发表评论时填写了昵称、邮箱和网址，我们还将收到你填写的这些信息</p>
+          <p>由你的电子邮箱地址所生成的匿名化字符串（又称为哈希）可能会被提供给 Gravatar 服务确认你是否有使用该服务（Gravatar 服务的隐私政策在此：https://automattic.com/privacy/）。在你的评论获批准后，你的资料图片将在你的评论旁公开展示</p>
+          <h2>媒体</h2>
+          <p>如果你在对文章等内容进行评论时，可能向此网站上传图片。你应当避免上传那些有嵌入地理位置信息（EXIF GPS）的图片，因为此网站的访客将可以下载并提取此网站的图片中的位置信息</p>
+          <h2>来自其它网站的嵌入内容</h2>
+          <p>此站点上的文章可能会包含嵌入的内容（如视频、图片、文章等）。来自其它站点的嵌入内容的行为和你直接访问这些其它站点没有区别</p>
+          <p>这些站点可能会收集关于你的数据、使用 Cookies、嵌入额外的第三方跟踪程序及监视你与这些嵌入内容的交互，包括在你有这些站点的账户并登录了这些站点时，跟踪你与嵌入内容的交互</p>
+          <br>
+          <p><strong>若对本政策或我们的隐私实践有任何疑问或意见，请在了解 <a href="https://yyl125.top/feedback_policy/">反馈须知</a> 的情况下通过电子邮箱联系 Benjamin</strong></p>
+
+        </div>
+      </div>
+
+    </div>
+    
+    <footer class="py-12 text-center px-4 md:px-0" v-pre>
+  共 24 篇文章｜<a href="https://yyl125.top/copyright" target="_blank">版权信息与资源使用说明</a>｜<i class="ri-rss-line"></i> <a href="https://yyl125.top/atom.xml" target="_blank">RSS</a><br>Copyright © 2026 Benjamin. All rights reserved.
+</footer>
+
+    
+    <!-- Back to top -->
+    <div class="fixed right-0 bottom-0 mb-4 mr-4 shadow w-8 h-8 rounded-full flex justify-center items-center z-10 cursor-pointer bg-white hover:shadow-lg transition-all dark:bg-gray-500 dark:text-gray-200" @click="backToUp" v-show="scrolled">
+      <i class="ri-arrow-up-line"></i>
+    </div>
+  </div>
+    
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+  <script src="https://yyl125.top/media/scripts/main.js"></script>
+  
+</body>
+</html>

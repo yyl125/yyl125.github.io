@@ -1,0 +1,354 @@
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<meta name="google-site-verification" content="mzGZdCiBsXZ5XSYVt7eh7KL8L64yuidUoeBNw_53XHk" />
+<meta name="referrer" content="same-origin">
+<title>丢的东西上绑有 AirTag，还能不能找到？这还真是个问题 - Benjamin&#39;s Blog</title>
+<link rel="shortcut icon" href="https://yyl125.top/favicon.ico">
+<link href="https://cdn.jsdelivr.net/npm/remixicon@latest/fonts/remixicon.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.7.2/animate.min.css">
+<link rel="stylesheet" href="https://yyl125.top/media/css/tailwind.css">
+<link rel="stylesheet" href="https://yyl125.top/styles/main.css">
+
+
+<link rel="alternate" type="application/atom+xml" title="丢的东西上绑有 AirTag，还能不能找到？这还真是个问题 - Benjamin&#39;s Blog - Atom Feed" href="https://yyl125.top/atom.xml">
+<!----<script src="https://yyl125.top/media/scripts/bootstrap.bundle.min.js"></script>---->
+
+
+  
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-Q6KYP4QSBH"></script>
+    <script>
+      var host = window.location.hostname;
+      if(host != "localhost")
+      {
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-Q6KYP4QSBH');
+      }
+    </script>
+  
+
+<script defer>
+(function (document) {
+  const SOURCE = 'https://cdn.jsdelivr.net';
+  const DEST = 'https://gcore.jsdelivr.net';
+  const $ = document.querySelectorAll.bind(document);
+  const checkAvailable = (callback) => {
+    let timeoutId;
+    const newNode = document.createElement('link');
+    newNode.rel = 'stylesheet';
+    newNode.text = 'text/css';
+    const onError = () => {
+      if (!timeoutId) {
+        return;
+      }
+
+      clearTimeout(timeoutId);
+      timeoutId = 0;
+      newNode.href = 'about:blank';
+      newNode.remove();
+      callback(false);
+    };
+
+    timeoutId = setTimeout(onError, 2000);
+    newNode.addEventListener('error', onError);
+    newNode.addEventListener('load', function () {
+      newNode.remove();
+      clearTimeout(timeoutId);
+      callback(true);
+    });
+
+    newNode.href =
+      SOURCE +
+      '/gh/PipecraftNet/jsdelivr-auto-fallback@main/empty.css?' +
+      Date.now();
+    document.head.insertAdjacentElement('afterbegin', newNode);
+  };
+
+  const replaceElementSrc = () => {
+    for (const element of $('link[rel="stylesheet"]')) {
+      if (element.href && element.href.includes(SOURCE)) {
+        element.href = element.href.replace(SOURCE, DEST);
+      }
+    }
+
+    for (const element of $('script')) {
+      if (element.src && element.src.includes(SOURCE)) {
+        const newNode = document.createElement('script');
+        newNode.src = element.src.replace(SOURCE, DEST);
+        element.defer = true;
+        element.src = '';
+        element.before(newNode);
+        element.remove();
+      }
+    }
+
+    for (const element of $('img')) {
+      if (element.src && element.src.includes(SOURCE)) {
+        const source = element.src;
+        // Used to cancel loading. Without this line it will remain pending status.
+        element.src = '';
+        element.src = source.replace(SOURCE, DEST);
+      }
+    }
+  };
+
+  checkAvailable(function (isAvailable) {
+    if (isAvailable) {
+      return;
+    }
+
+    console.warn(SOURCE + ' is not available.');
+
+    replaceElementSrc();
+    // Replace dynamically added elements
+    setInterval(replaceElementSrc, 500);
+  });
+})(document);
+</script>
+  <meta name="description" content="考验人性和运气的时候到了
+
+早在几年前，就有各种爆料称 Apple 将发布一款定位追踪器，主要定位可能是丢失物品追踪。而 Apple 直到本次 2021 年春季特别活动才最终发布了这个传说中的追踪产品 —— AirTag
+购买
+AirTag..." />
+  <meta property="og:title" content="丢的东西上绑有 AirTag，还能不能找到？这还真是个问题 - Benjamin&#39;s Blog">
+  <meta property="og:description" content="考验人性和运气的时候到了
+
+早在几年前，就有各种爆料称 Apple 将发布一款定位追踪器，主要定位可能是丢失物品追踪。而 Apple 直到本次 2021 年春季特别活动才最终发布了这个传说中的追踪产品 —— AirTag
+购买
+AirTag..." />
+  <meta property="og:type" content="articles">
+  <meta property="og:url" content="https://yyl125.top/post/this_is_a_question_about_finding_things/" />
+  <meta property="og:image" content="https://oss.yyl125.cc/blog/img/post/Vanguard_Report/This_Is_A_Question_About_Finding_Things/This_Is_A_Question_About_Finding_Things_Banner.jpeg">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:width" content="1200">
+  <meta name="twitter:title" content="丢的东西上绑有 AirTag，还能不能找到？这还真是个问题 - Benjamin&#39;s Blog">
+  <meta name="twitter:description" content="考验人性和运气的时候到了
+
+早在几年前，就有各种爆料称 Apple 将发布一款定位追踪器，主要定位可能是丢失物品追踪。而 Apple 直到本次 2021 年春季特别活动才最终发布了这个传说中的追踪产品 —— AirTag
+购买
+AirTag...">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="canonical" href="https://yyl125.top/post/this_is_a_question_about_finding_things/">
+
+  <script src="https://cdn.jsdelivr.net/npm/vanilla-lazyload@17.8.8/dist/lazyload.min.js"></script>
+  <script type="module" src="https://yyl125.top/media/scripts/emaction.js"></script>
+
+  
+    <link rel="stylesheet" href="https://yyl125.top/media/css/prism-atom-dark.css">
+  
+
+  
+</head>
+
+<body>
+  <div class="antialiased flex flex-col min-h-screen" id="app">
+    <a href="https://yyl125.top" class="fixed top-0 left-0 mt-4 bg-black text-white dark:text-gray-700 dark:bg-yellow-50 dark:hover:bg-black dark:hover:text-white inline-flex p-2 pl-8 hover:text-gray-700 hover:bg-yellow-50 font-bold z-10 transition-fast animated fadeInLeft">
+      Benjamin&#39;s Blog
+    </a>
+    <div class="max-w-4xl w-full mx-auto">
+      <div class="shadow-box bg-white dark:bg-gray-600 rounded-lg pt-32 md:pt-64 px-4 md:px-8 pb-8 animated fadeIn mb-8">
+        <h1 class="text-5xl font-semibold leading-normal pb-8 mb-8 border-b-8 border-gray-700">
+          丢的东西上绑有 AirTag，还能不能找到？这还真是个问题
+        </h1>
+        
+          <img src="https://oss.yyl125.cc/blog/img/post/Vanguard_Report/This_Is_A_Question_About_Finding_Things/This_Is_A_Question_About_Finding_Things_Banner.jpeg" alt="丢的东西上绑有 AirTag，还能不能找到？这还真是个问题" class="block w-full mb-8">
+        
+        <div class="mb-8 flex flex-wrap">
+          <div class="text-gray-400 text-sm mr-4"><i class="ri-calendar-2-line"></i> 2021-05-05 · <i class="ri-timer-line"></i> 8 min read · <i class="ri-eye-line"></i> <span id="twikoo_visitors">0</span></div>
+          
+            <a href="https://yyl125.top/tag/new_stuff/" class="text-gray-700 dark:text-gray-200 text-sm hover:transition-all duration-100 inline-flex mr-2">
+              <i class="ri-hashtag"></i>
+              New Stuff
+            </a>
+          
+        </div>
+        
+        <div class="jumbotron">
+          <div class="container">
+            <p><i class="ri-time-line"></i> 这是一篇发布于 5 年前的文章，其中的信息可能已经有所发展或是发生改变</p>
+          </div>
+        </div>
+
+        
+
+        
+        
+        <div class="markdown mb-8" v-pre id="post-content">
+          <p>考验人性和运气的时候到了</p>
+<!-- more -->
+<p>早在几年前，就有各种爆料称 Apple 将发布一款定位追踪器，主要定位可能是丢失物品追踪。而 Apple 直到本次 2021 年春季特别活动才最终发布了这个传说中的追踪产品 —— AirTag</p>
+<h2 id="购买">购买</h2>
+<p>AirTag 算是我购买的第四个 Apple 配件设备了（前有 AirPods gen1、AirPods gen2 和 Apple Pencil gen1），也是目前唯一一个其实需求不那么大的东西。一来综合 AirTag 的各种参数和功能，二来想了想我能够拥有的 AirTag 的使用场景，也就我的钥匙串有这种「奢侈」的待遇了</p>
+<p>我的 AirTag 是在京东买的，但不是京东自营店铺，而是一家支持京东快递的第三方店铺。一来是因为价格，二来是因为我买的时候恰巧自营店铺的 AirTag 仍然持续出于「采购中」的状态。快递到货与京东所提供的预计时间晚了一天的时间，毕竟只是京东快递配送，这不是自营店铺果真是不一样啊</p>
+<p>由于没有什么特别多的需求，我选择的是单只装。如果后续发现了更多的使用场景，再买也可以</p>
+<h2 id="连接与配对">连接与配对</h2>
+<p>将 AirTag 外的塑料外皮撕开，并将电池隔离膜拽掉后，AirTag 就会通电开始工作，并发出声音提示。与 AirPods 的连接类似，只要将 AirTag 靠近 iPhone、iPad 或 iPod touch，设备上就会出现连接弹窗，提示通过 iCloud 连接该设备，<strong>一个 Apple ID 最多可以绑定 16 个 AirTag</strong></p>
+<img src="https://oss.yyl125.cc/blog/img/post/Vanguard_Report/This_Is_A_Question_About_Finding_Things/This_Is_A_Question_About_Finding_Things_01.jpg">
+<p class="media-description">AirTag 的连接弹窗，又让我找到了当年初连 AirPods 时的那种惊喜的感觉</p>
+<p>连接该设备后，就可为 AirTag 设置一个物品名称。你可以选择 Apple 预设的背包、耳机、钱包、伞、手提包、外套、相机、行李箱、钥匙、自行车，也可以为你的 AirTag 自定名称，先选择一个用来代表物品的 Emoji 表情符号，再输入物品名称即可。物品名称可以在初次设置结束后再次设置</p>
+<img src="https://oss.yyl125.cc/blog/img/post/Vanguard_Report/This_Is_A_Question_About_Finding_Things/This_Is_A_Question_About_Finding_Things_02.jpg">
+<p class="media-description">为你的 AirTag 设置一个物品名称</p>
+<p>AirTag 设置完成后，会提示用户进入「查找 App」继续查看或者直接结束设置向导。在查找 App 的「物品」标签页中，可以看到刚刚设置好的 AirTag 和具体位置信息。轻触底部的 AirTag 可以打开关于此 AirTag 的详细信息</p>
+<img src="https://oss.yyl125.cc/blog/img/post/Vanguard_Report/This_Is_A_Question_About_Finding_Things/This_Is_A_Question_About_Finding_Things_03.jpeg">
+<p class="media-description">查找 App 的「物品」标签页</p>
+<p>在「物品」标签页中，你可以添加新的物品或者识别你找到的物品。如果你找到的物品上挂有 AirTag，则直接将你的 iPhone 置于 AirTag 上即可通过 NFC 打开一个含有丢失物品信息的网页。若当前设备不处于「丢失模式」，则只能看到设备的序列号信息</p>
+<img src="https://oss.yyl125.cc/blog/img/post/Vanguard_Report/This_Is_A_Question_About_Finding_Things/This_Is_A_Question_About_Finding_Things_04.PNG">
+<p class="media-description">扫描找到的 AirTag 会弹出一个显示 AirTag 信息的网页。只有在将 AirTag 设置为「丢失模式」，才会显示物主姓名及其联系方式</p>
+<p>如果找到一个不属于自己的 AirTag，也可以按照这个网页底部「停用说明」中介绍的操作步骤，将 AirTag 断电来停用该 AirTag</p>
+<img src="https://oss.yyl125.cc/blog/img/post/Vanguard_Report/This_Is_A_Question_About_Finding_Things/This_Is_A_Question_About_Finding_Things_05.jpeg">
+<p class="media-description">AirTag 的停用说明</p>
+<p>在 AirTag 发布时，Apple 便说明了 AirTag 并不适合用来追踪活物，主要原因是 UWB 信号范围较小且易受环境影响，蓝牙信标的定位也不够及时。而出于隐私等原因，Apple 还设计了一套机制来防止用来追踪人</p>
+<ol>
+<li>当 AirTag 离开物主（此例中即为「追踪人」）太远或太长时间（Apple 表示最长为 3 天）时一旦它发生了移动，便会发出振动和声音提示以此提示「被追踪人」</li>
+<li>当「被追踪人」手持 iPhone 时，「被追踪人」的 iPhone 会提示「被追踪人」有一个未经授权的 AirTag 正在随身移动</li>
+</ol>
+<p>如果 AirTag 整夜都在你身边，它的标识符可能会发生更改，而 iPhone 会根据这个标识符确定相应的 AirTag 是不是随你移动的那个 AirTag</p>
+<p>Apple 同时还提示，<strong>如果感到人身安全受到威胁，请联系当地执法机构</strong></p>
+<h2 id="airtag-的工作机制">AirTag 的工作机制</h2>
+<p>AirTag 与 Apple 设备将通过蓝牙技术进行连接。在受支持的 iPhone 机型<sup class="footnote-ref"><a href="#fn1" id="fnref1">[1]</a></sup>中，AirTag 还将支持利用超宽频技术（UWB）带来的「精确查找」查找功能，帮助用户在「近在眼前」的距离下找到自己丢失的物品。而对于不支持精确查找功能的 Apple 设备，用户仅能获取到 AirTag 基于蓝牙以及 Find My 众包网络<sup class="footnote-ref"><a href="#fn2" id="fnref2">[2]</a></sup>所获取到的大致位置，而无法将位置精确到更大的精度</p>
+<img src="https://oss.yyl125.cc/blog/img/post/Vanguard_Report/This_Is_A_Question_About_Finding_Things/This_Is_A_Question_About_Finding_Things_06.jpg">
+<p class="media-description">AirTag 的精确查找功能。图片来自 Apple</p>
+<p>根据 Youtube 博主以及国内各大数码评测博主的相关测试，在地域空旷的情况下，AirTag 可以很快的与 iPhone 进行连接并启用「精确查找」功能。当<strong>有障碍物或金属等其它物品干扰</strong>的情况下，AirTag 的连接将<strong>很不稳定</strong></p>
+<p>AirTag 能够使用基于全球 Apple 设备参与的庞大的 Find My 众包网络来帮助你找到丢失的物品。整个过程以匿名且加密的方式为丢失物品提供基础级别的大致位置确认，做到「人人为我，我为人人」。但也只是「一定程度上」。若丢失物品周边没有任何 Apple 设备/没有任何设备参与 Find My 众包网络，则这一功能也是毫无用处。最终物主能否找到自己丢失的物品，<strong>全凭人性和运气</strong>了</p>
+<img src="https://oss.yyl125.cc/blog/img/post/Vanguard_Report/This_Is_A_Question_About_Finding_Things/This_Is_A_Question_About_Finding_Things_07.png">
+<p class="media-description">启用了「丢失模式」的 AirTag 将在庞大的 Find My 众包网络模糊确定其位置后给予物主以提示。图片来自 Apple</p>
+<p>其次，AirTag 并不能防盗，它只能帮助解决你「找不到」的问题。AirTag 只能告诉/提示你物品的（甚至是「大致」）位置，因此对于想要买来防盗的人来说，毫无用处</p>
+<img src="https://oss.yyl125.cc/blog/img/post/Vanguard_Report/This_Is_A_Question_About_Finding_Things/This_Is_A_Question_About_Finding_Things_08.PNG">
+<p class="media-description">为 AirTag 开启「丢失模式」</p>
+<p>所以仔细想想，AirTag 的适用场景其实非常狭窄。目前，我认为只有以下物品/场景适合使用 AirTag 追踪器：</p>
+<ul>
+<li>钥匙、背包、钱包等需要随身携带的物品</li>
+<li>机场行李箱（需要专门的行李牌，如果将其放入金属行李箱中可能会影响连接与定位）</li>
+</ul>
+<h2 id="外观和重量">外观和重量</h2>
+<p>AirTag 的包装传承了 Apple 产品包装一贯的白色简洁风格。打开之后是一个包括了产品说明的固定件，内含一颗「滚圆」的 AirTag</p>
+<p>AirTag 的外观，比一元硬币稍大。具体的，AirTag 直径为 <strong>31.9 毫米</strong>（1.26 英寸），厚度为 <strong>8.0 毫米</strong>（0.31 英寸）。一面是白色塑料，一面是抛光的印有 Apple LOGO 和设计与组装信息的金属，外形上更像是围棋的白色棋子。AirTag 可能也是 Apple 少有的不内置锂电池的产品了，其使用 CR2032 纽扣电池供电，官方称其能够为 AirTag 提供一年多的续航。由于刚刚收到货，只能在日后的使用过程当中了解了</p>
+<p>重量上，其实 AirTag 的重量主要是来源于为其供电的 CR2032 纽扣电池。所以整个 AirTag 重量极轻。也因此才更加适合挂在各种物品之上。具体的，AirTag 的重量为 <strong>11 克</strong>（0.39 盎司）</p>
+<p>Apple 表示 AirTag 在 IEC 60529 标准下达到 IP67 级别防溅、抗水、防尘级别，在最深 1 米的水下停留时间最长可达 <strong>30 分钟</strong></p>
+<h2 id="为-airtag-更换电池">为 AirTag 更换电池</h2>
+<p>AirTag 使用常见的 CR2032 纽扣电池供电，相比于内置锂电池这一方案，使用纽扣电池对于用户而言足够的方便，在你的 AirTag 电池低电量时，iPhone 上也会收到相应的提示。你可以在大部分地区买到 CR2032 纽扣电池，而更换电池的方式也很简单：</p>
+<ol>
+<li>向下按压并逆时针转动 AirTag 的抛光不锈钢电池护盖，直到护盖停止转动，取出旧电池</li>
+<li>装回新电池，确保正极朝上</li>
+<li>装回护盖，确保护盖上的三个卡扣与 AirTag 上的三个插槽对齐</li>
+<li>顺时针转动护盖，直到它停止转动</li>
+</ol>
+<hr class="footnotes-sep">
+<section class="footnotes">
+<ol class="footnotes-list">
+<li id="fn1" class="footnote-item"><p>具体的，「受支持机型」目前为 iPhone 11 系列、iPhone 11 Pro 系列、iPhone 12 系列以及 iPhone 12 Pro 系列机型。Apple Watch Series 6 虽然也拥有 UWB 芯片，但目前在 Apple Watch 上还不能对其它设备以及物品进行查找 <a href="#fnref1" class="footnote-backref">↩︎</a></p>
+</li>
+<li id="fn2" class="footnote-item"><p>出国旅行时需要注意当地是否允许与 AirTag 相关的技术实现，例如在韩国你就无法使用「查找」网络 <a href="#fnref2" class="footnote-backref">↩︎</a></p>
+</li>
+</ol>
+</section>
+
+        </div>
+
+        <div class="jumbotron">
+          <div class="container">
+            <p><i class="ri-article-line"></i> <a href="https://yyl125.top/post/this_is_a_question_about_finding_things/" target="_blank">丢的东西上绑有 AirTag，还能不能找到？这还真是个问题</a></p>
+            <p><i class="ri-creative-commons-line"></i> 许可协议：<a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" target="_blank">CC BY-NC-SA 4.0</a>。欲了解更多相关信息，详见 <a href="https://yyl125.top/copyright/" target="_blank">版权信息与资源使用说明</a> 页面</p>
+            <p><i class="ri-error-warning-line"></i> 本站所有内容除特别说明外，皆为原创发布。欢迎尊重原创作者版权的转载或引用。转载或引用时请注明出处</p>
+            <br>
+            <p><i class="ri-feedback-line"></i> 出现了影响阅读的问题？不妨 <a href="mailto:support@yyl125.cc?subject=Benjamin's%20Blog%20%E9%97%AE%E9%A2%98%E5%8F%8D%E9%A6%88" target="_blank" rel="noreferrer noopener">反馈</a> 一下吧</p>
+          </div>
+        </div>
+
+        
+        
+      </div>
+
+      <div class="jumbotron-comment">
+        <div class="container">
+          <p><i class="ri-message-3-line"></i> 欢迎任何与文章内容相关并保持尊重的评论，评论时请遵守 <a href="https://yyl125.top/comment_policy/">评论准则</a></p>
+        </div>
+      </div>
+
+      
+
+      
+        <div id="tcomment"></div>
+      
+      
+      <footer class="py-12 text-center px-4 md:px-0" v-pre>
+  共 24 篇文章｜<a href="https://yyl125.top/copyright" target="_blank">版权信息与资源使用说明</a>｜<i class="ri-rss-line"></i> <a href="https://yyl125.top/atom.xml" target="_blank">RSS</a><br>Copyright © 2026 Benjamin. All rights reserved.
+</footer>
+
+
+    </div>
+
+    <!-- TOC Container -->
+    <div class="fixed right-0 bottom-0 mb-16 mr-4 shadow w-8 h-8 rounded-full flex justify-center items-center z-10 cursor-pointer bg-white dark:bg-gray-500 dark:text-gray-200 hover:shadow-lg transition-all animated fadeInRight" @click="showToc = true">
+      <i class="ri-file-list-line"></i>
+    </div>
+
+    <div class="fixed right-0 top-0 bottom-0 overflow-y-auto w-64 bg-white dark:bg-gray-800 p-4 border-l border-gray-100 dark:border-gray-600 z-10 transition-fast" :class="{ '-mr-64': !showToc }">
+      <div class="flex mb-4 justify-end">
+        <div class="w-8 h-8 inline-flex justify-center items-center rounded-full cursor-pointer hover:bg-gray-200 dark:hover:bg-gray-600 transition-fast" @click="showToc = false">
+          <i class="ri-close-line text-lg"></i>
+        </div>
+      </div>
+      <div class="post-toc-container">
+        <ul class="markdownIt-TOC">
+<li>
+<ul>
+<li><a href="#%E8%B4%AD%E4%B9%B0">购买</a></li>
+<li><a href="#%E8%BF%9E%E6%8E%A5%E4%B8%8E%E9%85%8D%E5%AF%B9">连接与配对</a></li>
+<li><a href="#airtag-%E7%9A%84%E5%B7%A5%E4%BD%9C%E6%9C%BA%E5%88%B6">AirTag 的工作机制</a></li>
+<li><a href="#%E5%A4%96%E8%A7%82%E5%92%8C%E9%87%8D%E9%87%8F">外观和重量</a></li>
+<li><a href="#%E4%B8%BA-airtag-%E6%9B%B4%E6%8D%A2%E7%94%B5%E6%B1%A0">为 AirTag 更换电池</a></li>
+</ul>
+</li>
+</ul>
+
+      </div>
+    </div>
+
+    <!-- Back to top -->
+    <div class="fixed right-0 bottom-0 mb-4 mr-4 shadow w-8 h-8 rounded-full flex justify-center items-center z-10 cursor-pointer bg-white hover:shadow-lg transition-all dark:bg-gray-500 dark:text-gray-200" @click="backToUp" v-show="scrolled">
+      <i class="ri-arrow-up-line"></i>
+    </div>
+
+  </div>
+
+<!--  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script> -->
+  <script src="https://yyl125.top/media/scripts/vue.js"></script>
+  <script src="https://yyl125.top/media/scripts/main.js"></script>
+  <script src="https://yyl125.top/media/scripts/linkcard.js"></script>
+  <script src="https://yyl125.top/media/scripts/view-image.min.js"></script>
+  <script>
+    window.ViewImage && ViewImage.init('.markdown img');
+    var lazyLoadInstance = new LazyLoad({});
+    lazyLoadInstance.update();
+  </script>
+  
+  <!-- Mermaid -->
+  
+
+  <!-- Code Highlight -->
+  
+    <script src="https://yyl125.top/media/scripts/prism.js"></script>
+    <script>
+      Prism.highlightAll()
+    </script>
+  
+
+  <!-- Twikoo -->
+  
+    <script src="https://cdn.jsdelivr.net/npm/twikoo@1.6.44/dist/twikoo.min.js"></script>
+<script>
+  twikoo.init({
+    envId: 'https://twikoo-deploy-one.vercel.app',
+    el: '#tcomment'
+  })
+</script>
+  
+
+</body>
+
+</html>

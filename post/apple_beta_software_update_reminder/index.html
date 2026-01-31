@@ -1,0 +1,358 @@
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<meta name="google-site-verification" content="mzGZdCiBsXZ5XSYVt7eh7KL8L64yuidUoeBNw_53XHk" />
+<meta name="referrer" content="same-origin">
+<title>Apple 测试版软件备忘录 - Benjamin&#39;s Blog</title>
+<link rel="shortcut icon" href="https://yyl125.top/favicon.ico">
+<link href="https://cdn.jsdelivr.net/npm/remixicon@latest/fonts/remixicon.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.7.2/animate.min.css">
+<link rel="stylesheet" href="https://yyl125.top/media/css/tailwind.css">
+<link rel="stylesheet" href="https://yyl125.top/styles/main.css">
+
+
+<link rel="alternate" type="application/atom+xml" title="Apple 测试版软件备忘录 - Benjamin&#39;s Blog - Atom Feed" href="https://yyl125.top/atom.xml">
+<!----<script src="https://yyl125.top/media/scripts/bootstrap.bundle.min.js"></script>---->
+
+
+  
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-Q6KYP4QSBH"></script>
+    <script>
+      var host = window.location.hostname;
+      if(host != "localhost")
+      {
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-Q6KYP4QSBH');
+      }
+    </script>
+  
+
+<script defer>
+(function (document) {
+  const SOURCE = 'https://cdn.jsdelivr.net';
+  const DEST = 'https://gcore.jsdelivr.net';
+  const $ = document.querySelectorAll.bind(document);
+  const checkAvailable = (callback) => {
+    let timeoutId;
+    const newNode = document.createElement('link');
+    newNode.rel = 'stylesheet';
+    newNode.text = 'text/css';
+    const onError = () => {
+      if (!timeoutId) {
+        return;
+      }
+
+      clearTimeout(timeoutId);
+      timeoutId = 0;
+      newNode.href = 'about:blank';
+      newNode.remove();
+      callback(false);
+    };
+
+    timeoutId = setTimeout(onError, 2000);
+    newNode.addEventListener('error', onError);
+    newNode.addEventListener('load', function () {
+      newNode.remove();
+      clearTimeout(timeoutId);
+      callback(true);
+    });
+
+    newNode.href =
+      SOURCE +
+      '/gh/PipecraftNet/jsdelivr-auto-fallback@main/empty.css?' +
+      Date.now();
+    document.head.insertAdjacentElement('afterbegin', newNode);
+  };
+
+  const replaceElementSrc = () => {
+    for (const element of $('link[rel="stylesheet"]')) {
+      if (element.href && element.href.includes(SOURCE)) {
+        element.href = element.href.replace(SOURCE, DEST);
+      }
+    }
+
+    for (const element of $('script')) {
+      if (element.src && element.src.includes(SOURCE)) {
+        const newNode = document.createElement('script');
+        newNode.src = element.src.replace(SOURCE, DEST);
+        element.defer = true;
+        element.src = '';
+        element.before(newNode);
+        element.remove();
+      }
+    }
+
+    for (const element of $('img')) {
+      if (element.src && element.src.includes(SOURCE)) {
+        const source = element.src;
+        // Used to cancel loading. Without this line it will remain pending status.
+        element.src = '';
+        element.src = source.replace(SOURCE, DEST);
+      }
+    }
+  };
+
+  checkAvailable(function (isAvailable) {
+    if (isAvailable) {
+      return;
+    }
+
+    console.warn(SOURCE + ' is not available.');
+
+    replaceElementSrc();
+    // Replace dynamically added elements
+    setInterval(replaceElementSrc, 500);
+  });
+})(document);
+</script>
+  <meta name="description" content="尝鲜有风险，测试需谨慎
+
+
+    
+    内容更新 本文内容将随状况的发展而更新
+
+Apple 如很多操作系统开发商一样，除了有用于正式环境的软件版本外，还有专供开发者做新功能适配和 App 机型测试的 Developer Beta（开..." />
+  <meta property="og:title" content="Apple 测试版软件备忘录 - Benjamin&#39;s Blog">
+  <meta property="og:description" content="尝鲜有风险，测试需谨慎
+
+
+    
+    内容更新 本文内容将随状况的发展而更新
+
+Apple 如很多操作系统开发商一样，除了有用于正式环境的软件版本外，还有专供开发者做新功能适配和 App 机型测试的 Developer Beta（开..." />
+  <meta property="og:type" content="articles">
+  <meta property="og:url" content="https://yyl125.top/post/apple_beta_software_update_reminder/" />
+  <meta property="og:image" content="https://oss.yyl125.cc/blog/img/post/Vanguard_Report/Apple_Beta_Software_Update_Reminder/Apple_Beta_Software_Update_Reminder_Banner.png">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:width" content="1200">
+  <meta name="twitter:title" content="Apple 测试版软件备忘录 - Benjamin&#39;s Blog">
+  <meta name="twitter:description" content="尝鲜有风险，测试需谨慎
+
+
+    
+    内容更新 本文内容将随状况的发展而更新
+
+Apple 如很多操作系统开发商一样，除了有用于正式环境的软件版本外，还有专供开发者做新功能适配和 App 机型测试的 Developer Beta（开...">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="canonical" href="https://yyl125.top/post/apple_beta_software_update_reminder/">
+
+  <script src="https://cdn.jsdelivr.net/npm/vanilla-lazyload@17.8.8/dist/lazyload.min.js"></script>
+  <script type="module" src="https://yyl125.top/media/scripts/emaction.js"></script>
+
+  
+    <link rel="stylesheet" href="https://yyl125.top/media/css/prism-atom-dark.css">
+  
+
+  
+</head>
+
+<body>
+  <div class="antialiased flex flex-col min-h-screen" id="app">
+    <a href="https://yyl125.top" class="fixed top-0 left-0 mt-4 bg-black text-white dark:text-gray-700 dark:bg-yellow-50 dark:hover:bg-black dark:hover:text-white inline-flex p-2 pl-8 hover:text-gray-700 hover:bg-yellow-50 font-bold z-10 transition-fast animated fadeInLeft">
+      Benjamin&#39;s Blog
+    </a>
+    <div class="max-w-4xl w-full mx-auto">
+      <div class="shadow-box bg-white dark:bg-gray-600 rounded-lg pt-32 md:pt-64 px-4 md:px-8 pb-8 animated fadeIn mb-8">
+        <h1 class="text-5xl font-semibold leading-normal pb-8 mb-8 border-b-8 border-gray-700">
+          Apple 测试版软件备忘录
+        </h1>
+        
+          <img src="https://oss.yyl125.cc/blog/img/post/Vanguard_Report/Apple_Beta_Software_Update_Reminder/Apple_Beta_Software_Update_Reminder_Banner.png" alt="Apple 测试版软件备忘录" class="block w-full mb-8">
+        
+        <div class="mb-8 flex flex-wrap">
+          <div class="text-gray-400 text-sm mr-4"><i class="ri-calendar-2-line"></i> 2023-06-26 · <i class="ri-timer-line"></i> 7 min read · <i class="ri-eye-line"></i> <span id="twikoo_visitors">0</span></div>
+          
+            <a href="https://yyl125.top/tag/vanguard_report/" class="text-gray-700 dark:text-gray-200 text-sm hover:transition-all duration-100 inline-flex mr-2">
+              <i class="ri-hashtag"></i>
+              Vanguard Report
+            </a>
+          
+        </div>
+        
+        <div class="jumbotron">
+          <div class="container">
+            <p><i class="ri-time-line"></i> 这是一篇发布于 3 年前的文章，其中的信息可能已经有所发展或是发生改变</p>
+          </div>
+        </div>
+
+        
+
+        
+        
+        <div class="markdown mb-8" v-pre id="post-content">
+          <p>尝鲜有风险，测试需谨慎</p>
+<!-- more -->
+<div class="alert alert-success">
+    <i class="ri-check-line"></i>
+    <strong>内容更新</strong> 本文内容将随状况的发展而更新
+</div>
+<p>Apple 如很多操作系统开发商一样，除了有用于正式环境的软件版本外，还有专供开发者做新功能适配和 App 机型测试的 Developer Beta（开发者测试版本，下文简称「DB」）以及面向普通消费者用户的 Public Beta（公众测试版本，下文简称「PB」）。每年的 WWDC（Apple 全球开发者大会）第一天的 Keynote 主旨演讲后，Apple 就会在其开发者网站上上线用户开发者的 DB 描述文件（Profile）用以开发者将自己的设备更新至新版本以为自己的 App 适配新系统做好准备</p>
+<p>而从 iOS/iPadOS 16.4、watchOS 9.5 以及 macOS 13.4 开始，Apple 引入了一种新的测试版软件获取方法，使用户能够在软件更新设置项目中直接获取 DB/PB 的 OTA 更新，并且在同一时间使传统的描述文件不再能够控制这一设置配置。Apple 还对能够获取 DB 和 PB 的用户做出了更进一步的细分，只有付费加入 Apple Developer Program 的 Apple ID 用户才能获取 DB 版本。但 Apple 随后在对 iOS/iPadOS 17 进行开发者测试时，宣布任何 Apple ID 均可免费获取 DB 更新</p>
+<h2 id="免责声明">免责声明</h2>
+<p>随着相关门槛的降低以及互联网探索精神，越来越多的人开始尝试在自己的设备上尝试使用最新的测试版本来体验新功能。但是本着认真负责的态度，还是应该再次说明一下，测试系统仍然有很多不太完善的地方，因此其仅应面向有一定技术实力的开发者推出（虽然也有很多方式能够让公众获得）。而测试系统之所以被称之为测试系统，一定是因为<strong>它的完善度等方面还远没有达到可以面向一般大众推出的水平，不然还测试干嘛，早就全量推送了</strong>。如果无脑的尝鲜的话，遇到问题时也往往会让你付出一定的代价。这个代价包括但不限于：你的<strong>时间成本</strong>和你的<strong>资料数据</strong>等内容。因此，请不要在自己的主用设备中使用测试版本的软件</p>
+<p>尝鲜有风险，测试需谨慎</p>
+<h2 id="db-和-pb-的相同之处">DB 和 PB 的相同之处</h2>
+<ol>
+<li>用户安装 DB 或 PB 参与测试均没有任何报酬，亦无需任何付费；</li>
+<li>严格来说，DB 和 PB 属于机密。Apple 指出，只有当 Apple 公开披露了有关 DB 或 PB 软件的技术信息时，这些才不再被视作机密信息；</li>
+<li>DB 和 PB 均为 Apple 软件正式发布前的测试版本，其稳定性和安全性通常不如正式发布版本；</li>
+<li>DB 和 PB 用户均可以使用反馈助理 App 向 Apple 反馈当前 DB 或 PB 中存在的问题；</li>
+<li>安装 DB 或 PB 软件均不会使你的硬件保修失效；</li>
+<li>一旦在 Apple Watch 中安装 DB 或 PB，Apple Watch 便无法恢复到之前正式发布的 watchOS 版本。如需恢复，请联系 Apple；</li>
+<li>用户均可在某一测试阶段选择让设备停止接收 DB 或 PB 版本，直至安装后续正式发布版本（watchOS 除外）；</li>
+<li>至当前版本测试收尾阶段，Apple 将发布 Gold Master（GM）<sup class="footnote-ref"><a href="#fn1" id="fnref1">[1]</a></sup>/Release Candidate（RC，发布候选）<sup class="footnote-ref"><a href="#fn2" id="fnref2">[2]</a></sup>，一般为该软件版本的 RTM（Release To Manufacture）</li>
+<li>其它未指明但客观存在的相同之处</li>
+</ol>
+<h2 id="db-与-pb-的不同之处">DB 与 PB 的不同之处</h2>
+<ol>
+<li>加入 Apple Developer Program 即可获取 DB，加入 Apple Beta 版软件计划即可获取 PB；</li>
+<li>PB 旨在收集预发布软件的反馈，PB 可能会收到与 DB 不同的软件版本；</li>
+<li>通常情况下，PB 可能是前一个 DB 的副本。而某一较大版本升级的前期测试时，PB 则可能是之前某一个 DB 的副本；</li>
+<li>一般而言，除某一较大版本升级的前期测试外，DB 和 PB 均为一周一更新（国际、美国法定节假日除外）。但 PB 一般与 DB 存在约一周左右的延迟。某一较大版本升级的前期测试时，DB 一般两周一更新，PB 则没有明确规律可言；</li>
+<li>其它未指明但客观存在的不同之处</li>
+</ol>
+<h2 id="如何开始进行测试">如何开始进行测试</h2>
+<p>DB 和 PB 开始测试的方法不尽相同。DB 无需任何多余的步骤，在任何 Apple 设备中登录自己已加入 <sup class="footnote-ref"><a href="#fn3" id="fnref3">[3]</a></sup> Apple Developer Program 的 Apple ID，即可在 Apple 设备的「软件更新」系统设置项目中更新 Developer Beta</p>
+<p>而获取 Public Beta 则需要使用你的 Apple ID 在 <a href="https://beta.apple.com/" target="_blank">Apple Beta 版软件计划</a> 中注册你的设备来获取 Public Beta 版并试用最新的功能</p>
+<h2 id="遇到问题怎么办">遇到问题怎么办</h2>
+<h3 id="我遇到的了一些问题想要反馈给-apple">我遇到的了一些问题，想要反馈给 Apple</h3>
+<p>iOS/iPadOS 安装测试版软件后，SpringBoard 会出现「反馈助理」App。轻点打开反馈助理 App，使用自己参加测试时所使用的 Apple ID 登录，并将问题反映给 Apple</p>
+<p>macOS 无论安装测试版软件与否，你都能在 <code>/System/Library/CoreServices/Applications</code> 目录下找到反馈助理（Feedback Assistant）App。你亦可以通过聚焦（Spotlight）搜索「反馈助理」打开反馈助理 App，使用自己参加测试时所使用的 Apple ID 登录，并将问题反映给 Apple</p>
+<p>使用与 Apple Watch 配对的 iPhone 上的反馈助理（方便提取日志文件等）将问题反映给 Apple。其它设备的反馈方式亦可参考 Apple Watch</p>
+<p>请尽量在反馈过程中做到逻辑清晰、信息提供到位，并友善发言，以便减少在反馈过程中所浪费的时间成本和所产生的负面情绪</p>
+<h3 id="我遇到了软件闪退-打不开-无法使用等问题">我遇到了软件闪退、打不开、无法使用等问题</h3>
+<p>一般而言，Apple 正常的软件更新不会对任何 App 造成这种「灾难级故障」，但诸如迭代版本的软件测试往往会出现此类问题</p>
+<p>当出现此类问题时，请将错误信息以合理合法的渠道向 App 开发者反馈，并等待 App 开发者修复</p>
+<h3 id="我不想使用测试版软件了如何将版本进行回滚">我不想使用测试版软件了，如何将版本进行回滚</h3>
+<p>请参考《<a href="https://yyl125.top/post/give_yourself_a_choose_for_regreting/" target="_blank">想要体验新功能？先给自己「留一手」吧</a>》</p>
+<p>我们不推荐其它非官方处理方式，特别是保留数据资料（易造成诸多错误）</p>
+<h3 id="我遇到了无法开机-数据丢失以及其它未指明但客观存在的较为严重的硬件软件问题">我遇到了无法开机、数据丢失以及其它未指明但客观存在的较为严重的硬件/软件问题</h3>
+<p>请联系 Apple</p>
+<hr class="footnotes-sep">
+<section class="footnotes">
+<ol class="footnotes-list">
+<li id="fn1" class="footnote-item"><p>现已废弃，不再使用 <a href="#fnref1" class="footnote-backref">↩︎</a></p>
+</li>
+<li id="fn2" class="footnote-item"><p>一般是 RTM 之前的最后一个或多个版本版本 <a href="#fnref2" class="footnote-backref">↩︎</a></p>
+</li>
+<li id="fn3" class="footnote-item"><p>WWDC 刚刚发布的迭代版本的预览版则不需要 <a href="#fnref3" class="footnote-backref">↩︎</a></p>
+</li>
+</ol>
+</section>
+
+        </div>
+
+        <div class="jumbotron">
+          <div class="container">
+            <p><i class="ri-article-line"></i> <a href="https://yyl125.top/post/apple_beta_software_update_reminder/" target="_blank">Apple 测试版软件备忘录</a></p>
+            <p><i class="ri-creative-commons-line"></i> 许可协议：<a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" target="_blank">CC BY-NC-SA 4.0</a>。欲了解更多相关信息，详见 <a href="https://yyl125.top/copyright/" target="_blank">版权信息与资源使用说明</a> 页面</p>
+            <p><i class="ri-error-warning-line"></i> 本站所有内容除特别说明外，皆为原创发布。欢迎尊重原创作者版权的转载或引用。转载或引用时请注明出处</p>
+            <br>
+            <p><i class="ri-feedback-line"></i> 出现了影响阅读的问题？不妨 <a href="mailto:support@yyl125.cc?subject=Benjamin's%20Blog%20%E9%97%AE%E9%A2%98%E5%8F%8D%E9%A6%88" target="_blank" rel="noreferrer noopener">反馈</a> 一下吧</p>
+          </div>
+        </div>
+
+        
+        
+      </div>
+
+      <div class="jumbotron-comment">
+        <div class="container">
+          <p><i class="ri-message-3-line"></i> 欢迎任何与文章内容相关并保持尊重的评论，评论时请遵守 <a href="https://yyl125.top/comment_policy/">评论准则</a></p>
+        </div>
+      </div>
+
+      
+
+      
+        <div id="tcomment"></div>
+      
+      
+      <footer class="py-12 text-center px-4 md:px-0" v-pre>
+  共 24 篇文章｜<a href="https://yyl125.top/copyright" target="_blank">版权信息与资源使用说明</a>｜<i class="ri-rss-line"></i> <a href="https://yyl125.top/atom.xml" target="_blank">RSS</a><br>Copyright © 2026 Benjamin. All rights reserved.
+</footer>
+
+
+    </div>
+
+    <!-- TOC Container -->
+    <div class="fixed right-0 bottom-0 mb-16 mr-4 shadow w-8 h-8 rounded-full flex justify-center items-center z-10 cursor-pointer bg-white dark:bg-gray-500 dark:text-gray-200 hover:shadow-lg transition-all animated fadeInRight" @click="showToc = true">
+      <i class="ri-file-list-line"></i>
+    </div>
+
+    <div class="fixed right-0 top-0 bottom-0 overflow-y-auto w-64 bg-white dark:bg-gray-800 p-4 border-l border-gray-100 dark:border-gray-600 z-10 transition-fast" :class="{ '-mr-64': !showToc }">
+      <div class="flex mb-4 justify-end">
+        <div class="w-8 h-8 inline-flex justify-center items-center rounded-full cursor-pointer hover:bg-gray-200 dark:hover:bg-gray-600 transition-fast" @click="showToc = false">
+          <i class="ri-close-line text-lg"></i>
+        </div>
+      </div>
+      <div class="post-toc-container">
+        <ul class="markdownIt-TOC">
+<li>
+<ul>
+<li><a href="#%E5%85%8D%E8%B4%A3%E5%A3%B0%E6%98%8E">免责声明</a></li>
+<li><a href="#db-%E5%92%8C-pb-%E7%9A%84%E7%9B%B8%E5%90%8C%E4%B9%8B%E5%A4%84">DB 和 PB 的相同之处</a></li>
+<li><a href="#db-%E4%B8%8E-pb-%E7%9A%84%E4%B8%8D%E5%90%8C%E4%B9%8B%E5%A4%84">DB 与 PB 的不同之处</a></li>
+<li><a href="#%E5%A6%82%E4%BD%95%E5%BC%80%E5%A7%8B%E8%BF%9B%E8%A1%8C%E6%B5%8B%E8%AF%95">如何开始进行测试</a></li>
+<li><a href="#%E9%81%87%E5%88%B0%E9%97%AE%E9%A2%98%E6%80%8E%E4%B9%88%E5%8A%9E">遇到问题怎么办</a>
+<ul>
+<li><a href="#%E6%88%91%E9%81%87%E5%88%B0%E7%9A%84%E4%BA%86%E4%B8%80%E4%BA%9B%E9%97%AE%E9%A2%98%E6%83%B3%E8%A6%81%E5%8F%8D%E9%A6%88%E7%BB%99-apple">我遇到的了一些问题，想要反馈给 Apple</a></li>
+<li><a href="#%E6%88%91%E9%81%87%E5%88%B0%E4%BA%86%E8%BD%AF%E4%BB%B6%E9%97%AA%E9%80%80-%E6%89%93%E4%B8%8D%E5%BC%80-%E6%97%A0%E6%B3%95%E4%BD%BF%E7%94%A8%E7%AD%89%E9%97%AE%E9%A2%98">我遇到了软件闪退、打不开、无法使用等问题</a></li>
+<li><a href="#%E6%88%91%E4%B8%8D%E6%83%B3%E4%BD%BF%E7%94%A8%E6%B5%8B%E8%AF%95%E7%89%88%E8%BD%AF%E4%BB%B6%E4%BA%86%E5%A6%82%E4%BD%95%E5%B0%86%E7%89%88%E6%9C%AC%E8%BF%9B%E8%A1%8C%E5%9B%9E%E6%BB%9A">我不想使用测试版软件了，如何将版本进行回滚</a></li>
+<li><a href="#%E6%88%91%E9%81%87%E5%88%B0%E4%BA%86%E6%97%A0%E6%B3%95%E5%BC%80%E6%9C%BA-%E6%95%B0%E6%8D%AE%E4%B8%A2%E5%A4%B1%E4%BB%A5%E5%8F%8A%E5%85%B6%E5%AE%83%E6%9C%AA%E6%8C%87%E6%98%8E%E4%BD%86%E5%AE%A2%E8%A7%82%E5%AD%98%E5%9C%A8%E7%9A%84%E8%BE%83%E4%B8%BA%E4%B8%A5%E9%87%8D%E7%9A%84%E7%A1%AC%E4%BB%B6%E8%BD%AF%E4%BB%B6%E9%97%AE%E9%A2%98">我遇到了无法开机、数据丢失以及其它未指明但客观存在的较为严重的硬件/软件问题</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+      </div>
+    </div>
+
+    <!-- Back to top -->
+    <div class="fixed right-0 bottom-0 mb-4 mr-4 shadow w-8 h-8 rounded-full flex justify-center items-center z-10 cursor-pointer bg-white hover:shadow-lg transition-all dark:bg-gray-500 dark:text-gray-200" @click="backToUp" v-show="scrolled">
+      <i class="ri-arrow-up-line"></i>
+    </div>
+
+  </div>
+
+<!--  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script> -->
+  <script src="https://yyl125.top/media/scripts/vue.js"></script>
+  <script src="https://yyl125.top/media/scripts/main.js"></script>
+  <script src="https://yyl125.top/media/scripts/linkcard.js"></script>
+  <script src="https://yyl125.top/media/scripts/view-image.min.js"></script>
+  <script>
+    window.ViewImage && ViewImage.init('.markdown img');
+    var lazyLoadInstance = new LazyLoad({});
+    lazyLoadInstance.update();
+  </script>
+  
+  <!-- Mermaid -->
+  
+
+  <!-- Code Highlight -->
+  
+    <script src="https://yyl125.top/media/scripts/prism.js"></script>
+    <script>
+      Prism.highlightAll()
+    </script>
+  
+
+  <!-- Twikoo -->
+  
+    <script src="https://cdn.jsdelivr.net/npm/twikoo@1.6.44/dist/twikoo.min.js"></script>
+<script>
+  twikoo.init({
+    envId: 'https://twikoo-deploy-one.vercel.app',
+    el: '#tcomment'
+  })
+</script>
+  
+
+</body>
+
+</html>

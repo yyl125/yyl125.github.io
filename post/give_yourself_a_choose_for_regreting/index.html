@@ -1,0 +1,507 @@
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<meta name="google-site-verification" content="mzGZdCiBsXZ5XSYVt7eh7KL8L64yuidUoeBNw_53XHk" />
+<meta name="referrer" content="same-origin">
+<title>想要体验新功能？先给自己「留一手」吧 - Benjamin&#39;s Blog</title>
+<link rel="shortcut icon" href="https://yyl125.top/favicon.ico">
+<link href="https://cdn.jsdelivr.net/npm/remixicon@latest/fonts/remixicon.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.7.2/animate.min.css">
+<link rel="stylesheet" href="https://yyl125.top/media/css/tailwind.css">
+<link rel="stylesheet" href="https://yyl125.top/styles/main.css">
+
+
+<link rel="alternate" type="application/atom+xml" title="想要体验新功能？先给自己「留一手」吧 - Benjamin&#39;s Blog - Atom Feed" href="https://yyl125.top/atom.xml">
+<!----<script src="https://yyl125.top/media/scripts/bootstrap.bundle.min.js"></script>---->
+
+
+  
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-Q6KYP4QSBH"></script>
+    <script>
+      var host = window.location.hostname;
+      if(host != "localhost")
+      {
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-Q6KYP4QSBH');
+      }
+    </script>
+  
+
+<script defer>
+(function (document) {
+  const SOURCE = 'https://cdn.jsdelivr.net';
+  const DEST = 'https://gcore.jsdelivr.net';
+  const $ = document.querySelectorAll.bind(document);
+  const checkAvailable = (callback) => {
+    let timeoutId;
+    const newNode = document.createElement('link');
+    newNode.rel = 'stylesheet';
+    newNode.text = 'text/css';
+    const onError = () => {
+      if (!timeoutId) {
+        return;
+      }
+
+      clearTimeout(timeoutId);
+      timeoutId = 0;
+      newNode.href = 'about:blank';
+      newNode.remove();
+      callback(false);
+    };
+
+    timeoutId = setTimeout(onError, 2000);
+    newNode.addEventListener('error', onError);
+    newNode.addEventListener('load', function () {
+      newNode.remove();
+      clearTimeout(timeoutId);
+      callback(true);
+    });
+
+    newNode.href =
+      SOURCE +
+      '/gh/PipecraftNet/jsdelivr-auto-fallback@main/empty.css?' +
+      Date.now();
+    document.head.insertAdjacentElement('afterbegin', newNode);
+  };
+
+  const replaceElementSrc = () => {
+    for (const element of $('link[rel="stylesheet"]')) {
+      if (element.href && element.href.includes(SOURCE)) {
+        element.href = element.href.replace(SOURCE, DEST);
+      }
+    }
+
+    for (const element of $('script')) {
+      if (element.src && element.src.includes(SOURCE)) {
+        const newNode = document.createElement('script');
+        newNode.src = element.src.replace(SOURCE, DEST);
+        element.defer = true;
+        element.src = '';
+        element.before(newNode);
+        element.remove();
+      }
+    }
+
+    for (const element of $('img')) {
+      if (element.src && element.src.includes(SOURCE)) {
+        const source = element.src;
+        // Used to cancel loading. Without this line it will remain pending status.
+        element.src = '';
+        element.src = source.replace(SOURCE, DEST);
+      }
+    }
+  };
+
+  checkAvailable(function (isAvailable) {
+    if (isAvailable) {
+      return;
+    }
+
+    console.warn(SOURCE + ' is not available.');
+
+    replaceElementSrc();
+    // Replace dynamically added elements
+    setInterval(replaceElementSrc, 500);
+  });
+})(document);
+</script>
+  <meta name="description" content="尝鲜有风险，测试需谨慎
+
+
+    
+    内容更新 本文内容将随状况的发展而更新
+
+
+Apple 如很多操作系统开发商一样，除了有用于正式环境的软件版本外，还有专供开发者做新功能适配和 App 机型测试的 Developer Beta（..." />
+  <meta property="og:title" content="想要体验新功能？先给自己「留一手」吧 - Benjamin&#39;s Blog">
+  <meta property="og:description" content="尝鲜有风险，测试需谨慎
+
+
+    
+    内容更新 本文内容将随状况的发展而更新
+
+
+Apple 如很多操作系统开发商一样，除了有用于正式环境的软件版本外，还有专供开发者做新功能适配和 App 机型测试的 Developer Beta（..." />
+  <meta property="og:type" content="articles">
+  <meta property="og:url" content="https://yyl125.top/post/give_yourself_a_choose_for_regreting/" />
+  <meta property="og:image" content="https://oss.yyl125.cc/blog/img/post/Ingenious_Skills/Give_Yourself_A_Choose_For_Regreting/Give_Yourself_A_Choose_For_Regreting_Banner.jpg">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:width" content="1200">
+  <meta name="twitter:title" content="想要体验新功能？先给自己「留一手」吧 - Benjamin&#39;s Blog">
+  <meta name="twitter:description" content="尝鲜有风险，测试需谨慎
+
+
+    
+    内容更新 本文内容将随状况的发展而更新
+
+
+Apple 如很多操作系统开发商一样，除了有用于正式环境的软件版本外，还有专供开发者做新功能适配和 App 机型测试的 Developer Beta（...">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="canonical" href="https://yyl125.top/post/give_yourself_a_choose_for_regreting/">
+
+  <script src="https://cdn.jsdelivr.net/npm/vanilla-lazyload@17.8.8/dist/lazyload.min.js"></script>
+  <script type="module" src="https://yyl125.top/media/scripts/emaction.js"></script>
+
+  
+    <link rel="stylesheet" href="https://yyl125.top/media/css/prism-atom-dark.css">
+  
+
+  
+</head>
+
+<body>
+  <div class="antialiased flex flex-col min-h-screen" id="app">
+    <a href="https://yyl125.top" class="fixed top-0 left-0 mt-4 bg-black text-white dark:text-gray-700 dark:bg-yellow-50 dark:hover:bg-black dark:hover:text-white inline-flex p-2 pl-8 hover:text-gray-700 hover:bg-yellow-50 font-bold z-10 transition-fast animated fadeInLeft">
+      Benjamin&#39;s Blog
+    </a>
+    <div class="max-w-4xl w-full mx-auto">
+      <div class="shadow-box bg-white dark:bg-gray-600 rounded-lg pt-32 md:pt-64 px-4 md:px-8 pb-8 animated fadeIn mb-8">
+        <h1 class="text-5xl font-semibold leading-normal pb-8 mb-8 border-b-8 border-gray-700">
+          想要体验新功能？先给自己「留一手」吧
+        </h1>
+        
+          <img src="https://oss.yyl125.cc/blog/img/post/Ingenious_Skills/Give_Yourself_A_Choose_For_Regreting/Give_Yourself_A_Choose_For_Regreting_Banner.jpg" alt="想要体验新功能？先给自己「留一手」吧" class="block w-full mb-8">
+        
+        <div class="mb-8 flex flex-wrap">
+          <div class="text-gray-400 text-sm mr-4"><i class="ri-calendar-2-line"></i> 2020-06-30 · <i class="ri-timer-line"></i> 18 min read · <i class="ri-eye-line"></i> <span id="twikoo_visitors">0</span></div>
+          
+            <a href="https://yyl125.top/tag/vanguard_report/" class="text-gray-700 dark:text-gray-200 text-sm hover:transition-all duration-100 inline-flex mr-2">
+              <i class="ri-hashtag"></i>
+              Vanguard Report
+            </a>
+          
+        </div>
+        
+        <div class="jumbotron">
+          <div class="container">
+            <p><i class="ri-time-line"></i> 这是一篇发布于 6 年前的文章，其中的信息可能已经有所发展或是发生改变</p>
+          </div>
+        </div>
+
+        
+
+        
+        
+        <div class="markdown mb-8" v-pre id="post-content">
+          <p>尝鲜有风险，测试需谨慎</p>
+<!-- more -->
+<div class="alert alert-success">
+    <i class="ri-check-line"></i>
+    <strong>内容更新</strong> 本文内容将随状况的发展而更新
+</div>
+<hr>
+<p>Apple 如很多操作系统开发商一样，除了有用于正式环境的软件版本外，还有专供开发者做新功能适配和 App 机型测试的 Developer Beta（开发者测试版本，下文简称「DB」）以及面向普通消费者用户的 Public Beta（公众测试版本，下文简称「PB」）。每年的 WWDC（Apple 全球开发者大会）第一天的 Keynote 主旨演讲后，Apple 就会在其开发者网站上上线用户开发者的 DB 描述文件（Profile）用以开发者将自己的设备更新至新版本以为自己的 App 适配新系统做好准备</p>
+<p>近些年来，随着相关门槛的降低以及互联网探索精神，越来越多的人开始尝试在自己的设备上尝试使用最新的测试版本来体验新功能。这里也要说明一下，测试系统仍然有很多不太完善的地方，因此其仅应面向有一定技术实力的开发者推出（虽然也有很多方式能够让公众获得）。而测试系统之所以被称之为测试系统，一定是因为<strong>它的完善度等方面还远没有达到可以面向一般大众推出的水平，不然早就全量推送了</strong>。如果无脑的尝鲜的话，遇到问题时也往往会让你付出一定的代价。这个代价包括但不限于：你的<strong>时间成本</strong>和你的<strong>资料数据</strong>等内容</p>
+<p>也正因如此，如果你的的确确认为你自己有一定的技术实力而可以进行尝鲜的话，也不妨试着先留给自己一粒「后悔药」，以免后续遇到什么没法解决的问题时还能够尝试恢复先前的状态</p>
+<p>再次提醒大家：<strong>测试有风险，尝鲜需谨慎</strong></p>
+<p>本文将依次介绍 iOS/iPadOS 以及 watchOS 的备份与还原办法。由于 Apple TV 购买项目和数据均储存在云端，因而无需备份你的 Apple TV</p>
+<h2 id="iosipados">iOS/iPadOS</h2>
+<p>之所以将这两个系统放在一起说，是因为它俩虽然名字不一样，但在备份与还原方面的内容基本是一致的</p>
+<h3 id="备份和恢复方式的选择">备份和恢复方式的选择</h3>
+<p>备份 iPhone 或 iPad 的方法主要有两种，即通过 iCloud 和使用 PC/Mac。这二者在一些地方有些不同，需要注意一下：</p>
+<ul>
+<li>
+<p>iCloud 会将备份存储于 iCloud 云端；而使用 PC/Mac 备份则会讲备份存储于 PC/Mac；</p>
+</li>
+<li>
+<p>iCloud 的储存空间随 Apple ID 是否订阅了 iCloud 空间而不同，最多提供 2 TB 的储存空间（最初 5 GB 免费）；而使用 PC/Mac 备份的储存空间则完全取决于你所用 PC/Mac 上的可用空间；</p>
+</li>
+<li>
+<p>iCloud 备份将始终加密，这会保证你的「健康」、「健身记录」和「钥匙串」数据不会在恢复后丢失；而使用 PC/Mac 备份时，<strong>默认</strong>情况下不会加密，这将导致上述 3 个数据在恢复后丢失（因为不加密备份即不会备份上述 3 个数据）；</p>
+</li>
+<li>
+<p>在 iCloud 的备份几乎包括储存在你设备上的所有数据和设置，但仍然不包括：</p>
+<ul>
+<li>已储存在 iCloud 中的数据<sup class="footnote-ref"><a href="#fn1" id="fnref1">[1]</a></sup>；</li>
+<li>已储存在其它云服务中的数据；</li>
+<li>Apple「邮件」数据；</li>
+<li>Apple Pay 信息和设置；</li>
+<li>Face ID 或 Touch ID 设置；</li>
+<li>iCloud 音乐资料库和 App Store 内容；</li>
+</ul>
+</li>
+<li>
+<p>在 PC/Mac 上对设备进行备份包含设备的几乎所有数据和设置，但仍然不包括：</p>
+<ul>
+<li>来自 iTunes Store 和 App Store 的内容，或直接下载到 Apple Books 的 PDF；</li>
+<li>从「Finder 访达」或 iTunes 同步而来的内容，例如导入的 MP3 或 CD、视频、图书和照片；</li>
+<li>已存储在 iCloud 中的数据，如 iCloud 照片，iMessages 信息，以及文本（SMS，俗称「短信」）和多媒体（MMS，俗称「彩信」） 信息；</li>
+<li>面容 ID 或触控 ID 设置；</li>
+<li>Apple Pay 信息和设置；</li>
+<li>Apple「邮件」数据；</li>
+<li>「健身记录」、「健康」和「钥匙串」数据（需要开启加密备份）</li>
+</ul>
+</li>
+</ul>
+<p>你可以将一种设备的备份恢复到另一种设备（例如将 iPad 备份用于恢复 iPhone），但备份中某些类型的数据将无法传输到另一种设备上，包括照片、「信息」、「信息」中的附件、「语音备忘录」以及与你要设置的设备不兼容 App<sup class="footnote-ref"><a href="#fn2" id="fnref2">[2]</a></sup></p>
+<h3 id="如果你选择通过-icloud-备份和恢复">如果你选择通过 iCloud 备份和恢复</h3>
+<p>如果你选择通过 iCloud 备份，那么在恢复时你也只能从 iCloud 中恢复。具体的操作步骤如下：</p>
+<ol>
+<li>将你的设备连接到 Wi-Fi 网络；</li>
+<li>前往「设置」&gt;「[你的姓名]」<sup class="footnote-ref"><a href="#fn3" id="fnref3">[3]</a></sup>，然后轻点「iCloud」；</li>
+<li>轻点「iCloud 云备份」；</li>
+<li>轻点「立即备份」。在备份过程结束前，保持你的设备始终处于 Wi-Fi 网络环境</li>
+</ol>
+<p>按照上面的步骤操作，你的设备数据就会备份到你的 iCloud 中。此外，iCloud 云备份还支持每天自动备份，只需保证你的设备屏幕已锁定、连接到电源并处于 Wi-Fi 网络环境中即可<sup class="footnote-ref"><a href="#fn4" id="fnref4">[4]</a></sup></p>
+<p>那么，如何恢复呢？也很简单，跟着下面的步骤操作就好：</p>
+<ol>
+<li>将要恢复的设备开机或先还原你的设备<sup class="footnote-ref"><a href="#fn5" id="fnref5">[5]</a></sup>，使其出现「您好」屏幕；</li>
+<li>按照屏幕上所示的设置步骤操作，直到进入「App 与数据」屏幕，然后轻点「从 iCloud 云备份恢复」；</li>
+<li>使用你的 Apple ID 登录 iCloud；</li>
+<li>选取备份。查看各个备份的日期和大小，选择相关性最高的备份。选好备份后，传输便会开始。如果有信息提示需要更高版本的软件，请按照屏幕上所示的步骤进行更新<sup class="footnote-ref"><a href="#fn6" id="fnref6">[6]</a></sup>；</li>
+<li>保持连接并等待进度条出现和完成。根据备份的大小和网络速度，可能需要数分钟到一个小时才能完成进度条。如果过早断开 Wi-Fi 连接，则进度条将暂停，直到重新连接 Wi-Fi；</li>
+<li>继续完成设置并开始使用设备。App、照片、音乐和其它信息等内容将在接下来的数小时或数天内继续在后台恢复<sup class="footnote-ref"><a href="#fn7" id="fnref7">[7]</a></sup>，你需要经常连接到 Wi-Fi 并接通电源以完成这个过程</li>
+</ol>
+<h3 id="如果你选择通过-pcmac-备份和恢复">如果你选择通过 PC/Mac 备份和恢复</h3>
+<p>如果你选择通过 PC/Mac 备份，那么在恢复时你也只能从 PC/Mac 中恢复。具体的操作步骤如下：</p>
+<ol>
+<li>将设备连接到电脑。在装有 macOS Catalina 10.15 的 Mac 上，打开 Finder 访达。在装有 macOS Mojave 10.14 或更低版本的 Mac 上或者 PC 上，打开 iTunes；</li>
+<li>如果出现信息询问设备密码或让你「信任此电脑」，请按屏幕上显示的步骤操作；</li>
+<li>确保已在电脑上找到你的设备（即已连接完成）；</li>
+<li>如果你想存储设备或 Apple Watch 中的「健康」和「健身记录」数据，则需要对备份进行加密：选择名为「加密备份」的框并设置一个能够记住的密码<sup class="footnote-ref"><a href="#fn8" id="fnref8">[8]</a></sup>。如果不需要存储“健康”和“健身记录”数据，则可进行不加密的备份；</li>
+<li>点按「立即备份」按钮；</li>
+<li>等待备份过程结束</li>
+</ol>
+<p>在通过 PC/Mac 恢复时，你需要先确定你在备份时所设置的密码（如果选择了「加密备份」）是否正确，然后按照以下步骤尝试进行恢复：</p>
+<ol>
+<li>在装有 macOS Catalina 10.15 的 Mac 上，打开 Finder 访达。在装有 macOS Mojave 10.14 或更低版本的 Mac 上或者在 PC 上，打开 iTunes；</li>
+<li>使用 USB 连接线将你的设备连接到电脑。如果出现信息询问设备密码或让您“信任此电脑”，请按屏幕上显示的步骤操作；</li>
+<li>当您的 iPhone、iPad 或 iPod touch 出现在访达窗口或 iTunes 中时，请选择该设备；</li>
+<li>选择「恢复备份」。如果有信息提示设备的软件版本太旧，请更新你的设备；</li>
+<li>查看各个备份的日期，选择相关性最高的备份<sup class="footnote-ref"><a href="#fn9" id="fnref9">[9]</a></sup>；</li>
+<li>点按「恢复」按钮，并等待恢复完成。如果系统提示输入加密备份的密码，请输入密码</li>
+<li>等待恢复过程结束</li>
+</ol>
+<p>至此，你的 iPhone 和 iPad 将恢复到先前的可用状态</p>
+<h2 id="macos">macOS</h2>
+<p>备份 Mac 的最好方式是使用 macOS 内置的「时间机器」。你可以使用时间机器对你的所有文件进行自动备份，包括应用、音乐、照片、电子邮件、文稿和系统文件。如果你拥有备份，当原始文件从 Mac 永久性删除或者 Mac 中的硬盘（或 SSD）被抹掉或更换时，还可以从备份恢复文件</p>
+<h3 id="创建时间机器备份">创建时间机器备份</h3>
+<p>要使用时间机器创建备份，你只需一个外置储存设备。连接设备并选择它作为你的备份磁盘后，时间机器就会自动制作<strong>过去 24 小时每小时的备份</strong>、<strong>过去一个月每天的备份</strong>以及<strong>之前所有月份每周的备份</strong>。如果备份磁盘已满，则最早的备份将会被删除<sup class="footnote-ref"><a href="#fn10" id="fnref10">[10]</a></sup></p>
+<p>使用时间机器须连接以下其中一种外置储存设备：</p>
+<ul>
+<li>连接到 Mac 的外置驱动器，例如 USB、Thunderbolt 雷雳或 FireWire 驱动器；</li>
+<li>连接到 AirPort Extreme 基站（802.11ac 机型）或 AirPort 时间返回舱的外置驱动器；</li>
+<li>AirPort 时间返回舱；</li>
+<li>共享为「时间机器」备份目标位置的 Mac；</li>
+<li>支持通过 SMB 进行「时间机器」备份的 NAS 设备</li>
+</ul>
+<p>将外置驱动器直接连接到 Mac 时，系统可能会询问你是不是要通过「时间机器」将这个驱动器用于备份。请选择「给备份磁盘加密」（推荐但不必须），<strong>此情况下只有知道密码的用户才能访问加密的备份</strong>。接着点按「用作备份磁盘」，然后你的外置驱动器将被抹掉，并使用时间机器支持的磁盘格式存储备份。此操作将抹掉你外置驱动器上的所有数据，无法恢复。要想让 Time Machine 备份不占用你的整个外置磁盘可用空间，你可以先对该外置驱动器进行「分区」操作</p>
+<p>如果时间机器没有询问是不是使用你的驱动器，请按照以下步骤手动进行添加：</p>
+<ol>
+<li>从菜单栏中的「时间机器」菜单中，打开「时间机器」偏好设置。或者选取「系统偏好设置」，然后点按「时间机器」；</li>
+<li>点按「选择备份磁盘」（或「选择磁盘」或「添加或移除备份磁盘」）；</li>
+<li>从可用磁盘列表中选择你的外置驱动器。然后选择「加密备份」（推荐但不必须）并点按「使用磁盘」；</li>
+<li>如果你选择的磁盘没有按照「时间机器」的要求进行格式化，系统会提示你先抹掉磁盘。点按「抹掉」以继续操作。这样操作会抹掉备份磁盘上的所有信息</li>
+</ol>
+<p>选择备份磁盘后，「时间机器」会立即开始自动定期备份，无需你进行进一步操作。<strong>首次备份可能需要较长时间，具体取决于文件的数量</strong>，但在备份期间你可以继续使用 Mac。「时间机器」只会备份自上次备份以来有变动的文件，因此将来的备份速度会加快</p>
+<p>要手动启动备份，请从菜单栏的「时间机器」菜单中选取「立即备份」。使用这个菜单，还可以<strong>查看某一备份的状态</strong>或<strong>跳过正在进行的某一备份</strong></p>
+<h3 id="恢复时间机器备份或恢复某一些文件">恢复时间机器备份或恢复某一（些）文件</h3>
+<p>利用 macOS 恢复功能，你可以轻松重新安装 Mac 操作系统，即使你需要先抹掉启动磁盘也是如此。你只需连接到互联网即可。如果有可用的无线网络，你可以从 Wi-Fi 菜单中选取这个无线网络，也可在 macOS 恢复功能中找到无线网络</p>
+<p>要通过 macOS 恢复功能启动，请将 Mac 开机，然后立即按住键盘上的以下组合键之一。当你看到 Apple 标志、旋转的地球或其他启动屏幕时，请松开这些按键：</p>
+<ul>
+<li>Command - R：重新安装你在 Mac 上安装过的最新 macOS（建议）；</li>
+<li>Option - Command - R：升级到与你的 Mac 兼容的最新 macOS；</li>
+<li>Shift - Option - Command - R：重新安装 Mac 随附的 macOS 或与它最接近且仍在提供的版本</li>
+</ul>
+<p>系统可能会提示您输入密码，例如固件密码，或这台 Mac 的管理员用户的密码。请输入要求的密码以继续。当你看到实用工具窗口时，即表示你已通过 macOS 恢复功能启动</p>
+<p>在做好重新安装 macOS 的准备后，请从「实用工具」窗口中选取「重新安装 macOS」。然后点按「继续」，并按照屏幕上的说明进行操作。系统将提示你选取一个作为安装目标的磁盘</p>
+<ul>
+<li>如果安装器要求解锁你的磁盘，请输入你在登录 Mac 时所使用的密码；</li>
+<li>如果安装器无法识别你的磁盘，或者指出它无法安装到你的电脑或宗卷上，你可能需要先抹掉磁盘；</li>
+<li>如果安装器让你选择是安装在「Macintosh HD」上还是在「Macintosh HD-Data」上，请选取「Macintosh HD」</li>
+</ul>
+<p>请不要将 Mac 置于睡眠状态或合上上盖，以便安装完成。在安装过程中，Mac 可能会多次重新启动并显示进度条，并且屏幕可能每次都处于空白状态并持续几分钟时间</p>
+<p>而「时间机器」还可用于恢复 macOS 上的某一（些）文件。步骤也十分简单</p>
+<p>如果你要恢复所有文件：</p>
+<ol>
+<li>确保你的「时间机器」备份磁盘已连接到 Mac 并处于打开状态。然后将 Mac 开机；</li>
+<li>打开「迁移助理」，它位于「应用程序」文件夹中的「实用工具」文件夹内；</li>
+<li>当系统询问你希望以哪种方式转移信息时，请选择相应的选项，以便从 Mac、「时间机器」备份或启动磁盘进行转移。然后，点按「继续」；</li>
+<li>选择你的「时间机器」备份，然后点按「继续」；</li>
+<li>如果系统提示你从按日期和时间排列的备份列表中进行选择，请选择一个备份，然后点按「继续」；</li>
+<li>选择要转移的信息，然后点按「继续」以开始转移。这个屏幕看起来可能与你 Mac 显示的屏幕有所不同；</li>
+<li>如果内容很多，则转移可能需要几个小时才能完成。转移完成后，请重新启动你的 Mac，并登录迁移的帐户，以查看它的文件</li>
+</ol>
+<p>如果你要恢复特定文件：</p>
+<ol>
+<li>确保你的「时间机器」备份磁盘已连接并处于打开状态；</li>
+<li>打开包含或曾经包含你要恢复的项目的窗口。例如，要恢复你从「文稿」文件夹中删除的文件，首先要打开「文稿」文件夹。或者，如果你使用的应用会在你处理文稿时自动存储文稿版本，请打开这个文稿的任意版本；</li>
+<li>从「时间机器」菜单中选取「进入时间机器」；</li>
+<li>使用屏幕边缘的时间线来查看“时间机器”备份中在相应日期和时间所备份的项目。时间线可能还包含本地快照<sup class="footnote-ref"><a href="#fn11" id="fnref11">[11]</a></sup>。使用屏幕上的向上和向下箭头跳至上次窗口内容变化的时间点。你也可以使用窗口中的搜索栏来查找项目，然后沿时间线移动并关注该项目的变化情况。选择一个项目并按下空格键来预览该项目，并确保它是您要找的文件；</li>
+<li>点按「恢复」以恢复你所选的项目，或按住 Control 键点按这个项目以显示其它选项</li>
+</ol>
+<p>至此，你的 Mac 将恢复到先前的可用状态</p>
+<h2 id="watchos">watchOS</h2>
+<p>Apple Watch 内容会自动备份到配对的 iPhone 上，因此你可以从 iPhone 备份中恢复 Apple Watch（当然，二者必须同时恢复）。当你将 iPhone 备份到 iCloud 或 PC/Mac 上时，你的 iPhone 备份还将包括你的 Apple Watch 数据</p>
+<p>请注意一旦安装测试版本软件，你的 Apple Watch 便无法恢复到之前发布的操作系统版本。如果出现需要恢复先前状态的情况，一般也只有寻求 Apple 官方通过返厂这一种途径来完成恢复</p>
+<p>你的 Apple Watch 数据备份将包括：</p>
+<ul>
+<li>特定于 App 的数据（适用于内建 App）和设置（适用于内建 App 和第三方 App）。例如，地图、距离、单位以及你的「邮件」、「日历」、「股市」和「天气」设置；</li>
+<li>主屏幕的 App 布局；</li>
+<li>表盘设置。包括你当前的表盘、自定设置和顺序</li>
+<li>「程序坞」设置，包括顺序（是按收藏的 App 还是按最近使用的 App 进行排序），以及可用的 App；</li>
+<li>通用系统设置。例如表盘、亮度、声音和触感设置；</li>
+<li>健康和健身数据（例如 Apple Watch 中的历史记录、成绩、「体能训练」和「健身记录」校准数据），以及用户输入的数据<sup class="footnote-ref"><a href="#fn12" id="fnref12">[12]</a></sup>；</li>
+<li>通知设置；</li>
+<li>同步到你的 Apple Watch 和你的「音乐」设置的播放列表、专辑和混合曲目；</li>
+<li>Apple Watch Series 3 或更新机型的 Siri 语音反馈设置，用于控制 Siri 说话的时机；</li>
+<li>已同步的相簿<sup class="footnote-ref"><a href="#fn13" id="fnref13">[13]</a></sup>；</li>
+<li>时区</li>
+</ul>
+<p>但其备份中将不包括：</p>
+<ul>
+<li>蓝牙配对</li>
+<li>Apple Watch 上用于 Apple Pay 的信用卡或借记卡</li>
+<li>Apple Watch 的密码</li>
+<li>信息</li>
+</ul>
+<hr class="footnotes-sep">
+<section class="footnotes">
+<ol class="footnotes-list">
+<li id="fn1" class="footnote-item"><p>当你使用 iCloud 云端「信息」、iOS 12 或更高版本上的「健康」数据或语音备忘录时，你的内容将自动储存在 iCloud 上。如果你打开 iCloud 照片，你的内容将自动储存在 iCloud 上 <a href="#fnref1" class="footnote-backref">↩︎</a></p>
+</li>
+<li id="fn2" class="footnote-item"><p>如果你的设备使用 iCloud 和 iCloud 云端「信息」，则你的 iMessage 信息以及短信（SMS）和彩信（MMS）将自动储存在 iCloud 中。此脚注同样适用于 Apple Watch 的备份 <a href="#fnref2" class="footnote-backref">↩︎</a></p>
+</li>
+<li id="fn3" class="footnote-item"><p>即「设置」中的第一行内容 <a href="#fnref3" class="footnote-backref">↩︎</a></p>
+</li>
+<li id="fn4" class="footnote-item"><p>请时刻检查你的 iCloud 可用空间 <a href="#fnref4" class="footnote-backref">↩︎</a></p>
+</li>
+<li id="fn5" class="footnote-item"><p>如果你的设备已设置好，则你需要先抹掉设备上的所有内容，然后才能按照以下步骤从备份进行恢复 <a href="#fnref5" class="footnote-backref">↩︎</a></p>
+</li>
+<li id="fn6" class="footnote-item"><p>iCloud 备份只能在同一系统版本中进行恢复，新版本的备份数据无法在旧版本中进行恢复 <a href="#fnref6" class="footnote-backref">↩︎</a></p>
+</li>
+<li id="fn7" class="footnote-item"><p>具体取决于信息量的大小 <a href="#fnref7" class="footnote-backref">↩︎</a></p>
+</li>
+<li id="fn8" class="footnote-item"><p>请将密码写下来妥善保管，因为没有这个密码将无法恢复备份 <a href="#fnref8" class="footnote-backref">↩︎</a></p>
+</li>
+<li id="fn9" class="footnote-item"><p>即当设备处于先前状态时所创建的最近的一个备份 <a href="#fnref9" class="footnote-backref">↩︎</a></p>
+</li>
+<li id="fn10" class="footnote-item"><p>此情况同样适用于 iPhone 和 iPad 的备份。当备份所在的储存空间已满时，最早的备份将会被删除 <a href="#fnref10" class="footnote-backref">↩︎</a></p>
+</li>
+<li id="fn11" class="footnote-item"><p>你的「时间机器」备份磁盘有时可能不可用，因此「时间机器」还会将某些备份储存在你的 Mac 上。这些备份称作本地快照 <a href="#fnref11" class="footnote-backref">↩︎</a></p>
+</li>
+<li id="fn12" class="footnote-item"><p>要备份健康和健身数据，你需要使用 iCloud 或加密的 iTunes 备份 <a href="#fnref12" class="footnote-backref">↩︎</a></p>
+</li>
+<li id="fn13" class="footnote-item"><p>要查看同步了哪个相簿，请打开 Apple Watch App，轻点「我的手表」标签，然后轻点「照片」&gt;「已同步相簿」 <a href="#fnref13" class="footnote-backref">↩︎</a></p>
+</li>
+</ol>
+</section>
+
+        </div>
+
+        <div class="jumbotron">
+          <div class="container">
+            <p><i class="ri-article-line"></i> <a href="https://yyl125.top/post/give_yourself_a_choose_for_regreting/" target="_blank">想要体验新功能？先给自己「留一手」吧</a></p>
+            <p><i class="ri-creative-commons-line"></i> 许可协议：<a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" target="_blank">CC BY-NC-SA 4.0</a>。欲了解更多相关信息，详见 <a href="https://yyl125.top/copyright/" target="_blank">版权信息与资源使用说明</a> 页面</p>
+            <p><i class="ri-error-warning-line"></i> 本站所有内容除特别说明外，皆为原创发布。欢迎尊重原创作者版权的转载或引用。转载或引用时请注明出处</p>
+            <br>
+            <p><i class="ri-feedback-line"></i> 出现了影响阅读的问题？不妨 <a href="mailto:support@yyl125.cc?subject=Benjamin's%20Blog%20%E9%97%AE%E9%A2%98%E5%8F%8D%E9%A6%88" target="_blank" rel="noreferrer noopener">反馈</a> 一下吧</p>
+          </div>
+        </div>
+
+        
+        
+      </div>
+
+      <div class="jumbotron-comment">
+        <div class="container">
+          <p><i class="ri-message-3-line"></i> 欢迎任何与文章内容相关并保持尊重的评论，评论时请遵守 <a href="https://yyl125.top/comment_policy/">评论准则</a></p>
+        </div>
+      </div>
+
+      
+
+      
+        <div id="tcomment"></div>
+      
+      
+      <footer class="py-12 text-center px-4 md:px-0" v-pre>
+  共 24 篇文章｜<a href="https://yyl125.top/copyright" target="_blank">版权信息与资源使用说明</a>｜<i class="ri-rss-line"></i> <a href="https://yyl125.top/atom.xml" target="_blank">RSS</a><br>Copyright © 2026 Benjamin. All rights reserved.
+</footer>
+
+
+    </div>
+
+    <!-- TOC Container -->
+    <div class="fixed right-0 bottom-0 mb-16 mr-4 shadow w-8 h-8 rounded-full flex justify-center items-center z-10 cursor-pointer bg-white dark:bg-gray-500 dark:text-gray-200 hover:shadow-lg transition-all animated fadeInRight" @click="showToc = true">
+      <i class="ri-file-list-line"></i>
+    </div>
+
+    <div class="fixed right-0 top-0 bottom-0 overflow-y-auto w-64 bg-white dark:bg-gray-800 p-4 border-l border-gray-100 dark:border-gray-600 z-10 transition-fast" :class="{ '-mr-64': !showToc }">
+      <div class="flex mb-4 justify-end">
+        <div class="w-8 h-8 inline-flex justify-center items-center rounded-full cursor-pointer hover:bg-gray-200 dark:hover:bg-gray-600 transition-fast" @click="showToc = false">
+          <i class="ri-close-line text-lg"></i>
+        </div>
+      </div>
+      <div class="post-toc-container">
+        <ul class="markdownIt-TOC">
+<li>
+<ul>
+<li><a href="#iosipados">iOS/iPadOS</a>
+<ul>
+<li><a href="#%E5%A4%87%E4%BB%BD%E5%92%8C%E6%81%A2%E5%A4%8D%E6%96%B9%E5%BC%8F%E7%9A%84%E9%80%89%E6%8B%A9">备份和恢复方式的选择</a></li>
+<li><a href="#%E5%A6%82%E6%9E%9C%E4%BD%A0%E9%80%89%E6%8B%A9%E9%80%9A%E8%BF%87-icloud-%E5%A4%87%E4%BB%BD%E5%92%8C%E6%81%A2%E5%A4%8D">如果你选择通过 iCloud 备份和恢复</a></li>
+<li><a href="#%E5%A6%82%E6%9E%9C%E4%BD%A0%E9%80%89%E6%8B%A9%E9%80%9A%E8%BF%87-pcmac-%E5%A4%87%E4%BB%BD%E5%92%8C%E6%81%A2%E5%A4%8D">如果你选择通过 PC/Mac 备份和恢复</a></li>
+</ul>
+</li>
+<li><a href="#macos">macOS</a>
+<ul>
+<li><a href="#%E5%88%9B%E5%BB%BA%E6%97%B6%E9%97%B4%E6%9C%BA%E5%99%A8%E5%A4%87%E4%BB%BD">创建时间机器备份</a></li>
+<li><a href="#%E6%81%A2%E5%A4%8D%E6%97%B6%E9%97%B4%E6%9C%BA%E5%99%A8%E5%A4%87%E4%BB%BD%E6%88%96%E6%81%A2%E5%A4%8D%E6%9F%90%E4%B8%80%E4%BA%9B%E6%96%87%E4%BB%B6">恢复时间机器备份或恢复某一（些）文件</a></li>
+</ul>
+</li>
+<li><a href="#watchos">watchOS</a></li>
+</ul>
+</li>
+</ul>
+
+      </div>
+    </div>
+
+    <!-- Back to top -->
+    <div class="fixed right-0 bottom-0 mb-4 mr-4 shadow w-8 h-8 rounded-full flex justify-center items-center z-10 cursor-pointer bg-white hover:shadow-lg transition-all dark:bg-gray-500 dark:text-gray-200" @click="backToUp" v-show="scrolled">
+      <i class="ri-arrow-up-line"></i>
+    </div>
+
+  </div>
+
+<!--  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script> -->
+  <script src="https://yyl125.top/media/scripts/vue.js"></script>
+  <script src="https://yyl125.top/media/scripts/main.js"></script>
+  <script src="https://yyl125.top/media/scripts/linkcard.js"></script>
+  <script src="https://yyl125.top/media/scripts/view-image.min.js"></script>
+  <script>
+    window.ViewImage && ViewImage.init('.markdown img');
+    var lazyLoadInstance = new LazyLoad({});
+    lazyLoadInstance.update();
+  </script>
+  
+  <!-- Mermaid -->
+  
+
+  <!-- Code Highlight -->
+  
+    <script src="https://yyl125.top/media/scripts/prism.js"></script>
+    <script>
+      Prism.highlightAll()
+    </script>
+  
+
+  <!-- Twikoo -->
+  
+    <script src="https://cdn.jsdelivr.net/npm/twikoo@1.6.44/dist/twikoo.min.js"></script>
+<script>
+  twikoo.init({
+    envId: 'https://twikoo-deploy-one.vercel.app',
+    el: '#tcomment'
+  })
+</script>
+  
+
+</body>
+
+</html>

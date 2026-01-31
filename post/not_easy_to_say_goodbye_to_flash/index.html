@@ -1,0 +1,331 @@
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<meta name="google-site-verification" content="mzGZdCiBsXZ5XSYVt7eh7KL8L64yuidUoeBNw_53XHk" />
+<meta name="referrer" content="same-origin">
+<title>Adobe Flash，想说「再见」不容易 - Benjamin&#39;s Blog</title>
+<link rel="shortcut icon" href="https://yyl125.top/favicon.ico">
+<link href="https://cdn.jsdelivr.net/npm/remixicon@latest/fonts/remixicon.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.7.2/animate.min.css">
+<link rel="stylesheet" href="https://yyl125.top/media/css/tailwind.css">
+<link rel="stylesheet" href="https://yyl125.top/styles/main.css">
+
+
+<link rel="alternate" type="application/atom+xml" title="Adobe Flash，想说「再见」不容易 - Benjamin&#39;s Blog - Atom Feed" href="https://yyl125.top/atom.xml">
+<!----<script src="https://yyl125.top/media/scripts/bootstrap.bundle.min.js"></script>---->
+
+
+  
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-Q6KYP4QSBH"></script>
+    <script>
+      var host = window.location.hostname;
+      if(host != "localhost")
+      {
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-Q6KYP4QSBH');
+      }
+    </script>
+  
+
+<script defer>
+(function (document) {
+  const SOURCE = 'https://cdn.jsdelivr.net';
+  const DEST = 'https://gcore.jsdelivr.net';
+  const $ = document.querySelectorAll.bind(document);
+  const checkAvailable = (callback) => {
+    let timeoutId;
+    const newNode = document.createElement('link');
+    newNode.rel = 'stylesheet';
+    newNode.text = 'text/css';
+    const onError = () => {
+      if (!timeoutId) {
+        return;
+      }
+
+      clearTimeout(timeoutId);
+      timeoutId = 0;
+      newNode.href = 'about:blank';
+      newNode.remove();
+      callback(false);
+    };
+
+    timeoutId = setTimeout(onError, 2000);
+    newNode.addEventListener('error', onError);
+    newNode.addEventListener('load', function () {
+      newNode.remove();
+      clearTimeout(timeoutId);
+      callback(true);
+    });
+
+    newNode.href =
+      SOURCE +
+      '/gh/PipecraftNet/jsdelivr-auto-fallback@main/empty.css?' +
+      Date.now();
+    document.head.insertAdjacentElement('afterbegin', newNode);
+  };
+
+  const replaceElementSrc = () => {
+    for (const element of $('link[rel="stylesheet"]')) {
+      if (element.href && element.href.includes(SOURCE)) {
+        element.href = element.href.replace(SOURCE, DEST);
+      }
+    }
+
+    for (const element of $('script')) {
+      if (element.src && element.src.includes(SOURCE)) {
+        const newNode = document.createElement('script');
+        newNode.src = element.src.replace(SOURCE, DEST);
+        element.defer = true;
+        element.src = '';
+        element.before(newNode);
+        element.remove();
+      }
+    }
+
+    for (const element of $('img')) {
+      if (element.src && element.src.includes(SOURCE)) {
+        const source = element.src;
+        // Used to cancel loading. Without this line it will remain pending status.
+        element.src = '';
+        element.src = source.replace(SOURCE, DEST);
+      }
+    }
+  };
+
+  checkAvailable(function (isAvailable) {
+    if (isAvailable) {
+      return;
+    }
+
+    console.warn(SOURCE + ' is not available.');
+
+    replaceElementSrc();
+    // Replace dynamically added elements
+    setInterval(replaceElementSrc, 500);
+  });
+})(document);
+</script>
+  <meta name="description" content="该进坟墓的，就不要再续命了
+
+提到 Flash，作为并不是开发者的我，可以说是又爱又恨。小时候，很多小游戏都是 Flash 驱动的，但 Flash 带来的种种安全问题也不得不让如今的我感到担忧
+2020 年 12 月，Flash 即将停止一..." />
+  <meta property="og:title" content="Adobe Flash，想说「再见」不容易 - Benjamin&#39;s Blog">
+  <meta property="og:description" content="该进坟墓的，就不要再续命了
+
+提到 Flash，作为并不是开发者的我，可以说是又爱又恨。小时候，很多小游戏都是 Flash 驱动的，但 Flash 带来的种种安全问题也不得不让如今的我感到担忧
+2020 年 12 月，Flash 即将停止一..." />
+  <meta property="og:type" content="articles">
+  <meta property="og:url" content="https://yyl125.top/post/not_easy_to_say_goodbye_to_flash/" />
+  <meta property="og:image" content="https://oss.yyl125.cc/blog/img/post/Meta_View/Not_Easy_to_Say_Goodbye_to_Flash/Not_Easy_to_Say_Goodbye_to_Flash_Banner.jpg">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:width" content="1200">
+  <meta name="twitter:title" content="Adobe Flash，想说「再见」不容易 - Benjamin&#39;s Blog">
+  <meta name="twitter:description" content="该进坟墓的，就不要再续命了
+
+提到 Flash，作为并不是开发者的我，可以说是又爱又恨。小时候，很多小游戏都是 Flash 驱动的，但 Flash 带来的种种安全问题也不得不让如今的我感到担忧
+2020 年 12 月，Flash 即将停止一...">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="canonical" href="https://yyl125.top/post/not_easy_to_say_goodbye_to_flash/">
+
+  <script src="https://cdn.jsdelivr.net/npm/vanilla-lazyload@17.8.8/dist/lazyload.min.js"></script>
+  <script type="module" src="https://yyl125.top/media/scripts/emaction.js"></script>
+
+  
+    <link rel="stylesheet" href="https://yyl125.top/media/css/prism-atom-dark.css">
+  
+
+  
+</head>
+
+<body>
+  <div class="antialiased flex flex-col min-h-screen" id="app">
+    <a href="https://yyl125.top" class="fixed top-0 left-0 mt-4 bg-black text-white dark:text-gray-700 dark:bg-yellow-50 dark:hover:bg-black dark:hover:text-white inline-flex p-2 pl-8 hover:text-gray-700 hover:bg-yellow-50 font-bold z-10 transition-fast animated fadeInLeft">
+      Benjamin&#39;s Blog
+    </a>
+    <div class="max-w-4xl w-full mx-auto">
+      <div class="shadow-box bg-white dark:bg-gray-600 rounded-lg pt-32 md:pt-64 px-4 md:px-8 pb-8 animated fadeIn mb-8">
+        <h1 class="text-5xl font-semibold leading-normal pb-8 mb-8 border-b-8 border-gray-700">
+          Adobe Flash，想说「再见」不容易
+        </h1>
+        
+          <img src="https://oss.yyl125.cc/blog/img/post/Meta_View/Not_Easy_to_Say_Goodbye_to_Flash/Not_Easy_to_Say_Goodbye_to_Flash_Banner.jpg" alt="Adobe Flash，想说「再见」不容易" class="block w-full mb-8">
+        
+        <div class="mb-8 flex flex-wrap">
+          <div class="text-gray-400 text-sm mr-4"><i class="ri-calendar-2-line"></i> 2020-07-15 · <i class="ri-timer-line"></i> 7 min read · <i class="ri-eye-line"></i> <span id="twikoo_visitors">0</span></div>
+          
+            <a href="https://yyl125.top/tag/meta_view/" class="text-gray-700 dark:text-gray-200 text-sm hover:transition-all duration-100 inline-flex mr-2">
+              <i class="ri-hashtag"></i>
+              Meta View
+            </a>
+          
+        </div>
+        
+        <div class="jumbotron">
+          <div class="container">
+            <p><i class="ri-time-line"></i> 这是一篇发布于 6 年前的文章，其中的信息可能已经有所发展或是发生改变</p>
+          </div>
+        </div>
+
+        
+
+        
+        
+        <div class="markdown mb-8" v-pre id="post-content">
+          <p>该进坟墓的，就不要再续命了</p>
+<!-- more -->
+<p>提到 Flash，作为并不是开发者的我，可以说是又爱又恨。小时候，很多小游戏都是 Flash 驱动的，但 Flash 带来的种种安全问题也不得不让如今的我感到担忧</p>
+<p>2020 年 12 月，Flash 即将停止一切支持（<s>当然，除了中国大陆</s>）。Flash 对我们来说，是否还应该存在？</p>
+<h2 id="属于-flash-的那段光辉岁月">属于 Flash 的那段「光辉岁月」</h2>
+<p>其实在一开始，Flash 还不叫「Flash」，它也并不是 Adobe 旗下的产品</p>
+<p>1993 年，一家名为 FutureWave Software 的公司由 Jonathan Gay、Charlie Jackson 和 Michelle Welsh 三人成立。他们打算来打造一款能够让人们直接在电脑屏幕上画画的应用软件。一开始，他们打造出一款名为 SmartSketch 的软件，但它在 Windows 和 macOS 平台上面临残酷的竞争。于是，这家公司决定将焦点专注在网页动画工具，并将软件名字改为 FutureSplash Animator。而这款 FutureSplash 就是 Flash 的前身</p>
+<p>FutureSplash 在 1996 年 5 月发货，它很快就被微软看上并采用，接着是 Disney、Fox，这些都是鼎鼎大名的企业，而这款软件也因此被 Macromedia 看上。1996 年底，FutureSplash 被 Macromedia 收购，并被正式命名为 Flash。在其演变升级的过程当中，Flash 本身已经包含两个部分。首先它是一个图像和动画编辑工具，但同时也包含一个播放器，也就是 Flash Player，后者被 Macromedia 作为浏览器插件免费开放，以获取市场份额。2005 年 12 月，Macromedia 被 Adobe 收购，而Macromedia Flash 也由此变成了 Adobe Flash</p>
+<p>2000 年之后，PC 市场的蓬勃发展，也让 Flash 得以继续发展壮大而成为一款大众软件。尤其是在网页动画和设计层面，基于 HTML 功能的不完善，Flash 凭借自身的力量几乎定义了一个标准</p>
+<p>2000 年至 2010 年之间，有数不清的公司用基于 Flash 技术的网站发布了新产品，以及创造富有互动性和创造力的交互体验。值得一提的是，2005 年，当 YouTube 被创建的时候，它也选择用 Flash Player 来作为其 Web 网页的流媒体播放工具。与此同时，流媒体视频开始在 Web 爆发，而 Flash 也随之走红——有报道称，当时，Flash Player 几乎被预装在每一台电脑中</p>
+<h2 id="对-flash-的种种批评">对 Flash 的种种批评</h2>
+<p>2007 年，iPhone 的问世，是 Flash 发展之路上的一个转折点</p>
+<p>在 iPhone 发布之前，Adobe 曾经在 2005 年推出 Flash Lite 平台，目的是为了推动 Flash 在移动平台运行，但移动处理器和耗电问题让 Flash Lite 并不能在移动设备上有很好的表现</p>
+<p>而同样是在 2007 年，为了能够让 YouTube App 在 iPhone 发布之时就能够预装其中并好好运行，YouTube 也在 iPhone 中放弃了对 Flash 的支持</p>
+<p>2010 年 4 月，Jobs 罕见地发表了一封名为 <em>Thoughts on Flash</em> 的长篇公开信，信中对 Adobe Flash 进行了尖锐的批评，并大力推荐 HTML5</p>
+<p>信中说明了 Flash 的几点落后之处：</p>
+<ul>
+<li>安全性差，被 Symantec 列为 2009 年最差安全记录之一；</li>
+<li>稳定性不好，导致 Mac 电脑死机；</li>
+<li>迟迟未推出移动版，导致手机等移动设备访问 Flash 视频网站时消耗了大量额外的电力；</li>
+<li>Flash 主要的操作习惯均为鼠标定制，在多点触摸操作方式中，大量 Flash 网站需要重写</li>
+</ul>
+<p>而时至今日，Flash Player 依然保留着这些缺点。随着 HTML5 的崛起，Flash 的功能也早不再是独步江湖，无论是视频播放，还是多媒体交互，HTML5 都能做得更好。无论在功能还是性能上，Flash 对比 HTML5 都没有优势</p>
+<p>业界对这些情况是早有了解的。在 iOS 拒绝 Flash 登陆后，Android 和 Windows Phone 也随之宣布不再支持 Flash Player。而在桌面平台上，Flash Player 也走到了尽头，无论是 Chrome、Firefox 还是 Edge，都对 Flash 发出了最后通牒</p>
+<p>无论从兼容、功能、效率、安全的角度出发，Flash 都已经跟不上时代，它被淘汰自然也就理所当然了</p>
+<h2 id="2020-年flash-的现状">2020 年，Flash 的现状</h2>
+<blockquote>
+<p>事物的发展由旧事物到新事物的转化，实际上就是一个旧事物的消亡过程和新事物的确立过程，这是事物内部矛盾的两次解决、两次质变。<br>
+——《马克思主义哲学》</p>
+</blockquote>
+<p>Adobe 早在 2017 年就已经宣布将在 2020 年底完全停止对 Flash 的支持计划。一直以来，只要在网页浏览过程中遇到只能使用 Flash 的网页，我都会直接关掉网页。但是，出于某些必须的因素（学校、政府的网站等），我还是不得不在需要它的时候使用 Flash</p>
+<img src="https://oss.yyl125.cc/blog/img/post/Not_Easy_to_Say_Goodbye_to_Flash/Not_Easy_to_Say_Goodbye_to_Flash_01.png">
+<p class="media-description">很多较旧的内容依然在使用 Flash 呈现（不知道还有没有人知道这个）</p>
+<p>拒绝使用 Flash 是一种时代的趋势。20 年来，Flash一直在帮助开发者塑造游戏、提供观看视频和在网络上运行应用程序的方式，但 Flash 早已变得不那么普遍了。这种趋势表明，很多网站正在迁移到开放式 Web 技术，其比 Flash 更快、更节能，也更安全。它们还能在移动设备等地方使用，因此人们可以在任何地方访问自己喜欢的网站。无论是 Flash 本身的诸多限制和信息安全问题，还是 HTML5 的兴起</p>
+<p>而自从重庆重橙宣布独家代理中国大陆的 Flash Player 的发行后（即所谓的「国内特供版本」），并实行锁区政策后，无论是下载时默认捆绑 2144 游戏中心，还是被网友曝光揭露的收集用户隐私数据和弹出广告窗口的 FlashHelperService 进程而引起的争议，都加深了我对它的厌恶程度</p>
+<img src="https://oss.yyl125.cc/blog/img/post/Not_Easy_to_Say_Goodbye_to_Flash/Not_Easy_to_Say_Goodbye_to_Flash_02.png">
+<p class="media-description">Adobe 宣布其将在 2020 年 12 月后继续与重橙网络的合作</p>
+<h2 id="写在最后">写在最后</h2>
+<img src="https://oss.yyl125.cc/blog/img/post/Not_Easy_to_Say_Goodbye_to_Flash/Not_Easy_to_Say_Goodbye_to_Flash_03.png">
+<p class="media-description">时至「昨」日，Flash 中国特供版仍在更新</p>
+<p>Flash 本身作为落后的互联网技术，用特供版来苟延残喘，这是否逆潮流而行？如果让 Flash 彻底退役，倒逼依赖 Flash 的各类网络系统来革新，会不会是更合理的做法？这是很值得探讨的问题</p>
+<p>对于 Adobe 来说，Flash 之死，其实并不算是一种遗憾，从某种程度上来说，Adobe 也是 Flash 之死的推动者，而这也是在顺应技术发展的潮流</p>
+<p>反过来看，技术发展的潮流也不以一个人、一家公司、甚至一个行业的意志为转移，它有着自身的规律性</p>
+<p>毕竟，任何事物的命运，都逃不过历史的进程</p>
+<p>新陈代谢，亘古如斯</p>
+<hr>
+<h2 id="addendum">Addendum</h2>
+<p>说到 Adobe，就不得不提到一家它的中国代理 —— 苏州「思杰马克丁」。上文提到的这家「重庆重橙」据查也是思杰马克丁旗下的一家代理公司。不想多评判，多说也无益，公道自在人心</p>
+
+        </div>
+
+        <div class="jumbotron">
+          <div class="container">
+            <p><i class="ri-article-line"></i> <a href="https://yyl125.top/post/not_easy_to_say_goodbye_to_flash/" target="_blank">Adobe Flash，想说「再见」不容易</a></p>
+            <p><i class="ri-creative-commons-line"></i> 许可协议：<a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" target="_blank">CC BY-NC-SA 4.0</a>。欲了解更多相关信息，详见 <a href="https://yyl125.top/copyright/" target="_blank">版权信息与资源使用说明</a> 页面</p>
+            <p><i class="ri-error-warning-line"></i> 本站所有内容除特别说明外，皆为原创发布。欢迎尊重原创作者版权的转载或引用。转载或引用时请注明出处</p>
+            <br>
+            <p><i class="ri-feedback-line"></i> 出现了影响阅读的问题？不妨 <a href="mailto:support@yyl125.cc?subject=Benjamin's%20Blog%20%E9%97%AE%E9%A2%98%E5%8F%8D%E9%A6%88" target="_blank" rel="noreferrer noopener">反馈</a> 一下吧</p>
+          </div>
+        </div>
+
+        
+        
+      </div>
+
+      <div class="jumbotron-comment">
+        <div class="container">
+          <p><i class="ri-message-3-line"></i> 欢迎任何与文章内容相关并保持尊重的评论，评论时请遵守 <a href="https://yyl125.top/comment_policy/">评论准则</a></p>
+        </div>
+      </div>
+
+      
+
+      
+        <div id="tcomment"></div>
+      
+      
+      <footer class="py-12 text-center px-4 md:px-0" v-pre>
+  共 24 篇文章｜<a href="https://yyl125.top/copyright" target="_blank">版权信息与资源使用说明</a>｜<i class="ri-rss-line"></i> <a href="https://yyl125.top/atom.xml" target="_blank">RSS</a><br>Copyright © 2026 Benjamin. All rights reserved.
+</footer>
+
+
+    </div>
+
+    <!-- TOC Container -->
+    <div class="fixed right-0 bottom-0 mb-16 mr-4 shadow w-8 h-8 rounded-full flex justify-center items-center z-10 cursor-pointer bg-white dark:bg-gray-500 dark:text-gray-200 hover:shadow-lg transition-all animated fadeInRight" @click="showToc = true">
+      <i class="ri-file-list-line"></i>
+    </div>
+
+    <div class="fixed right-0 top-0 bottom-0 overflow-y-auto w-64 bg-white dark:bg-gray-800 p-4 border-l border-gray-100 dark:border-gray-600 z-10 transition-fast" :class="{ '-mr-64': !showToc }">
+      <div class="flex mb-4 justify-end">
+        <div class="w-8 h-8 inline-flex justify-center items-center rounded-full cursor-pointer hover:bg-gray-200 dark:hover:bg-gray-600 transition-fast" @click="showToc = false">
+          <i class="ri-close-line text-lg"></i>
+        </div>
+      </div>
+      <div class="post-toc-container">
+        <ul class="markdownIt-TOC">
+<li>
+<ul>
+<li><a href="#%E5%B1%9E%E4%BA%8E-flash-%E7%9A%84%E9%82%A3%E6%AE%B5%E5%85%89%E8%BE%89%E5%B2%81%E6%9C%88">属于 Flash 的那段「光辉岁月」</a></li>
+<li><a href="#%E5%AF%B9-flash-%E7%9A%84%E7%A7%8D%E7%A7%8D%E6%89%B9%E8%AF%84">对 Flash 的种种批评</a></li>
+<li><a href="#2020-%E5%B9%B4flash-%E7%9A%84%E7%8E%B0%E7%8A%B6">2020 年，Flash 的现状</a></li>
+<li><a href="#%E5%86%99%E5%9C%A8%E6%9C%80%E5%90%8E">写在最后</a></li>
+<li><a href="#addendum">Addendum</a></li>
+</ul>
+</li>
+</ul>
+
+      </div>
+    </div>
+
+    <!-- Back to top -->
+    <div class="fixed right-0 bottom-0 mb-4 mr-4 shadow w-8 h-8 rounded-full flex justify-center items-center z-10 cursor-pointer bg-white hover:shadow-lg transition-all dark:bg-gray-500 dark:text-gray-200" @click="backToUp" v-show="scrolled">
+      <i class="ri-arrow-up-line"></i>
+    </div>
+
+  </div>
+
+<!--  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script> -->
+  <script src="https://yyl125.top/media/scripts/vue.js"></script>
+  <script src="https://yyl125.top/media/scripts/main.js"></script>
+  <script src="https://yyl125.top/media/scripts/linkcard.js"></script>
+  <script src="https://yyl125.top/media/scripts/view-image.min.js"></script>
+  <script>
+    window.ViewImage && ViewImage.init('.markdown img');
+    var lazyLoadInstance = new LazyLoad({});
+    lazyLoadInstance.update();
+  </script>
+  
+  <!-- Mermaid -->
+  
+
+  <!-- Code Highlight -->
+  
+    <script src="https://yyl125.top/media/scripts/prism.js"></script>
+    <script>
+      Prism.highlightAll()
+    </script>
+  
+
+  <!-- Twikoo -->
+  
+    <script src="https://cdn.jsdelivr.net/npm/twikoo@1.6.44/dist/twikoo.min.js"></script>
+<script>
+  twikoo.init({
+    envId: 'https://twikoo-deploy-one.vercel.app',
+    el: '#tcomment'
+  })
+</script>
+  
+
+</body>
+
+</html>

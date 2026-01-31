@@ -1,0 +1,306 @@
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<meta name="google-site-verification" content="mzGZdCiBsXZ5XSYVt7eh7KL8L64yuidUoeBNw_53XHk" />
+<meta name="referrer" content="same-origin">
+<title>威联通 QNAP 内网无法访问的临时解决方法 - Benjamin&#39;s Blog</title>
+<link rel="shortcut icon" href="https://yyl125.top/favicon.ico">
+<link href="https://cdn.jsdelivr.net/npm/remixicon@latest/fonts/remixicon.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.7.2/animate.min.css">
+<link rel="stylesheet" href="https://yyl125.top/media/css/tailwind.css">
+<link rel="stylesheet" href="https://yyl125.top/styles/main.css">
+
+
+<link rel="alternate" type="application/atom+xml" title="威联通 QNAP 内网无法访问的临时解决方法 - Benjamin&#39;s Blog - Atom Feed" href="https://yyl125.top/atom.xml">
+<!----<script src="https://yyl125.top/media/scripts/bootstrap.bundle.min.js"></script>---->
+
+
+  
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-Q6KYP4QSBH"></script>
+    <script>
+      var host = window.location.hostname;
+      if(host != "localhost")
+      {
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-Q6KYP4QSBH');
+      }
+    </script>
+  
+
+<script defer>
+(function (document) {
+  const SOURCE = 'https://cdn.jsdelivr.net';
+  const DEST = 'https://gcore.jsdelivr.net';
+  const $ = document.querySelectorAll.bind(document);
+  const checkAvailable = (callback) => {
+    let timeoutId;
+    const newNode = document.createElement('link');
+    newNode.rel = 'stylesheet';
+    newNode.text = 'text/css';
+    const onError = () => {
+      if (!timeoutId) {
+        return;
+      }
+
+      clearTimeout(timeoutId);
+      timeoutId = 0;
+      newNode.href = 'about:blank';
+      newNode.remove();
+      callback(false);
+    };
+
+    timeoutId = setTimeout(onError, 2000);
+    newNode.addEventListener('error', onError);
+    newNode.addEventListener('load', function () {
+      newNode.remove();
+      clearTimeout(timeoutId);
+      callback(true);
+    });
+
+    newNode.href =
+      SOURCE +
+      '/gh/PipecraftNet/jsdelivr-auto-fallback@main/empty.css?' +
+      Date.now();
+    document.head.insertAdjacentElement('afterbegin', newNode);
+  };
+
+  const replaceElementSrc = () => {
+    for (const element of $('link[rel="stylesheet"]')) {
+      if (element.href && element.href.includes(SOURCE)) {
+        element.href = element.href.replace(SOURCE, DEST);
+      }
+    }
+
+    for (const element of $('script')) {
+      if (element.src && element.src.includes(SOURCE)) {
+        const newNode = document.createElement('script');
+        newNode.src = element.src.replace(SOURCE, DEST);
+        element.defer = true;
+        element.src = '';
+        element.before(newNode);
+        element.remove();
+      }
+    }
+
+    for (const element of $('img')) {
+      if (element.src && element.src.includes(SOURCE)) {
+        const source = element.src;
+        // Used to cancel loading. Without this line it will remain pending status.
+        element.src = '';
+        element.src = source.replace(SOURCE, DEST);
+      }
+    }
+  };
+
+  checkAvailable(function (isAvailable) {
+    if (isAvailable) {
+      return;
+    }
+
+    console.warn(SOURCE + ' is not available.');
+
+    replaceElementSrc();
+    // Replace dynamically added elements
+    setInterval(replaceElementSrc, 500);
+  });
+})(document);
+</script>
+  <meta name="description" content="解决了一个困扰许久的问题
+
+背景
+最近打开了 QNAP 的 Virtualization Station，提示需要更改 QNAP 的虚拟交换机配置。谁曾想，QNAP 就此就再也连接不上了，不管是 QNAP 官方的 QFinder 还是 SS..." />
+  <meta property="og:title" content="威联通 QNAP 内网无法访问的临时解决方法 - Benjamin&#39;s Blog">
+  <meta property="og:description" content="解决了一个困扰许久的问题
+
+背景
+最近打开了 QNAP 的 Virtualization Station，提示需要更改 QNAP 的虚拟交换机配置。谁曾想，QNAP 就此就再也连接不上了，不管是 QNAP 官方的 QFinder 还是 SS..." />
+  <meta property="og:type" content="articles">
+  <meta property="og:url" content="https://yyl125.top/post/temporary_solution_to_inaccessible_intranet_of_QNAP/" />
+  <meta property="og:image" content="https://oss.yyl125.cc/blog/img/post/Ingenious_Skills/Temporary_Solution_To_Inaccessible_Intranet_of_QNAP/Temporary_Solution_To_Inaccessible_Intranet_of_QNAP_Banner.jpg">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:width" content="1200">
+  <meta name="twitter:title" content="威联通 QNAP 内网无法访问的临时解决方法 - Benjamin&#39;s Blog">
+  <meta name="twitter:description" content="解决了一个困扰许久的问题
+
+背景
+最近打开了 QNAP 的 Virtualization Station，提示需要更改 QNAP 的虚拟交换机配置。谁曾想，QNAP 就此就再也连接不上了，不管是 QNAP 官方的 QFinder 还是 SS...">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="canonical" href="https://yyl125.top/post/temporary_solution_to_inaccessible_intranet_of_QNAP/">
+
+  <script src="https://cdn.jsdelivr.net/npm/vanilla-lazyload@17.8.8/dist/lazyload.min.js"></script>
+  <script type="module" src="https://yyl125.top/media/scripts/emaction.js"></script>
+
+  
+    <link rel="stylesheet" href="https://yyl125.top/media/css/prism-atom-dark.css">
+  
+
+  
+</head>
+
+<body>
+  <div class="antialiased flex flex-col min-h-screen" id="app">
+    <a href="https://yyl125.top" class="fixed top-0 left-0 mt-4 bg-black text-white dark:text-gray-700 dark:bg-yellow-50 dark:hover:bg-black dark:hover:text-white inline-flex p-2 pl-8 hover:text-gray-700 hover:bg-yellow-50 font-bold z-10 transition-fast animated fadeInLeft">
+      Benjamin&#39;s Blog
+    </a>
+    <div class="max-w-4xl w-full mx-auto">
+      <div class="shadow-box bg-white dark:bg-gray-600 rounded-lg pt-32 md:pt-64 px-4 md:px-8 pb-8 animated fadeIn mb-8">
+        <h1 class="text-5xl font-semibold leading-normal pb-8 mb-8 border-b-8 border-gray-700">
+          威联通 QNAP 内网无法访问的临时解决方法
+        </h1>
+        
+          <img src="https://oss.yyl125.cc/blog/img/post/Ingenious_Skills/Temporary_Solution_To_Inaccessible_Intranet_of_QNAP/Temporary_Solution_To_Inaccessible_Intranet_of_QNAP_Banner.jpg" alt="威联通 QNAP 内网无法访问的临时解决方法" class="block w-full mb-8">
+        
+        <div class="mb-8 flex flex-wrap">
+          <div class="text-gray-400 text-sm mr-4"><i class="ri-calendar-2-line"></i> 2023-07-27 · <i class="ri-timer-line"></i> 3 min read · <i class="ri-eye-line"></i> <span id="twikoo_visitors">0</span></div>
+          
+            <a href="https://yyl125.top/tag/Ingenious_skills/" class="text-gray-700 dark:text-gray-200 text-sm hover:transition-all duration-100 inline-flex mr-2">
+              <i class="ri-hashtag"></i>
+              Ingenious Skills
+            </a>
+          
+        </div>
+        
+        <div class="jumbotron">
+          <div class="container">
+            <p><i class="ri-time-line"></i> 这是一篇发布于 3 年前的文章，其中的信息可能已经有所发展或是发生改变</p>
+          </div>
+        </div>
+
+        
+
+        
+        
+        <div class="markdown mb-8" v-pre id="post-content">
+          <p>解决了一个困扰许久的问题</p>
+<!-- more -->
+<h2 id="背景">背景</h2>
+<p>最近打开了 QNAP 的 Virtualization Station，提示需要更改 QNAP 的虚拟交换机配置。谁曾想，QNAP 就此就再也连接不上了，不管是 QNAP 官方的 QFinder 还是 SSH 均提示找不到主机</p>
+<p>无意间发现 Qmanager 可以通过 myQNAPcloud Link 连接到 NAS，遂打算重新启动 QNAP 尝试是否能够解决连接问题。但除了 App Center 功能外，其它功能在长时间使用时都会提示数次「连接失败」，甚至之前下达的重新启动也并未执行</p>
+<p>联想到之前曾打开 QNAP 的 Virtualization Station，尝试在 Qmanager 中删除 Virtualization Station，却依旧无法连接</p>
+<h2 id="问题描述">问题描述</h2>
+<ol>
+<li>无法从任何本地设备上连接 QNAP，或者在刚开机时短暂连接后提示断开连接/页面无响应</li>
+<li>Qmanager 可以利用 myQNAPcloud Link 连接到 QNAP，证明 QNAP 硬件无问题</li>
+<li>AFP、Time Machine 等服务短暂地可被本地网络设备发现，但始终无法连接</li>
+<li>部分进程启动完成后，即出现无法响应、连接错误等错误提示，但全部进程启动结束前，QNAP 可以被正常访问。而且 NAS 刚启动的时候是可以访问到的，但是一些进程启动之后就拒绝访问了</li>
+</ol>
+<h2 id="问题排查">问题排查</h2>
+<p>既然 myQNAPcloud Link 能够连接到我的 NAS，则证明 QNAP 硬件和 QTS 系统固件本身没有问题，而且外网甚至是连通的（至少 DDNS 是通的）</p>
+<p>那就索性用 Qmanager 一个一个进程排查嘛，逐个关闭 QNAP 的各种服务呗。最后关闭到 QuFirewall 后，电脑网页端恢复正常自动刷新进入到了登录界面。最后经过测试，单独结束掉 QuFirewall 后，访问便可恢复正常</p>
+<p>好家伙，那就是你了 —— QuFirewall！</p>
+<h2 id="问题分析">问题分析</h2>
+<p>QuFirewall，是 QNAP 的防火墙进程。后期通过系统日志发现 Network &amp; Vitual Switch 频繁发出警告，QuFirewall 事件数量飙升，部分网络服务被拦截</p>
+<img src="https://oss.yyl125.cc/blog/img/post/Ingenious_Skills/Temporary_Solution_To_Inaccessible_Intranet_of_QNAP/Temporary_Solution_To_Inaccessible_Intranet_of_QNAP_01.png">
+<p class="media-description">QuFirewall 在系统日志中事件数量飙升</p>
+<p>之前因为启用了 Virtualization Station，会改变 NAS 中的虚拟网络结构，从而触发 QuFirewall 的配置规则导致局域网访问被拒绝。而且需要注意的是 QNAP 中的三大操作（Virtualization Station、Container Station 以及 Ubuntu 工作站）都会改变 NAS 中的虚拟网络结构导致此问题的发生</p>
+<p>经过反复尝试发现，只要在开启 Virtualization Station、Container Station 以及 Ubuntu Linux Station 之前开启了 QuFirewall 都会导致无法访问的问题出现，不知道这算不算是 QTS 的一个 Bug，比较庆幸的是此时 QuFirewall 并没有拒绝 DDNS 访问，不然没有任何方式可以访问到 NAS 只能进行重置</p>
+<p>其次，还暴露出的 QNAP NAS 的一个安全问题。即 QuFirewall 在系统启动时并没有启动，此时系统并不受 QuFirewall 的保护，防火墙规则没有建立，存在被网络攻击的可能性。但是从 NAS 开机到 QuFirewall 启动之间的时间间隔很短，并且 NAS 的开关机频率极低，一般也不会造成很大的安全问题</p>
+
+        </div>
+
+        <div class="jumbotron">
+          <div class="container">
+            <p><i class="ri-article-line"></i> <a href="https://yyl125.top/post/temporary_solution_to_inaccessible_intranet_of_QNAP/" target="_blank">威联通 QNAP 内网无法访问的临时解决方法</a></p>
+            <p><i class="ri-creative-commons-line"></i> 许可协议：<a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" target="_blank">CC BY-NC-SA 4.0</a>。欲了解更多相关信息，详见 <a href="https://yyl125.top/copyright/" target="_blank">版权信息与资源使用说明</a> 页面</p>
+            <p><i class="ri-error-warning-line"></i> 本站所有内容除特别说明外，皆为原创发布。欢迎尊重原创作者版权的转载或引用。转载或引用时请注明出处</p>
+            <br>
+            <p><i class="ri-feedback-line"></i> 出现了影响阅读的问题？不妨 <a href="mailto:support@yyl125.cc?subject=Benjamin's%20Blog%20%E9%97%AE%E9%A2%98%E5%8F%8D%E9%A6%88" target="_blank" rel="noreferrer noopener">反馈</a> 一下吧</p>
+          </div>
+        </div>
+
+        
+        
+      </div>
+
+      <div class="jumbotron-comment">
+        <div class="container">
+          <p><i class="ri-message-3-line"></i> 欢迎任何与文章内容相关并保持尊重的评论，评论时请遵守 <a href="https://yyl125.top/comment_policy/">评论准则</a></p>
+        </div>
+      </div>
+
+      
+
+      
+        <div id="tcomment"></div>
+      
+      
+      <footer class="py-12 text-center px-4 md:px-0" v-pre>
+  共 24 篇文章｜<a href="https://yyl125.top/copyright" target="_blank">版权信息与资源使用说明</a>｜<i class="ri-rss-line"></i> <a href="https://yyl125.top/atom.xml" target="_blank">RSS</a><br>Copyright © 2026 Benjamin. All rights reserved.
+</footer>
+
+
+    </div>
+
+    <!-- TOC Container -->
+    <div class="fixed right-0 bottom-0 mb-16 mr-4 shadow w-8 h-8 rounded-full flex justify-center items-center z-10 cursor-pointer bg-white dark:bg-gray-500 dark:text-gray-200 hover:shadow-lg transition-all animated fadeInRight" @click="showToc = true">
+      <i class="ri-file-list-line"></i>
+    </div>
+
+    <div class="fixed right-0 top-0 bottom-0 overflow-y-auto w-64 bg-white dark:bg-gray-800 p-4 border-l border-gray-100 dark:border-gray-600 z-10 transition-fast" :class="{ '-mr-64': !showToc }">
+      <div class="flex mb-4 justify-end">
+        <div class="w-8 h-8 inline-flex justify-center items-center rounded-full cursor-pointer hover:bg-gray-200 dark:hover:bg-gray-600 transition-fast" @click="showToc = false">
+          <i class="ri-close-line text-lg"></i>
+        </div>
+      </div>
+      <div class="post-toc-container">
+        <ul class="markdownIt-TOC">
+<li>
+<ul>
+<li><a href="#%E8%83%8C%E6%99%AF">背景</a></li>
+<li><a href="#%E9%97%AE%E9%A2%98%E6%8F%8F%E8%BF%B0">问题描述</a></li>
+<li><a href="#%E9%97%AE%E9%A2%98%E6%8E%92%E6%9F%A5">问题排查</a></li>
+<li><a href="#%E9%97%AE%E9%A2%98%E5%88%86%E6%9E%90">问题分析</a></li>
+</ul>
+</li>
+</ul>
+
+      </div>
+    </div>
+
+    <!-- Back to top -->
+    <div class="fixed right-0 bottom-0 mb-4 mr-4 shadow w-8 h-8 rounded-full flex justify-center items-center z-10 cursor-pointer bg-white hover:shadow-lg transition-all dark:bg-gray-500 dark:text-gray-200" @click="backToUp" v-show="scrolled">
+      <i class="ri-arrow-up-line"></i>
+    </div>
+
+  </div>
+
+<!--  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script> -->
+  <script src="https://yyl125.top/media/scripts/vue.js"></script>
+  <script src="https://yyl125.top/media/scripts/main.js"></script>
+  <script src="https://yyl125.top/media/scripts/linkcard.js"></script>
+  <script src="https://yyl125.top/media/scripts/view-image.min.js"></script>
+  <script>
+    window.ViewImage && ViewImage.init('.markdown img');
+    var lazyLoadInstance = new LazyLoad({});
+    lazyLoadInstance.update();
+  </script>
+  
+  <!-- Mermaid -->
+  
+
+  <!-- Code Highlight -->
+  
+    <script src="https://yyl125.top/media/scripts/prism.js"></script>
+    <script>
+      Prism.highlightAll()
+    </script>
+  
+
+  <!-- Twikoo -->
+  
+    <script src="https://cdn.jsdelivr.net/npm/twikoo@1.6.44/dist/twikoo.min.js"></script>
+<script>
+  twikoo.init({
+    envId: 'https://twikoo-deploy-one.vercel.app',
+    el: '#tcomment'
+  })
+</script>
+  
+
+</body>
+
+</html>

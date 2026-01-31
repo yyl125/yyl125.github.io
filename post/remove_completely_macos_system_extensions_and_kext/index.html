@@ -1,0 +1,325 @@
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<meta name="google-site-verification" content="mzGZdCiBsXZ5XSYVt7eh7KL8L64yuidUoeBNw_53XHk" />
+<meta name="referrer" content="same-origin">
+<title>移除 macOS 无用的系统扩展和内核扩展 - Benjamin&#39;s Blog</title>
+<link rel="shortcut icon" href="https://yyl125.top/favicon.ico">
+<link href="https://cdn.jsdelivr.net/npm/remixicon@latest/fonts/remixicon.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.7.2/animate.min.css">
+<link rel="stylesheet" href="https://yyl125.top/media/css/tailwind.css">
+<link rel="stylesheet" href="https://yyl125.top/styles/main.css">
+
+
+<link rel="alternate" type="application/atom+xml" title="移除 macOS 无用的系统扩展和内核扩展 - Benjamin&#39;s Blog - Atom Feed" href="https://yyl125.top/atom.xml">
+<!----<script src="https://yyl125.top/media/scripts/bootstrap.bundle.min.js"></script>---->
+
+
+  
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-Q6KYP4QSBH"></script>
+    <script>
+      var host = window.location.hostname;
+      if(host != "localhost")
+      {
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-Q6KYP4QSBH');
+      }
+    </script>
+  
+
+<script defer>
+(function (document) {
+  const SOURCE = 'https://cdn.jsdelivr.net';
+  const DEST = 'https://gcore.jsdelivr.net';
+  const $ = document.querySelectorAll.bind(document);
+  const checkAvailable = (callback) => {
+    let timeoutId;
+    const newNode = document.createElement('link');
+    newNode.rel = 'stylesheet';
+    newNode.text = 'text/css';
+    const onError = () => {
+      if (!timeoutId) {
+        return;
+      }
+
+      clearTimeout(timeoutId);
+      timeoutId = 0;
+      newNode.href = 'about:blank';
+      newNode.remove();
+      callback(false);
+    };
+
+    timeoutId = setTimeout(onError, 2000);
+    newNode.addEventListener('error', onError);
+    newNode.addEventListener('load', function () {
+      newNode.remove();
+      clearTimeout(timeoutId);
+      callback(true);
+    });
+
+    newNode.href =
+      SOURCE +
+      '/gh/PipecraftNet/jsdelivr-auto-fallback@main/empty.css?' +
+      Date.now();
+    document.head.insertAdjacentElement('afterbegin', newNode);
+  };
+
+  const replaceElementSrc = () => {
+    for (const element of $('link[rel="stylesheet"]')) {
+      if (element.href && element.href.includes(SOURCE)) {
+        element.href = element.href.replace(SOURCE, DEST);
+      }
+    }
+
+    for (const element of $('script')) {
+      if (element.src && element.src.includes(SOURCE)) {
+        const newNode = document.createElement('script');
+        newNode.src = element.src.replace(SOURCE, DEST);
+        element.defer = true;
+        element.src = '';
+        element.before(newNode);
+        element.remove();
+      }
+    }
+
+    for (const element of $('img')) {
+      if (element.src && element.src.includes(SOURCE)) {
+        const source = element.src;
+        // Used to cancel loading. Without this line it will remain pending status.
+        element.src = '';
+        element.src = source.replace(SOURCE, DEST);
+      }
+    }
+  };
+
+  checkAvailable(function (isAvailable) {
+    if (isAvailable) {
+      return;
+    }
+
+    console.warn(SOURCE + ' is not available.');
+
+    replaceElementSrc();
+    // Replace dynamically added elements
+    setInterval(replaceElementSrc, 500);
+  });
+})(document);
+</script>
+  <meta name="description" content="macOS 虽然安装 App 十分简单方便，但卸载起来真的是让人头大
+
+一不小心安装了 Samsung 的 SSD 工具和某款同时还需要 macFUSE 搭配使用的 NTFS 工具。由于 macOS 中已不再推荐使用 Kext，需要用户手动..." />
+  <meta property="og:title" content="移除 macOS 无用的系统扩展和内核扩展 - Benjamin&#39;s Blog">
+  <meta property="og:description" content="macOS 虽然安装 App 十分简单方便，但卸载起来真的是让人头大
+
+一不小心安装了 Samsung 的 SSD 工具和某款同时还需要 macFUSE 搭配使用的 NTFS 工具。由于 macOS 中已不再推荐使用 Kext，需要用户手动..." />
+  <meta property="og:type" content="articles">
+  <meta property="og:url" content="https://yyl125.top/post/remove_completely_macos_system_extensions_and_kext/" />
+  <meta property="og:image" content="https://oss.yyl125.cc/blog/img/post/Ingenious_Skills/Remove_Completely_MacOS_System_Extensions_and_Kext/Remove_Completely_MacOS_System_Extensions_and_Kext_Banner.jpg">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:width" content="1200">
+  <meta name="twitter:title" content="移除 macOS 无用的系统扩展和内核扩展 - Benjamin&#39;s Blog">
+  <meta name="twitter:description" content="macOS 虽然安装 App 十分简单方便，但卸载起来真的是让人头大
+
+一不小心安装了 Samsung 的 SSD 工具和某款同时还需要 macFUSE 搭配使用的 NTFS 工具。由于 macOS 中已不再推荐使用 Kext，需要用户手动...">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="canonical" href="https://yyl125.top/post/remove_completely_macos_system_extensions_and_kext/">
+
+  <script src="https://cdn.jsdelivr.net/npm/vanilla-lazyload@17.8.8/dist/lazyload.min.js"></script>
+  <script type="module" src="https://yyl125.top/media/scripts/emaction.js"></script>
+
+  
+    <link rel="stylesheet" href="https://yyl125.top/media/css/prism-atom-dark.css">
+  
+
+  
+</head>
+
+<body>
+  <div class="antialiased flex flex-col min-h-screen" id="app">
+    <a href="https://yyl125.top" class="fixed top-0 left-0 mt-4 bg-black text-white dark:text-gray-700 dark:bg-yellow-50 dark:hover:bg-black dark:hover:text-white inline-flex p-2 pl-8 hover:text-gray-700 hover:bg-yellow-50 font-bold z-10 transition-fast animated fadeInLeft">
+      Benjamin&#39;s Blog
+    </a>
+    <div class="max-w-4xl w-full mx-auto">
+      <div class="shadow-box bg-white dark:bg-gray-600 rounded-lg pt-32 md:pt-64 px-4 md:px-8 pb-8 animated fadeIn mb-8">
+        <h1 class="text-5xl font-semibold leading-normal pb-8 mb-8 border-b-8 border-gray-700">
+          移除 macOS 无用的系统扩展和内核扩展
+        </h1>
+        
+          <img src="https://oss.yyl125.cc/blog/img/post/Ingenious_Skills/Remove_Completely_MacOS_System_Extensions_and_Kext/Remove_Completely_MacOS_System_Extensions_and_Kext_Banner.jpg" alt="移除 macOS 无用的系统扩展和内核扩展" class="block w-full mb-8">
+        
+        <div class="mb-8 flex flex-wrap">
+          <div class="text-gray-400 text-sm mr-4"><i class="ri-calendar-2-line"></i> 2023-10-31 · <i class="ri-timer-line"></i> 4 min read · <i class="ri-eye-line"></i> <span id="twikoo_visitors">0</span></div>
+          
+            <a href="https://yyl125.top/tag/Ingenious_skills/" class="text-gray-700 dark:text-gray-200 text-sm hover:transition-all duration-100 inline-flex mr-2">
+              <i class="ri-hashtag"></i>
+              Ingenious Skills
+            </a>
+          
+        </div>
+        
+        <div class="jumbotron">
+          <div class="container">
+            <p><i class="ri-time-line"></i> 这是一篇发布于 2 年前的文章，其中的信息可能已经有所发展或是发生改变</p>
+          </div>
+        </div>
+
+        
+
+        
+        
+        <div class="markdown mb-8" v-pre id="post-content">
+          <p>macOS 虽然安装 App 十分简单方便，但卸载起来真的是让人头大</p>
+<!-- more -->
+<p>一不小心安装了 Samsung 的 SSD 工具和某款同时还需要 macFUSE 搭配使用的 NTFS 工具。由于 macOS 中已不再推荐使用 Kext，需要用户手动降低设备安全策略并重启以启用系统扩展（系统扩展已被阻止）。之前还卸载了 AdGuard，但似乎还有部分系统扩展残留在系统中。而对于像我这种有「系统洁癖」的人来说，当务之急必然是尝试清除</p>
+<p>以前其实就尝试清理过 Samsung 的 SSD 工具所放入系统的系统扩展，当时还找到了源文件，删除后以为万事大吉，这次发现并非如此</p>
+<h2 id="开始之前">开始之前</h2>
+<p>在正式进行任何操作之前，我们需要确定我们需要修改的内容，以及<strong>对所修改的文件做好备份工作，条件允许时，应该进行整机 Time Machine 备份</strong></p>
+<p>对于 macOS，系统扩展和内核扩展一般在以下几个位置：</p>
+<ul>
+<li><code>/Library/StagedExtensions/Library/Extensions/</code> 这个位置一般包含了所有安装的 Kext<sup class="footnote-ref"><a href="#fn1" id="fnref1">[1]</a></sup></li>
+<li><code>/private/var/db/KernelExtensionManagement</code> 这个位置一般包含了诸如 AdGuard 网络系统扩展等内容，具体在其 <code>AuxKC</code> 目录中。可以先行在 Terminal 中通过 <code>systemextensionsctl list</code> 查询是否存在（比如 <code>com.adguard.mac.adguard.network-extension</code>）</li>
+<li><code>/Library/SystemExtensions</code> 这个位置一般包含了某些不在以上目录的扩展</li>
+</ul>
+<p>想要对 macOS 系统文件进行修改，则需要关闭 macOS 的系统完整性保护（System Integrity Protection，SIP）。具体方法为进入 macOS 的恢复模式，依次选择 Menu Bar 中的「实用工具」&gt;「终端」，然后在 Terminal 中输入 <code>csrutil disable</code> 关闭 SIP，随后重新启动 Mac 即可</p>
+<h2 id="移除-auxkc-目录下的系统扩展">移除 AuxKC 目录下的系统扩展</h2>
+<p>想要移除 AuxKC 目录下的系统扩展十分简单，只需要先使用 <code>systemextensionsctl list</code> 查询系统扩展的详细信息，随后在 Terminal 中输入 <code>systemextensionsctl uninstall &lt;teamID&gt; &lt;bundleID&gt;</code> 即可<sup class="footnote-ref"><a href="#fn2" id="fnref2">[2]</a></sup>。以移除 AdGuard 的网络系统扩展为例（此例中 teamID 为 <code>TC3Q7MAJXF</code>，具体请以 list 中所列信息为准）：</p>
+<p><code>systemextensionsctl uninstall TC3Q7MAJXF com.adguard.mac.adguard.network-extension</code></p>
+<p>等待 Terminal 完成操作（显示 <code>Successful</code>）后，重新启动 Mac。此系统扩展即将在重新启动过程中被移除</p>
+<h2 id="移除所有已安装的-kext">移除所有已安装的 Kext</h2>
+<p>开始之前，我们需要先修复 /S/L/E（System/Library/Extensions）和 /L/E（Library/Extensions）文件夹中的权限<sup class="footnote-ref"><a href="#fn3" id="fnref3">[3]</a></sup></p>
+<p>在 Terminal 中<strong>依次单独</strong>键入以下每个命令：</p>
+<ul>
+<li><code>sudo chmod -Rf 755 /S*/L*/E*</code></li>
+<li><code>sudo chmod -Rf 755 /L*/E*</code></li>
+<li><code>sudo chown -Rf 0:0 /S*/L*/E*</code></li>
+<li><code>sudo chown -Rf 0:0 /L*/E*</code></li>
+</ul>
+<p>随后在 Terminal 中键入以下命令后重新启动你的 Mac：</p>
+<p><code>sudo kextcache -i /</code></p>
+<p>最后，请记得在恢复模式的 Terminal 使用 <code>csrutil enable</code> 命令重新启用设备的系统完整性保护（SIP）</p>
+<h2 id="参考链接">参考链接</h2>
+<ul>
+<li><a href="https://support.apple.com/zh-cn/guide/security/secb7ea06b49/" target="_blank">系统完整性保护</a></li>
+<li><a href="https://support.apple.com/zh-cn/guide/deployment/depa5fb8376f/" target="_blank">macOS 中的系统和内核扩展</a></li>
+<li><a href="https://support.apple.com/zh-cn/guide/security/sec8e454101b/" target="_blank">macOS 中的内核扩展</a></li>
+</ul>
+<hr class="footnotes-sep">
+<section class="footnotes">
+<ol class="footnotes-list">
+<li id="fn1" class="footnote-item"><p>第三方内核扩展 <a href="#fnref1" class="footnote-backref">↩︎</a></p>
+</li>
+<li id="fn2" class="footnote-item"><p>亦可先使用 systemextensionsctl disable 命令将系统扩展反激活再进行后续操作  <a href="#fnref2" class="footnote-backref">↩︎</a></p>
+</li>
+<li id="fn3" class="footnote-item"><p>推荐在安全模式下操作 <a href="#fnref3" class="footnote-backref">↩︎</a></p>
+</li>
+</ol>
+</section>
+
+        </div>
+
+        <div class="jumbotron">
+          <div class="container">
+            <p><i class="ri-article-line"></i> <a href="https://yyl125.top/post/remove_completely_macos_system_extensions_and_kext/" target="_blank">移除 macOS 无用的系统扩展和内核扩展</a></p>
+            <p><i class="ri-creative-commons-line"></i> 许可协议：<a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" target="_blank">CC BY-NC-SA 4.0</a>。欲了解更多相关信息，详见 <a href="https://yyl125.top/copyright/" target="_blank">版权信息与资源使用说明</a> 页面</p>
+            <p><i class="ri-error-warning-line"></i> 本站所有内容除特别说明外，皆为原创发布。欢迎尊重原创作者版权的转载或引用。转载或引用时请注明出处</p>
+            <br>
+            <p><i class="ri-feedback-line"></i> 出现了影响阅读的问题？不妨 <a href="mailto:support@yyl125.cc?subject=Benjamin's%20Blog%20%E9%97%AE%E9%A2%98%E5%8F%8D%E9%A6%88" target="_blank" rel="noreferrer noopener">反馈</a> 一下吧</p>
+          </div>
+        </div>
+
+        
+        
+      </div>
+
+      <div class="jumbotron-comment">
+        <div class="container">
+          <p><i class="ri-message-3-line"></i> 欢迎任何与文章内容相关并保持尊重的评论，评论时请遵守 <a href="https://yyl125.top/comment_policy/">评论准则</a></p>
+        </div>
+      </div>
+
+      
+
+      
+        <div id="tcomment"></div>
+      
+      
+      <footer class="py-12 text-center px-4 md:px-0" v-pre>
+  共 24 篇文章｜<a href="https://yyl125.top/copyright" target="_blank">版权信息与资源使用说明</a>｜<i class="ri-rss-line"></i> <a href="https://yyl125.top/atom.xml" target="_blank">RSS</a><br>Copyright © 2026 Benjamin. All rights reserved.
+</footer>
+
+
+    </div>
+
+    <!-- TOC Container -->
+    <div class="fixed right-0 bottom-0 mb-16 mr-4 shadow w-8 h-8 rounded-full flex justify-center items-center z-10 cursor-pointer bg-white dark:bg-gray-500 dark:text-gray-200 hover:shadow-lg transition-all animated fadeInRight" @click="showToc = true">
+      <i class="ri-file-list-line"></i>
+    </div>
+
+    <div class="fixed right-0 top-0 bottom-0 overflow-y-auto w-64 bg-white dark:bg-gray-800 p-4 border-l border-gray-100 dark:border-gray-600 z-10 transition-fast" :class="{ '-mr-64': !showToc }">
+      <div class="flex mb-4 justify-end">
+        <div class="w-8 h-8 inline-flex justify-center items-center rounded-full cursor-pointer hover:bg-gray-200 dark:hover:bg-gray-600 transition-fast" @click="showToc = false">
+          <i class="ri-close-line text-lg"></i>
+        </div>
+      </div>
+      <div class="post-toc-container">
+        <ul class="markdownIt-TOC">
+<li>
+<ul>
+<li><a href="#%E5%BC%80%E5%A7%8B%E4%B9%8B%E5%89%8D">开始之前</a></li>
+<li><a href="#%E7%A7%BB%E9%99%A4-auxkc-%E7%9B%AE%E5%BD%95%E4%B8%8B%E7%9A%84%E7%B3%BB%E7%BB%9F%E6%89%A9%E5%B1%95">移除 AuxKC 目录下的系统扩展</a></li>
+<li><a href="#%E7%A7%BB%E9%99%A4%E6%89%80%E6%9C%89%E5%B7%B2%E5%AE%89%E8%A3%85%E7%9A%84-kext">移除所有已安装的 Kext</a></li>
+<li><a href="#%E5%8F%82%E8%80%83%E9%93%BE%E6%8E%A5">参考链接</a></li>
+</ul>
+</li>
+</ul>
+
+      </div>
+    </div>
+
+    <!-- Back to top -->
+    <div class="fixed right-0 bottom-0 mb-4 mr-4 shadow w-8 h-8 rounded-full flex justify-center items-center z-10 cursor-pointer bg-white hover:shadow-lg transition-all dark:bg-gray-500 dark:text-gray-200" @click="backToUp" v-show="scrolled">
+      <i class="ri-arrow-up-line"></i>
+    </div>
+
+  </div>
+
+<!--  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script> -->
+  <script src="https://yyl125.top/media/scripts/vue.js"></script>
+  <script src="https://yyl125.top/media/scripts/main.js"></script>
+  <script src="https://yyl125.top/media/scripts/linkcard.js"></script>
+  <script src="https://yyl125.top/media/scripts/view-image.min.js"></script>
+  <script>
+    window.ViewImage && ViewImage.init('.markdown img');
+    var lazyLoadInstance = new LazyLoad({});
+    lazyLoadInstance.update();
+  </script>
+  
+  <!-- Mermaid -->
+  
+
+  <!-- Code Highlight -->
+  
+    <script src="https://yyl125.top/media/scripts/prism.js"></script>
+    <script>
+      Prism.highlightAll()
+    </script>
+  
+
+  <!-- Twikoo -->
+  
+    <script src="https://cdn.jsdelivr.net/npm/twikoo@1.6.44/dist/twikoo.min.js"></script>
+<script>
+  twikoo.init({
+    envId: 'https://twikoo-deploy-one.vercel.app',
+    el: '#tcomment'
+  })
+</script>
+  
+
+</body>
+
+</html>

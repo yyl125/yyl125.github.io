@@ -1,0 +1,359 @@
+<html lang="zh">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<meta name="google-site-verification" content="mzGZdCiBsXZ5XSYVt7eh7KL8L64yuidUoeBNw_53XHk" />
+<meta name="referrer" content="same-origin">
+<title>更新日志 - Benjamin&#39;s Blog</title>
+<link rel="shortcut icon" href="https://yyl125.top/favicon.ico">
+<link href="https://cdn.jsdelivr.net/npm/remixicon@latest/fonts/remixicon.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.7.2/animate.min.css">
+<link rel="stylesheet" href="https://yyl125.top/media/css/tailwind.css">
+<link rel="stylesheet" href="https://yyl125.top/styles/main.css">
+
+
+<link rel="alternate" type="application/atom+xml" title="更新日志 - Benjamin&#39;s Blog - Atom Feed" href="https://yyl125.top/atom.xml">
+<!----<script src="https://yyl125.top/media/scripts/bootstrap.bundle.min.js"></script>---->
+
+
+  
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-Q6KYP4QSBH"></script>
+    <script>
+      var host = window.location.hostname;
+      if(host != "localhost")
+      {
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-Q6KYP4QSBH');
+      }
+    </script>
+  
+
+<script defer>
+(function (document) {
+  const SOURCE = 'https://cdn.jsdelivr.net';
+  const DEST = 'https://gcore.jsdelivr.net';
+  const $ = document.querySelectorAll.bind(document);
+  const checkAvailable = (callback) => {
+    let timeoutId;
+    const newNode = document.createElement('link');
+    newNode.rel = 'stylesheet';
+    newNode.text = 'text/css';
+    const onError = () => {
+      if (!timeoutId) {
+        return;
+      }
+
+      clearTimeout(timeoutId);
+      timeoutId = 0;
+      newNode.href = 'about:blank';
+      newNode.remove();
+      callback(false);
+    };
+
+    timeoutId = setTimeout(onError, 2000);
+    newNode.addEventListener('error', onError);
+    newNode.addEventListener('load', function () {
+      newNode.remove();
+      clearTimeout(timeoutId);
+      callback(true);
+    });
+
+    newNode.href =
+      SOURCE +
+      '/gh/PipecraftNet/jsdelivr-auto-fallback@main/empty.css?' +
+      Date.now();
+    document.head.insertAdjacentElement('afterbegin', newNode);
+  };
+
+  const replaceElementSrc = () => {
+    for (const element of $('link[rel="stylesheet"]')) {
+      if (element.href && element.href.includes(SOURCE)) {
+        element.href = element.href.replace(SOURCE, DEST);
+      }
+    }
+
+    for (const element of $('script')) {
+      if (element.src && element.src.includes(SOURCE)) {
+        const newNode = document.createElement('script');
+        newNode.src = element.src.replace(SOURCE, DEST);
+        element.defer = true;
+        element.src = '';
+        element.before(newNode);
+        element.remove();
+      }
+    }
+
+    for (const element of $('img')) {
+      if (element.src && element.src.includes(SOURCE)) {
+        const source = element.src;
+        // Used to cancel loading. Without this line it will remain pending status.
+        element.src = '';
+        element.src = source.replace(SOURCE, DEST);
+      }
+    }
+  };
+
+  checkAvailable(function (isAvailable) {
+    if (isAvailable) {
+      return;
+    }
+
+    console.warn(SOURCE + ' is not available.');
+
+    replaceElementSrc();
+    // Replace dynamically added elements
+    setInterval(replaceElementSrc, 500);
+  });
+})(document);
+</script>
+  <meta name="description" content="Stay hungry. Stay foolish." />
+</head>
+
+<body>
+  <div class="antialiased flex flex-col min-h-screen" id="app">
+    <a href="https://yyl125.top" class="fixed top-0 left-0 mt-4 bg-black text-white dark:text-gray-700 dark:bg-yellow-50 dark:hover:bg-black dark:hover:text-white inline-flex p-2 pl-8 hover:text-gray-700 hover:bg-yellow-50 font-bold z-10 transition-fast animated fadeInLeft">
+    Benjamin&#39;s Blog
+    </a>
+    <div class="max-w-4xl w-full mx-auto">
+      <div class="shadow-box bg-white dark:bg-gray-600 rounded-lg pt-32 md:pt-64 px-4 md:px-8 pb-8 animated fadeIn mb-8">
+        <h1 class="text-5xl font-semibold leading-normal pb-8 mb-8 border-b-8 border-gray-700">更新日志</h1>
+        
+        <div class="markdown mb-8">
+          <h2>2026 年</h2>
+          <h3>1 月</h3>
+            <ul>
+              <li>优化「记录」页面在桌面端、平板端和手机端的显示效果</li>
+            </ul>
+          <h2>2025 年</h2>
+          <h3>12 月</h3>
+            <ul>
+              <li>优化 Twikoo 相关资源文件</li>
+              <li>优化「相册」页面细节样式</li>
+              <li>优化 404 页面文案</li>
+            </ul>
+          <h3>11 月</h3>
+            <ul>
+              <li>增加「记录」页面，记录看过的电影、剧集和书籍以及玩过的游戏等</li>
+              <li>修改「动态」页面按钮样式，更改页面名称为「随想」</li>
+              <li>优化「随想」页面深色模式细节样式</li>
+              <li>修复 Memos 列表无法将豆瓣链接转为 NeoDB 链接的问题</li>
+            </ul>
+          <h3>10 月</h3>
+            <ul>
+              <li>优化「收藏」页面播客展示</li>
+              <li>优化部分样式文件</li>
+            </ul>
+          <h3>7 月</h3>
+            <ul>
+              <li>优化「关于」内足迹地图，新增世界足迹并优化国内足迹和世界足迹的显示</li>
+              <li>更新部分资源文件版本</li>
+            </ul>
+          <h3>3 月</h3>
+            <ul>
+              <li>优化文章阅读量统计的显示位置</li>
+            </ul>
+          <h3>1 月</h3>
+            <ul>
+              <li>更新 twikoo 前端版本为 1.6.41</li>
+            </ul>
+          <h2>2024 年</h2>
+          <h3>11 月</h3>
+            <ul>
+              <li>优化资源内容，gallery.css 现已合入站点主样式和 addition.css</li>
+              <li>调整首页社交信息内容</li>
+              <li>更新《版权信息与资源使用说明》</li>
+            </ul>
+          <h3>8 月</h3>
+            <ul>
+              <li>优化部分文案细节</li>
+            </ul>
+          <h3>7 月</h3>
+            <ul>
+              <li>更换 twikoo 资源版本为不带腾讯云云开发的精简版本，优化性能</li>
+            </ul>
+          <h3>5 月</h3>
+            <ul>
+              <li>限定 ViewImage 灯箱范围，排除文章题图和 Twikoo 表情</li>
+              <li>精简资源内容，加速页面加载</li>
+              <li>更新部分资源文件版本</li>
+              <li>修复了一些问题，一些非常傻的问题……</li>
+            </ul>
+          <h3>4 月</h3>
+            <ul>
+              <li>优化「动态」页面的超链接样式</li>
+              <li>更新部分资源文件版本</li>
+            </ul>
+          <h3>3 月</h3>
+            <ul>
+              <li>调整文章页布局。下线针对 Twitter、Weibo 及 Telegram 的文章分享功能，调整了文章阅读量统计的顺序</li>
+              <li>调整菜单内容，「友链」内容并入「关于」</li>
+              <li>由于性能原因，下线「搜索」功能</li>
+              <li>优化「标签」、「标签」和「关于」页面布局</li>
+              <li>优化文章内标签显示</li>
+              <li>修复部分页面链接失效的问题</li>
+            </ul>
+          <h3>2 月</h3>
+            <ul>
+              <li>优化文章页和「相册」页面的图片灯箱样式</li>
+              <li>重新上线「动态」页面。因自定义需求，对部分内容进行了一定优化。感谢木木木木木的相关技术支持</li></li>
+              <li>优化资源内容</li>
+              <li>修复了一些问题，一些非常奇怪的问题……</li>
+            </ul>
+          <h2>2023 年</h2>
+          <h3>10 月</h3>
+            <ul>
+              <li>「首页」、「活动」页面活动倒计时全新样式</li>
+              <li>活动预览现可以采用无声视频形式进行展示，若因某些原因无法使用视频时，将以原有的图片形式展示</li>
+              <li>「关于」页面 EDC 采用卡片化展示</li>
+              <li>优化部分资源</li>
+              <li>更新部分资源文件版本</li>
+              <li>解决一些已知问题</li>
+            </ul>
+          <h3>3 月</h3>
+            <ul>
+              <li>修改「隐私政策」页面的内容</li>
+              <li>「相册」页面更改布局方式</li>
+              <li>解决一些已知问题</li>
+            </ul>
+          <h2>2022 年</h2>
+          <h3>10 月</h3>
+            <ul>
+              <li>修复部分页面的错误</li>
+            </ul>
+          <h3>9 月</h3>
+            <ul>
+              <li>修改部分页面的内容标题样式</li>
+              <li>「标签」页面更改布局方式</li>
+              <li>解决一些已知问题</li>
+            </ul>
+          <h3>8 月</h3>
+            <ul>
+              <li>由于腾讯云变更解决方案费用及相关资源额度，遂将 twikoo 环境由腾讯云切换为 Vercel。访问评论资源时可能较慢，文章阅读量统计将重新开始计算</li>
+            </ul>
+          <h3>5 月</h3>
+            <ul>
+              <li>更新 twikoo 相关资源</li>
+            </ul>
+          <h3>4 月</h3>
+            <ul>
+              <li>更新 twikoo 相关资源</li>
+              <li>首页新增个人状态展示</li>
+              <li>下线「观影」、「收藏」页面</li>
+            </ul>
+          <h3>3 月</h3>
+            <ul>
+              <li>更新 Twikoo 相关资源</li>
+              <li>解决一些已知问题</li>
+            </ul>
+          <h3>1 月</h3>
+            <ul>
+              <li>「友链」页面增加添加好友帮助</li>
+            </ul>
+          <h2>2021 年</h2>
+          <h3>12 月</h3>
+            <ul>
+              <li>为「相册」页面加入 photoswipe 效果</li>
+              <li>完善 footer 信息</li>
+              <li>完善主页信息推送模块</li>
+              <li>解决一些已知问题</li>
+            </ul>
+          <h3>11 月</h3>
+            <ul>
+              <li>优化「友链」列表显示样式</li>
+              <li>解决一系列已知问题</li>
+            </ul>
+          <h3>8 月</h3>
+            <ul>
+              <li>因技术原因，下线文章内豆瓣读书和豆瓣观影链接显示优化功能</li>
+              <li>因规划原因，将「观点」页面改为「收藏」页面</li>
+            </ul>
+          <h3>5 月</h3>
+            <ul>
+              <li>上线「观点」页面</li> 
+              <li>上线搜索功能。目前处于测试阶段，搜索结果可能并不准确</li>
+            </ul>
+          <h3>4 月</h3>
+            <ul>
+              <li>优化「相册」、「友链」等页面的 CSS 细节</li>
+              <li>评论系统更换为 twikoo</li>
+              <li>因技术原因，「观影」和「阅读」页面将暂时下线，部分文章内的豆瓣内容卡片亦暂时无法正常显示。正在尝试联系方案原作者解决</li>
+            </ul>
+          <h3>2 月</h3>
+            <ul>
+              <li>主题实验室（Gridea GUI），加入具有实验性质的主题内容</li>
+              <li>新增「致敬」特别内容页面，展示那些令我们为之动容的「微光」们</li>
+            </ul>
+          <h3>1 月</h3>
+            <ul>
+              <li>新增「友情链接」页面</li>
+            </ul>
+          <h2 >2020 年</h2>
+          <h3>11 月</h3>
+            <ul>
+              <li>评论系统更换为 Disqus，基于开源项目 DisqusJS</li>
+              <li>支持 Twikoo 评论系统（前瞻性测试，尚未正式启用）</li>
+              <li>Valine 评论系统及相关内容</li>
+            </ul>
+          <h3>9 月</h3>
+            <ul>
+              <li>更新「阅读」和「观影」页面样式表至 3.0 版本</li>
+            </ul>
+          <h3>8 月</h3>
+            <ul>
+              <li>调整豆瓣读书和豆瓣观影链接，优化在深色模式（Dark Mode）下的显示样式</li>
+              <li>调整文章时效性提醒、文章版权信息和反馈提示在深色模式（Dark Mode）下的显示样式</li>
+              <li>调整文章标签在深色模式（Dark Mode）下的显示样式</li>
+              <li>首页加入文章标签信息</li>
+              <li>「归档」页面加入文章发布时间和标签信息</li>
+            </ul>
+          <h3>7 月</h3>
+            <ul>
+              <li>新增「相册」页面</li>
+              <li>参考知乎的相关样式，优化了文章内部分链接的显示方式</li>
+            </ul>
+          <h3>6 月</h3>
+            <ul>
+              <li>新增「观影」和「阅读」页面。感谢牧风大佬的「布克牧为」项目以及木木木木木的相关技术支持</li>
+              <li>友情链接页面</li>
+              <li>文章时效性提醒。感谢 木木木木木 的相关技术支持</li>
+              <li>文章版权信息和反馈提示</li>
+              <li>Valine 评论中可使用的表情内容。感谢 GamerNoTitle 大佬的「Valine-Magic」项目</li>
+              <li>为部分内容加入图标显示</li>
+              <li>修改置顶文章的图标显示</li>
+              <li>由于个人需要，修改了图标的排列顺序</li>
+              <li>将「QQ」的社交信息显示方式由原先的链接方案修改为了与 WeChat 一致的二维码（QR Code）方案</li>
+            </ul>
+          <h3>4 月</h3>
+            <ul>
+              <li>文章阅读量统计显示。感谢 Wherelse（Telegram Username：None）大佬的相关技术支持</li>
+            </ul>
+          <h3>3 月</h3>
+            <ul>
+              <li>豆瓣读书和豆瓣观影链接显示的优化。感谢牧风大佬的「布克牧为」项目和木木木木木的相关技术支持</li>
+              <li>RSS 移动至 Footer 显示，并增加相关图标显示</li>
+            </ul>
+        </div>
+
+      </div>
+
+      <footer class="py-12 text-center px-4 md:px-0" v-pre>
+  共 24 篇文章｜<a href="https://yyl125.top/copyright" target="_blank">版权信息与资源使用说明</a>｜<i class="ri-rss-line"></i> <a href="https://yyl125.top/atom.xml" target="_blank">RSS</a><br>Copyright © 2026 Benjamin. All rights reserved.
+</footer>
+
+    </div>
+
+    <!-- Back to top -->
+    <div class="fixed right-0 bottom-0 mb-4 mr-4 shadow w-8 h-8 rounded-full flex justify-center items-center z-10 cursor-pointer bg-white hover:shadow-lg transition-all dark:bg-gray-500 dark:text-gray-200" @click="backToUp" v-show="scrolled">
+      <i class="ri-arrow-up-line"></i>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+  <script src="https://yyl125.top/media/scripts/main.js"></script>
+  
+</body>
+
+</html>

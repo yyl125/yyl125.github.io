@@ -1,0 +1,626 @@
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<meta name="google-site-verification" content="mzGZdCiBsXZ5XSYVt7eh7KL8L64yuidUoeBNw_53XHk" />
+<meta name="referrer" content="same-origin">
+<title>收藏 - Benjamin&#39;s Blog</title>
+<link rel="shortcut icon" href="https://yyl125.top/favicon.ico">
+<link href="https://cdn.jsdelivr.net/npm/remixicon@latest/fonts/remixicon.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.7.2/animate.min.css">
+<link rel="stylesheet" href="https://yyl125.top/media/css/tailwind.css">
+<link rel="stylesheet" href="https://yyl125.top/styles/main.css">
+
+
+<link rel="alternate" type="application/atom+xml" title="收藏 - Benjamin&#39;s Blog - Atom Feed" href="https://yyl125.top/atom.xml">
+<!----<script src="https://yyl125.top/media/scripts/bootstrap.bundle.min.js"></script>---->
+
+
+  
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-Q6KYP4QSBH"></script>
+    <script>
+      var host = window.location.hostname;
+      if(host != "localhost")
+      {
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-Q6KYP4QSBH');
+      }
+    </script>
+  
+
+<script defer>
+(function (document) {
+  const SOURCE = 'https://cdn.jsdelivr.net';
+  const DEST = 'https://gcore.jsdelivr.net';
+  const $ = document.querySelectorAll.bind(document);
+  const checkAvailable = (callback) => {
+    let timeoutId;
+    const newNode = document.createElement('link');
+    newNode.rel = 'stylesheet';
+    newNode.text = 'text/css';
+    const onError = () => {
+      if (!timeoutId) {
+        return;
+      }
+
+      clearTimeout(timeoutId);
+      timeoutId = 0;
+      newNode.href = 'about:blank';
+      newNode.remove();
+      callback(false);
+    };
+
+    timeoutId = setTimeout(onError, 2000);
+    newNode.addEventListener('error', onError);
+    newNode.addEventListener('load', function () {
+      newNode.remove();
+      clearTimeout(timeoutId);
+      callback(true);
+    });
+
+    newNode.href =
+      SOURCE +
+      '/gh/PipecraftNet/jsdelivr-auto-fallback@main/empty.css?' +
+      Date.now();
+    document.head.insertAdjacentElement('afterbegin', newNode);
+  };
+
+  const replaceElementSrc = () => {
+    for (const element of $('link[rel="stylesheet"]')) {
+      if (element.href && element.href.includes(SOURCE)) {
+        element.href = element.href.replace(SOURCE, DEST);
+      }
+    }
+
+    for (const element of $('script')) {
+      if (element.src && element.src.includes(SOURCE)) {
+        const newNode = document.createElement('script');
+        newNode.src = element.src.replace(SOURCE, DEST);
+        element.defer = true;
+        element.src = '';
+        element.before(newNode);
+        element.remove();
+      }
+    }
+
+    for (const element of $('img')) {
+      if (element.src && element.src.includes(SOURCE)) {
+        const source = element.src;
+        // Used to cancel loading. Without this line it will remain pending status.
+        element.src = '';
+        element.src = source.replace(SOURCE, DEST);
+      }
+    }
+  };
+
+  checkAvailable(function (isAvailable) {
+    if (isAvailable) {
+      return;
+    }
+
+    console.warn(SOURCE + ' is not available.');
+
+    replaceElementSrc();
+    // Replace dynamically added elements
+    setInterval(replaceElementSrc, 500);
+  });
+})(document);
+</script>
+  <meta name="description" content="Stay hungry. Stay foolish."/>
+  <link rel="stylesheet" href="https://yyl125.top/media/css/addition.css">
+</head>
+<body>
+  <div class="antialiased flex flex-col min-h-screen" id="app">
+    <div class="nav py-3 md:py-8 fixed w-full z-10 bg-gray-50 dark:bg-gray-700 transition-all duration-300" :class="{ 'scroll': scrolled }">
+  <div class="flex justify-end px-4">
+    <div class="w-8 h-8 flex justify-center items-center rounded-full md:hidden" @click="showMenu = !showMenu">
+      <i class="ri-close-line" v-show="showMenu"></i>
+      <i class="ri-menu-3-line" v-show="!showMenu"></i>
+    </div>
+  </div>
+  <nav class="max-w-6xl w-full mx-auto text-center flex flex-col md:flex-row justify-center md:block" :class="`${ showMenu ? 'block' : 'hidden' }`">
+    
+      <a href="/" target="" class="py-2 md:py-1 px-4 mx-4 inline-flex transition font-semibold rounded dark:hover:bg-gray-600 hover:bg-gray-200">
+        首页
+      </a>
+    
+      <a href="/tags" target="" class="py-2 md:py-1 px-4 mx-4 inline-flex transition font-semibold rounded dark:hover:bg-gray-600 hover:bg-gray-200">
+        标签
+      </a>
+    
+      <a href="/archives" target="" class="py-2 md:py-1 px-4 mx-4 inline-flex transition font-semibold rounded dark:hover:bg-gray-600 hover:bg-gray-200">
+        归档
+      </a>
+    
+      <a href="/gallery" target="" class="py-2 md:py-1 px-4 mx-4 inline-flex transition font-semibold rounded dark:hover:bg-gray-600 hover:bg-gray-200">
+        相册
+      </a>
+    
+      <a href="/reflection" target="" class="py-2 md:py-1 px-4 mx-4 inline-flex transition font-semibold rounded dark:hover:bg-gray-600 hover:bg-gray-200">
+        随想
+      </a>
+    
+      <a href="/record" target="" class="py-2 md:py-1 px-4 mx-4 inline-flex transition font-semibold rounded dark:hover:bg-gray-600 hover:bg-gray-200">
+        记录
+      </a>
+    
+      <a href="/collection" target="" class="py-2 md:py-1 px-4 mx-4 inline-flex transition font-semibold rounded dark:hover:bg-gray-600 hover:bg-gray-200">
+        收藏
+      </a>
+    
+      <a href="/about" target="" class="py-2 md:py-1 px-4 mx-4 inline-flex transition font-semibold rounded dark:hover:bg-gray-600 hover:bg-gray-200">
+        关于
+      </a>
+    
+  </nav>
+</div>
+
+    <div class="max-w-4xl w-full mx-auto pt-32">
+      <div class="py-8 shadow-box bg-white dark:bg-gray-600 border-gray-300 rounded-none md:rounded-lg -mx-1 md:mx-0 md:px-0">
+        <div class="markdown mb-8 px-8">
+          <h2 id="Good">好物</h2>
+          <div class="good">
+            <div class="good-body">
+              <div class="good-img">
+                <img loading="lazy" decoding="async" src="https://oss.yyl125.cc/blog/img/collection/good/Nintendo_Switch_2.png">
+              </div>
+              <div class="good-subheading">Nintendo</div>
+              <div class="good-title">Switch 2</div>
+              <div class="good-note">全新的塞尔达、马车和咚奇刚启动器</div>
+            </div>
+            <div class="good-body">
+              <div class="good-img">
+                <img loading="lazy" decoding="async" src="https://oss.yyl125.cc/blog/img/collection/good/Mac_mini_M4.png">
+              </div>
+              <div class="good-subheading">Apple</div>
+              <div class="good-title">Mac mini M4</div>
+              <div class="good-note">低调强大</div>
+            </div>
+            <div class="good-body">
+              <div class="good-img">
+                <img loading="lazy" decoding="async" src="https://oss.yyl125.cc/blog/img/collection/good/Cuktech_No15_Power_Bank_Ultra.png">
+              </div>
+              <div class="good-subheading">Cuktech</div>
+              <div class="good-title">No.15 Power Bank Ultra</div>
+              <div class="good-note">差旅补能</div>
+            </div>
+            <div class="good-body">
+              <div class="good-img">
+                <img loading="lazy" decoding="async" src="https://oss.yyl125.cc/blog/img/collection/good/Sihoo_M59AS.png">
+              </div>
+              <div class="good-subheading">Sihoo</div>
+              <div class="good-title">M59AS</div>
+              <div class="good-note">舒适入座，便携收纳</div>
+            </div>
+            <div class="good-body">
+              <div class="good-img">
+                <img loading="lazy" decoding="async" src="https://oss.yyl125.cc/blog/img/collection/good/Steam_Deck.png">
+              </div>
+              <div class="good-subheading">Valve</div>
+              <div class="good-title">Steam Deck</div>
+              <div class="good-note">游戏掌机「里程碑」</div>
+            </div>
+            <div class="good-body">
+              <div class="good-img">
+                <img loading="lazy" decoding="async" src="https://oss.yyl125.cc/blog/img/collection/good/Samsung_T7_SSD.png">
+              </div>
+              <div class="good-subheading">Samsung</div>
+              <div class="good-title">SSD T7</div>
+              <div class="good-note">速度快，稳定，关键是好看</div>
+            </div>
+            <div class="good-body">
+              <div class="good-img">
+                <img loading="lazy" decoding="async" src="https://oss.yyl125.cc/blog/img/collection/good/Logitech_G_Pro_Wireless_Mouse.png">
+              </div>
+              <div class="good-subheading">Logitech</div>
+              <div class="good-title">G Pro Wireless</div>
+              <div class="good-note">简单易用的游戏鼠标</div>
+            </div>
+            <div class="good-body">
+              <div class="good-img">
+                <img loading="lazy" decoding="async" src="https://oss.yyl125.cc/blog/img/collection/good/iPhone_SE_gen3.png">
+              </div>
+              <div class="good-subheading">Apple</div>
+              <div class="good-title">iPhone SE gen3</div>
+              <div class="good-note">全面屏时代的「复古异类」</div>
+            </div>
+            <div class="good-body">
+              <div class="good-img">
+                <img loading="lazy" decoding="async" src="https://oss.yyl125.cc/blog/img/collection/good/MacBook_Air.png">
+              </div>
+              <div class="good-subheading">Apple</div>
+              <div class="good-title">MacBook Air M2</div>
+              <div class="good-note">足以应付轻度生产力</div>
+            </div>
+            <div class="good-body">
+              <div class="good-img">
+                <img loading="lazy" decoding="async" src="https://oss.yyl125.cc/blog/img/collection/good/MX_Master_3.png">
+              </div>
+              <div class="good-subheading">Logitech</div>
+              <div class="good-title">MX Master 3</div>
+              <div class="good-note">对双机党很友好的鼠标</div>
+            </div>
+            <div class="good-body">
+              <div class="good-img">
+                <img loading="lazy" decoding="async" src="https://oss.yyl125.cc/blog/img/collection/good/AirPods_Pro_gen2.png">
+              </div>
+              <div class="good-subheading">Apple</div>
+              <div class="good-title">AirPods Pro gen2</div>
+              <div class="good-note">沉浸降噪</div>
+            </div>
+            <div class="good-body">
+              <div class="good-img">
+                <img loading="lazy" decoding="async" src="https://oss.yyl125.cc/blog/img/collection/good/AirPods_gen3.png">
+              </div>
+              <div class="good-subheading">Apple</div>
+              <div class="good-title">AirPods gen3</div>
+              <div class="good-note">没有主动降噪，但已足够好用</div>
+            </div>
+            <div class="good-body">
+              <div class="good-img">
+                <img loading="lazy" decoding="async" src="https://oss.yyl125.cc/blog/img/collection/good/Apple_TV_4K.png">
+              </div>
+              <div class="good-subheading">Apple</div>
+              <div class="good-title">Apple TV 4K gen6</div>
+              <div class="good-note">好用，但还是得会折腾</div>
+            </div>
+            <div class="good-body">
+              <div class="good-img">
+                <img loading="lazy" decoding="async" src="https://oss.yyl125.cc/blog/img/collection/good/Mijia_Bluetooth_Thermohygrometer_2.png">
+              </div>
+              <div class="good-subheading">Mijia</div>
+              <div class="good-title">蓝牙温湿度计 2</div>
+              <div class="good-note">便宜好用</div>
+            </div>
+            <div class="good-body">
+              <div class="good-img">
+                <img loading="lazy" decoding="async" src="https://oss.yyl125.cc/blog/img/collection/good/Tomtoc_Commuter_Bag.png">
+              </div>
+              <div class="good-subheading">Tomtoc</div>
+              <div class="good-title">城市穿梭斜挎包 S</div>
+              <div class="good-note">轻巧设计，以快为进</div>
+            </div>
+          </div>
+          <h2 id="Game">游戏</h2>
+          <h3 id="PC&Console">PC & Console</h3>
+          <div class="card-columns">
+            <div class="card">
+              <img class="card-img-top" loading="lazy" src="https://oss.yyl125.cc/blog/img/collection/game/PC_and_Console/Black_Myth_Wukong.jpg">
+            </div>
+            <div class="card">
+              <img class="card-img-top" loading="lazy" src="https://oss.yyl125.cc/blog/img/collection/game/PC_and_Console/Breakout_13.jpg">
+            </div>
+            <div class="card">
+              <img class="card-img-top" loading="lazy" src="https://oss.yyl125.cc/blog/img/collection/game/PC_and_Console/Death_Stranding.jpg">
+            </div>
+            <div class="card">
+              <img class="card-img-top" loading="lazy" src="https://oss.yyl125.cc/blog/img/collection/game/PC_and_Console/Cities_Skylines_II.jpg">
+            </div>
+            <div class="card">
+              <img class="card-img-top" loading="lazy" src="https://oss.yyl125.cc/blog/img/collection/game/PC_and_Console/Dave_The_Diver.jpg">
+            </div>
+            <div class="card">
+              <img class="card-img-top" loading="lazy" src="https://oss.yyl125.cc/blog/img/collection/game/PC_and_Console/Stray.jpg">
+            </div>
+            <div class="card">
+              <img class="card-img-top" loading="lazy" src="https://oss.yyl125.cc/blog/img/collection/game/PC_and_Console/Detroit_Become_Human.jpg">
+            </div>
+            <div class="card">
+              <img class="card-img-top" loading="lazy" src="https://oss.yyl125.cc/blog/img/collection/game/PC_and_Console/Baldur's_Gate_3.jpg">
+            </div>
+            <div class="card">
+              <img class="card-img-top" loading="lazy" src="https://oss.yyl125.cc/blog/img/collection/game/PC_and_Console/Red_Dead_Redemption_2.jpg">
+            </div>
+          </div>
+          <h3 id="Switch">Nintendo Switch</h3>
+          <div class="card-columns">
+            <div class="card">
+              <img class="card-img-top" loading="lazy" src="https://oss.yyl125.cc/blog/img/collection/game/Nintendo/The_Legend_of_Zelda_Tears_of_the_Kingdom.jpg">
+            </div>
+            <div class="card">
+              <img class="card-img-top" loading="lazy" src="https://oss.yyl125.cc/blog/img/collection/game/Nintendo/Pokemon_Sword_And_Shield.jpg">
+            </div>
+            <div class="card">
+              <img class="card-img-top" loading="lazy" src="https://oss.yyl125.cc/blog/img/collection/game/Nintendo/Pokemon_Scarlet_And_Violet.jpg">
+            </div>
+            <div class="card">
+              <img class="card-img-top" loading="lazy" src="https://oss.yyl125.cc/blog/img/collection/game/Nintendo/Super_Mario_Odyssey.jpg">
+            </div>
+            <div class="card">
+              <img class="card-img-top" loading="lazy" src="https://oss.yyl125.cc/blog/img/collection/game/Nintendo/Animal_Crossing_New_Horizons.jpg">
+            </div>
+            <div class="card">
+              <img class="card-img-top" loading="lazy" src="https://oss.yyl125.cc/blog/img/collection/game/Nintendo/The_Legend_of_Zelda_Breath_of_the_Wild.jpg">
+            </div>
+          </div>
+          <h2 id="App">应用</h2>
+          <p>欲了解 App Bundle 所包含的 App 的具体细节，请访问 <a href="https://yyl125.top/app_bundle" target="_blank">关于「收藏」中的 App Bundle</a></p>
+          <div class="card-columns">
+            <div class="card">
+              <img class="card-img-top" src="https://oss.yyl125.cc/blog/img/collection/app_bundle/App_Bundle_01.png" loading="lazy">
+              <div class="card-body">
+                <h5 class="card-title">App Bundle 01</h5>
+                <br>
+                <p class="card-text">
+                  <ul>
+                    <li>· <a href="https://apps.apple.com/app/id1501532023" target="_blank">ServerCat</a></li>
+                    <Li>· <a href="https://apps.apple.com/app/id1642682818" target="_blank">熊猫吃短信 2</a></Li>
+                    <Li>· <a href="https://apps.apple.com/app/id1616467801" target="_blank">Apollo</a></Li>
+                    <Li>· <a href="https://apps.apple.com/app/id1104165041" target="_blank">Supershift</a></Li>
+                    <Li>· <a href="https://apps.apple.com/app/id1528561380" target="_blank">Bandbreite</a></Li>
+                    <Li>· <a href="https://apps.apple.com/app/id1470560916" target="_blank">Pandora</a></Li>
+                  </ul>
+                </p>
+                <br>
+                <p class="card-text"><small class="text-gray-400">Free, Offers In-App Purchases</small></p>
+              </div>
+            </div>
+            <div class="card">
+              <img class="card-img-top" src="https://oss.yyl125.cc/blog/img/collection/app_bundle/App_Bundle_02.png" loading="lazy">
+              <div class="card-body">
+                <h5 class="card-title">App Bundle 02</h5>
+                <br>
+                <p class="card-text">
+                  <ul>
+                    <li>· <a href="https://apps.apple.com/app/id6476010032" target="_blank">拦截猫</a></li>
+                    <Li>· <a href="https://apps.apple.com/app/id1534690075" target="_blank">DAMA</a></Li>
+                    <Li>· <a href="https://apps.apple.com/app/id1661733229" target="_blank">LocalSend</a></Li>
+                    <Li>· <a href="https://apps.apple.com/app/id1618892080" target="_blank">要知</a></Li>
+                    <Li>· <a href="https://apps.apple.com/app/id6449580241" target="_blank">BlackmagicCam</a></Li>
+                    <Li>· <a href="https://apps.apple.com/app/id6473148424" target="_blank">圆周旅迹</a></Li>
+                  </ul>
+                </p>
+                <br>
+                <p class="card-text"><small class="text-gray-400">Free, Offers In-App Purchases</small></p>
+              </div>
+            </div>
+            <div class="card">
+              <img class="card-img-top" src="https://oss.yyl125.cc/blog/img/collection/app_bundle/App_Bundle_03.png" loading="lazy">
+              <div class="card-body">
+                <h5 class="card-title">App Bundle 03</h5>
+                <br>
+                <p class="card-text">
+                  <ul>
+                    <li>· <a href="https://apps.apple.com/app/id1160481993" target="_blank">Apple Wallet</a></li>
+                    <Li>· <a href="https://apps.apple.com/app/id1443707795" target="_blank">ecbo cloak</a></Li>
+                    <Li>· <a href="https://apps.apple.com/app/id585027354" target="_blank">Google 地图</a></Li>
+                    <Li>· <a href="https://apps.apple.com/app/id350732480" target="_blank">NHK WORLD</a></Li>
+                    <Li>· <a href="https://apps.apple.com/app/id763377066" target="_blank">Tabelog</a><sup>*</sup></Li>
+                    <Li>· <a href="https://apps.apple.com/app/id1153448703" target="_blank">Shinkansen smartEX</a></Li>
+                  </ul>
+                </p>
+                <br>
+                <p class="card-text"><small class="text-gray-400">* Japan Only</small></p>
+              </div>
+            </div>
+            <div class="card">
+              <img class="card-img-top" src="https://oss.yyl125.cc/blog/img/collection/app_bundle/App_Bundle_04.png" loading="lazy">
+              <div class="card-body">
+                <h5 class="card-title">App Bundle 04</h5>
+                <br>
+                <p class="card-text">
+                  <ul>
+                    <li>· <a href="https://apps.apple.com/app/id469463298" target="_blank">Citymapper</a></li>
+                    <Li>· <a href="https://apps.apple.com/app/id1252258619" target="_blank">Water For Free</a></Li>
+                    <Li>· <a href="https://apps.apple.com/app/id361319719" target="_blank">我的天文台</a></Li>
+                    <Li>· <a href="https://apps.apple.com/app/id1576799448" target="_blank">ToiletBuddy</a></Li>
+                    <Li>· <a href="https://apps.apple.com/app/id455201798" target="_blank">Price</a></Li>
+                    <Li>· <a href="https://apps.apple.com/app/id1505492952" target="_blank">旅客八达通</a></Li>
+                  </ul>
+                </p>
+                <br>
+                <p class="card-text"><small class="text-gray-400">Free, Offers In-App Purchases</small></p>
+              </div>
+            </div>
+            <div class="card">
+              <img class="card-img-top" src="https://oss.yyl125.cc/blog/img/collection/app_bundle/App_Bundle_05.png" loading="lazy">
+              <div class="card-body">
+                <h5 class="card-title">App Bundle 05</h5>
+                <br>
+                <p class="card-text">
+                  <ul>
+                    <li>· <a href="https://apps.apple.com/cn/app/id6449272501" target="_blank">Klook 客路旅行</a></li>
+                    <Li>· <a href="https://apps.apple.com/cn/app/id401626263" target="_blank">Airbnb 爱彼迎</a></Li>
+                    <Li>· <a href="https://apps.apple.com/cn/app/id368677368" target="_blank">Uber 优步</a></Li>
+                    <Li>· <a href="https://apps.apple.com/app/id1514844621" target="_blank">查找</a></Li>
+                    <Li>· <a href="https://apps.apple.com/app/id1514844618" target="_blank">翻译</a></Li>
+                    <Li>· <a href="https://apps.apple.com/cn/app/id851033695" target="_blank">极简汇率</a></Li>
+                  </ul>
+                </p>
+                <br>
+                <p class="card-text"><small class="text-gray-400">Free, Offers In-App Purchases</small></p>
+              </div>
+            </div>
+          </div>
+          <h2 id="Music">音乐</h2>
+          <div class="card-columns">
+            <div class="card">
+              <img class="card-img-top" src="https://oss.yyl125.cc/blog/img/collection/playlist/Awakening_Pop_Cover.jpg" loading="lazy">
+              <div class="card-body">
+                <h5 class="card-title">Awakening Pop</h5>
+                <p class="card-text">清晨唤醒灵魂的音乐，轻柔而温暖，带来宁静与力量，让你在新的一天开始时感到充满活力</p>
+                <br>
+                <a href="https://music.apple.com/playlist/pl.u-V9D7vKEF38jBLM3" target="_blank"><img loading="lazy" src="https://oss.yyl125.cc/blog/img/about/Apple_Music_Badge/US_UK/Listen_on/US-UK_Apple_Music_Listen_on_Badge_RGB.svg"></a>
+                <br>
+                <p class="card-text"><small class="text-gray-400">Playlist｜Required to subscribe</small></p>
+              </div>
+            </div>
+            <div class="card">
+              <img class="card-img-top" src="https://oss.yyl125.cc/blog/img/collection/playlist/Pop_Cover.jpg" loading="lazy">
+              <div class="card-body">
+                <h5 class="card-title">Pop</h5>
+                <p class="card-text">一系列流行音乐的精选，涵盖了多种音乐风格和流派，让你享受到时下最热门的流行曲目</p>
+                <br>
+                <a href="https://music.apple.com/playlist/pl.u-DdAN85oC07Nad10" target="_blank"><img loading="lazy" src="https://oss.yyl125.cc/blog/img/about/Apple_Music_Badge/US_UK/Listen_on/US-UK_Apple_Music_Listen_on_Badge_RGB.svg"></a>
+                <br>
+                <p class="card-text"><small class="text-gray-400">Playlist｜Required to subscribe</small></p>
+              </div>
+            </div>
+            <div class="card">
+              <img class="card-img-top" src="https://oss.yyl125.cc/blog/img/collection/playlist/Japan_Pop_Cover.jpg" loading="lazy">
+              <div class="card-body">
+                <h5 class="card-title">J-Pop</h5>
+                <p class="card-text">日本流行音乐的经典之作，让你沉浸在充满活力和独特韵味的日本流行曲目中，感受东方音乐的魅力</p>
+                <br>
+                <a href="https://music.apple.com/playlist/pl.u-aZb0NJ5t1GRPqx1" target="_blank"><img loading="lazy" src="https://oss.yyl125.cc/blog/img/about/Apple_Music_Badge/US_UK/Listen_on/US-UK_Apple_Music_Listen_on_Badge_RGB.svg"></a>
+                <br>
+                <p class="card-text"><small class="text-gray-400">Playlist｜Required to subscribe</small></p>
+              </div>
+            </div>
+            <div class="card">
+              <img class="card-img-top" src="https://oss.yyl125.cc/blog/img/collection/playlist/Comics_Cover.jpg" loading="lazy">
+              <div class="card-body">
+                <h5 class="card-title">Comics</h5>
+                <p class="card-text">充满童趣和活力的歌单，汇集了各种动画和卡通片中的经典主题曲和插曲，带你重温童年的美好回忆</p>
+                <br>
+                <a href="https://music.apple.com/playlist/pl.u-mJy8gPRuNkYzRVN" target="_blank"><img loading="lazy" src="https://oss.yyl125.cc/blog/img/about/Apple_Music_Badge/US_UK/Listen_on/US-UK_Apple_Music_Listen_on_Badge_RGB.svg"></a>
+                <br>
+                <p class="card-text"><small class="text-gray-400">Playlist｜Required to subscribe</small></p>
+              </div>
+            </div>
+            <div class="card">
+              <img class="card-img-top" src="https://oss.yyl125.cc/blog/img/collection/playlist/Absolutus_Cover.jpg" loading="lazy">
+              <div class="card-body">
+                <h5 class="card-title">Absolutus</h5>
+                <p class="card-text">沉浸式的音乐体验，将你带入超然的境界，让音乐与心灵合为一体，达到绝对的平静与放松</p>
+                <br>
+                <a href="https://music.apple.com/playlist/pl.u-mJy8gE0INkYzRVN" target="_blank"><img loading="lazy" src="https://oss.yyl125.cc/blog/img/about/Apple_Music_Badge/US_UK/Listen_on/US-UK_Apple_Music_Listen_on_Badge_RGB.svg"></a>
+                <br>
+                <p class="card-text"><small class="text-gray-400">Playlist｜Required to subscribe</small></p>
+              </div>
+            </div>
+            <div class="card">
+              <img class="card-img-top" src="https://oss.yyl125.cc/blog/img/collection/playlist/Cantopop_Cover.jpg" loading="lazy">
+              <div class="card-body">
+                <h5 class="card-title">Cantopop</h5>
+                <p class="card-text">一系列粤语流行歌曲，让你沉浸在悠扬的旋律和动人的歌词中，感受香港音乐的魅力</p>
+                <br>
+                <a href="https://music.apple.com/playlist/pl.u-9N9L2yyT1ZyxBm1" target="_blank"><img loading="lazy" src="https://oss.yyl125.cc/blog/img/about/Apple_Music_Badge/US_UK/Listen_on/US-UK_Apple_Music_Listen_on_Badge_RGB.svg"></a>
+                <br>
+                <p class="card-text"><small class="text-gray-400">Playlist｜Required to subscribe</small></p>
+              </div>
+            </div>
+            <div class="card">
+              <img class="card-img-top" src="https://oss.yyl125.cc/blog/img/collection/playlist/Alternative_Rock_Cover.jpg" loading="lazy">
+              <div class="card-body">
+                <h5 class="card-title">Alternative Rock</h5>
+                <p class="card-text">充满个性与冲击力的一组另类摇滚音乐，展现不拘一格的音乐风格和独特的情感表达</p>
+                <br>
+                <a href="https://music.apple.com/playlist/pl.u-V9D7vdac38jBLM3" target="_blank"><img loading="lazy" src="https://oss.yyl125.cc/blog/img/about/Apple_Music_Badge/US_UK/Listen_on/US-UK_Apple_Music_Listen_on_Badge_RGB.svg"></a>
+                <br>
+                <p class="card-text"><small class="text-gray-400">Playlist｜Required to subscribe</small></p>
+              </div>
+            </div>
+            <div class="card">
+              <img class="card-img-top" src="https://oss.yyl125.cc/blog/img/collection/playlist/Mandopop_Cover.jpg" loading="lazy">
+              <div class="card-body">
+                <h5 class="card-title">Mandopop</h5>
+                <p class="card-text">华语流行音乐的经典之作，让你沉浸在动听的旋律和深情的歌词中，感受亚洲音乐的独特魅力</p>
+                <br>
+                <a href="https://music.apple.com/playlist/pl.u-V9D7v6GH38jBLM3" target="_blank"><img loading="lazy" src="https://oss.yyl125.cc/blog/img/about/Apple_Music_Badge/US_UK/Listen_on/US-UK_Apple_Music_Listen_on_Badge_RGB.svg"></a>
+                <br>
+                <p class="card-text"><small class="text-gray-400">Playlist｜Required to subscribe</small></p>
+              </div>
+            </div>
+            <div class="card">
+              <img class="card-img-top" src="https://oss.yyl125.cc/blog/img/collection/playlist/Soundtrack_Cover.jpg" loading="lazy">
+              <div class="card-body">
+                <h5 class="card-title">Soundtrack</h5>
+                <p class="card-text">集结了电影、电视剧、游戏等各种作品原声音乐的歌单，带你穿越不同的故事世界，感受音乐带来的情感共鸣</p>
+                <br>
+                <a href="https://music.apple.com/playlist/pl.u-mJy8gd8FNkYzRVN" target="_blank"><img loading="lazy" src="https://oss.yyl125.cc/blog/img/about/Apple_Music_Badge/US_UK/Listen_on/US-UK_Apple_Music_Listen_on_Badge_RGB.svg"></a>
+                <br>
+                <p class="card-text"><small class="text-gray-400">Playlist｜Required to subscribe</small></p>
+              </div>
+            </div>
+          </div>
+          <h2 id="Podcast">播客</h2>
+          <div class="itembox">
+            <div class="item-box itemblock">
+              <img class="item-avatar" loading="lazy" src="https://bts-image.xyzcdn.net/aHR0cHM6Ly9pLnR5cGxvZy5jb20vc3NwYWkvODM4NTQxMTkxNl83MjA0OTguanBnP3gtb3NzLXByb2Nlc3M9c3R5bGUvc2w=.jpg@small">
+              <div class="itemlink-info">
+                <a href="https://www.xiaoyuzhoufm.com/podcast/5e280fb1418a84a0461fc567" target="_blank">少数派播客</a>
+                <br>
+                高效工作，品质生活
+              </div>
+            </div>
+            <div class="item-box itemblock">
+              <img class="item-avatar" loading="lazy" src="https://bts-image.xyzcdn.net/aHR0cHM6Ly9tZWRpYS53YXZwdWIuY29tLzhiLzUwLzdlLzIwMjMwNTI5MjIyNTE1LUVrR2N4Q2F3a3FNbVFiS3EuanBlZw==.jpeg@small">
+              <div class="itemlink-info">
+                <a href="https://www.xiaoyuzhoufm.com/podcast/5e280fac418a84a0461fb129" target="_blank">无聊斋</a>
+                <br>
+                两个单口喜剧演员的清谈节目
+              </div>
+            </div>
+            <div class="item-box itemblock">
+              <img class="item-avatar" loading="lazy" src="https://bts-image.xyzcdn.net/aHR0cDovL21lZGlhLmZtaXQuY24vZmVlZC9nYWRpb25ld2xvZ29zLnBuZw==.png@small">
+              <div class="itemlink-info">
+                <a href="https://www.xiaoyuzhoufm.com/podcast/5e280fb0418a84a0461fc251" target="_blank">机核游戏频道</a>
+                <br>
+                机核网出品的 GADIO 中国首档游戏专门播客
+              </div>
+            </div>
+            <div class="item-box itemblock">
+              <img class="item-avatar" loading="lazy" src="https://bts-image.xyzcdn.net/aHR0cHM6Ly9zLmFueXdheS5yZWQvaW1hZ2VzL2NvdmVyLW5ldy5wbmc=.png@small">
+              <div class="itemlink-info">
+                <a href="https://www.xiaoyuzhoufm.com/podcast/5e280faf418a84a0461fba0e" target="_blank">Anyway.FM 设计杂谈</a>
+                <br>
+                由两位 UI 设计师主播的 podcast
+              </div>
+            </div>
+            <div class="item-box itemblock">
+              <img class="item-avatar" loading="lazy" src="https://bts-image.xyzcdn.net/aHR0cHM6Ly9jZG4uZGFvcHViLmNvbS9pbWFnZXMvTG9nb19EQU8ucG5n.png@small">
+              <div class="itemlink-info">
+                <a href="https://www.xiaoyuzhoufm.com/podcast/5e285480418a84a046275bf2" target="_blank">津津乐道</a>
+                <br>
+                在一派纷繁芜杂里，我们为愉悦双耳而生
+              </div>
+            </div>
+            <div class="item-box itemblock">
+              <img class="item-avatar" loading="lazy" src="https://image.xyzcdn.net/FsdM67oG8kA_CGCZo2K6Sa9HAEQr@small">
+              <div class="itemlink-info">
+                <a href="https://www.xiaoyuzhoufm.com/podcast/5e280fad418a84a0461fb38b" target="_blank">故事 FM</a>
+                <br>
+                在这里，我们用你的声音，讲述你的故事
+              </div>
+            </div>
+              <div class="item-box itemblock">
+              <img class="item-avatar" loading="lazy" src="https://image.xyzcdn.net/Fjn4EEd3_QJXu3Qf8MdNHXdRzbF4.jpg@small">
+              <div class="itemlink-info">
+                <a href="https://www.xiaoyuzhoufm.com/podcast/5e280faa418a84a0461f9ad8" target="_blank">日谈公园</a>
+                <br>
+                听见科技与人文的声音
+              </div>
+            </div>
+            <div class="item-box itemblock">
+              <img class="item-avatar" loading="lazy" src="https://image.xyzcdn.net/FqdDLo5y_DGgCmQ4mAHVVgAeHF-i@small">
+              <div class="itemlink-info">
+                <a href="https://www.xiaoyuzhoufm.com/podcast/5e280fa7418a84a0461f912b" target="_blank">谐星聊天会</a>
+                <br>
+                用幽默开解生活中的沉杂琐事
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <footer class="py-12 text-center px-4 md:px-0" v-pre>
+  共 24 篇文章｜<a href="https://yyl125.top/copyright" target="_blank">版权信息与资源使用说明</a>｜<i class="ri-rss-line"></i> <a href="https://yyl125.top/atom.xml" target="_blank">RSS</a><br>Copyright © 2026 Benjamin. All rights reserved.
+</footer>
+
+    
+    <!-- Back to top -->
+    <div class="fixed right-0 bottom-0 mb-4 mr-4 shadow w-8 h-8 rounded-full flex justify-center items-center z-10 cursor-pointer bg-white hover:shadow-lg transition-all dark:bg-gray-500 dark:text-gray-200" @click="backToUp" v-show="scrolled">
+      <i class="ri-arrow-up-line"></i>
+    </div>
+  </div>
+    
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+  <script src="https://yyl125.top/media/scripts/main.js"></script>
+  
+</body>
+</html>

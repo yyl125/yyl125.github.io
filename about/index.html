@@ -1,0 +1,543 @@
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<meta name="google-site-verification" content="mzGZdCiBsXZ5XSYVt7eh7KL8L64yuidUoeBNw_53XHk" />
+<meta name="referrer" content="same-origin">
+<title>关于 - Benjamin&#39;s Blog</title>
+<link rel="shortcut icon" href="https://yyl125.top/favicon.ico">
+<link href="https://cdn.jsdelivr.net/npm/remixicon@latest/fonts/remixicon.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.7.2/animate.min.css">
+<link rel="stylesheet" href="https://yyl125.top/media/css/tailwind.css">
+<link rel="stylesheet" href="https://yyl125.top/styles/main.css">
+
+
+<link rel="alternate" type="application/atom+xml" title="关于 - Benjamin&#39;s Blog - Atom Feed" href="https://yyl125.top/atom.xml">
+<!----<script src="https://yyl125.top/media/scripts/bootstrap.bundle.min.js"></script>---->
+
+
+  
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-Q6KYP4QSBH"></script>
+    <script>
+      var host = window.location.hostname;
+      if(host != "localhost")
+      {
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-Q6KYP4QSBH');
+      }
+    </script>
+  
+
+<script defer>
+(function (document) {
+  const SOURCE = 'https://cdn.jsdelivr.net';
+  const DEST = 'https://gcore.jsdelivr.net';
+  const $ = document.querySelectorAll.bind(document);
+  const checkAvailable = (callback) => {
+    let timeoutId;
+    const newNode = document.createElement('link');
+    newNode.rel = 'stylesheet';
+    newNode.text = 'text/css';
+    const onError = () => {
+      if (!timeoutId) {
+        return;
+      }
+
+      clearTimeout(timeoutId);
+      timeoutId = 0;
+      newNode.href = 'about:blank';
+      newNode.remove();
+      callback(false);
+    };
+
+    timeoutId = setTimeout(onError, 2000);
+    newNode.addEventListener('error', onError);
+    newNode.addEventListener('load', function () {
+      newNode.remove();
+      clearTimeout(timeoutId);
+      callback(true);
+    });
+
+    newNode.href =
+      SOURCE +
+      '/gh/PipecraftNet/jsdelivr-auto-fallback@main/empty.css?' +
+      Date.now();
+    document.head.insertAdjacentElement('afterbegin', newNode);
+  };
+
+  const replaceElementSrc = () => {
+    for (const element of $('link[rel="stylesheet"]')) {
+      if (element.href && element.href.includes(SOURCE)) {
+        element.href = element.href.replace(SOURCE, DEST);
+      }
+    }
+
+    for (const element of $('script')) {
+      if (element.src && element.src.includes(SOURCE)) {
+        const newNode = document.createElement('script');
+        newNode.src = element.src.replace(SOURCE, DEST);
+        element.defer = true;
+        element.src = '';
+        element.before(newNode);
+        element.remove();
+      }
+    }
+
+    for (const element of $('img')) {
+      if (element.src && element.src.includes(SOURCE)) {
+        const source = element.src;
+        // Used to cancel loading. Without this line it will remain pending status.
+        element.src = '';
+        element.src = source.replace(SOURCE, DEST);
+      }
+    }
+  };
+
+  checkAvailable(function (isAvailable) {
+    if (isAvailable) {
+      return;
+    }
+
+    console.warn(SOURCE + ' is not available.');
+
+    replaceElementSrc();
+    // Replace dynamically added elements
+    setInterval(replaceElementSrc, 500);
+  });
+})(document);
+</script>
+  <meta name="description" content="Stay hungry. Stay foolish." />
+  <link rel="stylesheet" href="https://yyl125.top/media/css/addition.css">
+</head>
+<body>
+  <div class="antialiased flex flex-col min-h-screen" id="app">
+    <div class="nav py-3 md:py-8 fixed w-full z-10 bg-gray-50 dark:bg-gray-700 transition-all duration-300" :class="{ 'scroll': scrolled }">
+  <div class="flex justify-end px-4">
+    <div class="w-8 h-8 flex justify-center items-center rounded-full md:hidden" @click="showMenu = !showMenu">
+      <i class="ri-close-line" v-show="showMenu"></i>
+      <i class="ri-menu-3-line" v-show="!showMenu"></i>
+    </div>
+  </div>
+  <nav class="max-w-6xl w-full mx-auto text-center flex flex-col md:flex-row justify-center md:block" :class="`${ showMenu ? 'block' : 'hidden' }`">
+    
+      <a href="/" target="" class="py-2 md:py-1 px-4 mx-4 inline-flex transition font-semibold rounded dark:hover:bg-gray-600 hover:bg-gray-200">
+        首页
+      </a>
+    
+      <a href="/tags" target="" class="py-2 md:py-1 px-4 mx-4 inline-flex transition font-semibold rounded dark:hover:bg-gray-600 hover:bg-gray-200">
+        标签
+      </a>
+    
+      <a href="/archives" target="" class="py-2 md:py-1 px-4 mx-4 inline-flex transition font-semibold rounded dark:hover:bg-gray-600 hover:bg-gray-200">
+        归档
+      </a>
+    
+      <a href="/gallery" target="" class="py-2 md:py-1 px-4 mx-4 inline-flex transition font-semibold rounded dark:hover:bg-gray-600 hover:bg-gray-200">
+        相册
+      </a>
+    
+      <a href="/reflection" target="" class="py-2 md:py-1 px-4 mx-4 inline-flex transition font-semibold rounded dark:hover:bg-gray-600 hover:bg-gray-200">
+        随想
+      </a>
+    
+      <a href="/record" target="" class="py-2 md:py-1 px-4 mx-4 inline-flex transition font-semibold rounded dark:hover:bg-gray-600 hover:bg-gray-200">
+        记录
+      </a>
+    
+      <a href="/collection" target="" class="py-2 md:py-1 px-4 mx-4 inline-flex transition font-semibold rounded dark:hover:bg-gray-600 hover:bg-gray-200">
+        收藏
+      </a>
+    
+      <a href="/about" target="" class="py-2 md:py-1 px-4 mx-4 inline-flex transition font-semibold rounded dark:hover:bg-gray-600 hover:bg-gray-200">
+        关于
+      </a>
+    
+  </nav>
+</div>
+
+    <div class="max-w-4xl w-full mx-auto pt-32">
+      <div class="py-8 shadow-box bg-white dark:bg-gray-600 border-gray-300 rounded-none md:rounded-lg -mx-1 md:mx-0 md:px-0">
+        <div class="markdown mb-8 px-8">
+          <p>男生，第一批 00 后。现居安徽合肥，一名穿梭在地底隧道的地铁司机</p>
+          <p>目前用闲暇时间创作和维护本网站。主要内容可能涉及个人生活、计算机和网络、轨道交通、本人的奇怪想法以及某些本人关注的问题。建站初衷是能够有一个平台，存放自己创作的作品。希望这个网站能够一直在本人维护下走下去，记录本人的所思所想所感</p>
+          <p>网站使用经过个人修改的 <a href="https://mianbaoduo.com/o/bread/YpWYlJ0=" target="_blank">Rocky</a> 主题，由 <a href="https://gridea.dev/" target="_blank">Gridea</a> 配合 GitHub Pages 搭建</p>
+          <h2 id="兴趣爱好">兴趣爱好</h2>
+          <h3 id="喜欢">喜欢</h3>
+          <ul>
+            <li>自己一个人呆着。听歌、看剧、阅读……怎样都行</li>
+            <li>比较随性、有设计感的东西。Apple、SONY、MUJI、IKEA……etc.</li>
+            <li>管它什么中、美、欧、日、韩……只要是好看的剧集或电影都行</li>
+            <li>据说爱抬杠🤔</li>
+          </ul>
+          <h3 id="不喜欢">不喜欢</h3>
+          <ul>
+            <li>「仪式感」，除非真的有必要</li>
+            <li>与陌生人交流，除非真的有必要</li>
+            <li>抖音/快手等「奶头乐（tittytainment）」和微信</li>
+            <li>其它不喜欢，但是现在突然想不起来的东西……（太多了）</li>
+          </ul>
+          <h2 id="设备">设备</h2>
+          <h3 id="EDC">EDC (Every Day Carry)</h3>
+          <div class="good">
+            <div class="good-body">
+              <div class="good-img">
+                <img loading="lazy" decoding="async" src="https://oss.yyl125.cc/blog/img/collection/good/iPhone_15_Pro.png">
+              </div>
+              <div class="good-subheading">Apple</div>
+              <div class="good-title">iPhone 15 Pro</div>
+              <div class="good-note">手感和性能的平衡之作</div>
+            </div>
+            <div class="good-body">
+              <div class="good-img">
+                <img loading="lazy" decoding="async" src="https://oss.yyl125.cc/blog/img/collection/good/Xiaomi_15.png">
+              </div>
+              <div class="good-subheading">Xiaomi</div>
+              <div class="good-title">Xiaomi 15</div>
+              <div class="good-note">手感一流</div>
+            </div>
+            <div class="good-body">
+              <div class="good-img">
+                <img loading="lazy" decoding="async" src="https://oss.yyl125.cc/blog/img/collection/good/Apple_Watch_Series_9.png">
+              </div>
+              <div class="good-subheading">Apple</div>
+              <div class="good-title">Apple Watch Series 9</div>
+              <div class="good-note">GPS + Cellular，常规更新</div>
+            </div>
+            <div class="good-body">
+              <div class="good-img">
+                <img loading="lazy" decoding="async" src="https://oss.yyl125.cc/blog/img/collection/good/AirPods_Pro_gen2.png">
+              </div>
+              <div class="good-subheading">Apple</div>
+              <div class="good-title">AirPods Pro gen2</div>
+              <div class="good-note">沉浸降噪</div>
+            </div>
+            <div class="good-body">
+              <div class="good-img">
+                <img loading="lazy" decoding="async" src="https://oss.yyl125.cc/blog/img/collection/good/ZMI_Power_Bank_PD30W.png">
+              </div>
+              <div class="good-subheading">ZMI</div>
+              <div class="good-title">Power Bank mini</div>
+              <div class="good-note">提供 A/C 双口最高 30W PD 有线快充</div>
+            </div>
+            <div class="good-body">
+              <div class="good-img">
+                <img loading="lazy" decoding="async" src="https://oss.yyl125.cc/blog/img/collection/good/Cuktech_No15_Power_Bank_Ultra.png">
+              </div>
+              <div class="good-subheading">Cuktech</div>
+              <div class="good-title">No.15 Power Bank Ultra</div>
+              <div class="good-note">差旅补能</div>
+            </div>
+            <div class="good-body">
+              <div class="good-img">
+                <img loading="lazy" decoding="async" src="https://oss.yyl125.cc/blog/img/collection/good/Daily_Photography_Commuter_Bag.png">
+              </div>
+              <div class="good-subheading">StormCrew</div>
+              <div class="good-title">Daily Photography Commuter Bag</div>
+              <div class="good-note">通勤扫街，一包搞定</div>
+            </div>
+            <div class="good-body">
+              <div class="good-img">
+                <img loading="lazy" decoding="async" src="https://oss.yyl125.cc/blog/img/collection/good/AirTag_Double_Select.png">
+              </div>
+              <div class="good-subheading">Apple</div>
+              <div class="good-title">AirTag</div>
+              <div class="good-note">找钥匙、怕丢包，用这个就行</div>
+            </div>
+          </div>
+          <h3 id="其它设备">其它设备</h3>
+          <ul>
+            <li>MacBook Air (M2, 13-inch, 2022) </li>
+            <li>iPhone SE gen3</li>
+            <li>iPad mini 6 Cellular</li>
+            <li>Apple TV 4K gen2</li>
+            <li>HomePod mini</li>
+            <li>Kindle Paperwhite gen10</li>
+            <li>Xbox Series S</li>
+            <li>Sony PlayStation 5</li>
+            <li>Nintendo Switch 2</li>
+            <li>Steam Deck</li>
+          </ul>
+          <h2 id="个人项目">个人项目</h2>
+          <ul>
+            <li><a href="https://yyl125.top/navigation/" target="_blank">Benjamin's Navigation</a> ，收集一些好看的、好玩的</li>
+          </ul>
+          <h2 id="联系方式">联系方式</h2>
+          <ul>
+            <li>Support Email: <a href="mailto:support@yyl125.cc" target="_blank">support@yyl125.cc</a></li>
+            <li>Telegram: <a href="https://t.me/BenjaminYing" target="_blank">@BenjaminYing</a></li>
+            <li>Telegram Channel: <a href="https://t.me/BenjaminTalks" target="_blank">Benjamin 的碎碎念</a></li>
+            <li>WeChat Official Accounts Platform: Benjamin 的碎碎念（@BenjaminTalks）</li>
+          </ul>
+          <p>如果你恰好喜好游戏，也可以通过搜索好友代码、昵称或 SW 编号的方式在以下平台找到我：</p><br>
+          <div class="itembox">
+            <div class="item-box itemblock">
+              <img class="item-avatar" src="https://is3-ssl.mzstatic.com/image/thumb/Purple113/v4/b8/65/91/b86591d3-42d9-eb9f-b2e1-d237da57974e/SteamMobileAppIcon-0-0-1x_U007emarketing-0-0-0-7-85-220.png/230x0w.png">
+              <div class="itemlink-info">
+                <span>Steam</span>
+                <br>
+                <span>402520030</span>
+              </div>
+            </div>
+            <div class="item-box itemblock">
+              <img class="item-avatar" src="https://is2-ssl.mzstatic.com/image/thumb/Purple126/v4/df/7f/4a/df7f4ad5-bead-87c6-23ea-5c1d168f7231/AppIcon-0-0-1x_U007emarketing-0-0-0-7-0-0-sRGB-0-0-0-GLES2_U002c0-512MB-85-220-0-0.png/230x0w.png">
+              <div class="itemlink-info">
+                <span>Xbox</span>
+                <br>
+                <span>@BenjaminYing</span>
+              </div>
+            </div>
+            <div class="item-box itemblock">
+              <img class="item-avatar" src="https://oss.yyl125.cc/blog/img/about/Nintendo_Switch_Logo_460x0w.png">
+              <div class="itemlink-info">
+                <span>Nintendo Switch</span>
+                <br>
+                <span>SW-8332-6693-8800</span>
+              </div>
+            </div>
+          </div>
+          <h2 id="友情链接">友情链接</h2>
+          <p>我的专业与计算机并无什么关系，纯粹是爱好。因此在相关技术上总是会碰到一些问题。在此衷心感谢在此道路上给予我帮助的每一个人。希望这个博客能够一直在我维护下走下去，实现更多的功能，记录我的所思所想……</p>
+          <p>如希望添加友情链接（单双向均可），请填写此 <a href="https://forms.office.com/Pages/ResponsePage.aspx?id=DQSIkWdsW0yxEjajBLZtrQAAAAAAAAAAAAZAAMcubclUNVlCTDlaWkZCVk1HNTc3VzlXN09JQVYzNS4u" target="_blank">表单</a> 中的相关信息。收到后会及时处理</p><br>
+          <div class="itembox">
+            <div class="item-box itemblock">
+              <img class="item-avatar" src="https://avatars1.githubusercontent.com/u/17328747">
+              <div class="itemlink-info">
+                <a href="https://fehey.com/" target="_blank">海岛心 hey</a>
+                <br>
+                关于产品、设计、前端
+              </div>
+            </div>
+            <div class="item-box itemblock">
+              <img class="item-avatar" src="https://immmmm.com/favicon.ico">
+              <div class="itemlink-info">
+                <a href="https://immmmm.com/" target="_blank">木木木木木</a>
+                <br>
+                不问明天，悠然浪费
+              </div>
+            </div>
+            <div class="item-box itemblock">
+              <img class="item-avatar" src="https://huhexian.s3.bitiful.net/pic/2024/03/488713009c150d641a1977ae3fb45cc7.webp">
+              <div class="itemlink-info">
+                <a href="https://yinji.org/" target="_blank">Bruce Hu 小胡同学</a>
+                <br>
+                Blogger/摄影爱好者
+              </div>
+            </div>
+            <div class="item-box itemblock">
+              <img class="item-avatar" src="https://vlieo.com/images/avatar.png">
+              <div class="itemlink-info">
+                <a href="https://vlieo.com/" target="_blank">Wherelse</a>
+                <br>
+                凡事总需研究，才会明白
+              </div>
+            </div>
+            <div class="item-box itemblock">
+              <img class="item-avatar" src="https://spencerwoo.com/assets/logo.png">
+              <div class="itemlink-info">
+                <a href="https://spencerwoo.com/blog" target="_blank">Spencer</a>
+                <br>
+                风雨正好，该去写点诗句
+              </div>
+            </div>
+            <div class="item-box itemblock">
+              <img class="item-avatar" src="https://happyxiao.com/wp-content/uploads/2020/10/cropped-IMG_5208-180x180.jpg">
+              <div class="itemlink-info">
+                <a href="https://happyxiao.com/" target="_blank">happy xiao</a>
+                <br>
+                It's time to build.
+              </div>
+            </div>
+          </div>
+          <h2 id="更多内容">更多内容</h2>
+          <h3 id="足迹地图">足迹地图</h3>
+          <div id="china_footmap" style="width:95%; height:500px; margin:auto; top:30px"></div>
+          <div id="world_footmap" style="width:95%; height:500px; margin:auto; top:30px"></div>
+          <h3 id="站点相关">站点相关</h3>
+          <ul>
+            <li><a href="https://yyl125.top/copyright/" target="_blank">版权信息与资源使用说明</a></li>
+            <li><a href="https://yyl125.top/log/" target="_blank">更新日志</a></li>
+            <li><a href="https://yyl125.top/comment_policy/" target="_blank">评论准则</a></li>
+            <li><a href="https://yyl125.top/feedback_policy/" target="_blank">反馈须知</a></li>
+          </ul>
+        </div>
+        
+      </div>
+
+      <footer class="py-12 text-center px-4 md:px-0" v-pre>
+  共 24 篇文章｜<a href="https://yyl125.top/copyright" target="_blank">版权信息与资源使用说明</a>｜<i class="ri-rss-line"></i> <a href="https://yyl125.top/atom.xml" target="_blank">RSS</a><br>Copyright © 2026 Benjamin. All rights reserved.
+</footer>
+
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+  <script src="https://yyl125.top/media/scripts/main.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/echarts@5.5.1/dist/echarts.min.js"></script>
+  <script type="text/javascript">
+  (function(){
+    var chartDomChina = document.getElementById("china_footmap");
+    var chinaChart = echarts.init(chartDomChina);
+    var chinaOption;
+
+    chinaChart.showLoading();
+
+    // 先加载中国地图 GeoJSON
+    fetch("https://raw.githubusercontent.com/wherelse/GeoMapData_ChinaCityProcess/master/china_city.json")  // 请替换为你实际的中国地图 GeoJSON 路径
+      .then(res => res.json())
+      .then(function(ChinaCityJson) {
+        // 注册地图
+        echarts.registerMap("China", ChinaCityJson, {});
+
+        // 再加载城市足迹数据
+        return fetch("https://yyl125.top/media/json/China_Footmap_Location.json")  // 请替换成你实际城市数据路径
+      })
+      .then(res => res.json())
+      .then(function(cityData) {
+        chinaChart.hideLoading();
+
+        var darkMode = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+        var textColor = darkMode ? '#EAEAEA' : '#000000';
+
+        chinaOption = {
+          title: {
+            text: "国内足迹",
+            subtext: "地图数据来自阿里云 Atlas",
+            sublink: "http://datav.aliyun.com/tools/atlas/",
+            left: "left",
+            textStyle: {
+              color: textColor,
+            },
+          },
+          visualMap: [{
+            min: 0,
+            max: 1,
+            show: false,
+            inRange: {
+              color: ["white", "#00AAFF"],
+            },
+          }],
+          series: [{
+            name: "China Footprint",
+            type: "map",
+            map: "China",
+            roam: true,
+            emphasis: {
+              label: { show: true }
+            },
+            data: cityData
+          }]
+        };
+
+        chinaChart.setOption(chinaOption);
+
+        // 监听暗黑模式变化，实时更新颜色
+        window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', function(e){
+          var newColor = e.matches ? '#EAEAEA' : '#000000';
+          chinaOption.title.textStyle.color = newColor;
+          chinaChart.setOption(chinaOption);
+        });
+      })
+      .catch(function(error){
+        console.error("中国地图或城市数据加载失败:", error);
+        chinaChart.hideLoading();
+      });
+  })();
+  </script>
+  <script type="text/javascript">
+  (function () {
+    var chartDomWorld = document.getElementById("world_footmap");
+    var worldChart = echarts.init(chartDomWorld);
+    var worldOption;
+
+    worldChart.showLoading();
+
+    fetch("https://cdn.jsdelivr.net/npm/@surbowl/world-geo-json-zh@2.1.5/world.zh.json")
+      .then((res) => res.json())
+      .then(function (worldGeoJson) {
+        echarts.registerMap("World", worldGeoJson);
+
+        // JSON 格式应为 [{ name: "中国", value: 1 }, ...]
+        fetch("https://yyl125.top/media/json/World_Footmap_Location.json")
+          .then(res => res.json())
+          .then(function (countryData) {
+            worldChart.hideLoading();
+
+            var darkMode = window.matchMedia &&
+              window.matchMedia('(prefers-color-scheme: dark)').matches;
+            var textColor = darkMode ? '#EAEAEA' : '#000000';
+
+            worldOption = {
+              title: {
+                text: "世界足迹",
+                subtext: "地图数据来自 Surbowl",
+                sublink: "https://github.com/Surbowl/world-geo-json-zh",
+                left: "left",
+                textStyle: {
+                  color: textColor,
+                },
+              },
+              visualMap: {
+                min: 0,
+                max: 1,
+                show: false,
+                inRange: {
+                  color: ["#f0f0f0", "#00AAFF"]
+                }
+              },
+              geo: {
+                map: "World",
+                roam: true,
+                itemStyle: {
+                  areaColor: "#f0f0f0",
+                  borderColor: "#999",
+                },
+                emphasis: {
+                  label: { show: true }
+                }
+              },
+              series: [{
+                type: "map",
+                map: "World",
+                
+                geoIndex: 0,
+                data: countryData
+              }]
+            };
+
+            worldChart.setOption(worldOption);
+
+            window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', function (e) {
+              var newColor = e.matches ? '#EAEAEA' : '#000000';
+              worldOption.title.textStyle.color = newColor;
+              worldChart.setOption(worldOption);
+            });
+          });
+      });
+  })();
+  </script>
+
+  <script>
+    (function(){
+      const initialWidth = window.innerWidth;
+      window.addEventListener('resize', function(){
+        if (window.innerWidth !== initialWidth) {
+          location.reload();
+        }
+      });
+    })();
+  </script>
+    
+  <!-- Code Highlight -->
+  
+    <script src="https://yyl125.top/media/scripts/prism.js"></script>
+    <script>
+      Prism.highlightAll()
+    </script>
+  
+  
+</body>
+
+</html>
