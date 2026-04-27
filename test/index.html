@@ -1,0 +1,309 @@
+<html lang="zh">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+<meta name="referrer" content="same-origin">
+<title>技术测试与验证 - Benjamin&#39;s Blog</title>
+<link rel="shortcut icon" href="https://yyl125.top/favicon.ico">
+<link href="https://cdn.jsdelivr.net/npm/remixicon@latest/fonts/remixicon.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.7.2/animate.min.css">
+<link rel="stylesheet" href="https://yyl125.top/media/css/tailwind.css">
+<link rel="stylesheet" href="https://yyl125.top/styles/main.css">
+
+
+<script src="https://cdn.apple-livephotoskit.com/lpk/1/livephotoskit.js"></script>
+<link rel="alternate" type="application/atom+xml" title="技术测试与验证 - Benjamin&#39;s Blog - Atom Feed" href="https://yyl125.top/atom.xml">
+<!----<script src="https://yyl125.top/media/scripts/bootstrap.bundle.min.js"></script>---->
+
+
+
+  <script defer src="https://umami.yyl125.cc/feedback.js" data-website-id="7ac7b513-9366-4d64-ae65-0a97bf211058"></script>
+  <script type="text/javascript">
+    (() => {
+      const name = 'outbound-link-click';
+      document.querySelectorAll('a').forEach(a => {
+        if (a.host !== window.location.host && !a.getAttribute('data-umami-event')) {
+          a.setAttribute('data-umami-event', name);
+          a.setAttribute('data-umami-event-url', a.href);
+        }
+      });
+    })();
+  </script>
+
+<script defer>
+(function (document) {
+  const SOURCE = 'https://cdn.jsdelivr.net';
+  const DEST = 'https://gcore.jsdelivr.net';
+  const $ = document.querySelectorAll.bind(document);
+  const checkAvailable = (callback) => {
+    let timeoutId;
+    const newNode = document.createElement('link');
+    newNode.rel = 'stylesheet';
+    newNode.text = 'text/css';
+    const onError = () => {
+      if (!timeoutId) {
+        return;
+      }
+
+      clearTimeout(timeoutId);
+      timeoutId = 0;
+      newNode.href = 'about:blank';
+      newNode.remove();
+      callback(false);
+    };
+
+    timeoutId = setTimeout(onError, 2000);
+    newNode.addEventListener('error', onError);
+    newNode.addEventListener('load', function () {
+      newNode.remove();
+      clearTimeout(timeoutId);
+      callback(true);
+    });
+
+    newNode.href =
+      SOURCE +
+      '/gh/PipecraftNet/jsdelivr-auto-fallback@main/empty.css?' +
+      Date.now();
+    document.head.insertAdjacentElement('afterbegin', newNode);
+  };
+
+  const replaceElementSrc = () => {
+    for (const element of $('link[rel="stylesheet"]')) {
+      if (element.href && element.href.includes(SOURCE)) {
+        element.href = element.href.replace(SOURCE, DEST);
+      }
+    }
+
+    for (const element of $('script')) {
+      if (element.src && element.src.includes(SOURCE)) {
+        const newNode = document.createElement('script');
+        newNode.src = element.src.replace(SOURCE, DEST);
+        element.defer = true;
+        element.src = '';
+        element.before(newNode);
+        element.remove();
+      }
+    }
+
+    for (const element of $('img')) {
+      if (element.src && element.src.includes(SOURCE)) {
+        const source = element.src;
+        // Used to cancel loading. Without this line it will remain pending status.
+        element.src = '';
+        element.src = source.replace(SOURCE, DEST);
+      }
+    }
+  };
+
+  checkAvailable(function (isAvailable) {
+    if (isAvailable) {
+      return;
+    }
+
+    console.warn(SOURCE + ' is not available.');
+
+    replaceElementSrc();
+    // Replace dynamically added elements
+    setInterval(replaceElementSrc, 500);
+  });
+})(document);
+</script>
+  <meta name="description" content="Stay hungry. Stay foolish."/>
+  <link rel="stylesheet" href="https://yyl125.top/media/css/addition.css">
+</head>
+
+<body>
+  <div class="antialiased flex flex-col min-h-screen" id="app">
+    <a href="https://yyl125.top" class="fixed top-0 left-0 mt-4 bg-black text-white dark:text-gray-700 dark:bg-yellow-50 dark:hover:bg-black dark:hover:text-white inline-flex p-2 pl-8 hover:text-gray-700 hover:bg-yellow-50 font-bold z-10 transition-fast animated fadeInLeft">
+    Benjamin&#39;s Blog
+    </a>
+    <div class="max-w-4xl w-full mx-auto">
+      <div class="shadow-box bg-white dark:bg-gray-600 rounded-lg pt-32 md:pt-64 px-4 md:px-8 pb-8 animated fadeIn mb-8">
+        <h1 class="text-5xl font-semibold leading-normal pb-8 mb-8 border-b-8 border-gray-700">技术测试与验证</h1>
+        
+        <div class="jumbotron">
+          <div class="container">
+            <p><i class="ri-ticket-2-line"></i> 本页面用于测试未来可能会在 Benjamin's Blog 中被正式启用的前瞻性内容</p>
+            <br>
+            <p><small class="text-gray-400">
+              1. 3D 模型来源于 Apple<br>
+              2. Benjamin 对网站内所有图片、文字以及音像资源保留最终解释权。欲了解更多相关信息，详见 <a href="https://yyl125.top/copyright/" target="_blank">版权信息与资源使用说明</a> 页面
+            </small></p>
+          </div>
+        </div>
+        
+        <div class="markdown mb-8">
+          <h2 id="Applaud">评价按钮</h2>
+          <p>此按钮不会影响任何生产数据，你可以随意点击此按钮。页面刷新后该计数会重置</p>
+          <div class="applaudBox">
+            <button class="applaudBtn">
+              <i class="ri-thumb-up-line"></i>
+              <span class="likeCount">0</span>
+            </button>
+          </div>
+          <h2 id="LivePhotos">Live Photos</h2>
+          <p>macOS 或 Windows 设备请将鼠标光标放置在位于图片左上角的 LIVE 字样上以开始播放，光标移出将自动停止。iPhone、iPad、Android 设备长按图片以开始播放，松开将自动停止</p>
+          <div class="LivePhotos">
+            <div
+              data-live-photo
+              data-photo-src="https://oss.yyl125.cc/blog/item/Live_Photos/Live_Photos_Demo.jpg"
+              data-video-src="https://oss.yyl125.cc/blog/item/Live_Photos/Live_Photos_Demo.mov"
+              data-autoplay="true"
+              data-loop="true"
+              data-muted="true"
+              data-intersect="true"
+              style="width: 320px; height: 320px;"
+            ></div>
+          </div>
+          <p class="media-description">Live Photos 示例</p>
+          <h3 id="Compatibility">浏览器兼容性</h3>
+          <table style="margin:auto; margin-top:1.5rem;"><thead style="text-align:center"><tr><th>设备</th><th>浏览器</th></tr></thead><tbody style="text-align:center"><tr><th>iOS/iPadOS</th><td>Safari、Chrome</td></tr><tr><th>macOS</th><td>Safari、Chrome 或 Firefox</td></tr><tr><th>Android</th><td>Chrome (beta)</td><tr><th>Windows</th><td>Chrome、Firefox、Edge 或 Internet Explorer 11</td></tr></tbody></table>
+          <p class="media-description">数据来源与 Apple 官网</p>
+          <h3 id="Tips">Tips</h3>
+          <ul>
+            <li>Live Photos 的视频部分是以 H.264 编码的 MOV 文件，图片部分是以 JPEG 格式的静态图片</li>
+            <li>Live Photos 在 Windows 设备上的表现可能不太理想，尤其是在 Internet Explorer 11 上。建议使用 Chrome、Firefox 或 Edge 浏览器以获得更好的体验。Android 设备的具体性能表现则取决于设备</li>
+            <li>由于使用 <a href="https://developer.apple.com/documentation/livephotoskitjs" target="_blank">LivePhotosKit JS</a> 库，兼容性相关只保证 Apple 设备，各 Android OEM 的支持情况可能不同</li>
+          </ul>
+          <h2 id="APalyer">APlayer</h2>
+          <div id="aplayer"></div>
+          <h2 id="AR_Quick_Look">AR Quick Look</h2>
+          <p>需要运行 iOS/iPadOS 12 或更高版本的设备。同时，需要使用 Safari 浏览器</p>
+          <h3 id="Animations">Animations</h3>
+          <div class="card-columns">
+            <div class="card">
+              <a rel="ar" href="https://oss.yyl125.cc/blog/item/Models/Animations/LunarRover_English.reality">
+                <img src="https://oss.yyl125.cc/blog/item/Models/Animations/Thumbnail/Lunar_Rover.png">
+              </a>
+            </div>
+            <div class="card">
+              <a rel="ar" href="https://oss.yyl125.cc/blog/item/Models/Animations/CosmonautSuit_en.reality">
+                <img src="https://oss.yyl125.cc/blog/item/Models/Animations/Thumbnail/Cosmonaut.png">
+              </a>
+            </div>
+            <div class="card">
+              <a rel="ar" href="https://oss.yyl125.cc/blog/item/Models/Animations/hab_en.reality">
+                <img src="https://oss.yyl125.cc/blog/item/Models/Animations/Thumbnail/Hab.png">
+              </a>
+            </div>
+          </div>
+          <h3 id="3D_Models">3D Models</h3>
+          <div class="card-columns">
+            <div class="card">
+              <a rel="ar" href="https://oss.yyl125.cc/blog/item/Models/3D_Models/redchair.usdz">
+                <img src="https://oss.yyl125.cc/blog/item/Models/3D_Models/Thumbnail/redchair.jpg">
+              </a>
+            </div>
+            <div class="card">
+              <a rel="ar" href="https://oss.yyl125.cc/blog/item/Models/3D_Models/retrotv.usdz">
+                <img src="https://oss.yyl125.cc/blog/item/Models/3D_Models/Thumbnail/retrotv.jpg">
+              </a>
+            </div>
+            <div class="card">
+              <a rel="ar" href="https://oss.yyl125.cc/blog/item/Models/3D_Models/stratocaster.usdz">
+                <img src="https://oss.yyl125.cc/blog/item/Models/3D_Models/Thumbnail/stratocaster.jpg">
+              </a>
+            </div>
+          </div>
+          <h3 id="Banners">Banners</h3>
+          <div class="card-columns">
+            <div class="card">
+              <a rel="ar" id="ApplePay" href="https://oss.yyl125.cc/blog/item/Models/Banners/alarm_clock.usdz#applePayButtonType=plain&checkoutTitle=Retro%20Alarm%20Clock&checkoutSubtitle=With%20built-in%20FM%20tuner&price=$92.50">
+                <img src="https://oss.yyl125.cc/blog/item/Models/Banners/Thumbnail/alarm_clock.png">
+              </a>
+            </div>
+            <div class="card">
+              <a rel="ar" id="CustomAction" href="https://oss.yyl125.cc/blog/item/Models/Banners/kids_slide.usdz#callToAction=Browse%20API&checkoutTitle=Kids%20Slide&checkoutSubtitle=Playground%20in%20your%20backyard&price=$145">
+                <img src="https://oss.yyl125.cc/blog/item/Models/Banners/Thumbnail/kids_slide.png">
+              </a>
+            </div>
+            <div class="card">
+              <a rel="ar" id="CustomBanner" href="https://oss.yyl125.cc/blog/item/Models/Banners/solar_panels.usdz#custom=https://developer.apple.com/augmented-reality/quick-look/models/solar-panels/solar_panels_custom.html&customHeight=small">
+                <img src="https://oss.yyl125.cc/blog/item/Models/Banners/Thumbnail/solar_panels.png">
+              </a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <footer class="py-12 text-center px-4 md:px-0" v-pre>
+  共 24 篇文章｜<a href="https://yyl125.top/copyright" target="_blank">版权信息与资源使用说明</a>｜<i class="ri-rss-line"></i> <a href="https://yyl125.top/atom.xml" target="_blank">RSS</a><br>Copyright © 2026 Benjamin. All rights reserved.
+</footer>
+
+    </div>
+
+    <!-- Back to top -->
+    <div class="fixed right-0 bottom-0 mb-4 mr-4 shadow w-8 h-8 rounded-full flex justify-center items-center z-10 cursor-pointer bg-white hover:shadow-lg transition-all dark:bg-gray-500 dark:text-gray-200" @click="backToUp" v-show="scrolled">
+      <i class="ri-arrow-up-line"></i>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+  <script src="https://yyl125.top/media/scripts/main.js"></script>
+  <script>
+    const btn = document.querySelector(".applaudBtn");
+    const countEl = btn.querySelector(".likeCount");
+    const iconEl = btn.querySelector("i");
+
+    let animFrame = null;
+    let count = 0;
+
+    btn.addEventListener("click", () => {
+      // 每次点击数字增加
+      const start = count;
+      const end = count + 1;
+      count = end;
+    
+      // 按钮微弹跳
+      btn.style.transform = "scale(1.2)";
+      setTimeout(() => btn.style.transform = "scale(1)", 200);
+    
+      // 图标弹跳 + 切换空心→实心
+      iconEl.classList.replace("ri-thumb-up-line", "ri-thumb-up-fill");
+      btn.classList.add("liked");
+      btn.classList.add("animate");
+      setTimeout(() => btn.classList.remove("animate"), 400);
+    
+      // 数字递增动画
+      const duration = 400;
+      const startTime = performance.now();
+      cancelAnimationFrame(animFrame);
+    
+      function animateNumber(now) {
+        const elapsed = now - startTime;
+        const progress = Math.min(elapsed / duration, 1);
+        const value = Math.round(start + (end - start) * progress);
+        countEl.textContent = value;
+        countEl.classList.add("animate");
+      
+        if (progress < 1) {
+          animFrame = requestAnimationFrame(animateNumber);
+        } else {
+          countEl.classList.remove("animate");
+        }
+      }
+    
+      animFrame = requestAnimationFrame(animateNumber);
+    });
+  </script>
+
+  <link rel="stylesheet" href="https://yyl125.top/media/css/APlayer.min.css">
+  <script src="https://yyl125.top/media/scripts/APlayer.min.js"></script>
+  <script>
+    const ap = new APlayer({
+      container: document.getElementById('aplayer'),
+      audio: [{
+        name: 'Moments',
+        artist: 'Christopher',
+        url: 'https://oss.yyl125.cc/blog/audio/test/Moments.mp3',
+        cover: "https://oss.yyl125.cc/blog/img/cover/test/Moments_Cover.jpg",
+      }]
+    });
+  </script>
+  
+</body>
+
+</html>
