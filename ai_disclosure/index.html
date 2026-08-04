@@ -1,0 +1,203 @@
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+<meta name="referrer" content="same-origin">
+<title>AI 内容说明 - Benjamin&#39;s Blog</title>
+<link rel="shortcut icon" href="https://yyl125.top/favicon.ico">
+<link href="https://cdn.jsdelivr.net/npm/remixicon@latest/fonts/remixicon.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.7.2/animate.min.css">
+<link rel="stylesheet" href="https://yyl125.top/media/css/tailwind.css">
+<link rel="stylesheet" href="https://yyl125.top/styles/main.css">
+
+
+<script src="https://yyl125.top/media/scripts/livephotoskit.js"></script>
+<link rel="alternate" type="application/atom+xml" title="AI 内容说明 - Benjamin&#39;s Blog - Atom Feed" href="https://yyl125.top/atom.xml">
+<!----<script src="https://yyl125.top/media/scripts/bootstrap.bundle.min.js"></script>---->
+
+
+
+  <script defer src="https://umami.yyl125.cc/feedback.js" data-website-id="7ac7b513-9366-4d64-ae65-0a97bf211058"></script>
+  <script type="text/javascript">
+    (() => {
+      const name = 'outbound-link-click';
+      document.querySelectorAll('a').forEach(a => {
+        if (a.host !== window.location.host && !a.getAttribute('data-umami-event')) {
+          a.setAttribute('data-umami-event', name);
+          a.setAttribute('data-umami-event-url', a.href);
+        }
+      });
+    })();
+  </script>
+
+<script defer>
+(function (document) {
+  const SOURCE = 'https://cdn.jsdelivr.net';
+  const DEST = 'https://gcore.jsdelivr.net';
+  const $ = document.querySelectorAll.bind(document);
+  const checkAvailable = (callback) => {
+    let timeoutId;
+    const newNode = document.createElement('link');
+    newNode.rel = 'stylesheet';
+    newNode.text = 'text/css';
+    const onError = () => {
+      if (!timeoutId) {
+        return;
+      }
+
+      clearTimeout(timeoutId);
+      timeoutId = 0;
+      newNode.href = 'about:blank';
+      newNode.remove();
+      callback(false);
+    };
+
+    timeoutId = setTimeout(onError, 2000);
+    newNode.addEventListener('error', onError);
+    newNode.addEventListener('load', function () {
+      newNode.remove();
+      clearTimeout(timeoutId);
+      callback(true);
+    });
+
+    newNode.href =
+      SOURCE +
+      '/gh/PipecraftNet/jsdelivr-auto-fallback@main/empty.css?' +
+      Date.now();
+    document.head.insertAdjacentElement('afterbegin', newNode);
+  };
+
+  const replaceElementSrc = () => {
+    for (const element of $('link[rel="stylesheet"]')) {
+      if (element.href && element.href.includes(SOURCE)) {
+        element.href = element.href.replace(SOURCE, DEST);
+      }
+    }
+
+    for (const element of $('script')) {
+      if (element.src && element.src.includes(SOURCE)) {
+        const newNode = document.createElement('script');
+        newNode.src = element.src.replace(SOURCE, DEST);
+        element.defer = true;
+        element.src = '';
+        element.before(newNode);
+        element.remove();
+      }
+    }
+
+    for (const element of $('img')) {
+      if (element.src && element.src.includes(SOURCE)) {
+        const source = element.src;
+        // Used to cancel loading. Without this line it will remain pending status.
+        element.src = '';
+        element.src = source.replace(SOURCE, DEST);
+      }
+    }
+  };
+
+  checkAvailable(function (isAvailable) {
+    if (isAvailable) {
+      return;
+    }
+
+    console.warn(SOURCE + ' is not available.');
+
+    replaceElementSrc();
+    // Replace dynamically added elements
+    setInterval(replaceElementSrc, 500);
+  });
+})(document);
+</script>
+  <meta name="description" content="Stay hungry. Stay foolish." />
+</head>
+<body>
+  <div class="antialiased flex flex-col min-h-screen" id="app">
+    <a href="https://yyl125.top" class="fixed top-0 left-0 mt-4 bg-black text-white dark:text-gray-700 dark:bg-yellow-50 dark:hover:bg-black dark:hover:text-white inline-flex p-2 pl-8 hover:text-gray-700 hover:bg-yellow-50 font-bold z-10 transition-fast animated fadeInLeft">
+    Benjamin&#39;s Blog
+    </a>
+    <div class="max-w-4xl w-full mx-auto">
+      <div class="shadow-box bg-white dark:bg-gray-600 rounded-lg pt-32 md:pt-64 px-4 md:px-8 pb-8 animated fadeIn mb-8">
+        <h1 class="text-5xl font-semibold leading-normal pb-8 mb-8 border-b-8 border-gray-700">AI 内容说明</h1>
+        
+        <div class="markdown mb-8">
+          <div class="jumbotron">
+            <div class="container">
+              <p><i class="ri-information-line"></i> 本页面用于说明 Benjamin’s Blog 在内容创作过程中对人工智能（AI）工具的使用方式，以及相关原则</p>
+            </div>
+          </div>
+
+          <p>随着生成式人工智能技术的发展，AI 已逐渐成为内容创作、软件开发和知识整理的重要辅助工具</p>
+          <p>Benjamin’s Blog 尊重技术的发展，也相信 AI 能够帮助提升内容质量和创作效率。但与此同时，我始终认为，AI 应当作为创作者的辅助工具，而不是原创作者本身</p>
+          <h2 id="AI 的使用范围">AI 的使用范围</h2>
+            <p>本站部分内容可能在创作过程中使用生成式人工智能工具提供辅助，包括但不限于：</p>
+              <ul>
+                <li>文本润色与语言优化；</li>
+                <li>内容整理与结构调整；</li>
+                <li>翻译及多语言表达；</li>
+                <li>技术资料归纳与信息整理；</li>
+                <li>程序代码优化与示例生成；</li>
+                <li>文档排版建议；</li>
+                <li>创意启发与方案讨论</li>
+              </ul>
+            <p>AI 的参与程度可能因文章类型及创作需求而有所不同</p>
+          <h2 id="人工审核原则">人工审核原则</h2>
+            <p>无论 AI 是否参与创作，最终发布于本站的内容均会经过人工审核、修改及确认</p>
+            <p>包括但不限于：</p>
+              <ul>
+                <li>内容准确性；</li>
+                <li>表达方式；</li>
+                <li>文章结构；</li>
+                <li>技术实现；</li>
+                <li>图片与素材选择；</li>
+                <li>最终发布决定</li>
+              </ul>
+            <p>最终内容及观点均由 Benjamin 负责</p>
+          <h2 id="原创内容说明">原创内容说明</h2>
+            <p>AI 不作为本站原创内容的作者</p>
+            <p>本站原创作品所表达的观点、经验、评价、摄影作品、技术实践及其它原创内容，均代表 Benjamin 本人的整理、判断或创作成果</p>
+            <p>对于涉及个人体验、旅行记录、产品评测、摄影作品及实践经验等内容，AI 不替代真实经历，也不会凭空生成不存在的事实</p>
+          <h2 id="关于内容准确性">关于内容准确性</h2>
+            <p>虽然本站会尽可能核实文章中的信息，但 AI 生成内容仍可能存在：</p>
+              <ul>
+                <li>信息过时；</li>
+                <li>理解偏差；</li>
+                <li>表达错误；</li>
+                <li>技术细节遗漏；</li>
+                <li>引用不完整等情况</li>
+              </ul>
+            <p>因此，涉及法律、医疗、金融、安全或其它专业领域的重要事项时，建议读者结合官方资料及专业意见进行进一步确认</p>
+            <p>如你发现文章存在事实错误或需要补充之处，欢迎通过本站提供的联系方式反馈</p>
+          <h2 id="尊重原创与知识产权">尊重原创与知识产权</h2>
+            <p>本站不会主动要求 AI 模仿特定创作者的表达风格，也不会故意生成侵犯他人知识产权的内容</p>
+            <p>如文章引用第三方资料、图片、数据或其它作品，仍将遵循相应的版权声明及许可协议，并尽可能标注来源</p>
+            <p>更多信息请参阅《<a href="https://yyl125.top/copyright/" target="_blank">版权信息与资源使用说明</a>》</p>
+          <h2 id="持续更新">持续更新</h2>
+            <p>生成式人工智能技术仍在不断发展</p>
+            <p>未来，本站可能根据技术发展情况适当调整 AI 的使用方式，并持续优化内容创作流程</p>
+            <p>如本页面内容发生重要变化，将通过更新版本进行说明</p>
+          <p>感谢你阅读本站的内容，也感谢你理解 AI 在现代内容创作中的定位</p>
+          <p>对 Benjamin’s Blog 而言，AI 是提高效率、激发灵感和优化表达的工具，而真正负责内容质量、真实性与最终发布的，始终是创作者本人</p>
+          <hr>
+          <small class="text-gray-400">版本：v1.0</small>
+          <small class="text-gray-400">最后更新：2026 年 7 月 13 日</small>
+        </div>
+      </div>
+    </div>
+    
+    <footer class="py-12 text-center px-4 md:px-0" v-pre>
+  共 25 篇文章｜<a href="https://yyl125.top/copyright" target="_blank">版权信息与资源使用说明</a>｜<i class="ri-rss-line"></i> <a href="https://yyl125.top/atom.xml" target="_blank">RSS</a><br>Copyright © 2026 Benjamin. CC BY-NC-SA 4.0
+</footer>
+
+    
+    <!-- Back to top -->
+    <div class="fixed right-0 bottom-0 mb-4 mr-4 shadow w-8 h-8 rounded-full flex justify-center items-center z-10 cursor-pointer bg-white hover:shadow-lg transition-all dark:bg-gray-500 dark:text-gray-200" @click="backToUp" v-show="scrolled">
+      <i class="ri-arrow-up-line"></i>
+    </div>
+  </div>
+    
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+  <script src="https://yyl125.top/media/scripts/main.js"></script>
+  
+</body>
+</html>

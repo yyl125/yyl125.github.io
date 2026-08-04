@@ -1,0 +1,355 @@
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+<meta name="referrer" content="same-origin">
+<title>Write To Gridea - Benjamin&#39;s Blog</title>
+<link rel="shortcut icon" href="https://yyl125.top/favicon.ico">
+<link href="https://cdn.jsdelivr.net/npm/remixicon@latest/fonts/remixicon.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.7.2/animate.min.css">
+<link rel="stylesheet" href="https://yyl125.top/media/css/tailwind.css">
+<link rel="stylesheet" href="https://yyl125.top/styles/main.css">
+
+
+<script src="https://yyl125.top/media/scripts/livephotoskit.js"></script>
+<link rel="alternate" type="application/atom+xml" title="Write To Gridea - Benjamin&#39;s Blog - Atom Feed" href="https://yyl125.top/atom.xml">
+<!----<script src="https://yyl125.top/media/scripts/bootstrap.bundle.min.js"></script>---->
+
+
+
+  <script defer src="https://umami.yyl125.cc/feedback.js" data-website-id="7ac7b513-9366-4d64-ae65-0a97bf211058"></script>
+  <script type="text/javascript">
+    (() => {
+      const name = 'outbound-link-click';
+      document.querySelectorAll('a').forEach(a => {
+        if (a.host !== window.location.host && !a.getAttribute('data-umami-event')) {
+          a.setAttribute('data-umami-event', name);
+          a.setAttribute('data-umami-event-url', a.href);
+        }
+      });
+    })();
+  </script>
+
+<script defer>
+(function (document) {
+  const SOURCE = 'https://cdn.jsdelivr.net';
+  const DEST = 'https://gcore.jsdelivr.net';
+  const $ = document.querySelectorAll.bind(document);
+  const checkAvailable = (callback) => {
+    let timeoutId;
+    const newNode = document.createElement('link');
+    newNode.rel = 'stylesheet';
+    newNode.text = 'text/css';
+    const onError = () => {
+      if (!timeoutId) {
+        return;
+      }
+
+      clearTimeout(timeoutId);
+      timeoutId = 0;
+      newNode.href = 'about:blank';
+      newNode.remove();
+      callback(false);
+    };
+
+    timeoutId = setTimeout(onError, 2000);
+    newNode.addEventListener('error', onError);
+    newNode.addEventListener('load', function () {
+      newNode.remove();
+      clearTimeout(timeoutId);
+      callback(true);
+    });
+
+    newNode.href =
+      SOURCE +
+      '/gh/PipecraftNet/jsdelivr-auto-fallback@main/empty.css?' +
+      Date.now();
+    document.head.insertAdjacentElement('afterbegin', newNode);
+  };
+
+  const replaceElementSrc = () => {
+    for (const element of $('link[rel="stylesheet"]')) {
+      if (element.href && element.href.includes(SOURCE)) {
+        element.href = element.href.replace(SOURCE, DEST);
+      }
+    }
+
+    for (const element of $('script')) {
+      if (element.src && element.src.includes(SOURCE)) {
+        const newNode = document.createElement('script');
+        newNode.src = element.src.replace(SOURCE, DEST);
+        element.defer = true;
+        element.src = '';
+        element.before(newNode);
+        element.remove();
+      }
+    }
+
+    for (const element of $('img')) {
+      if (element.src && element.src.includes(SOURCE)) {
+        const source = element.src;
+        // Used to cancel loading. Without this line it will remain pending status.
+        element.src = '';
+        element.src = source.replace(SOURCE, DEST);
+      }
+    }
+  };
+
+  checkAvailable(function (isAvailable) {
+    if (isAvailable) {
+      return;
+    }
+
+    console.warn(SOURCE + ' is not available.');
+
+    replaceElementSrc();
+    // Replace dynamically added elements
+    setInterval(replaceElementSrc, 500);
+  });
+})(document);
+</script>
+  <meta name="description" content="最近看到 GitHub 有开发者基于 Gridea 开发了一个 Gridea Pro，突然有感而发
+
+P.S. 本文提及的所有「Gridea」如无特别说明，均是指由 @EryouHao 开发的 Gridea 开源客户端
+初见 Gridea
+..." />
+  <meta property="og:title" content="Write To Gridea - Benjamin&#39;s Blog">
+  <meta property="og:description" content="最近看到 GitHub 有开发者基于 Gridea 开发了一个 Gridea Pro，突然有感而发
+
+P.S. 本文提及的所有「Gridea」如无特别说明，均是指由 @EryouHao 开发的 Gridea 开源客户端
+初见 Gridea
+..." />
+  <meta property="og:type" content="articles">
+  <meta property="og:url" content="https://yyl125.top/post/write_to_gridea/" />
+  <meta property="og:image" content="https://oss.yyl125.cc/blog/img/post/Small_Talk/Write_To_Gridea/Write_to_Gridea_Banner.png">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:width" content="1200">
+  <meta name="twitter:title" content="Write To Gridea - Benjamin&#39;s Blog">
+  <meta name="twitter:description" content="最近看到 GitHub 有开发者基于 Gridea 开发了一个 Gridea Pro，突然有感而发
+
+P.S. 本文提及的所有「Gridea」如无特别说明，均是指由 @EryouHao 开发的 Gridea 开源客户端
+初见 Gridea
+...">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="canonical" href="https://yyl125.top/post/write_to_gridea/">
+
+  <script src="https://cdn.jsdelivr.net/npm/vanilla-lazyload@17.8.8/dist/lazyload.min.js"></script>
+  <script type="module" src="https://yyl125.top/media/scripts/emaction.js"></script>
+
+  
+    <link rel="stylesheet" href="https://yyl125.top/media/css/prism-atom-dark.css">
+  
+
+  
+</head>
+
+<body>
+  <div class="antialiased flex flex-col min-h-screen" id="app">
+    <a href="https://yyl125.top" class="fixed top-0 left-0 mt-4 bg-black text-white dark:text-gray-700 dark:bg-yellow-50 dark:hover:bg-black dark:hover:text-white inline-flex p-2 pl-8 hover:text-gray-700 hover:bg-yellow-50 font-bold z-10 transition-fast animated fadeInLeft">
+      Benjamin&#39;s Blog
+    </a>
+    <div class="max-w-4xl w-full mx-auto">
+      <div class="shadow-box bg-white dark:bg-gray-600 rounded-lg pt-32 md:pt-64 px-4 md:px-8 pb-8 animated fadeIn mb-8">
+        <h1 class="text-5xl font-semibold leading-normal pb-8 mb-8 border-b-8 border-gray-700">
+          Write To Gridea
+        </h1>
+        
+          <img src="https://oss.yyl125.cc/blog/img/post/Small_Talk/Write_To_Gridea/Write_to_Gridea_Banner.png" alt="Write To Gridea" class="block w-full mb-8">
+        
+        <div class="mb-8 flex flex-wrap">
+          <div class="text-gray-400 text-sm mr-4"><i class="ri-calendar-2-line"></i> 2026-04-15 · <i class="ri-timer-line"></i> 7 min read · <i class="ri-eye-line"></i> <span id="twikoo_visitors">0</span></div>
+          
+            <a href="https://yyl125.top/tag/small_talk/" class="text-gray-700 dark:text-gray-200 text-sm hover:transition-all duration-100 inline-flex mr-2">
+              <i class="ri-hashtag"></i>
+              Small Talk
+            </a>
+          
+        </div>
+        
+        <div class="jumbotron">
+          <div class="container">
+            <p><i class="ri-time-line"></i> 这是一篇发布于 4 个月前的文章，其中的信息可能已经有所发展或是发生改变</p>
+          </div>
+        </div>
+
+        
+
+        
+          <div class="announcement-box">
+            <div class="announcement-main-box">
+                <div class="announcement-icon">
+                  <i class="ri-message-3-line"></i>
+                </div>
+                <div class="announcement-main"> 
+                    <span class="announcement-text"><strong>公告</strong> 本站已更新《版权与资源使用说明》《隐私政策》《反馈须知》《评论准则》及《AI 内容说明》等文档，进一步完善版权、隐私保护、评论管理及 AI 内容透明度说明。建议所有读者抽空阅读最新版本，感谢你一直以来对 Benjamin’s Blog 的支持与理解</span>
+                </div>
+            </div>
+          </div>
+        
+        
+        <div class="markdown mb-8" v-pre id="post-content">
+          <p>最近看到 GitHub 有开发者基于 Gridea 开发了一个 Gridea Pro，突然有感而发</p>
+<!-- more -->
+<p>P.S. 本文提及的所有「Gridea」如无特别说明，均是指由 <a href="https://github.com/EryouHao" target="_blank">@EryouHao</a> 开发的 <a href="https://open.gridea.dev/" target="_blank">Gridea 开源客户端</a></p>
+<h2 id="初见-gridea">初见 Gridea</h2>
+<p>相信很多人知道 Gridea 是因为 Sspai 少数派的 <a href="https://sspai.com/post/54212" target="_blank">推荐文章</a>。这是一个曾经推荐过 VVebo、Bob 等神仙 App、出品过 Cuto 壁纸以及众多 Apple 生态效率内容的神奇网站</p>
+<p>我的相关需求其实非常简单。我想有个能写自己想法或者其它任何东西，并且能最大限度自己管理、再配合符合我审美的网站主题就可以对外发布的东西即可</p>
+<p>我并非有很多的专业知识，甚至压根就不是相关从业者。我的真正专业和工作内容，再大家印象里，是可能没什么文化但是工作岗位却是「人们想象中」的完全不累的「好工作」（具体你可以去看本站「关于」页面）</p>
+<p>Gridea 在当时很好的满足的基本需求</p>
+<p>第一是免费。尽管我已购买或订阅了众多我愿意支持的应用，如 Surge、Netflix 等，但对于一个新领域众多同类软件或App，我起初仍会保持谨慎。因此，「免费」是我首要考虑的一点</p>
+<p>第二是与我熟悉的内容搭配的很好。尽管我不是程序员，顶多算是个「数码内容爱好者」，GitHub 仍然是我常看常用的网站。它和 Cloudflare 一样，被很多人称为「赛博福利姬」。GitHub Pages 搭配 Gridea 和一点点基础的网络知识和 Markdown 这一简单的标记语言就能搭建一个简单的个人站点，确确实实是它最初真正吸引我的原因</p>
+<p>当时唯一的问题是，官方或GitHub上的开源主题选择并不丰富，至少与 Wordpress、Hexo 等相比，很少能合我眼缘。倒不是没有优点，而是我那时看到什么都想要，总之是个人问题。后来 Gridea 的作者发布了 Rocky 主题，总体符合我的审美，试了很多后，最终还是确定了我的博客主题为 Rocky</p>
+<p>填写完配置、测试、发布，很快我就完成了第一次 Git 提交，上线了一篇测试文章。左看右看，十分满意</p>
+<h2 id="漫漫折腾路">漫漫折腾路</h2>
+<p>从那之后，我就开始了使用 Gridea + GitHub Pages 的建站之路</p>
+<p>第一次让我折腾许久的，是当时另一篇在 Sspai 少数派出名的项目「<a href="https://sspai.com/post/60024" target="_blank">b言b语</a>」。对于第一次需要类似 LeanCloud 这种后端（应该是叫这个名字？）的项目，刚开始折腾确实在一些细节上耗了我非常大的功夫。不过好在最后项目还是成功被我「嫁接」在了我的这个个人博客上</p>
+<p>只不过后来随着 LeanCloud 不断的拉垮，以及某些相关规则和政策上等的转变（印象里是有的？），加之项目页面设计粗糙，与博客的整体风格不搭，因此我也是首次尝试自己修改前端 CSS，力求项目与网站其它部分至少在设计中更为协调</p>
+<p>这便是现在「随想」页面的雏形</p>
+<p>后来，随着知识需求增长，我访问和关注了更多作者的博客或内容。看到他们网站上的有趣设计，我会尝试自己动手实现，先找现成方案（我承认我挺懒的），没有就研究实现方法，看能否搬到我的博客上来。虽常因技术能力不足而失败，但至少学到了不少知识。经过多次比较和重试，我的博客终于变成了现在这个样子。它可能不完美，但至少表达了我的想法</p>
+<p>而这一切的基础，或者说让我轻松部署的，毫无疑问，始终是 Gridea</p>
+<h2 id="gridea-的现状">Gridea 的现状</h2>
+<p>这当然不是一篇全是夸赞的软文。下面我们来聊聊 Gridea 的现状</p>
+<p>正如 Gridea Pro 的 Readme 里说的那样，Gridea 最初的开源版本已经停止更新近 4 年之久了。虽然很多东西一直都能跑起来，但在如今的环境下，它依然有很多不完美的地方</p>
+<p>首先就是 Gridea 的启动速度。我并不十分了解架构等远超出我技术知识储备的内容，但我知道，这可能和站点包含文章数量和相关配置文件的内容有关。在如今的 M 系列 Mac 上，它可以说是我这台 M2 芯片至少看起来运行起来相当耗时的 App，它往往会在 Docker 上弹跳不少次</p>
+<p>相比较而言，我也有在 Windows PC 上安装 Gridea 辅以坚果云同步内容，Gridea 在 Windows 上的运行速度反而让我没那么难以接受</p>
+<p>Gridea 的作者 <a href="https://github.com/EryouHao" target="_blank">@EryouHao</a> 在后期推出了订阅制的 Gridea，并将先前的开源项目 Gridea 更名为 <a href="https://open.gridea.dev/" target="_blank">Gridea 开源客户端</a>。它补齐了 Gridea 的一些问题，比如 PWA（Progressive Web App，渐进式网络应用） 以及一些以往需要自己手搓的功能。我也曾经在早鸟体验期间试用了几次，但因为种种原因，最终还是继续选择了 Gridea 开源客户端</p>
+<h2 id="gridea-pro">Gridea Pro</h2>
+<p><a href="https://github.com/Gridea-Pro/gridea-pro" target="_blank">Gridea Pro</a> 是近期在 GitHub 上开源的以 Gridea 为基础制作的一款静态博客写作客户端，意图延续 Gridea 的核心愿景：让每个人都能零门槛拥有自己的博客</p>
+<p>Gridea Pro 还被 @EryouHao 在 X 上提及</p>
+<blockquote>
+<p>看到有人基于 Gridea 之前的开源客户端，开发了一个新的，功能介绍还挺好的。<br>把记忆一下子拉回了 4 年前</p>
+</blockquote>
+<p>它采用 Go + Wails + Vue 3 构建，我也简单试用了一下。对于我比较在意的启动速度方面，确实是进步明显。但需要注意的是，它终究不是原版的 Gridea，使用 Gridea Pro 会对原有的 Gridea 目录实行不可逆的迁移（当然你可以重开一个文件夹）</p>
+<p>Gridea Pro 目前仍在持续更新中，关于其后续的发展我也会持续关注</p>
+<h2 id="属于-apple-silicon-的时代x86-mac-应用要何去何从">属于 Apple Silicon 的时代，X86 Mac 应用要何去何从？</h2>
+<p>随着 Apple 将 Mac 从 Intel 成功带到了 Apple Silicon 的时代，macOS 也即将结束对基于 Intel 的 App 的支持<sup class="footnote-ref"><a href="#fn1" id="fnref1">[1]</a></sup></p>
+<p>据 Apple 官方的说法，后续的 macOS 版本会移除 Rosetta 2，仅会对某些依赖基于 Intel 的框架且没有维护过的较低版本的游戏生效</p>
+<blockquote>
+<p>Rosetta 目前适用于搭载 Apple 芯片的任一款 Mac，并且直到即将发布的下一个主要 macOS 版本 — macOS 27 都仍可使用。从使用 macOS 28 的电脑开始，Rosetta 功能将仅适用于某些依赖基于 Intel 的框架且没有维护过的较低版本的游戏<br><br>
+为了获得卓越性能和日后的兼容性，你应更新基于 Intel 的 App、插件、扩展和其他附加组件以适配 Apple 芯片</p>
+</blockquote>
+<p>就连每次启动 X86 Mac 应用，macOS 也会做出提示</p>
+<img src="https://oss.yyl125.cc/blog/img/post/Small_Talk/Write_To_Gridea/Write_to_Gridea_01.png">
+<p class="media-description">每次打开 Gridea 开源客户端时 macOS 的提示</p>
+<p>目前还不清楚 Apple 会在未来的 macOS 28 中如何处理旧版的 X86 App</p>
+<hr class="footnotes-sep">
+<section class="footnotes">
+<ol class="footnotes-list">
+<li id="fn1" class="footnote-item"><p><a href="https://support.apple.com/zh-cn/102527">在搭载 Apple 芯片的 Mac 上使用基于 Intel 的 App</a> <a href="#fnref1" class="footnote-backref">↩︎</a></p>
+</li>
+</ol>
+</section>
+
+        </div>
+
+        <div class="applaudBox">
+          <button class="applaudBtn">
+            <i class="ri-thumb-up-line"></i> <span class="likeCount">0</span>
+          </button>
+        </div>
+
+        <div class="jumbotron">
+          <div class="container">
+            <p><i class="ri-article-line"></i> <a href="https://yyl125.top/post/write_to_gridea/" target="_blank">Write To Gridea</a></p>
+            <p><i class="ri-creative-commons-line"></i> 许可协议：<a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" target="_blank">CC BY-NC-SA 4.0</a>。欲了解更多相关信息，详见 <a href="https://yyl125.top/copyright/" target="_blank">版权信息与资源使用说明</a> 页面</p>
+            <p><i class="ri-error-warning-line"></i> 本站所有文章除特别说明外，皆为原创发布。欢迎尊重原创作者版权的转载或引用。转载或引用时请注明出处</p>
+            <br>
+            <p><i class="ri-feedback-line"></i> 出现了影响阅读的问题？不妨 <a href="mailto:support@yyl125.cc?subject=Benjamin's%20Blog%20%E9%97%AE%E9%A2%98%E5%8F%8D%E9%A6%88" target="_blank" rel="noreferrer noopener">反馈</a> 一下吧</p>
+          </div>
+        </div>
+
+        
+        
+      </div>
+
+      <div class="jumbotron-comment">
+        <div class="container">
+          <p><i class="ri-message-3-line"></i> 欢迎任何与文章内容相关并保持尊重的评论，评论时请遵守 <a href="https://yyl125.top/comment_policy/">评论准则</a></p>
+        </div>
+      </div>
+
+      
+
+      
+        <div id="tcomment"></div>
+      
+      
+      <footer class="py-12 text-center px-4 md:px-0" v-pre>
+  共 25 篇文章｜<a href="https://yyl125.top/copyright" target="_blank">版权信息与资源使用说明</a>｜<i class="ri-rss-line"></i> <a href="https://yyl125.top/atom.xml" target="_blank">RSS</a><br>Copyright © 2026 Benjamin. CC BY-NC-SA 4.0
+</footer>
+
+
+    </div>
+
+    <!-- TOC Container -->
+    <div class="fixed right-0 bottom-0 mb-16 mr-4 shadow w-8 h-8 rounded-full flex justify-center items-center z-10 cursor-pointer bg-white dark:bg-gray-500 dark:text-gray-200 hover:shadow-lg transition-all animated fadeInRight" @click="showToc = true">
+      <i class="ri-file-list-line"></i>
+    </div>
+
+    <div class="fixed right-0 top-0 bottom-0 overflow-y-auto w-64 bg-white dark:bg-gray-800 p-4 border-l border-gray-100 dark:border-gray-600 z-10 transition-fast" :class="{ '-mr-64': !showToc }">
+      <div class="flex mb-4 justify-end">
+        <div class="w-8 h-8 inline-flex justify-center items-center rounded-full cursor-pointer hover:bg-gray-200 dark:hover:bg-gray-600 transition-fast" @click="showToc = false">
+          <i class="ri-close-line text-lg"></i>
+        </div>
+      </div>
+      <div class="post-toc-container">
+        <ul class="markdownIt-TOC">
+<li>
+<ul>
+<li><a href="#%E5%88%9D%E8%A7%81-gridea">初见 Gridea</a></li>
+<li><a href="#%E6%BC%AB%E6%BC%AB%E6%8A%98%E8%85%BE%E8%B7%AF">漫漫折腾路</a></li>
+<li><a href="#gridea-%E7%9A%84%E7%8E%B0%E7%8A%B6">Gridea 的现状</a></li>
+<li><a href="#gridea-pro">Gridea Pro</a></li>
+<li><a href="#%E5%B1%9E%E4%BA%8E-apple-silicon-%E7%9A%84%E6%97%B6%E4%BB%A3x86-mac-%E5%BA%94%E7%94%A8%E8%A6%81%E4%BD%95%E5%8E%BB%E4%BD%95%E4%BB%8E">属于 Apple Silicon 的时代，X86 Mac 应用要何去何从？</a></li>
+</ul>
+</li>
+</ul>
+
+      </div>
+    </div>
+
+    <!-- Back to top -->
+    <div class="fixed right-0 bottom-0 mb-4 mr-4 shadow w-8 h-8 rounded-full flex justify-center items-center z-10 cursor-pointer bg-white hover:shadow-lg transition-all dark:bg-gray-500 dark:text-gray-200" @click="backToUp" v-show="scrolled">
+      <i class="ri-arrow-up-line"></i>
+    </div>
+
+  </div>
+
+<!--  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script> -->
+  <script src="https://yyl125.top/media/scripts/vue.js"></script>
+  <script src="https://yyl125.top/media/scripts/main.js"></script>
+  <script src="https://yyl125.top/media/scripts/linkcard.js"></script>
+  <script src="https://yyl125.top/media/scripts/applaud.js"></script>
+  <script src="https://yyl125.top/media/scripts/view-image.min.js"></script>
+  <script>
+    window.ViewImage && ViewImage.init('.markdown img');
+    var lazyLoadInstance = new LazyLoad({});
+    lazyLoadInstance.update();
+  </script>
+  
+  <!-- Mermaid -->
+  
+
+  <!-- Code Highlight -->
+  
+    <script src="https://yyl125.top/media/scripts/prism.js"></script>
+    <script>
+      Prism.highlightAll()
+    </script>
+  
+
+  <!-- Twikoo -->
+  
+    <script src="https://cdn.jsdelivr.net/npm/twikoo@1.6.44/dist/twikoo.min.js"></script>
+<script>
+  twikoo.init({
+    envId: 'https://twikoo-deploy-one.vercel.app',
+    el: '#tcomment'
+  })
+</script>
+  
+
+</body>
+
+</html>

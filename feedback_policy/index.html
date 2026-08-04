@@ -1,0 +1,209 @@
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+<meta name="referrer" content="same-origin">
+<title>反馈须知 - Benjamin&#39;s Blog</title>
+<link rel="shortcut icon" href="https://yyl125.top/favicon.ico">
+<link href="https://cdn.jsdelivr.net/npm/remixicon@latest/fonts/remixicon.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.7.2/animate.min.css">
+<link rel="stylesheet" href="https://yyl125.top/media/css/tailwind.css">
+<link rel="stylesheet" href="https://yyl125.top/styles/main.css">
+
+
+<script src="https://yyl125.top/media/scripts/livephotoskit.js"></script>
+<link rel="alternate" type="application/atom+xml" title="反馈须知 - Benjamin&#39;s Blog - Atom Feed" href="https://yyl125.top/atom.xml">
+<!----<script src="https://yyl125.top/media/scripts/bootstrap.bundle.min.js"></script>---->
+
+
+
+  <script defer src="https://umami.yyl125.cc/feedback.js" data-website-id="7ac7b513-9366-4d64-ae65-0a97bf211058"></script>
+  <script type="text/javascript">
+    (() => {
+      const name = 'outbound-link-click';
+      document.querySelectorAll('a').forEach(a => {
+        if (a.host !== window.location.host && !a.getAttribute('data-umami-event')) {
+          a.setAttribute('data-umami-event', name);
+          a.setAttribute('data-umami-event-url', a.href);
+        }
+      });
+    })();
+  </script>
+
+<script defer>
+(function (document) {
+  const SOURCE = 'https://cdn.jsdelivr.net';
+  const DEST = 'https://gcore.jsdelivr.net';
+  const $ = document.querySelectorAll.bind(document);
+  const checkAvailable = (callback) => {
+    let timeoutId;
+    const newNode = document.createElement('link');
+    newNode.rel = 'stylesheet';
+    newNode.text = 'text/css';
+    const onError = () => {
+      if (!timeoutId) {
+        return;
+      }
+
+      clearTimeout(timeoutId);
+      timeoutId = 0;
+      newNode.href = 'about:blank';
+      newNode.remove();
+      callback(false);
+    };
+
+    timeoutId = setTimeout(onError, 2000);
+    newNode.addEventListener('error', onError);
+    newNode.addEventListener('load', function () {
+      newNode.remove();
+      clearTimeout(timeoutId);
+      callback(true);
+    });
+
+    newNode.href =
+      SOURCE +
+      '/gh/PipecraftNet/jsdelivr-auto-fallback@main/empty.css?' +
+      Date.now();
+    document.head.insertAdjacentElement('afterbegin', newNode);
+  };
+
+  const replaceElementSrc = () => {
+    for (const element of $('link[rel="stylesheet"]')) {
+      if (element.href && element.href.includes(SOURCE)) {
+        element.href = element.href.replace(SOURCE, DEST);
+      }
+    }
+
+    for (const element of $('script')) {
+      if (element.src && element.src.includes(SOURCE)) {
+        const newNode = document.createElement('script');
+        newNode.src = element.src.replace(SOURCE, DEST);
+        element.defer = true;
+        element.src = '';
+        element.before(newNode);
+        element.remove();
+      }
+    }
+
+    for (const element of $('img')) {
+      if (element.src && element.src.includes(SOURCE)) {
+        const source = element.src;
+        // Used to cancel loading. Without this line it will remain pending status.
+        element.src = '';
+        element.src = source.replace(SOURCE, DEST);
+      }
+    }
+  };
+
+  checkAvailable(function (isAvailable) {
+    if (isAvailable) {
+      return;
+    }
+
+    console.warn(SOURCE + ' is not available.');
+
+    replaceElementSrc();
+    // Replace dynamically added elements
+    setInterval(replaceElementSrc, 500);
+  });
+})(document);
+</script>
+  <meta name="description" content="Stay hungry. Stay foolish." />
+</head>
+<body>
+  <div class="antialiased flex flex-col min-h-screen" id="app">
+    <a href="https://yyl125.top" class="fixed top-0 left-0 mt-4 bg-black text-white dark:text-gray-700 dark:bg-yellow-50 dark:hover:bg-black dark:hover:text-white inline-flex p-2 pl-8 hover:text-gray-700 hover:bg-yellow-50 font-bold z-10 transition-fast animated fadeInLeft">
+    Benjamin&#39;s Blog
+    </a>
+    <div class="max-w-4xl w-full mx-auto">
+      <div class="shadow-box bg-white dark:bg-gray-600 rounded-lg pt-32 md:pt-64 px-4 md:px-8 pb-8 animated fadeIn mb-8">
+        <h1 class="text-5xl font-semibold leading-normal pb-8 mb-8 border-b-8 border-gray-700">反馈须知</h1>
+        
+        <div class="markdown mb-8">
+          <div class="jumbotron">
+            <div class="container">
+              <p><i class="ri-information-line"></i> 本页面用于说明 Benjamin’s Blog 的问题反馈方式，以及如何提供有助于定位问题的信息</p>
+            </div>
+          </div>
+
+          <p>感谢你访问 Benjamin’s Blog</p>
+          <p>本站持续维护和更新中。如果你在使用过程中发现网站存在异常、功能问题、内容错误或其它建议，欢迎通过下方联系方式进行反馈</p>
+          <p>每一份反馈都会认真阅读，并尽可能在合理时间内进行确认与处理</p>
+          <h2 id="反馈前建议">反馈前建议</h2>
+            <p>本站采用现代 Web 技术构建，并主要面向支持当前 Web 标准的现代浏览器</p>
+            <p>如果你遇到页面显示异常、排版错乱、功能无法正常使用等问题，建议首先确认：</p>
+            <ul>
+              <li>设备操作系统已更新至较新的版本；</li>
+              <li>浏览器已更新至最新稳定版本；</li>
+              <li>浏览器未禁用 JavaScript 或必要功能；</li>
+              <li>浏览器缓存已刷新或清除；</li>
+              <li>如使用浏览器扩展、代理或隐私保护工具，可尝试暂时关闭后重新访问，以确认问题是否仍然存在</li>
+            </ul>
+          <h2 id="反馈内容建议">反馈内容建议</h2>
+            <p>为了帮助更快定位问题，你可以根据实际情况提供尽可能完整的信息，包括但不限于：</p>
+              <ul>
+                <li>使用的设备类型（桌面设备、平板设备或移动设备）；</li>
+                <li>操作系统及版本；</li>
+                <li>浏览器名称及版本；</li>
+                <li>问题发生时的大致时间；</li>
+                <li>问题出现的页面地址（URL）；</li>
+                <li>问题的具体表现，以及复现步骤（如能够稳定复现）</li>
+                <li>是否正在使用代理、VPN 或其它网络加速服务；</li>
+                <li>是否启用了浏览器扩展、脚本管理器或广告拦截工具；</li>
+                <li>浏览器开发者工具（Console）中的报错信息（如方便提供）；</li>
+                <li>问题截图或录屏（如适用）</li>
+              </ul>
+            <p>提供的信息越完整，通常越有助于缩短问题定位和处理时间</p>
+          <h2 id="可反馈的内容">可反馈的内容</h2>
+          <p>欢迎反馈包括但不限于以下问题：</p>
+            <ul>
+              <li>页面显示异常或排版错误；</li>
+              <li>网站功能无法正常使用；</li>
+              <li>链接失效或资源无法访问；</li>
+              <li>文章内容存在事实错误或描述不准确；</li>
+              <li>错别字、排版问题或翻译错误；</li>
+              <li>网站性能、兼容性或无障碍访问问题；</li>
+              <li>对网站功能或内容的改进建议</li>
+            </ul>
+          <h2 id="联系方式">联系方式</h2>
+          <p>你可以通过以下方式与我取得联系：</p>
+            <ul>
+              <li>Telegram：<a href="https://t.me/BenjaminYing" target="_blank">@BenjaminYing</a></li>
+              <li>Email：<a href="mailto:support@yyl125.cc?subject=Benjamin's%20Blog%20%E9%97%AE%E9%A2%98%E5%8F%8D%E9%A6%88" target="_blank" rel="noreferrer noopener">support@yyl125.cc</a></li>
+            </ul>
+          <p>请选择你方便的联系方式即可</p>
+          <h2 id="关于第三方内容">关于第三方内容</h2>
+              <p>本站部分内容可能引用或嵌入来自第三方平台的资源，例如 YouTube、Wikipedia、Netflix 等</p>
+              <p>由于不同地区的网络环境、平台政策或版权限制，这些资源在部分国家或地区可能无法正常访问</p>
+              <p>此类情况通常不属于本站程序故障。如确认为第三方服务导致的问题，本站可能无法提供相应的技术支持，但欢迎反馈相关情况，以便进一步确认是否属于网站自身的问题</p>
+          <h2 id="反馈说明">反馈说明</h2>
+              <p>为了提高沟通效率，建议在反馈时尽量准确描述问题，并提供必要的信息</p>
+              <p>如反馈涉及版权、隐私、安全漏洞或其它敏感事项，也欢迎直接通过电子邮件联系</p>
+              <p>感谢你对 Benjamin’s Blog 的关注、支持与帮助。每一份认真、友善且详细的反馈，都有助于本站不断完善和改进</p>
+          <h2 id="未成年人隐私">未成年人隐私</h2>
+              <p>本站内容主要面向普通公众，不以未成年人为主要服务对象</p>
+              <p>如发现本站在未经监护人同意的情况下收集了未成年人的个人信息，请及时与我联系，我将在核实后尽快处理</p>
+          <hr>
+          <small class="text-gray-400">版本：v2.0</small>
+          <small class="text-gray-400">最后更新：2026 年 7 月 13 日</small>
+        </div>
+      </div>
+    </div>
+    
+    <footer class="py-12 text-center px-4 md:px-0" v-pre>
+  共 25 篇文章｜<a href="https://yyl125.top/copyright" target="_blank">版权信息与资源使用说明</a>｜<i class="ri-rss-line"></i> <a href="https://yyl125.top/atom.xml" target="_blank">RSS</a><br>Copyright © 2026 Benjamin. CC BY-NC-SA 4.0
+</footer>
+
+    
+    <!-- Back to top -->
+    <div class="fixed right-0 bottom-0 mb-4 mr-4 shadow w-8 h-8 rounded-full flex justify-center items-center z-10 cursor-pointer bg-white hover:shadow-lg transition-all dark:bg-gray-500 dark:text-gray-200" @click="backToUp" v-show="scrolled">
+      <i class="ri-arrow-up-line"></i>
+    </div>
+  </div>
+    
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+  <script src="https://yyl125.top/media/scripts/main.js"></script>
+  
+</body>
+</html>
