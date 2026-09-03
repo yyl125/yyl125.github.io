@@ -1,0 +1,324 @@
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+<meta name="referrer" content="same-origin">
+<title>版权信息与资源使用说明 - Benjamin&#39;s Blog</title>
+<link rel="shortcut icon" href="https://yyl125.top/favicon.ico">
+<link href="https://cdn.jsdelivr.net/npm/remixicon@latest/fonts/remixicon.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.7.2/animate.min.css">
+<link rel="stylesheet" href="https://yyl125.top/media/css/tailwind.css">
+<link rel="stylesheet" href="https://yyl125.top/styles/main.css">
+
+
+<link rel="alternate" type="application/atom+xml" title="版权信息与资源使用说明 - Benjamin&#39;s Blog - Atom Feed" href="https://yyl125.top/atom.xml">
+
+
+
+  <script defer src="https://umami.yyl125.cc/feedback.js" data-website-id="7ac7b513-9366-4d64-ae65-0a97bf211058"></script>
+  <script type="text/javascript">
+    (() => {
+      const name = 'outbound-link-click';
+      document.querySelectorAll('a').forEach(a => {
+        if (a.host !== window.location.host && !a.getAttribute('data-umami-event')) {
+          a.setAttribute('data-umami-event', name);
+          a.setAttribute('data-umami-event-url', a.href);
+        }
+      });
+    })();
+  </script>
+
+<script defer>
+(function (document) {
+  const SOURCE = 'https://cdn.jsdelivr.net';
+  const DEST = 'https://gcore.jsdelivr.net';
+  const $ = document.querySelectorAll.bind(document);
+  const checkAvailable = (callback) => {
+    let timeoutId;
+    const newNode = document.createElement('link');
+    newNode.rel = 'stylesheet';
+    newNode.text = 'text/css';
+    const onError = () => {
+      if (!timeoutId) {
+        return;
+      }
+
+      clearTimeout(timeoutId);
+      timeoutId = 0;
+      newNode.href = 'about:blank';
+      newNode.remove();
+      callback(false);
+    };
+
+    timeoutId = setTimeout(onError, 2000);
+    newNode.addEventListener('error', onError);
+    newNode.addEventListener('load', function () {
+      newNode.remove();
+      clearTimeout(timeoutId);
+      callback(true);
+    });
+
+    newNode.href =
+      SOURCE +
+      '/gh/PipecraftNet/jsdelivr-auto-fallback@main/empty.css?' +
+      Date.now();
+    document.head.insertAdjacentElement('afterbegin', newNode);
+  };
+
+  const replaceElementSrc = () => {
+    for (const element of $('link[rel="stylesheet"]')) {
+      if (element.href && element.href.includes(SOURCE)) {
+        element.href = element.href.replace(SOURCE, DEST);
+      }
+    }
+
+    for (const element of $('script')) {
+      if (element.src && element.src.includes(SOURCE)) {
+        const newNode = document.createElement('script');
+        newNode.src = element.src.replace(SOURCE, DEST);
+        element.defer = true;
+        element.src = '';
+        element.before(newNode);
+        element.remove();
+      }
+    }
+
+    for (const element of $('img')) {
+      if (element.src && element.src.includes(SOURCE)) {
+        const source = element.src;
+        // Used to cancel loading. Without this line it will remain pending status.
+        element.src = '';
+        element.src = source.replace(SOURCE, DEST);
+      }
+    }
+  };
+
+  checkAvailable(function (isAvailable) {
+    if (isAvailable) {
+      return;
+    }
+
+    console.warn(SOURCE + ' is not available.');
+
+    replaceElementSrc();
+    // Replace dynamically added elements
+    setInterval(replaceElementSrc, 500);
+  });
+})(document);
+</script>
+  <meta name="description" content="Stay hungry. Stay foolish." />
+</head>
+<body>
+  <div class="antialiased flex flex-col min-h-screen" id="app">
+    <a href="https://yyl125.top" class="fixed top-0 left-0 mt-4 bg-black text-white dark:text-gray-700 dark:bg-yellow-50 dark:hover:bg-black dark:hover:text-white inline-flex p-2 pl-8 hover:text-gray-700 hover:bg-yellow-50 font-bold z-10 transition-fast animated fadeInLeft">
+    Benjamin&#39;s Blog
+    </a>
+    <div class="max-w-4xl w-full mx-auto">
+      <div class="shadow-box bg-white dark:bg-gray-600 rounded-lg pt-32 md:pt-64 px-4 md:px-8 pb-8 animated fadeIn mb-8">
+        <h1 class="text-5xl font-semibold leading-normal pb-8 mb-8 border-b-8 border-gray-700">版权信息与资源使用说明</h1>
+        
+        <div class="markdown mb-8">
+          <div class="jumbotron">
+            <div class="container">
+              <p><i class="ri-information-line"></i> 这是一篇帮助文档，用于指示某些重要信息</p>
+            </div>
+          </div>
+          
+          <p>感谢你访问 Benjamin's Blog</p>
+          <p>我十分重视你的个人隐私，并始终遵循必要、透明、最小化的原则处理与网站访问相关的信息</p>
+          <p>作为个人博客，本站不会主动收集与你身份无关的信息，也不会出售、出租或交易任何用户数据</p>
+          <h2 id="适用范围">适用范围</h2>
+            <p>本隐私政策适用于 Benjamin's Blog 及其相关网站服务</p>
+            <p>访问本站即表示你已知悉本隐私政策所说明的内容</p>
+          <h2 id="本站可能收集的信息">本站可能收集的信息</h2>
+            <h3 id="访问日志">访问日志</h3>
+              <p>当你访问本站时，网络服务器、内容分发网络（CDN）或相关基础设施可能会自动记录部分技术信息，包括但不限于：</p>
+                <ul>
+                  <li>IP 地址（可能经过匿名化处理）</li>
+                  <li>浏览器类型及版本</li>
+                  <li>操作系统信息</li>
+                  <li>设备类型</li>
+                  <li>页面访问记录</li>
+                  <li>引荐来源（Referrer）</li>
+                  <li>访问时间</li>
+                  <li>HTTP 请求信息</li>
+                </ul>
+              <p>上述信息主要用于：</p>
+                <ul>
+                  <li>网站安全防护；</li>
+                  <li>故障诊断；</li>
+                  <li>性能优化；</li>
+                  <li>访问统计与分析</li>
+                </ul>
+              <p>本站不会利用上述信息识别你的真实身份</p>
+            <h3 id="评论信息">评论信息</h3>
+              <p>如果你在本站发表评论，评论系统可能会收集：</p>
+                <ul>
+                  <li>昵称；</li>
+                  <li>邮箱地址（如填写）；</li>
+                  <li>网站地址（如填写）；</li>
+                  <li>评论内容；</li>
+                  <li>IP 地址；</li>
+                  <li>浏览器 User-Agent 信息</li>
+                </ul>
+              <p>上述信息仅用于：</p>
+                <ul>
+                  <li>评论展示；</li>
+                  <li>垃圾评论过滤；</li>
+                  <li>网站安全维护</li>
+                </ul>
+              <p>除法律法规另有规定外，本站不会公开你的邮箱地址</p>
+            <h3 id="访问统计">访问统计</h3>
+              <p>为了了解网站运行情况，本站可能使用访问统计服务</p>
+              <p>统计信息通常包括：</p>
+                <ul>
+                  <li>页面浏览量（PV）</li>
+                  <li>独立访客（UV）</li>
+                  <li>浏览器及设备类型</li>
+                  <li>页面停留时间</li>
+                  <li>来源页面</li>
+                </ul>
+              <p>统计数据主要用于改进网站内容和优化访问体验，不用于建立个人画像或开展精准广告投放</p>
+          <h2 id="Cookie 与本地存储">Cookie 与本地存储</h2>
+            <p>本站可能使用 Cookie、LocalStorage、SessionStorage 或其它浏览器本地存储技术，以实现以下功能：</p>
+              <ul>
+                <li>保存主题模式（浅色/深色）；</li>
+                <li>保存用户界面偏好；</li>
+                <li>记住部分浏览设置；</li>
+                <li>支持评论系统；</li>
+                <li>提升网站访问体验</li>
+              </ul>
+            <p>这些数据通常保存在你的设备中，不会上传至本站服务器，除非相应功能确有需要</p>
+            <p>如你不希望使用 Cookie，可通过浏览器设置进行管理。但关闭相关功能后，本站部分功能可能无法正常工作</p>
+          <h2 id="第三方服务">第三方服务</h2>
+            <p>为了提供完整的网站功能，本站可能使用第三方服务，包括但不限于：</p>
+              <ul>
+                <li>Cloudflare（内容分发、安全防护及网络优化）</li>
+                <li>GitHub Pages（网站托管）</li>
+                <li>Twikoo（评论系统）</li>
+                <li>Umami（网站访问统计，如启用）</li>
+                <li>NeoDB（内容数据服务）</li>
+              </ul>
+            <p>上述服务可能依据各自的隐私政策处理与你访问本站相关的部分信息</p>
+            <p>本站无法控制第三方服务的数据处理方式，建议你同时查阅其对应的隐私政策</p>
+          <h2 id="第三方链接">第三方链接</h2>
+            <p>本站可能包含指向其它网站或第三方服务的链接</p>
+            <p>这些网站拥有各自独立的隐私政策和数据处理方式</p>
+            <p>当你离开本站后，你的数据处理将不再受本隐私政策约束</p>
+          <h2 id="数据安全">数据安全</h2>
+            <p>本站将采取合理措施保护网站及相关数据的安全，包括但不限于：</p>
+              <ul>
+                <li>使用 HTTPS 加密传输；</li>
+                <li>使用内容分发网络（CDN）及安全防护服务；</li>
+                <li>定期维护网站程序及依赖组件；</li>
+                <li>尽可能减少个人信息收集</li>
+              </ul>
+            <p>上述服务可能依据各自的隐私政策处理与你访问本站相关的部分信息</p>
+            <p>本站无法控制第三方服务的数据处理方式，建议你同时查阅其对应的隐私政策</p>
+          <h2 id="你的权利">你的权利</h2>
+            <p>如果你曾在本站提交评论或其它个人信息，你有权：</p>
+              <ul>
+                <li>查询相关信息；</li>
+                <li>更正相关信息；</li>
+                <li>请求删除相关信息（法律法规另有规定的除外）</li>
+                <li>尽可能减少个人信息收集</li>
+              </ul>
+            <p>如需行使上述权利，请通过电子邮件与我联系</p>
+          <h2 id="未成年人隐私">未成年人隐私</h2>
+            <p>本站内容主要面向普通公众，不以未成年人为主要服务对象</p>
+            <p>如发现本站在未经监护人同意的情况下收集了未成年人的个人信息，请及时与我联系，我将在核实后尽快处理</p>
+          <h2 id="隐私政策更新">隐私政策更新</h2>
+            <p>随着网站功能或相关法律法规的变化，本隐私政策可能适时更新</p>
+            <p>更新后的版本将在本页面公布，并自发布之日起生效</p>
+            <p>对于影响用户权益的重要修改，我会尽可能以适当方式进行说明</p>
+          <h2 id="联系我们">联系我们</h2>
+            <p>如果你对本隐私政策有任何疑问、意见或建议，或认为本站在个人信息处理方面存在问题，欢迎通过 <a href="mailto:support@yyl125.cc?subject=Benjamin's%20Blog%20%E9%97%AE%E9%A2%98%E5%8F%8D%E9%A6%88" target="_blank" rel="noreferrer noopener">电子邮件</a> 与我联系</p>
+            <p>我将认真对待每一份反馈，并在合理时间内予以回复</p>
+          <hr>
+          <small class="text-gray-400">版本：v2.0</small>
+          <small class="text-gray-400">最后更新：2026 年 7 月 13 日</small>
+        </div>
+      </div>
+      
+    </div>
+    
+    <footer class="py-12 text-center px-4 md:px-0" v-pre>
+  共 26 篇文章｜<a href="https://yyl125.top/copyright" target="_blank">版权信息与资源使用说明</a>｜<i class="ri-rss-line"></i> <a href="https://yyl125.top/atom.xml" target="_blank">RSS</a><br>Copyright © 2026 Benjamin. CC BY-NC-SA 4.0
+</footer>
+
+
+    <button
+  class="article-toc-mobile-trigger"
+  type="button"
+  v-show="!showToc"
+  @click="toggleToc"
+  :aria-expanded="showToc ? 'true' : 'false'"
+  aria-controls="article-toc-content"
+  aria-label="打开文章目录"
+>
+  <i class="ri-file-list-line" aria-hidden="true"></i>
+</button>
+<button
+  class="article-toc-backdrop"
+  type="button"
+  v-show="showToc"
+  @click="dismissToc"
+  style="display: none;"
+  aria-label="关闭文章目录"
+></button>
+<aside
+  class="article-toc"
+  :class="{ 'is-open': showToc, 'is-pinned': tocPinned, 'is-closing': tocClosing }"
+  @pointerenter="openToc"
+  @pointerleave="closeToc"
+  @transitionend.self="refreshTocIndicator"
+  aria-label="文章目录"
+>
+  <button
+    class="article-toc-trigger"
+    type="button"
+    @click="toggleToc"
+    :aria-expanded="showToc ? 'true' : 'false'"
+    aria-controls="article-toc-content"
+  >
+    <span class="article-toc-collapsed-track" aria-hidden="true"></span>
+    <span class="article-toc-trigger-lines" aria-hidden="true"><i></i><i></i><i></i></span>
+    <span class="article-toc-title">目录</span>
+  </button>
+  <button
+    class="article-toc-pin"
+    type="button"
+    @click="toggleTocPin"
+    :aria-pressed="tocPinned ? 'true' : 'false'"
+    :aria-label="tocPinned ? '取消固定目录' : '固定目录'"
+    title="固定目录"
+  >
+    <i class="ri-pushpin-line" aria-hidden="true"></i>
+  </button>
+  <nav
+    class="post-toc-container"
+    id="article-toc-content"
+    aria-label="本文目录"
+    data-toc-auto="true"
+  >
+    <svg class="article-toc-tree" aria-hidden="true">
+      <path class="article-toc-tree-base"></path>
+      <path class="article-toc-tree-active"></path>
+    </svg>
+    
+  </nav>
+</aside>
+
+    
+    <!-- Back to top -->
+    <div class="fixed right-0 bottom-0 mb-4 mr-4 shadow w-8 h-8 rounded-full flex justify-center items-center z-10 cursor-pointer bg-white hover:shadow-lg transition-all dark:bg-gray-500 dark:text-gray-200" @click="backToUp" v-show="scrolled">
+      <i class="ri-arrow-up-line"></i>
+    </div>
+  </div>
+    
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+  <script src="https://yyl125.top/media/scripts/main.js"></script>
+  
+</body>
+</html>

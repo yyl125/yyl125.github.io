@@ -1,0 +1,279 @@
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+<meta name="referrer" content="same-origin">
+<title>版权信息与资源使用说明 - Benjamin&#39;s Blog</title>
+<link rel="shortcut icon" href="https://yyl125.top/favicon.ico">
+<link href="https://cdn.jsdelivr.net/npm/remixicon@latest/fonts/remixicon.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.7.2/animate.min.css">
+<link rel="stylesheet" href="https://yyl125.top/media/css/tailwind.css">
+<link rel="stylesheet" href="https://yyl125.top/styles/main.css">
+
+
+<link rel="alternate" type="application/atom+xml" title="版权信息与资源使用说明 - Benjamin&#39;s Blog - Atom Feed" href="https://yyl125.top/atom.xml">
+
+
+
+  <script defer src="https://umami.yyl125.cc/feedback.js" data-website-id="7ac7b513-9366-4d64-ae65-0a97bf211058"></script>
+  <script type="text/javascript">
+    (() => {
+      const name = 'outbound-link-click';
+      document.querySelectorAll('a').forEach(a => {
+        if (a.host !== window.location.host && !a.getAttribute('data-umami-event')) {
+          a.setAttribute('data-umami-event', name);
+          a.setAttribute('data-umami-event-url', a.href);
+        }
+      });
+    })();
+  </script>
+
+<script defer>
+(function (document) {
+  const SOURCE = 'https://cdn.jsdelivr.net';
+  const DEST = 'https://gcore.jsdelivr.net';
+  const $ = document.querySelectorAll.bind(document);
+  const checkAvailable = (callback) => {
+    let timeoutId;
+    const newNode = document.createElement('link');
+    newNode.rel = 'stylesheet';
+    newNode.text = 'text/css';
+    const onError = () => {
+      if (!timeoutId) {
+        return;
+      }
+
+      clearTimeout(timeoutId);
+      timeoutId = 0;
+      newNode.href = 'about:blank';
+      newNode.remove();
+      callback(false);
+    };
+
+    timeoutId = setTimeout(onError, 2000);
+    newNode.addEventListener('error', onError);
+    newNode.addEventListener('load', function () {
+      newNode.remove();
+      clearTimeout(timeoutId);
+      callback(true);
+    });
+
+    newNode.href =
+      SOURCE +
+      '/gh/PipecraftNet/jsdelivr-auto-fallback@main/empty.css?' +
+      Date.now();
+    document.head.insertAdjacentElement('afterbegin', newNode);
+  };
+
+  const replaceElementSrc = () => {
+    for (const element of $('link[rel="stylesheet"]')) {
+      if (element.href && element.href.includes(SOURCE)) {
+        element.href = element.href.replace(SOURCE, DEST);
+      }
+    }
+
+    for (const element of $('script')) {
+      if (element.src && element.src.includes(SOURCE)) {
+        const newNode = document.createElement('script');
+        newNode.src = element.src.replace(SOURCE, DEST);
+        element.defer = true;
+        element.src = '';
+        element.before(newNode);
+        element.remove();
+      }
+    }
+
+    for (const element of $('img')) {
+      if (element.src && element.src.includes(SOURCE)) {
+        const source = element.src;
+        // Used to cancel loading. Without this line it will remain pending status.
+        element.src = '';
+        element.src = source.replace(SOURCE, DEST);
+      }
+    }
+  };
+
+  checkAvailable(function (isAvailable) {
+    if (isAvailable) {
+      return;
+    }
+
+    console.warn(SOURCE + ' is not available.');
+
+    replaceElementSrc();
+    // Replace dynamically added elements
+    setInterval(replaceElementSrc, 500);
+  });
+})(document);
+</script>
+  <meta name="description" content="Stay hungry. Stay foolish." />
+</head>
+<body>
+  <div class="antialiased flex flex-col min-h-screen" id="app">
+    <a href="https://yyl125.top" class="fixed top-0 left-0 mt-4 bg-black text-white dark:text-gray-700 dark:bg-yellow-50 dark:hover:bg-black dark:hover:text-white inline-flex p-2 pl-8 hover:text-gray-700 hover:bg-yellow-50 font-bold z-10 transition-fast animated fadeInLeft">
+    Benjamin&#39;s Blog
+    </a>
+    <div class="max-w-4xl w-full mx-auto">
+      <div class="shadow-box bg-white dark:bg-gray-600 rounded-lg pt-32 md:pt-64 px-4 md:px-8 pb-8 animated fadeIn mb-8">
+        <h1 class="text-5xl font-semibold leading-normal pb-8 mb-8 border-b-8 border-gray-700">版权信息与资源使用说明</h1>
+        
+        <div class="markdown mb-8">
+          <div class="jumbotron">
+            <div class="container">
+              <p><i class="ri-information-line"></i> 这是一篇帮助文档，用于指示某些重要信息</p>
+            </div>
+          </div>
+          
+          <p>感谢你访问 Benjamin's Blog</p>
+          <p>本站始终尊重知识产权，并支持原创内容创作。在创作和维护过程中，我会尽可能使用合法取得授权、符合许可协议或属于公共领域（Public Domain）的资源，并尊重所有原创作者及版权所有者的合法权益</p>
+          <p>如你认为本站存在版权归属错误、授权信息遗漏或其它知识产权相关问题，欢迎通过 <a href="mailto:support@yyl125.cc?subject=Benjamin's%20Blog%20%E9%97%AE%E9%A2%98%E5%8F%8D%E9%A6%88" target="_blank" rel="noreferrer noopener">电子邮件</a> 与我联系，我将在核实后及时处理</p>
+          <h2 id="原创内容版权">原创内容版权</h2>
+            <p>除另有说明外，本站原创内容（包括但不限于文字、图片、摄影作品、音频、视频及其它受著作权法保护的作品）的著作权均归 Benjamin 所有</p>
+            <p>本站所称「原创内容」，是指由 Benjamin 独立创作，或依法取得完整著作权并首次发布于本站的内容</p>
+            <p>作品中出现的署名、水印、Logo、字幕或其它标识（如 Benjamin、Shot by Benjamin、Benjamin Studio、Benjamin Original Content 等）仅用于标识作品来源，不作为判断版权归属的唯一依据</p>
+            <p>部分原创作品可能同步发布至其它平台（如 Unsplash 等）。此类作品除遵循本声明外，还应同时遵守对应平台的许可协议及相关使用规则</p>
+          <h2 id="内容许可">内容许可</h3>
+            <p>除另有特别说明外，本站原创内容均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" target="_blank">知识共享许可协议 署名 - 非商业使用 - 相同方式共享 4.0</a>（CC BY-NC-SA 4.0） 许可协议进行授权</p>
+            <p>在遵守本许可协议的前提下，你可以：</p>
+              <ol>
+                <li><strong>共享（Share）</strong>：复制、转载、传播本站原创内容；</li>
+                <li><strong>演绎（Adapt）</strong>：修改、转换或基于本站原创内容进行再创作</li>
+              </ol>
+            <p>使用本站原创内容时，请遵守以下条件：</p>
+            <p>除了上述的许可协议条款内容外，还必须遵守下列条件：
+              <ol>
+                <li><strong>署名（BY）</strong>：应合理标明作者为 Benjamin，并提供原文链接及 CC BY-NC-SA 4.0 许可协议链接，同时说明是否对原作品进行了修改；</li>
+                <li><strong>非商业性使用（NC）</strong>：不得将本站原创内容用于任何商业目的；</li>
+                <li><strong>相同方式共享（SA）</strong>：基于本站原创内容创作的新作品，应继续采用相同或兼容的许可协议发布；</li>
+                <li><strong>没有附加协议</strong>：不得通过法律或技术手段限制他人行使本许可协议授予的权利</li>
+              </ol>
+            <p>根据 CC BY-NC-SA 4.0 许可协议，对于已经依据本许可协议合法取得授权的使用者，本许可为<strong>不可撤销</strong></p>
+          <h2 id="不适用本许可协议的内容">不适用本许可协议的内容</h3>
+            <p>以下内容不适用 CC BY-NC-SA 4.0 许可协议，除法律另有规定或权利人另行授权外，不得自行复制、传播、修改或用于其它用途：</p>
+              <ol>
+                <li>网站 Logo、网站名称及相关品牌标识；</li>
+                <li>第三方商标、企业 Logo 及品牌资产（如 Apple、Microsoft 等）；</li>
+                <li>第三方授权图片、字体、音视频资源及其它受独立许可协议约束的内容；</li>
+                <li>引用作品、公共领域作品及依法合理使用的第三方内容（其版权及许可归原权利人所有）</li>
+              </ol>
+            <p>上述内容应分别遵循其对应的版权声明或许可协议</p>
+          <h2 id="第三方资源">第三方资源</h2>
+            <p>本站在创作过程中可能使用以下第三方资源或服务：</p>
+          <h3 id="图片资源">图片资源</h3>
+            <ol>
+              <li><a href="https://unsplash.com/" target="_blank">Unsplash</a></li>
+              <li><a href="https://www.wikipedia.org/" target="_blank">wikipedia</a>（遵循各页面对应许可协议）</li>
+              <li><a href="https://www.apple.com/" target="_blank">Apple 官方网站</a> 及相关媒体资源</li>
+              <li><a href="https://www.microsoft.com/" target="_blank">Microsoft 官方网站</a> 及相关媒体资源</li>
+              <li><a href="https://worldvectorlogo.com/zh" target="_blank">WorldVectorLogo</a></li>
+              <li><a href="https://neodb.social/" target="_blank">NeoDB</a></li>
+            </ol>
+          <h3 id="音视频素材使用来源">音视频素材使用来源</h3>
+            <ol>
+              <li><a href="https://www.musicbed.com/" target="_blank">MusicBed</a></li>
+              <li><a href="https://www.motionelements.com/zh-hant/" target="_blank">MotionElements</a></li>
+            </ol>
+            <p>以上平台或服务仅表示资源来源，不代表其内容均可自由转载、传播或再次授权。相关资源的版权归其原权利人所有，使用时应遵循对应许可协议</p>
+          <h2 id="版权声明与侵权反馈">版权声明与侵权反馈</h2>
+            <p>本站尊重每一位原创作者及版权所有者的合法权益</p>
+            <p>如你发现本站存在：</p>
+              <ol>
+                <li>版权归属错误；</li>
+                <li>为正确标注来源；</li>
+                <li>授权信息遗漏；</li>
+                <li>设计侵犯知识产权或其它合法权益的内容</li>
+              </ol>
+            <p>请通过 <a href="mailto:support@yyl125.cc?subject=Benjamin's%20Blog%20%E9%97%AE%E9%A2%98%E5%8F%8D%E9%A6%88" target="_blank" rel="noreferrer noopener">电子邮件</a> 与我联系，并尽可能提供相关证明材料或说明</p>
+            <p>收到反馈后，我将尽快核实相关情况，并根据实际情况补充说明、修正内容或下线相关资源</p>
+          <h2 id="最后说明">最后说明</h2>
+            <p>版权制度的目的不仅是保护创作者的合法权益，也是促进知识与作品的合理传播</p>
+            <p>如果你喜欢本站内容，欢迎在遵守 <strong>CC BY-NC-SA 4.0</strong> 许可协议的前提下进行转载、引用和分享；如果你希望进行超出许可协议范围的使用（例如商业使用），欢迎提前与我联系协商授权</p>
+            <p>感谢每一位尊重原创、遵守版权规则的读者</p>
+          <hr>
+          <small class="text-gray-400">版本：v2.0</small>
+          <small class="text-gray-400">最后更新：2026 年 7 月 13 日</small>
+        </div>
+      </div>
+      
+    </div>
+    
+    <footer class="py-12 text-center px-4 md:px-0" v-pre>
+  共 26 篇文章｜<a href="https://yyl125.top/copyright" target="_blank">版权信息与资源使用说明</a>｜<i class="ri-rss-line"></i> <a href="https://yyl125.top/atom.xml" target="_blank">RSS</a><br>Copyright © 2026 Benjamin. CC BY-NC-SA 4.0
+</footer>
+
+
+    <button
+  class="article-toc-mobile-trigger"
+  type="button"
+  v-show="!showToc"
+  @click="toggleToc"
+  :aria-expanded="showToc ? 'true' : 'false'"
+  aria-controls="article-toc-content"
+  aria-label="打开文章目录"
+>
+  <i class="ri-file-list-line" aria-hidden="true"></i>
+</button>
+<button
+  class="article-toc-backdrop"
+  type="button"
+  v-show="showToc"
+  @click="dismissToc"
+  style="display: none;"
+  aria-label="关闭文章目录"
+></button>
+<aside
+  class="article-toc"
+  :class="{ 'is-open': showToc, 'is-pinned': tocPinned, 'is-closing': tocClosing }"
+  @pointerenter="openToc"
+  @pointerleave="closeToc"
+  @transitionend.self="refreshTocIndicator"
+  aria-label="文章目录"
+>
+  <button
+    class="article-toc-trigger"
+    type="button"
+    @click="toggleToc"
+    :aria-expanded="showToc ? 'true' : 'false'"
+    aria-controls="article-toc-content"
+  >
+    <span class="article-toc-collapsed-track" aria-hidden="true"></span>
+    <span class="article-toc-trigger-lines" aria-hidden="true"><i></i><i></i><i></i></span>
+    <span class="article-toc-title">目录</span>
+  </button>
+  <button
+    class="article-toc-pin"
+    type="button"
+    @click="toggleTocPin"
+    :aria-pressed="tocPinned ? 'true' : 'false'"
+    :aria-label="tocPinned ? '取消固定目录' : '固定目录'"
+    title="固定目录"
+  >
+    <i class="ri-pushpin-line" aria-hidden="true"></i>
+  </button>
+  <nav
+    class="post-toc-container"
+    id="article-toc-content"
+    aria-label="本文目录"
+    data-toc-auto="true"
+  >
+    <svg class="article-toc-tree" aria-hidden="true">
+      <path class="article-toc-tree-base"></path>
+      <path class="article-toc-tree-active"></path>
+    </svg>
+    
+  </nav>
+</aside>
+
+    
+    <!-- Back to top -->
+    <div class="fixed right-0 bottom-0 mb-4 mr-4 shadow w-8 h-8 rounded-full flex justify-center items-center z-10 cursor-pointer bg-white hover:shadow-lg transition-all dark:bg-gray-500 dark:text-gray-200" @click="backToUp" v-show="scrolled">
+      <i class="ri-arrow-up-line"></i>
+    </div>
+  </div>
+    
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+  <script src="https://yyl125.top/media/scripts/main.js"></script>
+  
+</body>
+</html>

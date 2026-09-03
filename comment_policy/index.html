@@ -1,0 +1,281 @@
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+<meta name="referrer" content="same-origin">
+<title>评论准则 - Benjamin&#39;s Blog</title>
+<link rel="shortcut icon" href="https://yyl125.top/favicon.ico">
+<link href="https://cdn.jsdelivr.net/npm/remixicon@latest/fonts/remixicon.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.7.2/animate.min.css">
+<link rel="stylesheet" href="https://yyl125.top/media/css/tailwind.css">
+<link rel="stylesheet" href="https://yyl125.top/styles/main.css">
+
+
+<link rel="alternate" type="application/atom+xml" title="评论准则 - Benjamin&#39;s Blog - Atom Feed" href="https://yyl125.top/atom.xml">
+
+
+
+  <script defer src="https://umami.yyl125.cc/feedback.js" data-website-id="7ac7b513-9366-4d64-ae65-0a97bf211058"></script>
+  <script type="text/javascript">
+    (() => {
+      const name = 'outbound-link-click';
+      document.querySelectorAll('a').forEach(a => {
+        if (a.host !== window.location.host && !a.getAttribute('data-umami-event')) {
+          a.setAttribute('data-umami-event', name);
+          a.setAttribute('data-umami-event-url', a.href);
+        }
+      });
+    })();
+  </script>
+
+<script defer>
+(function (document) {
+  const SOURCE = 'https://cdn.jsdelivr.net';
+  const DEST = 'https://gcore.jsdelivr.net';
+  const $ = document.querySelectorAll.bind(document);
+  const checkAvailable = (callback) => {
+    let timeoutId;
+    const newNode = document.createElement('link');
+    newNode.rel = 'stylesheet';
+    newNode.text = 'text/css';
+    const onError = () => {
+      if (!timeoutId) {
+        return;
+      }
+
+      clearTimeout(timeoutId);
+      timeoutId = 0;
+      newNode.href = 'about:blank';
+      newNode.remove();
+      callback(false);
+    };
+
+    timeoutId = setTimeout(onError, 2000);
+    newNode.addEventListener('error', onError);
+    newNode.addEventListener('load', function () {
+      newNode.remove();
+      clearTimeout(timeoutId);
+      callback(true);
+    });
+
+    newNode.href =
+      SOURCE +
+      '/gh/PipecraftNet/jsdelivr-auto-fallback@main/empty.css?' +
+      Date.now();
+    document.head.insertAdjacentElement('afterbegin', newNode);
+  };
+
+  const replaceElementSrc = () => {
+    for (const element of $('link[rel="stylesheet"]')) {
+      if (element.href && element.href.includes(SOURCE)) {
+        element.href = element.href.replace(SOURCE, DEST);
+      }
+    }
+
+    for (const element of $('script')) {
+      if (element.src && element.src.includes(SOURCE)) {
+        const newNode = document.createElement('script');
+        newNode.src = element.src.replace(SOURCE, DEST);
+        element.defer = true;
+        element.src = '';
+        element.before(newNode);
+        element.remove();
+      }
+    }
+
+    for (const element of $('img')) {
+      if (element.src && element.src.includes(SOURCE)) {
+        const source = element.src;
+        // Used to cancel loading. Without this line it will remain pending status.
+        element.src = '';
+        element.src = source.replace(SOURCE, DEST);
+      }
+    }
+  };
+
+  checkAvailable(function (isAvailable) {
+    if (isAvailable) {
+      return;
+    }
+
+    console.warn(SOURCE + ' is not available.');
+
+    replaceElementSrc();
+    // Replace dynamically added elements
+    setInterval(replaceElementSrc, 500);
+  });
+})(document);
+</script>
+  <meta name="description" content="Stay hungry. Stay foolish." />
+</head>
+<body>
+  <div class="antialiased flex flex-col min-h-screen" id="app">
+    <a href="https://yyl125.top" class="fixed top-0 left-0 mt-4 bg-black text-white dark:text-gray-700 dark:bg-yellow-50 dark:hover:bg-black dark:hover:text-white inline-flex p-2 pl-8 hover:text-gray-700 hover:bg-yellow-50 font-bold z-10 transition-fast animated fadeInLeft">
+    Benjamin&#39;s Blog
+    </a>
+    <div class="max-w-4xl w-full mx-auto">
+      <div class="shadow-box bg-white dark:bg-gray-600 rounded-lg pt-32 md:pt-64 px-4 md:px-8 pb-8 animated fadeIn mb-8">
+        <h1 class="text-5xl font-semibold leading-normal pb-8 mb-8 border-b-8 border-gray-700">评论准则</h1>
+        
+        <div class="markdown mb-8">
+          <div class="jumbotron">
+            <div class="container">
+              <p><i class="ri-information-line"></i> 这是一篇帮助文档，用于指示某些重要信息</p>
+            </div>
+          </div>
+
+          <p>感谢你参与 Benjamin’s Blog 的讨论</p>
+          <p>评论区是交流观点、分享经验和提出建议的地方。本站欢迎所有围绕文章内容展开的理性讨论，也希望每一位参与者都能够保持尊重、友善与开放的交流态度</p>
+          <h2 id="评论范围">评论范围</h2>
+            <p>除另有说明外，本站已启用评论功能的文章及页面均可发表评论</p>
+            <p>评论内容应尽量与当前页面主题相关，偏离主题较多或持续影响正常讨论的评论，可能会被移动、隐藏或删除</p>
+          <h2 id="欢迎的评论">欢迎的评论</h2>
+            <p>本站欢迎包括但不限于以下类型的评论：</p>
+              <ul>
+                <li>对文章内容提出疑问或补充；</li>
+                <li>分享个人经验或实践结果；</li>
+                <li>指出文中的错误或疏漏；</li>
+                <li>提出建设性的意见或建议；</li>
+                <li>提出建设性的意见或建议；</li>
+                <li>基于事实展开理性讨论；</li>
+                <li>分享不同观点并保持相互尊重</li>
+              </ul>
+            <p>即使与你的观点不同，也欢迎通过充分、友善的表达参与讨论</p>
+          <h2 id="不建议发布的内容">不建议发布的内容</h2>
+            <p>为了维护良好的交流环境，以下内容可能会被隐藏、删除或限制展示：</p>
+              <ul>
+                <li>与当前主题明显无关的评论；</li>
+                <li>人身攻击、侮辱、骚扰、恶意挑衅或歧视性言论；</li>
+                <li>违法、暴力、淫秽、仇恨、恐怖主义或其它违反法律法规的内容；</li>
+                <li>垃圾广告、推广信息或重复发布的内容；</li>
+                <li>恶意刷屏、灌水或无实际讨论价值的留言（如仅包含「沙发」「顶」「前排」等）；</li>
+                <li>明显具有误导性或恶意传播虚假信息的内容；</li>
+                <li>侵犯他人知识产权、隐私权或其它合法权益的内容；</li>
+                <li>其它可能影响正常交流秩序的内容</li>
+              </ul>
+            <p>本站鼓励不同观点之间的讨论，但不鼓励针对个人或群体的攻击性表达</p>
+          <h2 id="评论审核">评论审核</h2>
+            <p>为了减少垃圾评论和恶意内容，本站评论系统可能启用自动审核、垃圾评论过滤及敏感内容识别等功能</p>
+            <p>因此，你的评论可能出现以下情况：</p>
+              <ul>
+                <li>立即发布；</li>
+                <li>暂时进入审核状态；</li>
+                <li>被系统自动拦截；</li>
+                <li>被人工审核后决定是否公开</li>
+              </ul>
+            <p>自动审核结果可能存在误判。如你认为评论被错误拦截，欢迎通过其它方式与我联系</p>
+          <h2 id="为什么评论没有显示">为什么评论没有显示？</h2>
+            <p>评论未显示通常可能由以下原因导致：</p>
+              <ul>
+                <li>评论正在等待人工审核；</li>
+                <li>被系统识别为垃圾评论或疑似垃圾评论；</li>
+                <li>网络异常导致评论未成功提交；</li>
+                <li>评论内容触发自动审核规则；</li>
+                <li>评论违反本页面所列评论准则</li>
+              </ul>
+            <p>如确认属于误判，欢迎联系我协助核实</p>
+          <h2 id="为什么有些页面关闭了评论">为什么有些页面关闭了评论？</h2>
+            <p>本站会根据页面内容及实际情况决定是否开放评论</p>
+            <p>以下情况可能不会开放评论：</p>
+              <ul>
+                <li>帮助文档、法律文档等不适合展开讨论的页面；</li>
+                <li>曾出现大量垃圾评论或恶意行为的页面；</li>
+                <li>已停止维护或讨论价值较低的内容；</li>
+                <li>其它不适合开放评论的情况</li>
+              </ul>
+            <p>关闭评论并不代表拒绝交流，你仍可通过其它方式提出意见或建议</p>
+          <h2 id="评论版权">评论版权</h2>
+            <p>评论内容的著作权归评论发布者所有</p>
+            <p>发表评论即表示你同意本站在展示评论、引用讨论或维护评论系统正常运行所必需的范围内，对评论内容进行存储、展示、备份及必要的技术处理</p>
+            <p>如果评论中包含受第三方版权保护的内容，请确保你拥有相应的使用权利或已获得必要授权</p>
+          <h2 id="联系与反馈">联系与反馈</h2>
+            <p>如果你对评论审核、评论功能或评论系统本身存在疑问，欢迎通过本站提供的联系方式与我联系</p>
+            <p>如发现评论存在错误删除、垃圾评论遗漏或其它问题，也欢迎及时反馈，我会尽可能在合理时间内进行处理</p>
+          <p>感谢每一位认真参与讨论的读者。理性、友善且富有价值的交流，是 Benjamin’s Blog 持续发展的重要组成部分</p>
+          <hr>
+          <small class="text-gray-400">版本：v2.0</small>
+          <small class="text-gray-400">最后更新：2026 年 7 月 13 日</small>
+        </div>
+      </div>
+    </div>
+    
+    <footer class="py-12 text-center px-4 md:px-0" v-pre>
+  共 26 篇文章｜<a href="https://yyl125.top/copyright" target="_blank">版权信息与资源使用说明</a>｜<i class="ri-rss-line"></i> <a href="https://yyl125.top/atom.xml" target="_blank">RSS</a><br>Copyright © 2026 Benjamin. CC BY-NC-SA 4.0
+</footer>
+
+
+    <button
+  class="article-toc-mobile-trigger"
+  type="button"
+  v-show="!showToc"
+  @click="toggleToc"
+  :aria-expanded="showToc ? 'true' : 'false'"
+  aria-controls="article-toc-content"
+  aria-label="打开文章目录"
+>
+  <i class="ri-file-list-line" aria-hidden="true"></i>
+</button>
+<button
+  class="article-toc-backdrop"
+  type="button"
+  v-show="showToc"
+  @click="dismissToc"
+  style="display: none;"
+  aria-label="关闭文章目录"
+></button>
+<aside
+  class="article-toc"
+  :class="{ 'is-open': showToc, 'is-pinned': tocPinned, 'is-closing': tocClosing }"
+  @pointerenter="openToc"
+  @pointerleave="closeToc"
+  @transitionend.self="refreshTocIndicator"
+  aria-label="文章目录"
+>
+  <button
+    class="article-toc-trigger"
+    type="button"
+    @click="toggleToc"
+    :aria-expanded="showToc ? 'true' : 'false'"
+    aria-controls="article-toc-content"
+  >
+    <span class="article-toc-collapsed-track" aria-hidden="true"></span>
+    <span class="article-toc-trigger-lines" aria-hidden="true"><i></i><i></i><i></i></span>
+    <span class="article-toc-title">目录</span>
+  </button>
+  <button
+    class="article-toc-pin"
+    type="button"
+    @click="toggleTocPin"
+    :aria-pressed="tocPinned ? 'true' : 'false'"
+    :aria-label="tocPinned ? '取消固定目录' : '固定目录'"
+    title="固定目录"
+  >
+    <i class="ri-pushpin-line" aria-hidden="true"></i>
+  </button>
+  <nav
+    class="post-toc-container"
+    id="article-toc-content"
+    aria-label="本文目录"
+    data-toc-auto="true"
+  >
+    <svg class="article-toc-tree" aria-hidden="true">
+      <path class="article-toc-tree-base"></path>
+      <path class="article-toc-tree-active"></path>
+    </svg>
+    
+  </nav>
+</aside>
+
+    
+    <!-- Back to top -->
+    <div class="fixed right-0 bottom-0 mb-4 mr-4 shadow w-8 h-8 rounded-full flex justify-center items-center z-10 cursor-pointer bg-white hover:shadow-lg transition-all dark:bg-gray-500 dark:text-gray-200" @click="backToUp" v-show="scrolled">
+      <i class="ri-arrow-up-line"></i>
+    </div>
+  </div>
+    
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+  <script src="https://yyl125.top/media/scripts/main.js"></script>
+  
+</body>
+</html>

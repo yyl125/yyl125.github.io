@@ -1,0 +1,315 @@
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+<meta name="referrer" content="same-origin">
+<title>技术测试与验证 - Benjamin&#39;s Blog</title>
+<link rel="shortcut icon" href="https://yyl125.top/favicon.ico">
+<link href="https://cdn.jsdelivr.net/npm/remixicon@latest/fonts/remixicon.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.7.2/animate.min.css">
+<link rel="stylesheet" href="https://yyl125.top/media/css/tailwind.css">
+<link rel="stylesheet" href="https://yyl125.top/styles/main.css">
+
+
+<link rel="alternate" type="application/atom+xml" title="技术测试与验证 - Benjamin&#39;s Blog - Atom Feed" href="https://yyl125.top/atom.xml">
+
+
+
+  <script defer src="https://umami.yyl125.cc/feedback.js" data-website-id="7ac7b513-9366-4d64-ae65-0a97bf211058"></script>
+  <script type="text/javascript">
+    (() => {
+      const name = 'outbound-link-click';
+      document.querySelectorAll('a').forEach(a => {
+        if (a.host !== window.location.host && !a.getAttribute('data-umami-event')) {
+          a.setAttribute('data-umami-event', name);
+          a.setAttribute('data-umami-event-url', a.href);
+        }
+      });
+    })();
+  </script>
+
+<script defer>
+(function (document) {
+  const SOURCE = 'https://cdn.jsdelivr.net';
+  const DEST = 'https://gcore.jsdelivr.net';
+  const $ = document.querySelectorAll.bind(document);
+  const checkAvailable = (callback) => {
+    let timeoutId;
+    const newNode = document.createElement('link');
+    newNode.rel = 'stylesheet';
+    newNode.text = 'text/css';
+    const onError = () => {
+      if (!timeoutId) {
+        return;
+      }
+
+      clearTimeout(timeoutId);
+      timeoutId = 0;
+      newNode.href = 'about:blank';
+      newNode.remove();
+      callback(false);
+    };
+
+    timeoutId = setTimeout(onError, 2000);
+    newNode.addEventListener('error', onError);
+    newNode.addEventListener('load', function () {
+      newNode.remove();
+      clearTimeout(timeoutId);
+      callback(true);
+    });
+
+    newNode.href =
+      SOURCE +
+      '/gh/PipecraftNet/jsdelivr-auto-fallback@main/empty.css?' +
+      Date.now();
+    document.head.insertAdjacentElement('afterbegin', newNode);
+  };
+
+  const replaceElementSrc = () => {
+    for (const element of $('link[rel="stylesheet"]')) {
+      if (element.href && element.href.includes(SOURCE)) {
+        element.href = element.href.replace(SOURCE, DEST);
+      }
+    }
+
+    for (const element of $('script')) {
+      if (element.src && element.src.includes(SOURCE)) {
+        const newNode = document.createElement('script');
+        newNode.src = element.src.replace(SOURCE, DEST);
+        element.defer = true;
+        element.src = '';
+        element.before(newNode);
+        element.remove();
+      }
+    }
+
+    for (const element of $('img')) {
+      if (element.src && element.src.includes(SOURCE)) {
+        const source = element.src;
+        // Used to cancel loading. Without this line it will remain pending status.
+        element.src = '';
+        element.src = source.replace(SOURCE, DEST);
+      }
+    }
+  };
+
+  checkAvailable(function (isAvailable) {
+    if (isAvailable) {
+      return;
+    }
+
+    console.warn(SOURCE + ' is not available.');
+
+    replaceElementSrc();
+    // Replace dynamically added elements
+    setInterval(replaceElementSrc, 500);
+  });
+})(document);
+</script>
+  <meta name="description" content="Stay hungry. Stay foolish."/>
+  <link rel="stylesheet" href="https://yyl125.top/media/css/addition.css">
+</head>
+
+<body>
+  <div class="antialiased flex flex-col min-h-screen" id="app">
+    <a href="https://yyl125.top" class="fixed top-0 left-0 mt-4 bg-black text-white dark:text-gray-700 dark:bg-yellow-50 dark:hover:bg-black dark:hover:text-white inline-flex p-2 pl-8 hover:text-gray-700 hover:bg-yellow-50 font-bold z-10 transition-fast animated fadeInLeft">
+    Benjamin&#39;s Blog
+    </a>
+    <div class="max-w-4xl w-full mx-auto">
+      <div class="shadow-box bg-white dark:bg-gray-600 rounded-lg pt-32 md:pt-64 px-4 md:px-8 pb-8 animated fadeIn mb-8">
+        <h1 class="text-5xl font-semibold leading-normal pb-8 mb-8 border-b-8 border-gray-700">技术测试与验证</h1>
+        
+        <div class="jumbotron">
+          <div class="container">
+            <p><i class="ri-ticket-2-line"></i> 本页面用于测试未来可能会在 Benjamin's Blog 中被正式启用的前瞻性内容</p>
+            <br>
+            <p><small class="text-gray-400">
+              Benjamin 对网站内所有图片、文字以及音像资源保留最终解释权。欲了解更多相关信息，详见 <a href="https://yyl125.top/copyright/" target="_blank">版权信息与资源使用说明</a> 页面
+            </small></p>
+          </div>
+        </div>
+        
+        <div class="markdown mb-8">
+          <h2 id="EmojiReaction">表情符号回应</h2>
+          <p>这是「表情符号回应」的独立测试实例，再次点击已选中的表情即可撤回。它连接真实反馈后端，但使用专属测试数据空间，不会读取或修改正式统计</p>
+          <emoji-reaction
+            endpoint="https://memos-reaction.yyl125.cc"
+            target-id="/rocky-tests/emoji-reaction/v1"
+            debug
+            aria-label="Emoji Reaction 独立组件测试">
+          </emoji-reaction>
+          <h2 id="Applaud">点赞评价按钮</h2>
+          <p>此按钮不会影响任何生产数据，你可以随意点击此按钮。正常情况下再次点击按钮不会撤回点赞。仅在该页面上，刷新后该计数会重置</p>
+          <div class="applaudBox">
+            <button class="applaudBtn">
+              <i class="ri-thumb-up-line"></i>
+              <span class="likeCount">0</span>
+            </button>
+          </div>
+          <h2 id="LivePhotos">Live Photos</h2>
+          <p>macOS 或 Windows 设备请将鼠标光标放置在位于图片左上角的 LIVE 字样上以开始播放，光标移出将自动停止。iPhone、iPad、Android 设备长按图片以开始播放，松开将自动停止</p>
+          <div class="LivePhotos">
+            <div
+              data-live-photo
+              data-photo-src="https://oss.yyl125.cc/blog/item/Live_Photos/Live_Photos_Demo.jpg"
+              data-video-src="https://oss.yyl125.cc/blog.item/Live_Photos/Live_Photos_Demo.mov"
+              data-autoplay="true"
+              data-loop="true"
+              data-muted="true"
+              data-intersect="true"
+              style="width: 320px; height: 320px;"
+            ></div>
+          </div>
+          <p class="media-description">Live Photos 示例</p>
+          <h3 id="Compatibility">浏览器兼容性</h3>
+          <table style="margin:auto; margin-top:1.5rem;"><thead style="text-align:center"><tr><th>设备</th><th>浏览器</th></tr></thead><tbody style="text-align:center"><tr><th>iOS/iPadOS</th><td>Safari、Chrome</td></tr><tr><th>macOS</th><td>Safari、Chrome 或 Firefox</td></tr><tr><th>Android</th><td>Chrome (beta)</td><tr><th>Windows</th><td>Chrome、Firefox、Edge 或 Internet Explorer 11</td></tr></tbody></table>
+          <p class="media-description">数据来源与 Apple 官网</p>
+          <h3 id="Tips">Tips</h3>
+          <ul>
+            <li>Live Photos 的视频部分是以 H.264 编码的 MOV 文件，图片部分是以 JPEG 格式的静态图片</li>
+            <li>Live Photos 在 Windows 设备上的表现可能不太理想，尤其是在 Internet Explorer 11 上。建议使用 Chrome、Firefox 或 Edge 浏览器以获得更好的体验。Android 设备的具体性能表现则取决于设备</li>
+            <li>由于使用 <a href="https://developer.apple.com/documentation/livephotoskitjs" target="_blank">LivePhotosKit JS</a> 库，兼容性相关只保证 Apple 设备，各 Android OEM 的支持情况可能不同</li>
+          </ul>
+          <h2 id="APalyer">APlayer</h2>
+          <div id="aplayer"></div>
+        </div>
+      </div>
+      <footer class="py-12 text-center px-4 md:px-0" v-pre>
+  共 26 篇文章｜<a href="https://yyl125.top/copyright" target="_blank">版权信息与资源使用说明</a>｜<i class="ri-rss-line"></i> <a href="https://yyl125.top/atom.xml" target="_blank">RSS</a><br>Copyright © 2026 Benjamin. CC BY-NC-SA 4.0
+</footer>
+
+    </div>
+
+    <button
+  class="article-toc-mobile-trigger"
+  type="button"
+  v-show="!showToc"
+  @click="toggleToc"
+  :aria-expanded="showToc ? 'true' : 'false'"
+  aria-controls="article-toc-content"
+  aria-label="打开文章目录"
+>
+  <i class="ri-file-list-line" aria-hidden="true"></i>
+</button>
+<button
+  class="article-toc-backdrop"
+  type="button"
+  v-show="showToc"
+  @click="dismissToc"
+  style="display: none;"
+  aria-label="关闭文章目录"
+></button>
+<aside
+  class="article-toc"
+  :class="{ 'is-open': showToc, 'is-pinned': tocPinned, 'is-closing': tocClosing }"
+  @pointerenter="openToc"
+  @pointerleave="closeToc"
+  @transitionend.self="refreshTocIndicator"
+  aria-label="文章目录"
+>
+  <button
+    class="article-toc-trigger"
+    type="button"
+    @click="toggleToc"
+    :aria-expanded="showToc ? 'true' : 'false'"
+    aria-controls="article-toc-content"
+  >
+    <span class="article-toc-collapsed-track" aria-hidden="true"></span>
+    <span class="article-toc-trigger-lines" aria-hidden="true"><i></i><i></i><i></i></span>
+    <span class="article-toc-title">目录</span>
+  </button>
+  <button
+    class="article-toc-pin"
+    type="button"
+    @click="toggleTocPin"
+    :aria-pressed="tocPinned ? 'true' : 'false'"
+    :aria-label="tocPinned ? '取消固定目录' : '固定目录'"
+    title="固定目录"
+  >
+    <i class="ri-pushpin-line" aria-hidden="true"></i>
+  </button>
+  <nav
+    class="post-toc-container"
+    id="article-toc-content"
+    aria-label="本文目录"
+    data-toc-auto="true"
+  >
+    <svg class="article-toc-tree" aria-hidden="true">
+      <path class="article-toc-tree-base"></path>
+      <path class="article-toc-tree-active"></path>
+    </svg>
+    
+  </nav>
+</aside>
+
+
+    <!-- Back to top -->
+    <div class="fixed right-0 bottom-0 mb-4 mr-4 shadow w-8 h-8 rounded-full flex justify-center items-center z-10 cursor-pointer bg-white hover:shadow-lg transition-all dark:bg-gray-500 dark:text-gray-200" @click="backToUp" v-show="scrolled">
+      <i class="ri-arrow-up-line"></i>
+    </div>
+  </div>
+
+  <script src="https://yyl125.top/media/scripts/memos-reaction.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+  <script src="https://yyl125.top/media/scripts/main.js"></script>
+  <script>
+    const btn = document.querySelector(".applaudBtn");
+    const countEl = btn.querySelector(".likeCount");
+    const iconEl = btn.querySelector("i");
+
+    let animFrame = null;
+    let count = 0;
+
+    btn.addEventListener("click", () => {
+      const start = count;
+      const end = count + 1;
+      count = end;
+
+      btn.style.transform = "scale(1.2)";
+      setTimeout(() => btn.style.transform = "scale(1)", 200);
+
+      iconEl.classList.replace("ri-thumb-up-line", "ri-thumb-up-fill");
+      btn.classList.add("liked");
+      btn.classList.add("animate");
+      setTimeout(() => btn.classList.remove("animate"), 400);
+
+      const duration = 400;
+      const startTime = performance.now();
+      cancelAnimationFrame(animFrame);
+
+      function animateNumber(now) {
+        const elapsed = now - startTime;
+        const progress = Math.min(elapsed / duration, 1);
+        const value = Math.round(start + (end - start) * progress);
+        countEl.textContent = value;
+        countEl.classList.add("animate");
+
+        if (progress < 1) {
+          animFrame = requestAnimationFrame(animateNumber);
+        } else {
+          countEl.classList.remove("animate");
+        }
+      }
+
+      animFrame = requestAnimationFrame(animateNumber);
+    });
+  </script>
+  <link rel="stylesheet" href="https://yyl125.top/media/css/APlayer.min.css">
+  <link rel="stylesheet" href="https://yyl125.top/media/css/APlayer-rocky.css">
+  <script src="https://yyl125.top/media/scripts/APlayer.min.js"></script>
+  <script>
+    const ap = new APlayer({
+      container: document.getElementById('aplayer'),
+      audio: [{
+        name: 'Moments',
+        artist: 'Christopher',
+        url: 'https://personalblogmedia.oss-cn-hangzhou.aliyuncs.com/audio/test/Moments.mp3',
+        cover: "https://personalblogmedia.oss-cn-hangzhou.aliyuncs.com/img/cover/test/Moments_Cover.jpg",
+      }]
+    });
+  </script>
+  
+</body>
+
+</html>

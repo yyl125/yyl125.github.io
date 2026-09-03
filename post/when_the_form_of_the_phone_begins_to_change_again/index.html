@@ -1,0 +1,588 @@
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+<meta name="referrer" content="same-origin">
+<title>当手机形态又开始改变 - Benjamin&#39;s Blog</title>
+<link rel="shortcut icon" href="https://yyl125.top/favicon.ico">
+<link href="https://cdn.jsdelivr.net/npm/remixicon@latest/fonts/remixicon.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.7.2/animate.min.css">
+<link rel="stylesheet" href="https://yyl125.top/media/css/tailwind.css">
+<link rel="stylesheet" href="https://yyl125.top/styles/main.css">
+
+
+<link rel="alternate" type="application/atom+xml" title="当手机形态又开始改变 - Benjamin&#39;s Blog - Atom Feed" href="https://yyl125.top/atom.xml">
+
+
+
+  <script defer src="https://umami.yyl125.cc/feedback.js" data-website-id="7ac7b513-9366-4d64-ae65-0a97bf211058"></script>
+  <script type="text/javascript">
+    (() => {
+      const name = 'outbound-link-click';
+      document.querySelectorAll('a').forEach(a => {
+        if (a.host !== window.location.host && !a.getAttribute('data-umami-event')) {
+          a.setAttribute('data-umami-event', name);
+          a.setAttribute('data-umami-event-url', a.href);
+        }
+      });
+    })();
+  </script>
+
+<script defer>
+(function (document) {
+  const SOURCE = 'https://cdn.jsdelivr.net';
+  const DEST = 'https://gcore.jsdelivr.net';
+  const $ = document.querySelectorAll.bind(document);
+  const checkAvailable = (callback) => {
+    let timeoutId;
+    const newNode = document.createElement('link');
+    newNode.rel = 'stylesheet';
+    newNode.text = 'text/css';
+    const onError = () => {
+      if (!timeoutId) {
+        return;
+      }
+
+      clearTimeout(timeoutId);
+      timeoutId = 0;
+      newNode.href = 'about:blank';
+      newNode.remove();
+      callback(false);
+    };
+
+    timeoutId = setTimeout(onError, 2000);
+    newNode.addEventListener('error', onError);
+    newNode.addEventListener('load', function () {
+      newNode.remove();
+      clearTimeout(timeoutId);
+      callback(true);
+    });
+
+    newNode.href =
+      SOURCE +
+      '/gh/PipecraftNet/jsdelivr-auto-fallback@main/empty.css?' +
+      Date.now();
+    document.head.insertAdjacentElement('afterbegin', newNode);
+  };
+
+  const replaceElementSrc = () => {
+    for (const element of $('link[rel="stylesheet"]')) {
+      if (element.href && element.href.includes(SOURCE)) {
+        element.href = element.href.replace(SOURCE, DEST);
+      }
+    }
+
+    for (const element of $('script')) {
+      if (element.src && element.src.includes(SOURCE)) {
+        const newNode = document.createElement('script');
+        newNode.src = element.src.replace(SOURCE, DEST);
+        element.defer = true;
+        element.src = '';
+        element.before(newNode);
+        element.remove();
+      }
+    }
+
+    for (const element of $('img')) {
+      if (element.src && element.src.includes(SOURCE)) {
+        const source = element.src;
+        // Used to cancel loading. Without this line it will remain pending status.
+        element.src = '';
+        element.src = source.replace(SOURCE, DEST);
+      }
+    }
+  };
+
+  checkAvailable(function (isAvailable) {
+    if (isAvailable) {
+      return;
+    }
+
+    console.warn(SOURCE + ' is not available.');
+
+    replaceElementSrc();
+    // Replace dynamically added elements
+    setInterval(replaceElementSrc, 500);
+  });
+})(document);
+</script>
+  <meta name="description" content="上世纪，手机设计和制造领域百花齐放。但自 iPhone 发布 10 多年后，手机形态却似乎逐渐趋于统一。这真的是事实吗？
+
+手机应该长什么样
+纵观全年的手机厂商发布会，你会发现，当今时代的手机实际上高度同质化：
+
+一块大屏幕
+金属/玻璃中框..." />
+  <meta property="og:title" content="当手机形态又开始改变 - Benjamin&#39;s Blog">
+  <meta property="og:description" content="上世纪，手机设计和制造领域百花齐放。但自 iPhone 发布 10 多年后，手机形态却似乎逐渐趋于统一。这真的是事实吗？
+
+手机应该长什么样
+纵观全年的手机厂商发布会，你会发现，当今时代的手机实际上高度同质化：
+
+一块大屏幕
+金属/玻璃中框..." />
+  <meta property="og:type" content="articles">
+  <meta property="og:url" content="https://yyl125.top/post/when_the_form_of_the_phone_begins_to_change_again/" />
+  <meta property="og:image" content="https://personalblogmedia.oss-cn-hangzhou.aliyuncs.com/img/post/Meta_View/When_The_Form_of_The_Phone_Begins_to_Change_Again/When_The_Form_of_The_Phone_Begins_to_Change_Again_Banner.jpg">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:width" content="1200">
+  <meta name="twitter:title" content="当手机形态又开始改变 - Benjamin&#39;s Blog">
+  <meta name="twitter:description" content="上世纪，手机设计和制造领域百花齐放。但自 iPhone 发布 10 多年后，手机形态却似乎逐渐趋于统一。这真的是事实吗？
+
+手机应该长什么样
+纵观全年的手机厂商发布会，你会发现，当今时代的手机实际上高度同质化：
+
+一块大屏幕
+金属/玻璃中框...">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="canonical" href="https://yyl125.top/post/when_the_form_of_the_phone_begins_to_change_again/">
+
+  <script src="https://cdn.jsdelivr.net/npm/vanilla-lazyload@17.8.8/dist/lazyload.min.js"></script>
+
+  
+    <link rel="stylesheet" href="https://yyl125.top/media/css/prism-atom-dark.css">
+  
+
+  
+</head>
+
+<body>
+  <div class="antialiased flex flex-col min-h-screen" id="app">
+    <a href="https://yyl125.top" class="fixed top-0 left-0 mt-4 bg-black text-white dark:text-gray-700 dark:bg-yellow-50 dark:hover:bg-black dark:hover:text-white inline-flex p-2 pl-8 hover:text-gray-700 hover:bg-yellow-50 font-bold z-10 transition-fast animated fadeInLeft">
+      Benjamin&#39;s Blog
+    </a>
+    <div class="max-w-4xl w-full mx-auto">
+      <div class="shadow-box bg-white dark:bg-gray-600 rounded-lg pt-32 md:pt-64 px-4 md:px-8 pb-8 animated fadeIn mb-8">
+        <h1 class="text-5xl font-semibold leading-normal pb-8 mb-8 border-b-8 border-gray-700">
+          当手机形态又开始改变
+        </h1>
+        
+          <img src="https://personalblogmedia.oss-cn-hangzhou.aliyuncs.com/img/post/Meta_View/When_The_Form_of_The_Phone_Begins_to_Change_Again/When_The_Form_of_The_Phone_Begins_to_Change_Again_Banner.jpg" alt="当手机形态又开始改变" class="block w-full mb-8">
+        
+        <div class="mb-8 flex flex-wrap">
+          <div class="text-gray-400 text-sm mr-4"><i class="ri-calendar-2-line"></i> 2026-06-19 · <i class="ri-timer-line"></i> 20 min read</div>
+          
+            <a href="https://yyl125.top/tag/meta_view/" class="text-gray-700 dark:text-gray-200 text-sm hover:transition-all duration-100 inline-flex mr-2">
+              <i class="ri-hashtag"></i>
+              Meta View
+            </a>
+          
+        </div>
+        
+        <div class="jumbotron">
+          <div class="container">
+            <p><i class="ri-time-line"></i> 这是一篇发布于 3 个月前的文章，其中的信息可能已经有所发展或是发生改变</p>
+          </div>
+        </div>
+
+        
+        
+        <div class="markdown mb-8" v-pre id="post-content">
+          <p>上世纪，手机设计和制造领域百花齐放。但自 iPhone 发布 10 多年后，手机形态却似乎逐渐趋于统一。这真的是事实吗？</p>
+<!-- more -->
+<h2 id="手机应该长什么样">手机应该长什么样</h2>
+<p>纵观全年的手机厂商发布会，你会发现，当今时代的手机实际上高度同质化：</p>
+<ul>
+<li>一块大屏幕</li>
+<li>金属/玻璃中框</li>
+<li>硕大的摄像头模组，甚至是「岛」</li>
+</ul>
+<p>但在 1990 年代，厂商甚至还没有形成「手机应该长什么样的」的共识。于是当时厂商解决的问题并不是「摄像头应该横着还是竖着」，而是手机究竟应该是一根棍、一块砖、一个方矮盒子、一部袖珍电话，还是一种时尚饰品？这就给当时的工业设计留下了极大的探索空间</p>
+<p>如果将 iPhone 视作现代智能手机的始祖，难不如我们先将手机大致分为「前 iPhone 时代」和「后 iPhone 时代」两个部分</p>
+<h3 id="前-iphone-时代">前 iPhone 时代</h3>
+<p>先让我们来一段「考古」。纵观手机的发展史，大体上可以将「前 iPhone 时代」的手机划分为以下几个发展阶段：</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">阶段</th>
+<th style="text-align:center">大致时间</th>
+<th style="text-align:center">关键词</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">移动电话阶段</td>
+<td style="text-align:center">1983-1991</td>
+<td style="text-align:center">能带出去就已经很了不起</td>
+</tr>
+<tr>
+<td style="text-align:center">小型化阶段</td>
+<td style="text-align:center">1991-1995</td>
+<td style="text-align:center">更小、更轻、更像「个人设备」</td>
+</tr>
+<tr>
+<td style="text-align:center">形态爆发阶段</td>
+<td style="text-align:center">1996-1998</td>
+<td style="text-align:center">直板、翻盖、滑盖</td>
+</tr>
+<tr>
+<td style="text-align:center">消费电子阶段</td>
+<td style="text-align:center">1998-2007</td>
+<td style="text-align:center">色彩、换壳、游戏、时尚、个性化</td>
+</tr>
+</tbody>
+</table>
+<p>真正的转折，其实就是<strong>手机从曾经单一的通讯设备变为了真正的消费电子产品</strong></p>
+<h4 id="移动电话阶段">移动电话阶段</h4>
+<p>1980 年代，手机的工业设计首先服从于一个非常朴实的需求：「我怎么把它带出去」</p>
+<p>最典型的产品当然是 Motorola DynaTAC</p>
+<figure data-type="image" tabindex="1"><img src="https://personalblogmedia.oss-cn-hangzhou.aliyuncs.com/img/post/Meta_View/When_The_Form_of_The_Phone_Begins_to_Change_Again/When_The_Form_of_The_Phone_Begins_to_Change_Again_01.jpg" alt="" loading="lazy"></figure>
+<figure data-type="image" tabindex="2"><img src="https://personalblogmedia.oss-cn-hangzhou.aliyuncs.com/img/post/Meta_View/When_The_Form_of_The_Phone_Begins_to_Change_Again/When_The_Form_of_The_Phone_Begins_to_Change_Again_02.jpg" alt="" loading="lazy"></figure>
+<figure data-type="image" tabindex="3"><img src="https://personalblogmedia.oss-cn-hangzhou.aliyuncs.com/img/post/Meta_View/When_The_Form_of_The_Phone_Begins_to_Change_Again/When_The_Form_of_The_Phone_Begins_to_Change_Again_03.jpg" alt="" loading="lazy"></figure>
+<figure data-type="image" tabindex="4"><img src="https://personalblogmedia.oss-cn-hangzhou.aliyuncs.com/img/post/Meta_View/When_The_Form_of_The_Phone_Begins_to_Change_Again/When_The_Form_of_The_Phone_Begins_to_Change_Again_04.jpg" alt="" loading="lazy"></figure>
+<figure data-type="image" tabindex="5"><img src="https://personalblogmedia.oss-cn-hangzhou.aliyuncs.com/img/post/Meta_View/When_The_Form_of_The_Phone_Begins_to_Change_Again/When_The_Form_of_The_Phone_Begins_to_Change_Again_05.jpg" alt="" loading="lazy"></figure>
+<figure data-type="image" tabindex="6"><img src="https://personalblogmedia.oss-cn-hangzhou.aliyuncs.com/img/post/Meta_View/When_The_Form_of_The_Phone_Begins_to_Change_Again/When_The_Form_of_The_Phone_Begins_to_Change_Again_06.jpg" alt="" loading="lazy"></figure>
+<figure data-type="image" tabindex="7"><img src="https://personalblogmedia.oss-cn-hangzhou.aliyuncs.com/img/post/Meta_View/When_The_Form_of_The_Phone_Begins_to_Change_Again/When_The_Form_of_The_Phone_Begins_to_Change_Again_07.jpg" alt="" loading="lazy"></figure>
+<figure data-type="image" tabindex="8"><img src="https://personalblogmedia.oss-cn-hangzhou.aliyuncs.com/img/post/Meta_View/When_The_Form_of_The_Phone_Begins_to_Change_Again/When_The_Form_of_The_Phone_Begins_to_Change_Again_08.jpg" alt="" loading="lazy"></figure>
+<figure data-type="image" tabindex="9"><img src="https://personalblogmedia.oss-cn-hangzhou.aliyuncs.com/img/post/Meta_View/When_The_Form_of_The_Phone_Begins_to_Change_Again/When_The_Form_of_The_Phone_Begins_to_Change_Again_09.jpg" alt="" loading="lazy"></figure>
+<p class="media-description">前 iPhone 时代，各式各样的手机形态。部分图片来源见水印</p>
+<p>这一时期手机设计受到一个最现实的问题制约，即电池、射频、电路都太大。因此所谓工业设计，很大程度是在回答：</p>
+<blockquote>
+<p>怎么把原本装在汽车里的无线电话缩小到一个人能够拿起来？</p>
+</blockquote>
+<p>所以形成了非常典型的「Brick Phone」：</p>
+<ul>
+<li>长条形</li>
+<li>巨大的外置天线</li>
+<li>数字键盘</li>
+<li>极小的 LED/LCD</li>
+<li>厚重机身</li>
+<li>大容量电池占据大量空间</li>
+</ul>
+<p>但一个很重要的转折发生在 1989 年发布的 Motorola MicroTAC——它开始尝试「折叠」。虽然严格意义上，此时的「折叠」还不是后来大家熟悉的完整上下翻盖结构，但它已经提出一个非常重要的设计思想：</p>
+<blockquote>
+<p>手机不使用的时候，为什么一定要保持通话时的长度？</p>
+</blockquote>
+<p>这实际上是后来整个翻盖手机时代的思想源头</p>
+<h4 id="小型化阶段">小型化阶段</h4>
+<p>到了 1990 年代初，人体工学开始超过纯粹的电子工程，成为手机设计的重要因素。手机工业设计第一次从「如何装下电子元件」，转向了「人应该如何使用这台机器」</p>
+<p>由此，当时的手机开始了寻找自己的「标准形态」的道路。比如 1992 年发布的 Nokia 101</p>
+<p>当时 Nokia 的设计重点在于：</p>
+<ul>
+<li>按键的位置</li>
+<li>按键手感</li>
+<li>听筒与嘴之间的距离</li>
+<li>屏幕信息</li>
+<li>菜单逻辑</li>
+</ul>
+<p>很多人甚至将 Nokia 101 视为 Nokia 后来设计路线的重要起点。这时候手机已经逐渐形成了我们后来非常熟悉的「屏幕在上+导航/功能键+数字键盘在下」的模式。这也是 Nokia 后来崛起的重要背景</p>
+<p>1996 年推出的 Motorola StarTAC 则将手机真正折叠成了非常紧凑的形态</p>
+<p>它大约只有 88 克的重量，是当时市场上推出的最小、最轻的手机之一。Motorola 甚至在当时把它当作一种「可穿戴产品」来营销</p>
+<p>它的设计具有三个意义：</p>
+<ol>
+<li>翻盖解决了「大屏幕/键盘」和「小体积」之间的矛盾；</li>
+<li>开合本身变成了一种交互；</li>
+<li>让手机第一次具有强烈的「时尚产品」属性</li>
+</ol>
+<p>当年的 MotorolaStarTAC 并不便宜。英国市场资料记载其价格达到约 £1,400；广告甚至把它和美国运通金卡放在一起来塑造其高端形象。手机开始不仅代表通信能力，也代表使用者的身份</p>
+<h4 id="形态爆发阶段">形态爆发阶段</h4>
+<p>而与此同时，Nokia 则走了与 Motorola 几乎完全不同的路线</p>
+<p>Motorola 很长时间都在追求更小、更薄、更高级。而 Nokia 后来发现了另一件事，即手机可以表达一个人的性格</p>
+<p>Nokia 在这一时期推出了 Nokia 5110，并正式推广 Xpress-on 可更换面板。最初 Nokia 官方仅准备了黑色之外的七种颜色，随后大量的第三方厂商开始生产适配于它的透明壳、荧光壳、图案壳、材质壳等</p>
+<p>其实 Nokia 5110 并不是历史上第一台能够改变外观的手机。Ericsson SA628 已经允许更换键盘周围的面板，但 Nokia 5110 把「整个正面外壳可以由用户更换」真正做成了一个成熟的产品概念。于是出现了一件今天看来很普通，但在当年却意义重大的事情：两个人可以买同一款手机，但拿出来完全不像同一款</p>
+<p>但 Nokia 在这一阶段也并不是只有一种设计。1996 年，Nokia 发布了 Nokia 8110。它采用了弧形机身和滑动键盘盖</p>
+<p>几乎同一时期，Motorola StarTAC 在尝试把手机做到尽可能小，而 Nokia 9000 Communicator 却在尝试让手机做到尽可能多。这两种方向居然都成立，这正是那个时代有趣的地方</p>
+<h4 id="消费电子阶段">消费电子阶段</h4>
+<p>1999 年发布了细长的 Ericsson T28。此时 Ericsson 的产品有一种非常鲜明的北欧工业设计气质：细长、克制、小屏幕、极薄机身、主动式翻盖和外露短天线</p>
+<p>1999 年的手机市场已经形成了很有意思的视觉分化</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">品牌</th>
+<th style="text-align:center">关键词</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">Motorola</td>
+<td style="text-align:center">科技、商务、折叠、精密</td>
+</tr>
+<tr>
+<td style="text-align:center">Nokia</td>
+<td style="text-align:center">圆润、友好、年轻、个性化</td>
+</tr>
+<tr>
+<td style="text-align:center">Ericsson</td>
+<td style="text-align:center">冷峻、纤薄、工程感</td>
+</tr>
+</tbody>
+</table>
+<p>而当时三家公司确实处于激烈竞争状态。据  Ericsson 自己的历史资料记载，1997 年 Ericsson、Nokia、Motorola 三家公司的全球市场份额已经大体接近。换句话说，不同的工业设计哲学，是可以同时取得商业成功的</p>
+<p>由此看来，在当时人们根本不知道未来的手机应该是什么样子。屏幕应该多大？键盘是不是必须存在？天线应该放哪里？</p>
+<p>答案是没有标准答案</p>
+<p>甚至此时手机究竟应该是耐用品还是时尚消费品都还没有答案。所有厂商只能不断试验，而且这种实验并不只是外形。1999 年的一篇工业设计报道已经在讨论手机厂商的各种尝试，报道甚至直接指出手机已经开始从商务工具转变为了更广泛的消费产品</p>
+<p>1999 年的手机，外形千奇百怪，功能却非常相似；2026 年的手机，外形高度相似，但功能却强大得不可思议</p>
+<p>早期手机的核心功能无非就是电话+短信+通讯录+简单游戏。所以厂商们想做差异化，自然会去思考「它长什么样？」。而现代智能手机的价值大量存在于 App、摄像系统、SoC、AI、OS 生态、云服务……于是外壳反而必须围绕一块巨大的触摸屏服务。当软件还没有「吞噬」手机的时候，硬件本身就是手机的「性格」</p>
+<p>而到了 2000 年代前半段，Nokia 7600、7280「口红手机」、N-Gage、3650 的圆形键盘、6800 折叠全键盘、7710。Motorola 的 V70、RAZR V3。Siemens Xelibri，Sony Ericsson T68i、T610、W800、K750。Samsung、LG 的各种翻盖/旋转结构。以及日本市场更加疯狂的 DoCoMo、au、SoftBank/J-Phone 机型将手机设计的百花齐放更是推到了顶峰</p>
+<h3 id="后-iphone-时代">后 iPhone 时代</h3>
+<p>2007 年，iPhone 横空出世。此后的人们普遍认为 iPhone 发布后，逐渐出现的大屏触控智能手机逐渐统一的工业设计语言终结了曾经的手机形态战争</p>
+<p>事实果真如此吗？当然不。手机厂商其实在这期间并没有完全跟随主流，还是发展出了一些有意思的产品</p>
+<p>2009 年发布的 Nokia N97 是非常典型的后 iPhone 时代过渡产品</p>
+<p>合起来，它是一台触屏智能手机；推开，屏幕会倾斜起来，下面露出完整的 QWER 键盘</p>
+<p>另一些厂商则更加保守。比如 BlackBerry，BlackBerry Torch 9800 正常状态是一块触摸屏，向上一推，下面就出现了 BlackBerry 全键盘。BlackBerry 后来甚至自己搞出了 BlackBerry Passport 这一经典机型。它的逻辑则完全不是「让手机适应人的单手」，而是「让屏幕更接近阅读文档、邮件和表格的宽度」</p>
+<p>再往后，屏幕为什么一定要是平的？手机为什么只能有一面屏幕？能不能将手机模块化？这些问题都推动了手机厂商在手机形态上不断的探索</p>
+<p>所以其实，与其说 iPhone 让各大厂商逐渐趋同，倒不如说 iPhone 并没有「杀死」手机形态创新，而是改变了创新的前提</p>
+<p>在 iPhone 发布之前，厂商首先设计一个「物体」，再考虑屏幕应该放在哪里。而 iPhone 发布以后，厂商首先承认「正面需要一块尽可能大的屏幕」，然后再思考这个屏幕和机身还能怎么折、怎么滑、怎么转</p>
+<h2 id="视角的不同创造了划时代的变化">视角的不同，创造了划时代的变化</h2>
+<p>让我们换一种视角。如果把过去四十年的手机放在一起看，会发现手机外形并不只是由「电池能做多小、屏幕能做多大」决定的。另一个长期存在的力量是：</p>
+<blockquote>
+<p>人们究竟在拿手机消费什么内容</p>
+</blockquote>
+<p>电话时代，手机围绕「耳朵和嘴」设计；短信时代则围绕「拇指」设计；到了移动互联网时代则围绕「眼睛」设计；最后到了短视频时代又进一步围绕「屏幕面积、摄像头和续航」而设计</p>
+<figure data-type="image" tabindex="10"><img src="https://personalblogmedia.oss-cn-hangzhou.aliyuncs.com/img/post/Meta_View/When_The_Form_of_The_Phone_Begins_to_Change_Again/When_The_Form_of_The_Phone_Begins_to_Change_Again_10.jpg" alt="" loading="lazy"></figure>
+<figure data-type="image" tabindex="11"><img src="https://personalblogmedia.oss-cn-hangzhou.aliyuncs.com/img/post/Meta_View/When_The_Form_of_The_Phone_Begins_to_Change_Again/When_The_Form_of_The_Phone_Begins_to_Change_Again_11.jpg" alt="" loading="lazy"></figure>
+<figure data-type="image" tabindex="12"><img src="https://personalblogmedia.oss-cn-hangzhou.aliyuncs.com/img/post/Meta_View/When_The_Form_of_The_Phone_Begins_to_Change_Again/When_The_Form_of_The_Phone_Begins_to_Change_Again_12.jpg" alt="" loading="lazy"></figure>
+<figure data-type="image" tabindex="13"><img src="https://personalblogmedia.oss-cn-hangzhou.aliyuncs.com/img/post/Meta_View/When_The_Form_of_The_Phone_Begins_to_Change_Again/When_The_Form_of_The_Phone_Begins_to_Change_Again_13.jpg" alt="" loading="lazy"></figure>
+<figure data-type="image" tabindex="14"><img src="https://personalblogmedia.oss-cn-hangzhou.aliyuncs.com/img/post/Meta_View/When_The_Form_of_The_Phone_Begins_to_Change_Again/When_The_Form_of_The_Phone_Begins_to_Change_Again_14.jpg" alt="" loading="lazy"></figure>
+<figure data-type="image" tabindex="15"><img src="https://personalblogmedia.oss-cn-hangzhou.aliyuncs.com/img/post/Meta_View/When_The_Form_of_The_Phone_Begins_to_Change_Again/When_The_Form_of_The_Phone_Begins_to_Change_Again_15.jpg" alt="" loading="lazy"></figure>
+<figure data-type="image" tabindex="16"><img src="https://personalblogmedia.oss-cn-hangzhou.aliyuncs.com/img/post/Meta_View/When_The_Form_of_The_Phone_Begins_to_Change_Again/When_The_Form_of_The_Phone_Begins_to_Change_Again_16.jpg" alt="" loading="lazy"></figure>
+<p class="media-description">前 iPhone 时代，各式各样的手机形态。部分图片来源见水印或来自 Unsplash</p>
+<h3 id="电话时代">电话时代</h3>
+<p>电话时代，手机首先是一件「贴在脸上的东西」</p>
+<p>1980-1990 年代初，人们购买移动电话，最核心的消费内容其实只有一个：声音。因此当时手机的首要人体工学对象不是眼睛，而是耳朵和嘴巴</p>
+<p>这直接决定了早期手机为什么普遍是纵向长条形。听筒必须靠近耳朵，麦克风最好靠近嘴。于是你就能理解 Motorola MicroTAC、StarTAC 的设计为什么那么重要。折叠不是单纯为了炫技，而是在解决一个几何矛盾：</p>
+<blockquote>
+<p>通话的时候我要足够长；放进口袋的时候我要足够短</p>
+</blockquote>
+<p>所以翻盖手机实际上是「语音内容」塑造出来的一种非常合理的形态，甚至当时很多设计细节都是围绕电话行为建立的。这时候的手机首先是一台「Tele Phone」，其次才是一台计算设备</p>
+<h3 id="短信时代">短信时代</h3>
+<p>到了短信时代，手机从「贴在脸上」变成「拿在手里」</p>
+<p>1990 年代中后期，SMS 开始改变了电话的设计方向。因为短信带来了一个完全不同的交互，当时手机的收腰人体工学对象从耳朵和嘴巴变成了眼睛和拇指</p>
+<p>数字键盘原本只是用于拨打电话号码，现在突然承担了文字的拼写。于是当时的手机设计第一次必须认真考虑「人能不能快速输入大量文字？」。这就是 T9、导航键、软键、键盘布局越来越重要的原因</p>
+<p>而短信还有一个更深层的影响，即手机第一次出现了大量的「私人内容」</p>
+<p>电话内容是即时的，打完就消失。短信却会留在手机里，被反复阅读，转发、收藏、删除。于是手机在此时 越来越不像一个「公共通信终端」，而是越来越像一个属于个人的数字空间。因此，短信文化与手机个性化文化的兴起并不是一种巧合。它们共同完成了把「移动电话」变成「我的手机」这件事</p>
+<p>如果短信只是几十个字，那么九宫格还能忍受。但当消费内容进一步变成 Email、MSN/QQ、企业消息、Web 和文档，九宫格就开始吃力了。于是在此时出现了另一条极端路线——BlackBerry</p>
+<p>BlackBerry 的经典形态其实就是被「电子邮件」塑造出来的。屏幕不能太小，因为我要读邮件；但键盘也不能消失，因为我要回邮件</p>
+<p>所以 BlackBerry 看起来和 Nokia 3310 完全不同，不仅是设计师审美不同。而是内容决定了交互方式，交互方式又反过来决定硬件</p>
+<h3 id="移动互联网时代">移动互联网时代</h3>
+<p>到了 2000 年代中期，随着音视频和稍大型手机游戏消费内容的问世让人们开始思考，手机能不能取代随身听、视频播放器、游戏机？</p>
+<p>Sony Ericsson Walkman、Nokia N-Gage 等手机的设计明显围绕音视频和稍大型手机游戏而发生改变。手机在此时期开始逐渐和「吞并」、吸收其它消费电子设备。以前是 Phone + Camera + MP3 Player + Game Boy + PDA，慢慢变成了 Smartphone</p>
+<p>那么怎么为十几种完全不同的内容分别准备实体控制器？根本做不到。这正是触摸屏最终胜出的深层原因之一</p>
+<p>2007 年 iPhone 发布时，Apple 对它的定位是：</p>
+<blockquote>
+<p>A phone, a widescreen iPod and a Internet device.</p>
+</blockquote>
+<p>也就是说，它从第一天开始就不是只围绕「打电话」设计的。Apple 当年的官方材料也明确把它描述成手机、宽屏 iPod 和互联网设备三者合一</p>
+<p>为什么去掉键盘那么重要？因为实体键盘存在一个根本缺陷：它占据的空间永远只能做键盘。但屏幕不一样，我想要打电话，屏幕变成数字键盘；我想要打字，屏幕变成 QWER 键盘；我要看电影，键盘消失，整块面积播放电影；我想要玩游戏，屏幕出现游戏按钮；我要看网页，所有面积都给网页……软件第一次可以重新分配手机的物理表面积，这实际上是一种非常深刻的工业设计革命</p>
+<p>Apple 发布 App Store 之后，厂商根本不知道三年后用户会拿手机干什么。于是手机必须成为一种通用内容容器。而通用容器最理想的正面是什么？答案几乎只能是：一块尽可能大的可编程矩形。这就是为什么我认为「App」对于手机形态同质化的影响，甚至不亚于 iPhone 本身</p>
+<p>早期 iPhone 的屏幕只有 3.5 英寸，后来越变越大。因为手机从单一的通信工具变成了统一多元的内容消费终端，尤其是视频</p>
+<p>Ericsson 在 2014 年的移动通信报告中发现，Android 设备显示像素越多，平均每用户数据消费量总体越高；报告同时指出，更大、更高分辨率的屏幕、平板和「phablet」大屏手机以及更强的摄像头，都指向视频流量继续增长。2013 年时，视频已经占其统计移动数据流量的约 31%。后来视频更成为智能手机流量中最重要的类别之一</p>
+<p>手机设计在此时的优化目标发生了非常根本的变化。过去是「我要让它尽可能小，方便携带」；后来变成了「我要让屏幕尽可能大，但仍然勉强能放进口袋」。这就是大屏手机出现的根本原因</p>
+<p>2011 年第一代 Samsung Galaxy Note 的 5.3 英寸屏幕在当时显得巨大，甚至「Phablet」大屏手机这个词本身都带有一点嘲讽意味。但消费者最终用购买行为证明，大屏幕带来的内容体验，比单手操作和小巧机身更重要。于是手机工业设计出现了一个非常有意思的价值交换：消费者主动牺牲便携性，换取内容面积</p>
+<p>这是手机历史上非常重要的一次转折。从此以后，屏幕不再适应手机尺寸，而是反过来变成了手机尺寸开始适应屏幕</p>
+<p>再后来，厂商开始疯狂的追求所谓的「屏占比」。因为消费者此时希望同时拥有两个互相矛盾的东西：「更大的内容」和「更小的机器」。厂商们解决方法就是消灭一切不显示内容的正面面积。于是，Home 键消失，导航键消失，正面 Logo 消失，听筒缩进边框；指纹进入屏幕/侧边；摄像头更是从「刘海」、「水滴」、「挖孔」向「屏下」探索</p>
+<p>过去手机的正面是「控制面板」，现在手机的正面则是「内容窗口」</p>
+<p>后来，社交媒体的发展在此时又带来了另一个变化：手机不只是消费内容，还要生产内容。这是进入智能手机时代以后非常关键的第二次变化。于是，摄像头在此时开始反过来塑造手机。早期摄像头只是背面一个小洞。后来由单摄变双摄；双摄变三摄；三摄变四摄。巨型 Sensor 变为了潜望式长焦。最终我们得到今天极其突出的「摄像头岛」</p>
+<p>为什么现在手机背面越来越不像过去那种平整的工业设计？很大程度上是因为内容生产能力开始和内容消费能力同样重要。正面被「消费内容」占领；背面则被「生产内容」占领。于是现代智能手机其实形成了一种非常有趣的空间分工：</p>
+<ul>
+<li>正面 = Display</li>
+<li>背面 = Camera</li>
+<li>剩下的东西全部塞进中间</li>
+</ul>
+<h3 id="短视频时代">短视频时代</h3>
+<p>传统电影、电视、电脑显示器告诉我们，视频应该横着看。所以早期智能手机看 YouTube，就是把手机转过来。但 Snapchat、TikTok、Reels 等内容生态逐渐把 9:16 竖屏视频变成一种原生内容形式。于是发生了一件非常罕见的事情：内容不再要求手机适应传统媒体，而是媒体开始适应手机本来的形态</p>
+<p>电话时代留下来的纵向长方形，最后反过来塑造了新的影像语言</p>
+<p>后来发展出的折叠屏，本质上也是内容消费与便携性的矛盾。消费者希望屏幕越来越大，但人的口袋并没有变大</p>
+<p>于是那一年 Samsung Galaxy Fold 给出的答案是：携带的时候是手机，消费内容的时候是小平板。这和 1996 年发布的 Motorola StarTAC 的逻辑其实惊人地相似。两者相隔二十多年，但工业设计解决的是同一种问题：设备在「使用状态」和「携带状态」下，需要的尺寸不同</p>
+<h2 id="为什么今天手机反而越来越像">为什么今天手机反而越来越像</h2>
+<p>过去，我们通常认为<strong>硬件进步会催生出新的消费内容</strong>。比如有了彩色屏幕，所以能看图片；有了高速网络，所以能看视频；有了 GPU，所以能玩大型游戏……</p>
+<p>这当然没错。但现在反过来，<strong>内容需求也同样可以迫使硬件改变</strong></p>
+<p>由此，二者其实逐渐形成了一种循环。硬件能力的提高，导致出现新的内容形式；用户开始大量消费这种内容，原来的手机形态逐渐不再符合需求；厂商由此改变屏幕、尺寸、输入方式、摄像头，新的硬件又继续催生出新的内容……</p>
+<p>网络能力、智能手机、App 生态和视频内容相互推动，使手机逐渐成为主要联网设备；移动数据流量在十年间出现了数量级增长。所以很多时候其实并不是技术决定设计，更准确的是，技术决定「能不能做」，内容决定「值不值得做」</p>
+<p>1990 年代，不同用户的核心需求主要还是电话、短信。这些功能本身占用的视觉面积很少，因此剩下大量空间可以交给工业设计师。于是，功能简单，那么硬件却可以复杂</p>
+<p>而今天则恰好相反。消费者希望一台手机同时是：电视 + 相机 + 游戏机 + 浏览器 + 阅读器 + 地图 + 钱包 + 社交终端 + 工作设备……这些用途有一个最大的共同需求：屏幕</p>
+<p>所以所有需求最后都在争夺同一种物理资源，即正面面积。而与此带来的结果就是功能越来越复杂，外形反而越来越简单。最终手机被压缩成一种近乎数学意义上的最优解：</p>
+<blockquote>
+<p>在能够握持、能够放进口袋的尺寸范围内，尽可能提供一块最大的矩形显示区域</p>
+</blockquote>
+<p>这就是今天绝大多数手机为什么最终都变成了一块黑色圆角矩形的原因</p>
+<p>很多人觉得 iPhone 出现后，大家纷纷开始模仿，手机从此都一样了。其实，不是 iPhone 消灭了手机的形态，而是手机所承载的内容越来越丰富，最终让「可变的软件界面 + 尽可能大的屏幕」成为最通用的硬件「版本答案」。而 iPhone 恰恰在正确的时间，把这个答案做了出来</p>
+<p>我们曾经围绕手机设计内容，后来开始围绕内容设计手机。那么，再往后走一步，如果未来人们消费内容的方式再次改变——例如从 App 转向 AI 生成、从二维屏幕转向空间内容——今天这块统治手机二十年的黑色矩形，还会不会继续是最优解？</p>
+
+        </div>
+
+        <div class="applaudBox">
+          <button class="applaudBtn">
+            <i class="ri-thumb-up-line"></i> <span class="likeCount">0</span>
+          </button>
+        </div>
+
+        <div class="jumbotron">
+          <div class="container">
+            <p><i class="ri-article-line"></i> <a href="https://yyl125.top/post/when_the_form_of_the_phone_begins_to_change_again/" target="_blank">当手机形态又开始改变</a></p>
+            <p><i class="ri-creative-commons-line"></i> 许可协议：<a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" target="_blank">CC BY-NC-SA 4.0</a>。欲了解更多相关信息，详见 <a href="https://yyl125.top/copyright/" target="_blank">版权信息与资源使用说明</a> 页面</p>
+            <p><i class="ri-error-warning-line"></i> 本站所有文章除特别说明外，皆为原创发布。欢迎尊重原创作者版权的转载或引用。转载或引用时请注明出处</p>
+            <br>
+            <p><i class="ri-feedback-line"></i> 出现了影响阅读的问题？不妨 <a href="mailto:support@yyl125.cc?subject=Benjamin's%20Blog%20%E9%97%AE%E9%A2%98%E5%8F%8D%E9%A6%88" target="_blank" rel="noreferrer noopener">反馈</a> 一下吧</p>
+          </div>
+        </div>
+
+        
+          <div class="text-center text-gray-400">
+            <i class="ri-eye-line"></i> 本文已被阅读 <span id="twikoo_visitors">0</span> 次，该数据仅供参考
+          </div>
+        
+
+        
+        
+      </div>
+
+      <div class="jumbotron-comment">
+        <div class="container">
+          <p><i class="ri-message-3-line"></i> 欢迎任何与文章内容相关并保持尊重的评论，评论时请遵守 <a href="https://yyl125.top/comment_policy/">评论准则</a></p>
+        </div>
+      </div>
+
+      
+
+      
+        <div id="tcomment"></div>
+      
+      
+      <footer class="py-12 text-center px-4 md:px-0" v-pre>
+  共 26 篇文章｜<a href="https://yyl125.top/copyright" target="_blank">版权信息与资源使用说明</a>｜<i class="ri-rss-line"></i> <a href="https://yyl125.top/atom.xml" target="_blank">RSS</a><br>Copyright © 2026 Benjamin. CC BY-NC-SA 4.0
+</footer>
+
+
+    </div>
+
+    
+      <!-- Article table of contents -->
+      <button
+  class="article-toc-mobile-trigger"
+  type="button"
+  v-show="!showToc"
+  @click="toggleToc"
+  :aria-expanded="showToc ? 'true' : 'false'"
+  aria-controls="article-toc-content"
+  aria-label="打开文章目录"
+>
+  <i class="ri-file-list-line" aria-hidden="true"></i>
+</button>
+<button
+  class="article-toc-backdrop"
+  type="button"
+  v-show="showToc"
+  @click="dismissToc"
+  style="display: none;"
+  aria-label="关闭文章目录"
+></button>
+<aside
+  class="article-toc"
+  :class="{ 'is-open': showToc, 'is-pinned': tocPinned, 'is-closing': tocClosing }"
+  @pointerenter="openToc"
+  @pointerleave="closeToc"
+  @transitionend.self="refreshTocIndicator"
+  aria-label="文章目录"
+>
+  <button
+    class="article-toc-trigger"
+    type="button"
+    @click="toggleToc"
+    :aria-expanded="showToc ? 'true' : 'false'"
+    aria-controls="article-toc-content"
+  >
+    <span class="article-toc-collapsed-track" aria-hidden="true"></span>
+    <span class="article-toc-trigger-lines" aria-hidden="true"><i></i><i></i><i></i></span>
+    <span class="article-toc-title">目录</span>
+  </button>
+  <button
+    class="article-toc-pin"
+    type="button"
+    @click="toggleTocPin"
+    :aria-pressed="tocPinned ? 'true' : 'false'"
+    :aria-label="tocPinned ? '取消固定目录' : '固定目录'"
+    title="固定目录"
+  >
+    <i class="ri-pushpin-line" aria-hidden="true"></i>
+  </button>
+  <nav
+    class="post-toc-container"
+    id="article-toc-content"
+    aria-label="本文目录"
+    data-toc-auto="false"
+  >
+    <svg class="article-toc-tree" aria-hidden="true">
+      <path class="article-toc-tree-base"></path>
+      <path class="article-toc-tree-active"></path>
+    </svg>
+    <ul class="markdownIt-TOC">
+<li>
+<ul>
+<li><a href="#%E6%89%8B%E6%9C%BA%E5%BA%94%E8%AF%A5%E9%95%BF%E4%BB%80%E4%B9%88%E6%A0%B7">手机应该长什么样</a>
+<ul>
+<li><a href="#%E5%89%8D-iphone-%E6%97%B6%E4%BB%A3">前 iPhone 时代</a>
+<ul>
+<li><a href="#%E7%A7%BB%E5%8A%A8%E7%94%B5%E8%AF%9D%E9%98%B6%E6%AE%B5">移动电话阶段</a></li>
+<li><a href="#%E5%B0%8F%E5%9E%8B%E5%8C%96%E9%98%B6%E6%AE%B5">小型化阶段</a></li>
+<li><a href="#%E5%BD%A2%E6%80%81%E7%88%86%E5%8F%91%E9%98%B6%E6%AE%B5">形态爆发阶段</a></li>
+<li><a href="#%E6%B6%88%E8%B4%B9%E7%94%B5%E5%AD%90%E9%98%B6%E6%AE%B5">消费电子阶段</a></li>
+</ul>
+</li>
+<li><a href="#%E5%90%8E-iphone-%E6%97%B6%E4%BB%A3">后 iPhone 时代</a></li>
+</ul>
+</li>
+<li><a href="#%E8%A7%86%E8%A7%92%E7%9A%84%E4%B8%8D%E5%90%8C%E5%88%9B%E9%80%A0%E4%BA%86%E5%88%92%E6%97%B6%E4%BB%A3%E7%9A%84%E5%8F%98%E5%8C%96">视角的不同，创造了划时代的变化</a>
+<ul>
+<li><a href="#%E7%94%B5%E8%AF%9D%E6%97%B6%E4%BB%A3">电话时代</a></li>
+<li><a href="#%E7%9F%AD%E4%BF%A1%E6%97%B6%E4%BB%A3">短信时代</a></li>
+<li><a href="#%E7%A7%BB%E5%8A%A8%E4%BA%92%E8%81%94%E7%BD%91%E6%97%B6%E4%BB%A3">移动互联网时代</a></li>
+<li><a href="#%E7%9F%AD%E8%A7%86%E9%A2%91%E6%97%B6%E4%BB%A3">短视频时代</a></li>
+</ul>
+</li>
+<li><a href="#%E4%B8%BA%E4%BB%80%E4%B9%88%E4%BB%8A%E5%A4%A9%E6%89%8B%E6%9C%BA%E5%8F%8D%E8%80%8C%E8%B6%8A%E6%9D%A5%E8%B6%8A%E5%83%8F">为什么今天手机反而越来越像</a></li>
+</ul>
+</li>
+</ul>
+
+  </nav>
+</aside>
+
+    
+
+    <!-- Back to top -->
+    <div class="fixed right-0 bottom-0 mb-4 mr-4 shadow w-8 h-8 rounded-full flex justify-center items-center z-10 cursor-pointer bg-white hover:shadow-lg transition-all dark:bg-gray-500 dark:text-gray-200" @click="backToUp" v-show="scrolled">
+      <i class="ri-arrow-up-line"></i>
+    </div>
+
+  </div>
+
+<!--  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script> -->
+  <script src="https://yyl125.top/media/scripts/vue.js"></script>
+  <script src="https://yyl125.top/media/scripts/main.js"></script>
+  <script src="https://yyl125.top/media/scripts/linkcard.js"></script>
+  <script src="https://yyl125.top/media/scripts/applaud.js"></script>
+  <script src="https://yyl125.top/media/scripts/post-image-layout.js?v=20260903-5"></script>
+  <script src="https://yyl125.top/media/scripts/view-image.min.js"></script>
+  <script>
+    window.ViewImage && ViewImage.init('.markdown img');
+    var lazyLoadInstance = new LazyLoad({});
+    lazyLoadInstance.update();
+  </script>
+  
+  <!-- Mermaid -->
+  
+
+  <!-- Code Highlight -->
+  
+    <script src="https://yyl125.top/media/scripts/prism.js"></script>
+    <script>
+      Prism.highlightAll()
+    </script>
+  
+
+  <!-- Twikoo -->
+  
+    <script src="https://cdn.jsdelivr.net/npm/twikoo@1.7.20/dist/twikoo.min.js"></script>
+<script>
+  twikoo.init({
+    envId: 'https://twikoo-deploy-one.vercel.app',
+    el: '#tcomment'
+  })
+</script>
+  
+
+</body>
+
+</html>
