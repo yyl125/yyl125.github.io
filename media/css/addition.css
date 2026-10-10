@@ -1,0 +1,955 @@
+h5 {
+  font-size: 1.25rem;
+  font-weight: 500;
+  line-height: 1.2
+}
+
+.card {
+  position:relative;
+  display:flex;
+  flex-direction:column;
+  min-width:0;
+  word-wrap:break-word;
+  background-color: rgb(250, 249, 247);
+  background-clip:border-box;
+  border: 1px solid rgba(0, 0, 0, 0.125);
+  box-shadow: 0 6px 14px 0 rgba(0,0,0,.04);
+}
+
+@media (prefers-color-scheme: dark) {
+  .card {
+      background-color: rgb(51, 51, 51);
+  }
+}
+    
+.card>hr {
+  margin-right:0;
+  margin-left:0
+}
+
+.card>.list-group {
+  border-top: inherit;
+  border-bottom: inherit
+}
+
+.card>.list-group:first-child {
+  border-top-width: 0;
+}
+    
+.card>.list-group:last-child {
+  border-bottom-width: 0;
+}
+
+.card-body {
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+  min-height: 1px;
+  padding: 1.25rem
+}
+
+.card-title {
+  margin-bottom: .75rem
+}
+
+.card-subtitle {
+  margin-top:-.375rem;
+  margin-bottom:0
+}
+
+.card-text:last-child {
+  margin-bottom:0
+}
+
+.card-link:hover {
+  text-decoration:none
+}
+
+.card-link+.card-link{
+  margin-left:1.25rem
+}
+
+.card-header{
+  padding:.75rem 1.25rem;
+  margin-bottom:0;
+  background-color:rgba(0,0,0,.03);
+  border-bottom:1px solid rgba(0,0,0,.125)
+}
+
+.card-header+.list-group .list-group-item:first-child{
+  border-top:0
+}
+.card-footer{
+  padding:.75rem 1.25rem;
+  background-color:rgba(0,0,0,.03);
+  border-top:1px solid rgba(0,0,0,.125)
+}
+
+.card-header-tabs{
+  margin-right:-.625rem;
+  margin-bottom:-.75rem;
+  margin-left:-.625rem;
+  border-bottom:0
+}
+
+.card-header-pills{
+  margin-right:-.625rem;
+  margin-left:-.625rem
+}
+
+.card-img-overlay{
+  position:absolute;
+  top:0;
+  right:0;
+  bottom:0;
+  left:0;
+  padding:1.25rem
+}
+
+.card-img,.card-img-bottom,.card-img-top{
+  -ms-flex-negative:0;
+  flex-shrink:0;
+  width:100%
+}
+
+.card-deck .card {
+  margin-bottom:15px
+}
+
+@media (min-width:576px) {
+  .card-deck {
+      display:-ms-flexbox;
+      display:flex;
+      -ms-flex-flow:row wrap;
+      flex-flow:row wrap;
+      margin-right:-15px;
+      margin-left:-15px
+  }
+  .card-deck .card {
+      -ms-flex:1 0 0%;
+      flex:1 0 0%;
+      margin-right:15px;
+      margin-bottom:0;
+      margin-left:15px
+  }
+}
+
+.card-deck-status .card {
+  margin-bottom:15px
+}
+
+@media (min-width:576px) {
+  .card-deck-status {
+      display:-ms-flexbox;
+      display:flex;
+      -ms-flex-flow:row wrap;
+      flex-flow:row wrap;
+      margin-right:-10px;
+      margin-left:-10px
+  }
+  .card-deck-status .status {
+      -ms-flex:1 0 0%;
+      flex:1 0 0%;
+      margin-bottom:0;
+      margin-left:10px;
+      max-width:135px;
+      max-height:250px;
+  }
+}
+
+.card-group >.card {
+  margin-bottom: 0.75rem
+}
+
+@media (min-width:576px) {
+    .card-group {
+        display:flex;
+        flex-flow:row wrap
+    }
+    .card-group >.card {
+        flex:1 0 0%;
+        margin-bottom:0
+    }
+    .card-group >.card + .card {
+        margin-left:0;
+        border-left:0
+    }
+    .card-group > .card:not(:last-child) {
+        border-top-right-radius: 0;
+        border-bottom-right-radius: 0;
+    }
+    .card-group > .card:not(:last-child) .card-img-top, .card-group > .card:not(:last-child) .card-header {
+        border-top-right-radius: 0;
+    }
+    .card-group > .card:not(:last-child) .card-img-bottom, .card-group > .card:not(:last-child) .card-footer {
+        border-bottom-right-radius: 0;
+    }
+    .card-group > .card:not(:first-child) {
+        border-top-left-radius: 0;
+        border-bottom-left-radius: 0;
+    }
+    .card-group > .card:not(:first-child) .card-img-top, .card-group > .card:not(:first-child) .card-header {
+        border-top-left-radius: 0;
+    }
+    .card-group > .card:not(:first-child) .card-img-bottom, .card-group > .card:not(:first-child) .card-footer {
+        border-bottom-left-radius: 0;
+    }
+}
+
+.card-columns .card {
+    margin-bottom: 0.75rem
+}
+
+@media (min-width:576px) {
+    .card-columns {
+        -webkit-column-count:3;
+        -moz-column-count:3;
+        column-count:3;
+        -webkit-column-gap:1.25rem;
+        -moz-column-gap:1.25rem;
+        column-gap:1.25rem;
+        orphans:1;
+        widows:1
+    }
+    .card-columns .card {
+        display:inline-block;
+        width:100%
+    }
+}
+
+.accordion>.card {
+  overflow:hidden
+}
+
+.accordion>.card:not(:last-of-type) {
+  border-bottom:0;
+}
+
+.accordion>.card>.card-header {
+  margin-bottom:-1px
+}
+
+.row {
+  --bs-gutter-x: 1.5rem;
+  --bs-gutter-y: 0;
+  display:flex;
+  flex-wrap:wrap;
+  margin-top: calc(var(--bs-gutter-y) * -1);
+  margin-right: calc(var(--bs-gutter-x) / -2);
+  margin-left: calc(var(--bs-gutter-x) / -2)
+}
+
+.row > * {
+  flex-shrink: 0;
+  width: 100%;
+  max-width: 100%;
+  padding-right: calc(var(--bs-gutter-x) / 2);
+  padding-left: calc(var(--bs-gutter-x) / 2);
+  margin-top: var(--bs-gutter-y)
+}
+
+.no-gutters {
+  margin-right:0;
+  margin-left:0
+}
+
+.no-gutters>.col,.no-gutters>[class*=col-] {
+  padding-right:0;
+  padding-left:0
+}
+
+.col,.col-1,.col-10,.col-11,.col-12,.col-2,.col-3,.col-4,.col-5,.col-6,.col-7,.col-8,.col-9,.col-auto,.col-lg,.col-lg-1,.col-lg-10,.col-lg-11,.col-lg-12,.col-lg-2,.col-lg-3,.col-lg-4,.col-lg-5,.col-lg-6,.col-lg-7,.col-lg-8,.col-lg-9,.col-lg-auto,.col-md,.col-md-1,.col-md-10,.col-md-11,.col-md-12,.col-md-2,.col-md-3,.col-md-4,.col-md-5,.col-md-6,.col-md-7,.col-md-8,.col-md-9,.col-md-auto,.col-sm,.col-sm-1,.col-sm-10,.col-sm-11,.col-sm-12,.col-sm-2,.col-sm-3,.col-sm-4,.col-sm-5,.col-sm-6,.col-sm-7,.col-sm-8,.col-sm-9,.col-sm-auto,.col-xl,.col-xl-1,.col-xl-10,.col-xl-11,.col-xl-12,.col-xl-2,.col-xl-3,.col-xl-4,.col-xl-5,.col-xl-6,.col-xl-7,.col-xl-8,.col-xl-9,.col-xl-auto {
+  position:relative;
+  width:100%;
+}
+
+.col {
+  flex: 1 0 0%;
+}
+
+.row-cols-auto > * {
+  flex: 0 0 auto;
+  width: auto;
+}
+  
+.row-cols-1 > * {
+  flex: 0 0 auto;
+  width: 100%;
+}
+  
+.row-cols-2 > * {
+  flex: 0 0 auto;
+  width: 50%;
+}
+  
+.row-cols-3 > * {
+  flex: 0 0 auto;
+  width: 33.3333333333%;
+}
+  
+.row-cols-4 > * {
+  flex: 0 0 auto;
+  width: 25%;
+}
+  
+.row-cols-5 > * {
+  flex: 0 0 auto;
+  width: 20%;
+}
+  
+.row-cols-6 > * {
+  flex: 0 0 auto;
+  width: 16.6666666667%;
+}
+
+.col-auto {
+  flex: 0 0 auto;
+  width: auto;
+}
+  
+.col-1 {
+  flex: 0 0 auto;
+  width: 8.3333333333%;
+}
+  
+.col-2 {
+  flex: 0 0 auto;
+  width: 16.6666666667%;
+}
+  
+.col-3 {
+  flex: 0 0 auto;
+  width: 25%;
+}
+  
+.col-4 {
+  flex: 0 0 auto;
+  width: 33.3333333333%;
+}
+  
+.col-5 {
+  flex: 0 0 auto;
+  width: 41.6666666667%;
+}
+  
+.col-6 {
+  flex: 0 0 auto;
+  width: 50%;
+}
+  
+.col-7 {
+  flex: 0 0 auto;
+  width: 58.3333333333%;
+}
+  
+.col-8 {
+  flex: 0 0 auto;
+  width: 66.6666666667%;
+}
+  
+.col-9 {
+  flex: 0 0 auto;
+  width: 75%;
+}
+  
+.col-10 {
+  flex: 0 0 auto;
+  width: 83.3333333333%;
+}
+  
+.col-11 {
+  flex: 0 0 auto;
+  width: 91.6666666667%;
+}
+  
+.col-12 {
+  flex: 0 0 auto;
+  width: 100%;
+}
+
+.row-cols-sm-1>* {
+  flex:0 0 auto;
+  width: 100%
+}
+
+.row-cols-sm-2>* {
+  flex:0 0 auto;
+  width: 50%
+}
+
+.row-cols-sm-3>* {
+  flex:0 0 auto;
+  width: 33.333333%
+}
+
+.row-cols-sm-4>* {
+  flex:0 0 auto;
+  width: 25%
+}
+
+.row-cols-sm-5>* {
+  flex:0 0 auto;
+  width: 20%
+}
+
+.row-cols-sm-6>* {
+  flex:0 0 auto;
+  width: 16.666667%
+}
+
+.col-sm-auto {
+  flex:0 0 auto;
+  width: auto;
+}
+
+.col-sm-1 {
+  flex:0 0 auto;
+  width:8.333333%
+}
+
+.col-sm-2 {
+  flex:0 0 auto;
+  width: 16.666667%
+}
+
+.col-sm-3 {
+  flex:0 0 auto;
+  width: 25%
+}
+
+.col-sm-4 {
+  flex:0 0 auto;
+  width: 33.333333%
+}
+
+.col-sm-5 {
+  flex:0 0 auto;
+  width: 41.666667%
+}
+
+.col-sm-6 {
+  flex:0 0 auto;
+  width: 50%
+}
+
+.col-sm-7 {
+  flex:0 0 auto;
+  width: 58.333333%
+}
+
+.col-sm-8 {
+  flex:0 0 auto;
+  width: 66.666667%
+}
+
+.col-sm-9 {
+  flex:0 0 auto;
+  width:75%
+}
+
+.col-sm-10 {
+  flex:0 0 auto;
+  width: 83.333333%
+}
+
+.col-sm-11 {
+  flex:0 0 auto;
+  width: 91.666667%
+}
+
+.col-sm-12 {
+  flex:0 0 auto;
+  width: 100%
+}
+
+.row-cols-md-1>* {
+  flex:0 0 auto;
+  width: 100%
+}
+
+.row-cols-md-2>* {
+  flex:0 0 auto;
+  width: 50%
+}
+
+.row-cols-md-3>* {
+  flex:0 0 auto;
+  width: 33.333333%
+}
+
+.row-cols-md-4>* {
+  flex:0 0 auto;
+  width: 25%
+}
+
+.row-cols-md-5>* {
+  flex:0 0 auto;
+  width: 20%
+}
+
+.row-cols-md-6>* {
+  flex:0 0 auto;
+  width: 16.666667%
+}
+
+.col-md-auto {
+  flex: 0 0 auto;
+  width: auto;
+}
+
+.col-md-1 {
+  flex: 0 0 auto;
+  width: 8.3333333333%;
+}
+
+.col-md-2 {
+  flex: 0 0 auto;
+  width: 16.6666666667%;
+}
+
+.col-md-3 {
+  flex: 0 0 auto;
+  width: 25%;
+}
+
+.col-md-4 {
+  flex: 0 0 auto;
+  width: 33.3333333333%;
+}
+
+.col-md-5 {
+  flex: 0 0 auto;
+  width: 41.6666666667%;
+}
+
+.col-md-6 {
+  flex: 0 0 auto;
+  width: 50%;
+}
+
+.col-md-7 {
+  flex: 0 0 auto;
+  width: 58.3333333333%;
+}
+
+.col-md-8 {
+  flex: 0 0 auto;
+  width: 66.6666666667%;
+}
+
+.col-md-9 {
+  flex: 0 0 auto;
+  width: 75%;
+}
+
+.col-md-10 {
+  flex: 0 0 auto;
+  width: 83.3333333333%;
+}
+
+.col-md-11 {
+  flex: 0 0 auto;
+  width: 91.6666666667%;
+}
+
+.col-md-12 {
+  flex: 0 0 auto;
+  width: 100%;
+}
+
+.btn-group-lg > .btn {
+  padding: 0.5rem 1rem;
+  font-size: 1.25rem;
+  border-radius: 0.3rem;
+}
+
+.btn-sm, .btn-group-sm > .btn {
+  padding: 0.25rem 0.5rem;
+  font-size: 0.875rem;
+  border-radius: 0.2rem;
+}
+
+.btn-group,
+.btn-group-vertical {
+  position: relative;
+  display: inline-flex;
+  vertical-align: middle;
+}
+.btn-group > .btn,
+.btn-group-vertical > .btn {
+  position: relative;
+  flex: 1 1 auto;
+}
+.btn-group > .btn-check:checked + .btn,
+.btn-group > .btn-check:focus + .btn,
+.btn-group > .btn:hover,
+.btn-group > .btn:focus,
+.btn-group > .btn:active,
+.btn-group > .btn.active,
+.btn-group-vertical > .btn-check:checked + .btn,
+.btn-group-vertical > .btn-check:focus + .btn,
+.btn-group-vertical > .btn:hover,
+.btn-group-vertical > .btn:focus,
+.btn-group-vertical > .btn:active,
+.btn-group-vertical > .btn.active {
+  z-index: 1;
+}
+
+.btn-group > .btn:not(:first-child),
+.btn-group > .btn-group:not(:first-child) {
+  margin-left: -1px;
+}
+.btn-group > .btn:not(:last-child):not(.dropdown-toggle),
+.btn-group > .btn-group:not(:last-child) > .btn {
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+.btn-group > .btn:nth-child(n+3),
+.btn-group > :not(.btn-check) + .btn,
+.btn-group > .btn-group:not(:first-child) > .btn {
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+.btn-group-sm > .btn + .dropdown-toggle-split {
+  padding-right: 0.375rem;
+  padding-left: 0.375rem;
+}
+
+.btn-group-lg > .btn + .dropdown-toggle-split {
+  padding-right: 0.75rem;
+  padding-left: 0.75rem;
+}
+
+.btn-group-vertical {
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+}
+.btn-group-vertical > .btn,
+.btn-group-vertical > .btn-group {
+  width: 100%;
+}
+.btn-group-vertical > .btn:not(:first-child),
+.btn-group-vertical > .btn-group:not(:first-child) {
+  margin-top: -1px;
+}
+.btn-group-vertical > .btn:not(:last-child):not(.dropdown-toggle),
+.btn-group-vertical > .btn-group:not(:last-child) > .btn {
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+}
+.btn-group-vertical > .btn ~ .btn,
+.btn-group-vertical > .btn-group:not(:first-child) > .btn {
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}
+
+.good {
+  display: grid;
+  gap: 1.25rem;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  align-items: stretch;
+}
+
+.good-body {
+  min-height: 346px;
+  display: grid;
+  grid-template-rows: 164px auto auto 1fr;
+  list-style: none;
+  background-color: rgb(250, 249, 247);
+  background-clip: border-box;
+  padding: 1.25rem;
+  border: 1px solid rgba(0, 0, 0, 0.125);
+  box-shadow: 0 6px 14px 0 rgba(0,0,0,.04);
+}
+
+@media (prefers-color-scheme: dark) {
+  .good-body {
+    background-color: rgb(51, 51, 51);
+  }
+}
+
+.good-img {
+  width: 100%;
+  height: 164px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.good-img img {
+  width: 100%;
+  height: 100%;
+  max-width: 190px;
+  max-height: 148px;
+  object-fit: contain;
+  object-position: center;
+  margin: 0;
+  transition: transform .2s ease-in-out;
+}
+
+.good-subheading {
+  font-size: 14px;
+  line-height: 1.4rem;
+}
+
+.good-title,
+.markdown .drama-collection .drama-title {
+  min-height: 3.2rem;
+  margin-bottom: .75rem;
+  font-size: 1.25rem;
+  font-weight: 500;
+  line-height: 1.6rem;
+  transition: .5s;
+}
+
+.good-note {
+  font-size: 1rem;
+  line-height: 1.3rem;
+  margin-top: .5rem;
+}
+.card-meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  white-space: nowrap;
+}
+
+.card-meta-left {
+  text-align: left;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.card-meta-right {
+  text-align: right;
+  flex-shrink: 0;
+}
+
+.markdown figure {
+background-color: rgb(250, 249, 247);
+}
+
+@media (prefers-color-scheme: dark) {
+  .markdown figure {
+    background-color: rgb(51, 51, 51);
+  }
+}
+
+/* 记录与剧单共用的卡片、海报和标题基础样式 */
+.shelf-item {
+  background-color: rgb(250, 249, 247);
+  border: 1px solid rgba(0, 0, 0, 0.125);
+  box-shadow: 0 6px 14px 0 rgba(0,0,0,.04);
+  border-radius: 6px;
+  overflow: hidden;
+  transition: transform .2s;
+}
+@media (prefers-color-scheme: dark) {
+  .shelf-item {
+    background-color: rgb(51, 51, 51);
+  }
+}
+.item-cover {
+  width: 100%;
+  aspect-ratio: 2 / 3; /* 固定 2:3 比例（电影常见海报比例） */
+  object-fit: cover; /* 自动裁剪以适应盒子，不会拉伸 */
+  display: block;
+}
+.item-info {
+  padding: 1.25rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 110px; /* 固定文字区域高度 */
+}
+@media (max-width: 640px) {
+  .item-title {
+    font-size: 0.95rem;
+    line-height: 1.3rem;
+  }
+}
+.item-title {
+  /* margin-bottom: .75rem; */
+  font-size: 1rem;
+  font-weight: 500;
+  line-height: 1.4;
+  transition: .5s;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2; /* 限制最多显示两行标题 */
+  line-clamp: 2; /* 限制最多显示两行标题 */
+  -webkit-box-orient: vertical;
+}
+
+/* NeoDB 剧单：三列卡片、海报叠放与展开浏览 */
+.drama-collections {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  align-items: start;
+  gap: 1.25rem;
+  margin: 1.5rem 0 2.5rem;
+}
+.drama-collection {
+  min-width: 0;
+}
+.markdown .drama-collection .drama-title { margin-top: 0; overflow-wrap: anywhere; }
+/* 描述直接使用 good-note；内容增多时自动撑开，不受记录卡片固定高度限制。 */
+.drama-collection .drama-info { height: auto; min-height: 110px; justify-content: flex-start; }
+.drama-description { overflow-wrap: anywhere; white-space: pre-line; }
+
+
+.drama-stage {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: .75rem;
+  min-width: 0;
+  padding: 1rem 1rem 0;
+}
+.drama-artwork { position: relative; width: 100%; min-width: 0; }
+.drama-track {
+  position: relative;
+  width: 100%;
+  min-width: 0;
+  aspect-ratio: 2 / 2.6;
+}
+.drama-poster {
+  position: absolute;
+  top: 4%;
+  left: 0;
+  width: 80%;
+  aspect-ratio: 2 / 3;
+}
+.drama-poster:nth-child(1) { z-index: 3; }
+.drama-poster:nth-child(2) { left: 10%; transform: scale(.94) rotate(3deg); z-index: 2; }
+.drama-poster:nth-child(3) { left: 20%; transform: scale(.88) rotate(5deg); z-index: 1; }
+.drama-poster-placeholder:nth-child(2) { opacity: .35; pointer-events: none; }
+.drama-poster-placeholder:nth-child(3) { opacity: .18; pointer-events: none; }
+.drama-track:not(.is-expanded) .drama-poster:nth-child(n+4) { display: none; }
+.markdown .drama-poster img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  margin: 0;
+  border-radius: inherit;
+}
+/* 交互按钮与刻度指示器共用胶囊外观。 */
+.drama-button {
+  justify-content: center;
+  min-width: 34px;
+  flex-shrink: 0;
+  font-family: inherit;
+  cursor: pointer;
+  position: relative;
+  transition: transform .2s ease, background .25s ease;
+}
+.drama-button:active:not(:disabled) { transform: scale(.95); }
+.drama-collection button:disabled { opacity: .4; cursor: default; }
+.drama-collection button:focus-visible, .drama-track:focus-visible { outline: 2px solid #888; outline-offset: 3px; }
+/* 在原卡片内展开，保持网格位置和海报区域尺寸不变。 */
+.drama-track.is-expanded {
+  display: flex;
+  gap: 1rem;
+  width: 100%;
+  align-items: flex-start;
+  padding: 4% 0 0;
+  overflow-x: auto;
+}
+.drama-track.is-expanded .drama-poster {
+  position: relative;
+  top: auto;
+  left: auto;
+  flex: 0 0 80%;
+  transform: none;
+}
+.drama-collection .drama-toggle {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  z-index: 4;
+}
+.drama-navigation { position: absolute; left: 0; bottom: 0; z-index: 4; display: flex; gap: .5rem; }
+.drama-navigation .drama-button { width: 34px; padding-inline: 0; }
+.drama-collection [hidden] { display: none !important; }
+.markdown .drama-status { margin: 0; padding: 1.25rem; color: #888; font-size: .9rem; }
+.drama-collection > button { margin: 0 1.25rem 1.25rem; }
+.drama-missing { display: grid; place-items: center; height: 100%; color: #888; font-size: .85rem; }
+.dark .drama-collection, .dark .drama-poster { background: rgb(51, 51, 51); }
+@media (prefers-reduced-motion: reduce) { .drama-button { transition: none; } }
+@media (max-width: 767px) { .drama-collections { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 480px) {
+  .drama-collections { grid-template-columns: minmax(0, 1fr); }
+  .drama-track:not(.is-expanded) { max-width: 240px; margin-inline: auto; }
+}
+
+/* 移动端保持叠放，左右触控切换前景海报，纵向滚动交给浏览器。 */
+.drama-collection.is-touch .drama-toggle,
+.drama-collection.is-touch .drama-navigation { display: none; }
+.drama-collection.is-touch .drama-track { touch-action: pan-y pinch-zoom; }
+
+
+/* 剧单指示器：连续图片的半透明浮层与目录折叠短线刻度。 */
+.drama-indicator, .drama-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  height: 34px;
+  padding: 0 12px;
+  color: #333;
+  font-size: .875rem;
+  font-weight: 500;
+  line-height: 1;
+  font-variant-numeric: tabular-nums;
+  background: rgba(250, 249, 247, .86);
+  border: 1px solid rgba(234, 234, 234, .9);
+  border-radius: 9999px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, .12);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+}
+.drama-indicator { position: absolute; top: 8px; left: 0; z-index: 4; pointer-events: none; }
+@media (hover: hover) { .drama-button:hover:not(:disabled) { background: rgba(250, 249, 247, .98); } }
+.drama-indicator-track { display: inline-flex; align-items: center; gap: 5px; height: 14px; }
+.drama-indicator-track i { display: block; width: 2px; height: 8px; background: #b8bbc1; border-radius: 2px; opacity: .72; }
+.drama-indicator-track i.is-active { height: 12px; background: #333; opacity: 1; }
+.dark .drama-indicator, .dark .drama-button { color: #eaeaea; background: rgba(51, 51, 51, .86); border-color: rgba(102, 102, 102, .9); box-shadow: 0 2px 8px rgba(0, 0, 0, .3); }
+.dark .drama-indicator-track i { background: #777; }
+.dark .drama-indicator-track i.is-active { background: #ddd; }
+@media (prefers-color-scheme: dark) {
+  .drama-indicator, .drama-button { color: #eaeaea; background: rgba(51, 51, 51, .86); border-color: rgba(102, 102, 102, .9); box-shadow: 0 2px 8px rgba(0, 0, 0, .3); }
+  .drama-indicator-track i { background: #777; }
+  .drama-indicator-track i.is-active { background: #ddd; }
+}
+
+@media (hover: hover) { .dark .drama-button:hover:not(:disabled) { background: rgba(70, 70, 70, .98); } }
+@media (prefers-color-scheme: dark) and (hover: hover) { .drama-button:hover:not(:disabled) { background: rgba(70, 70, 70, .98); } }
+
+/* 固定三槽位：侧边无内容时保留空位，中间始终高亮。 */
+.drama-indicator { width: 92px; padding-inline: 10px; gap: 6px; justify-content: center; white-space: nowrap; }
+.drama-indicator-track { flex-shrink: 0; }
+.drama-indicator-track i.is-empty { visibility: hidden; }
+/* JS 以位置差动画连接叠放与横排；关闭旧 transform 过渡，避免重复插值。 */
+.drama-poster { transition: none; }
+.drama-transition-layer { position: absolute; inset: 0; overflow: hidden; pointer-events: none; z-index: 3; }
+
+/* 移动端抽卡：侧转离场，后方海报递进到前景；浮层指示器不参与位移。 */
+.drama-collection.is-touch .drama-track { perspective: 800px; }
+.drama-collection.is-touch .drama-poster { transform-origin: center center; backface-visibility: hidden; }
+
+/* 触控叠放以当前海报为中心，左右各预留 10% 的叠层空间。 */
+.drama-collection.is-touch .drama-poster { left: 10%; }
+
+/* 将变换中的海报限定在卡片内，避免扩张页面横向滚动范围。 */
+.drama-collection.is-touch .drama-artwork { overflow: clip; }
+
+/* 移动端刻度气泡可点击返回第一张，沿用原有胶囊外观。 */
+.drama-collection.is-touch .drama-indicator { pointer-events: auto; font-family: inherit; }
+.drama-collection.is-touch .drama-indicator:not(:disabled) { cursor: pointer; }
+
+/* 触控点击不保留浏览器蓝色高亮，键盘 focus-visible 提示仍然保留。 */
+.drama-collection.is-touch .drama-indicator { -webkit-tap-highlight-color: transparent; }
+.drama-collection.is-touch .drama-indicator:focus:not(:focus-visible) { outline: none; }

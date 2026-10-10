@@ -1,0 +1,112 @@
+/* Rocky dark-mode skin for APlayer. Keep this file after APlayer.min.css. */
+@media (prefers-color-scheme: dark) {
+  .aplayer {
+    color: #aaa;
+    background: #333333;
+    box-shadow: none;
+  }
+
+  .aplayer.aplayer-withlist .aplayer-info {
+    border-bottom-color: #555;
+  }
+
+  .aplayer.aplayer-fixed .aplayer-body {
+    background: #444;
+    box-shadow: 0 -6px 14px rgba(0, 0, 0, 0.12);
+  }
+
+  .aplayer.aplayer-fixed .aplayer-info {
+    border-top-color: #555;
+  }
+
+  .aplayer.aplayer-fixed .aplayer-list {
+    background: #444;
+    border-color: #555;
+  }
+
+  .aplayer.aplayer-fixed .aplayer-lrc {
+    text-shadow: -1px -1px 0 #333;
+  }
+
+  .aplayer .aplayer-info .aplayer-music .aplayer-title {
+    color: #f1f1f1;
+  }
+
+  .aplayer .aplayer-info .aplayer-music .aplayer-author,
+  .aplayer .aplayer-info .aplayer-controller .aplayer-time,
+  .aplayer .aplayer-list ol li .aplayer-list-index,
+  .aplayer .aplayer-list ol li .aplayer-list-author {
+    color: #aaa;
+  }
+
+  .aplayer .aplayer-info .aplayer-controller .aplayer-bar-wrap .aplayer-bar {
+    background: #666;
+  }
+
+  .aplayer .aplayer-info .aplayer-controller .aplayer-bar-wrap .aplayer-bar .aplayer-loaded {
+    background: #888;
+  }
+
+  .aplayer .aplayer-info .aplayer-controller .aplayer-time .aplayer-icon path,
+  .aplayer .aplayer-miniswitcher .aplayer-icon path {
+    fill: #aaa;
+  }
+
+  .aplayer .aplayer-info .aplayer-controller .aplayer-time .aplayer-icon:hover path,
+  .aplayer .aplayer-info .aplayer-controller .aplayer-time .aplayer-icon:focus path,
+  .aplayer .aplayer-miniswitcher .aplayer-icon:hover path,
+  .aplayer .aplayer-miniswitcher .aplayer-icon:focus path {
+    fill: #f1f1f1;
+  }
+
+  .aplayer .aplayer-info .aplayer-controller .aplayer-volume-wrap .aplayer-volume-bar-wrap .aplayer-volume-bar {
+    background: #777;
+  }
+
+  .aplayer .aplayer-lrc::before {
+    background: linear-gradient(180deg, #444 0, rgba(68, 68, 68, 0));
+  }
+
+  .aplayer .aplayer-lrc::after {
+    background: linear-gradient(180deg, rgba(68, 68, 68, 0) 0, rgba(68, 68, 68, 0.8));
+  }
+
+  .aplayer .aplayer-lrc p {
+    color: #aaa;
+  }
+
+  .aplayer .aplayer-lrc p.aplayer-lrc-current {
+    color: #f1f1f1;
+  }
+
+  .aplayer .aplayer-list ol::-webkit-scrollbar-thumb {
+    background-color: #666;
+  }
+
+  .aplayer .aplayer-list ol::-webkit-scrollbar-thumb:hover {
+    background-color: #888;
+  }
+
+  .aplayer .aplayer-list ol li {
+    color: #d8d8d8;
+    border-top-color: #555;
+  }
+
+  .aplayer .aplayer-list ol li:hover {
+    background: #505050;
+  }
+
+  .aplayer .aplayer-list ol li.aplayer-list-light {
+    color: #f1f1f1;
+    background: #555;
+  }
+
+  .aplayer .aplayer-notice {
+    color: #d8d8d8;
+    background: #555;
+  }
+
+  .aplayer .aplayer-miniswitcher {
+    background: #555;
+  }
+}
