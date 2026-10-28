@@ -1,0 +1,592 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <id>https://yyl125.top</id>
+    <title>Benjamin&apos;s Blog</title>
+    <updated>2026-10-28T10:52:12.743Z</updated>
+    <generator>https://github.com/jpmonette/feed</generator>
+    <link rel="alternate" href="https://yyl125.top"/>
+    <link rel="self" href="https://yyl125.top/atom.xml"/>
+    <subtitle>Stay hungry. Stay foolish.</subtitle>
+    <logo>https://yyl125.top/images/avatar.png</logo>
+    <icon>https://yyl125.top/favicon.ico</icon>
+    <rights>All rights reserved 2026, Benjamin&apos;s Blog</rights>
+    <entry>
+        <title type="html"><![CDATA[Metro Vol.001｜普通人如何开地铁]]></title>
+        <id>https://yyl125.top/post/how_to_drive_the_metro/</id>
+        <link href="https://yyl125.top/post/how_to_drive_the_metro/">
+        </link>
+        <updated>2026-10-28T09:34:36.000Z</updated>
+        <summary type="html"><![CDATA[<p>是的，没错，普通人也是有可能开上地铁的</p>
+]]></summary>
+        <content type="html"><![CDATA[<p>是的，没错，普通人也是有可能开上地铁的</p>
+<!-- more -->
+<div class="alert alert-info" role="alert">
+<p>本文是一篇轨道交通相关科普文章。为便于理解，本文在部分细节上有所简化</p>
+</div>
+<h2 id="地铁是人开的">地铁是人开的</h2>
+<p>不知道有多少次在饭局上，我的一些朋友听闻我的职业后，或多或少都会发出像《潜伏》里翠屏那样的疑问（注：原台词是飞机）：</p>
+<blockquote>
+<p>啊？地铁是人开的啊？</p>
+</blockquote>
+<p>是的，地铁是人开的。准确说，哪怕是目前最高运行等级 GoA4 级别的地铁列车，法规上也是要求其驾驶室要有一名司乘人员的</p>
+<p>但是说到「开」，很多时候其实和你想象的不同。至少如今我们大部分时间是无需一直人工驾驶的</p>
+<p>前面我们提到「GoA4」这一运行等级，它有点像咱们现在在汽车上所说的 LX 级别。具体来说，根据国际公共交通协会（UITP）的定义，自动运行等级（Grades of Automation，GoA）分成五等：</p>
+<ul>
+<li>第零等（GoA0）：目视运行，主要是有轨电车、轻轨使用。驾驶员负责控制列车的运行、停止、开关乘降门和处理突发事件；</li>
+<li>第一等（GoA1）：手动运行（Manual Train Operation, MTO），驾驶员负责控制列车的运行、停止、开关乘降门和处理突发事件。人为操作失误时（如超速等）ATP 会介入控制；</li>
+<li>第二等（GoA2）：半自动运行（Semi-automatic Train Operation, STO），列车自动运行及停止，但需要驾驶员开关乘降门和处理突发事件，大多数的列车自动运行系统均是第二等；</li>
+<li>第三等（GoA3）：无驾驶员运行（Fully-Automatic Driverless Train Operation, DTO），列车自动运行、停止和开关乘降门（部分设计需要由工作人员手动开门），但在个别情况下需要列车助理（驾驶员）开关乘降门和处理突发事件，列车上有人员在驾驶室内值守；</li>
+<li>第四等（GoA4）：无人看守运行（Fully-Automatic Unattended Train Operation, UTO），列车运行、停止、开关乘降门和突发事件的处理均完全自动化，列车上无人员值守，通常此类列车传统驾驶室部分与客室之间不设屏障，乘客可观看列车前后的隧道和风景</li>
+</ul>
+<p>目前在国内，你能坐到的地铁线路，至少都已经达到了 GoA2 等级。个别较为先进的线路则是已经做到了 GoA3 甚至 GoA4 等级</p>
+<figure data-type="image" tabindex="1"><img src="https://personalblogmedia.oss-cn-hangzhou.aliyuncs.com/img/post/Metro/How_to_Drive_the_Metro/How_to_Drive_the_Metro_01.jpg" alt="" loading="lazy"></figure>
+<figure data-type="image" tabindex="2"><img src="https://personalblogmedia.oss-cn-hangzhou.aliyuncs.com/img/post/Metro/How_to_Drive_the_Metro/How_to_Drive_the_Metro_02.jpg" alt="" loading="lazy"></figure>
+<figure data-type="image" tabindex="3"><img src="https://personalblogmedia.oss-cn-hangzhou.aliyuncs.com/img/post/Metro/How_to_Drive_the_Metro/How_to_Drive_the_Metro_03.jpg" alt="" loading="lazy"></figure>
+<p class="media-description">图片分别是东京地铁 10000 系电力动车组的驾驶台、深圳地铁 12 号线使用 GoA4 自动驾驶系统列车的前端以及南京地铁 7 号线的驾驶室。图片来自网络</p>
+<h2 id="怎么开地铁">怎么开地铁</h2>
+<p>知道了地铁是人开的之后，你可能就会想要了解驾驶员是怎么开地铁的了</p>
+<p>首先，回忆一下，在我们考驾照时，教练是怎么教我们的？这是方向盘，这是油门，这是刹车，这是离合，这是……</p>
+<p>等一下，开地铁时有会有方向吗？好问题</p>
+<p>但是你见过地铁往前开，偶尔可能见到过地铁往后缓慢的退，那么你直接见过地铁往左往右转吗？</p>
+<p>似乎没有。那地铁是怎么在线路上左右转向的？仔细观察运动中的地铁你会发现，地铁列车运行时并非是一直笔直一条的。在明显有弯道的地方，地铁列车才会跟着一起转弯</p>
+<p>是的，地铁转弯靠的是地上铺设的轨道。轨道往哪里走，车就往哪里走</p>
+<p>但轨道不可能永远以线段方式铺设，如果我们要发明一种装置，让行走在轨道上的列车能够在这一装置的控制下在两个不同方向的轨道上运行呢？这一装置，就是道岔</p>
+<figure data-type="image" tabindex="4"><img src="https://personalblogmedia.oss-cn-hangzhou.aliyuncs.com/img/post/Metro/How_to_Drive_the_Metro/How_to_Drive_the_Metro_04.jpg" alt="" loading="lazy"></figure>
+<p class="media-description">道岔。图片来自于网络</p>
+<p>那么道岔是怎么控制列车运行方向的呢？很简单，给你上个图你就明白了</p>
+<figure data-type="image" tabindex="5"><img src="https://personalblogmedia.oss-cn-hangzhou.aliyuncs.com/img/post/Metro/How_to_Drive_the_Metro/How_to_Drive_the_Metro_05.gif" alt="" loading="lazy"></figure>
+<p class="media-description">道岔原理图。图片来自网络</p>
+<p>那么油门和刹车呢？</p>
+<p>仔细观察上方东京地铁 10000 系电力动车组的驾驶台，你会发现一个很像街机摇杆的手柄，它就是司机控制器，简称司控器。列车的加速和制动全是由它进行控制的</p>
+<figure data-type="image" tabindex="6"><img src="https://personalblogmedia.oss-cn-hangzhou.aliyuncs.com/img/post/Metro/How_to_Drive_the_Metro/How_to_Drive_the_Metro_06.jpg" alt="" loading="lazy"></figure>
+<p class="media-description">一种品牌的司机控制器。图片来自网络</p>
+<p>那地铁列车有离合器吗？现代地铁列车往往通过受电弓或者集电靴来获取电力以为整辆车供电。和如今的电动汽车一样，地铁列车其实并没有离合器这一东西</p>
+<p>驾校司机还会告诉你开车时要注意的另一个东西——红绿灯。那地铁里有红绿灯吗？有类似的，它也遵循「红灯停，绿灯行」的基本常识。那黄灯呢？和马路上的汽车交规不一样，在这里黄灯你依然可以正常通过。那它和绿灯的区别是什么呢？此时，你只需要简单地知道黄灯和绿灯代表不同的方向即可。你可能还会在其它地方见到白灯和蓝灯，他们都有他们各自的含义。这个我们暂且按下不表</p>
+<figure data-type="image" tabindex="7"><img src="https://personalblogmedia.oss-cn-hangzhou.aliyuncs.com/img/post/Metro/How_to_Drive_the_Metro/How_to_Drive_the_Metro_07.jpg" alt="" loading="lazy"></figure>
+<p class="media-description">信号机。图片来自网络，图源见水印</p>
+<p>之所以说在通常情况下，大部分时间是无需一直人工驾驶的。那么，地铁能够实现「自动驾驶」？</p>
+<p>当然，至少对于 GoA2 及以上等级的运营线路来说，你只需要同时按下两个按钮——ATO<sup class="footnote-ref"><a href="#fn1" id="fnref1">[1]</a></sup>，即可启动列车并让他按照既定程序自动在站台启停</p>
+<h2 id="如何实现精准停车">如何实现精准停车</h2>
+<p>在日常乘坐地铁时，你会发现到站停妥后，地铁列车通常总是会和站台门一一对应。那么，地铁是如何实现精准停车的呢？难道是拼运气？</p>
+<p>当然不是。如果你仔细观察，包括高速铁路机车，在各个站台的最前端，均有一个「停车位置」指示牌。在人工驾驶时，驾驶员根据判断列车车头与该停车位置标的距离，即可实现精准停车。这一操作叫做「对标停车」。在 ATO 情况下，列车会通过其信号系统内的停车标位置进行自动对标停车</p>
+<h2 id="如何才能开上地铁">如何才能开上地铁</h2>
+<p>现在你已经了解了有关驾驶地铁列车的最基本的知识，那么，你要如何才能开上地铁呢？</p>
+<p>首先，很多现代交通工具都需要你持合格的有效证件才允许你驾驶。飞机、轮船、汽车等均是如此。地铁也是一样</p>
+<p>简单来说，你需要先在高考时报考拥有相关专业的学校，通过大学阶段的学习，逐步学习相关知识，并等待相关地铁运营公司前往你们学校。再通过公司的面试，进入相关岗位进行正式学习。在这个过程中，你将学习具体线路的相关知识并学习亲自驾驶载客的地铁列车。决定你能够留下来继续工作的，是一场考试，通过该考试，你便取得了一张电客车司机上岗证。它是你在该地铁公司能够合法驾驶的有效证明</p>
+<p>听起来还是有些复杂？没事，哪怕不按照上述的流程取得上岗证，你也依旧能在模拟环境下开上地铁。不少地铁运营公司都有类似的研学游和科普项目可以报名，在那里你可以操作与真实驾驶台相似度 99% 的模拟器，在模拟环境中开上地铁</p>
+<p>驾驶任何一种公共交通均需要强大的责任心作为支撑，虽然现代地铁列车已逐步向 GoA4 等级进化发展，但驾驶员在此的作用却仍然不可忽视。哪怕是最高等级的 GoA4 等级亦是如此</p>
+<hr class="footnotes-sep">
+<section class="footnotes">
+<ol class="footnotes-list">
+<li id="fn1" class="footnote-item"><p>列车自动运行系统 <a href="#fnref1" class="footnote-backref">↩︎</a></p>
+</li>
+</ol>
+</section>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[中国大陆 eSIM 问题详解]]></title>
+        <id>https://yyl125.top/post/discuss_ablout_esim_of_china_mainland/</id>
+        <link href="https://yyl125.top/post/discuss_ablout_esim_of_china_mainland/">
+        </link>
+        <updated>2026-10-23T04:00:00.000Z</updated>
+        <summary type="html"><![CDATA[<p>尽可能试图让你了解现如今的中国大陆地区 eSIM</p>
+]]></summary>
+        <content type="html"><![CDATA[<p>尽可能试图让你了解现如今的中国大陆地区 eSIM</p>
+<!-- more -->
+<div class="alert alert-warning" role="alert">
+<p>由于本文涉及较多复杂内容，另后期可能涉及多项政策变化等情况，更新可能不及时，部分内容仍需以实际为准。如在使用中国大陆 eSIM 过程中遇到任何问题，请联系当地相关运营商了解详情</p>
+</div>
+<h2 id="esim-是什么">eSIM 是什么</h2>
+<p>很多人看到 eSIM 这个名字，会误以为第一个「e」代表的是「电子的」。其实这个「e」是「embedded」（嵌入式的）的意思。所以 eSIM 也就是<strong>嵌入式 SIM</strong> 的意思。它是一种直接嵌入设备（一般焊接在 PCB 板上）的可编程 SIM 卡</p>
+<img src="https://personalblogmedia.oss-cn-hangzhou.aliyuncs.com/img/post/Vanguard_Report/Discuss_about_eSIM_of_China_Mainland/Discuss_about_eSIM_of_China_Mainland_01.png">
+<p class="media-description">不同 SIM 的规格和尺寸。图片来自 Wikipedia</p>
+<p>根据 Wikipedia 的资料，2015 年发布的 Samsung Gear S2 智能手表是首款能成功使用 eSIM 的商业化设备。而 eSIM 的第一版标准于 2016 年 3 月发布，第二版则于 2016 年 11 月发布。Apple 在其 2017 年 9 月公开的 Apple Watch Series 3 及以后之产品中加入了 eSIM 功能。此外，其 2018 年发表的第三代 iPad Pro 及后续每一台 iPad 都支持 eSIM。Apple 还在部分国家和地区销售的 iPhone Xs、iPhone Xs Max 和 iPhone XR 以及后来的双卡双待产品中加入了 eSIM 功能。自 2022 年起，于美国国内销售的 iPhone 14 则更是取消了传统的 SIM 卡槽，仅接受 eSIM</p>
+<h2 id="中国大陆-esim-业务的起起伏伏">中国大陆 eSIM 业务的起起伏伏</h2>
+<p>作为中国大陆三大国有电信服务运营商之一的中国联通，于 2015 年开始布局 eSIM，2017 年获批开展可穿戴设备业务试点，并与华为合作推出支持 eSIM 独立号码的智能手表</p>
+<p>2016 年，中国移动推出了针对 IoT 设备的eSIM服务，其面向远程抄表、车联网、智能家居、可穿戴、智能医疗、智能金融等应用场景。2017-2018 年，因应 Apple Watch Series 3 及华为手表等智能配件的应用，中国三大移动电话运营商曾经支持为这些设备申请 eSIM 开户作为蜂窝网联网服务，但随后于 2023 年前后暂停了 eSIM 手表的「一号双终端」业务及「独立 eSIM 卡」的办理申请。有观点认为其可能与中国的移动电话服务需要实名认证、允许 OTA 网络发卡带来的监管安全性、运营商之间由于用户争夺的博弈有关</p>
+<p>2025 年 10 月 13 日起，中国电信、中国移动、中国联通相继宣布获得工信部 eSIM 手机运营服务商用试验批复，并在全国上线相关业务办理服务。同时顺应 iPhone Air 的发售，中国大陆三大移动电话运营商均支持 eSIM 手机线下开户申请。但因法规限制，中国大陆 eSIM 并不像其他地区一样支持无缝切换不同电话卡，并且中国大陆行货的 iPhone Air 仅可绑定 2 个中国大陆电话号码，反之国外版本的 iPhone 也无法安装大陆号码 eSIM。根据中国信息通信研究院相关报告显示，截至 2026 年 7 月，中国大陆市场支持 eSIM 的手机已涵盖 Apple、华为、OPPO、荣耀、Samsung、联想等品牌，产品形态包括纯 eSIM、实体 SIM（pSIM）与 eSIM 混合方案</p>
+<h2 id="在中国大陆办理-esim-业务的流程">在中国大陆办理 eSIM 业务的流程</h2>
+<p>那么作为一名中国大陆 eSIM 的潜在客户，办理前你需要知道什么？</p>
+<p>因为一些众所周知的原因，中国大陆地区的 eSIM 相关业务只做到了「已经支持 eSIM」这一步，和「用户能够方便地使用 eSIM」并不是一回事。现如今你要办理中国大陆的 eSIM 业务，你需要先检查你的电信终端（这里指你的手机）是否支持 eSIM。支持 eSIM 的终端设备会在系统设置的「移动数据」或「蜂窝网络」部分显示「添加 eSIM」按钮</p>
+<img src="https://personalblogmedia.oss-cn-hangzhou.aliyuncs.com/img/post/Vanguard_Report/Discuss_about_eSIM_of_China_Mainland/Discuss_about_eSIM_of_China_Mainland_02.png">
+<p class="media-description">eSIM 的空中发卡。图片由 ChatGPT 绘制</p>
+<p>确定你的终端设备支持 eSIM 后，你需要携带你的有效身份证明文件（一般是<strong>身份证</strong>）和电信终端设备前往你要办理 eSIM 业务的具体通信运营商的线下自有门店。店员为你办理 eSIM 业务前，会先要求检查你的终端设备的  IMEI、EID 等信息，核实设备是否符合办理条件</p>
+<p>店员核对身份证件及本人身份完成实名实人认证后，会为你继续完成后续的新入网或补换卡操作，配置运营商 Profile。办理完成后，需要你通过扫描二维码等方式下载该配置文件，完成网络激活</p>
+<p>现阶段，你需要先将你的支持电信终端完成激活操作才可前往营业厅办理 eSIM 业务</p>
+<h2 id="现如今中国大陆-esim-业务的困境">现如今中国大陆 eSIM 业务的困境</h2>
+<p>通过前述在中国大陆办理 eSIM 业务的流程，不难看出现如今在中国大陆办理 eSIM 相关业务的最大问题不在于 eSIM 这一技术，而在于其办理流程过于繁琐，且需要终端和号卡主亲身前往线下实体电信运营商自有门店办理。2025 年工信部 eSIM 手机运营服务商用试验批复的意义在于开放手机业务，而并非是 eSIM 技术本身在当时取得了突然突破。手机商用试验改变了用户可使用 eSIM 的终端范围，但并没有自动消除所有开通与迁移限制</p>
+<p>例如，除了需要终端和号卡主亲身前往线下实体电信运营商自有门店办理外，单一终端仅可绑定最多 2 个中国大陆电话号码这一限制本身也制约了中国大陆 eSIM 业务的发展（部分终端设备可绑定最多 4 个中国大陆电话号码，但仅可同时启用 2 个）</p>
+<p>与国际大多数国家通用的 eSIM 标准不一样的是，中国大陆 eSIM 使用了一套完全不同于国际通用标准的 CI 证书文件。这使得除国行终端外，其余任何版本的终端设备均无法写入中国大陆 eSIM</p>
+<h2 id="关于中国大陆-esim-的常见问题解答">关于中国大陆 eSIM 的常见问题解答</h2>
+<p>中国大陆 eSIM 业务目前仍处于并将长期处于现如今的「探索」阶段。但随着政策更新，后续可能会与本文该部分有所出入，请以实际为准</p>
+<h3 id="中国大陆-esim-支持的电信运营商">中国大陆 eSIM 支持的电信运营商</h3>
+<p>目前，支持中国大陆 eSIM 的电信运营商仅有中国移动（China Mobile）、中国联通（China Union）和中国电信（China Telecom）。中国广电（China Broadnet）暂不支持</p>
+<h3 id="支持办理中国大陆-esim-业务的电信终端">支持办理中国大陆 eSIM 业务的电信终端</h3>
+<p>根据中国信息通信研究院相关报告显示，截至 2026 年 7 月，中国大陆市场支持 eSIM 的手机已涵盖 Apple、华为、OPPO、荣耀、Samsung、联想等品牌，产品形态包括纯 eSIM、实体 SIM 与 eSIM 混合方案</p>
+<p>对于 iPhone 而言，截至本文发稿时，仅中国大陆地区销售的 iPhone Air（型号 A3518）、iPhone 17e（型号 A3635）、iPhone 18 Pro（型号 A3715）、iPhone 18 Pro Max（型号 A3718）和 iPhone Duo（型号 A3721）机型支持在支持的电信运营商处办理 eSIM 业务</p>
+<p>支持的其它品牌电信终端设备，可在其品牌官网查询是否支持中国大陆 eSIM 业务办理。但原则上，如电信终端设备无工信部入网许可或进网试用资质，均无法写入中国大陆 eSIM</p>
+<h3 id="非中国大陆行货可否办理中国大陆-esim-业务">非中国大陆行货，可否办理中国大陆 eSIM 业务</h3>
+<p>不能</p>
+<p>以 iPhone 为例，除上述在中国大陆地区销售的 iPhone 机型外，其它 iPhone 机型都无法安装中国大陆运营商提供的 eSIM 描述文件，包括在中国大陆境外（包括中国香港和中国澳门地区）购买的 iPhone 机型。其它品牌的电信终端设备亦是如此</p>
+<h3 id="支持的中国大陆版本电信终端设备可最多储存多少-esim">支持的中国大陆版本电信终端设备可最多储存多少 eSIM？</h3>
+<p>在中国大陆购买且支持 eSIM 的同一台电信终端设备上，最多可以启用并储存两个 eSIM。仅中国大陆地区销售的 iPhone Air（型号 A3518）搭配 iOS 26.0 时，可在该设备上启用并储存多于两个 eSIM。但有消息称，在随后的服务端 OTA 更新后，该终端和该系统版本已不再支持启用并储存对于两个 eSIM</p>
+<p>现阶段，在单台中国大陆版本电信终端上使用中国大陆 eSIM，最多可同时使用 2 个号码。在部分中国大陆版本电信终端上，其单台设备可储存最多 4 个号码（包括 eSIM 和 pSIM），但同时仅可启用两个 eSIM</p>
+<p>包括 pSIM 在内，现有支持的中国大陆版本电信终端上可实现以下几种 pSIM 和/或 eSIM 组合：</p>
+<ul>
+<li>pSIM1+pSIM2，即正反两面均为实体卡</li>
+<li>pSIM+eSIM（China CI），即正面为实体 SIM，反面为中国大陆证书版本的 eSIM（即中国大陆 eSIM）</li>
+<li>eSIM（China CI）+eSIM（China CI），即正反两面均为中国大陆证书版本的 eSIM（即中国大陆 eSIM）</li>
+</ul>
+<p>以中国大陆版本的 iPhone 18 Pro 系列为例，激活 eSIM 后将占用 SIM2 卡槽。另现阶段无法自主选择要取消启用的 pSIM 号码</p>
+<p>同一台电信终端设备每自然月最多可新入网开通 2 次中国大陆电信运营商号码</p>
+<h3 id="办理中国大陆-esim-业务时你需要注意什么">办理中国大陆 eSIM 业务时，你需要注意什么</h3>
+<p>你必须携带有效的身份证明文件（一般是身份证）和电信终端设备前往支持办理中国大陆 eSIM 业务的电信运营商线下实体自营门店向其店员提出办理 eSIM 业务的要求</p>
+<p>店员会在办理过程中扫描你的电信终端设备的 IMEI 和 EID 条形码，将该电信终端设备的 IMEI 和 EID 与你所办理 eSIM 业务的电信运营商号卡所绑定。原则上，一台电信终端设备会有两组 IMEI 和 EID。成功办理中国大陆 eSIM 业务后，对应的的设备 IMEI 和 EID 在运营商系统中将被标记为「已占用」或「已绑定」状态</p>
+<p>基于前述内容，其设备 IMEI 和相关 EID 在相关电信运营商系统中除非将中国大陆 eSIM 转为实体 SIM，并在先前对应电信运营商系统中将被占用的设备 IMEI 和 EID <strong>解绑</strong>后，才会不影响该电信终端和该电信运营商号卡对应的号码继续办理后续的中国大陆 eSIM 相关业务。特别是该电信终端设备在被出售、赠送或折抵时，需要尤为注意检查。仅在该电信终端设备中删除相关 eSIM 并不会影响该设备 IMEI 和 EID 与该电信运营商号卡对应的号码在该电信运营商系统中的绑定状态</p>
+<p>该中国大陆 eSIM 不会被设备制造商的云服务或备份功能（包括但不限于云端备份和本地备份）备份或复制。如果你在该电信终端设备中删除相关 eSIM，你必须申请从该电信运营商处重新获取该号卡的 Profile。具体方法参考各电信运营商的相关技术支持</p>
+<h3 id="如何正确将中国大陆-esim-转为实体-sim">如何正确将中国大陆 eSIM 转为实体 SIM</h3>
+<p>由于前项问题，如果需要将中国大陆 eSIM 转为实体 SIM，请携带有效的身份证明文件（一般是身份证）和电信终端设备前往支持办理中国大陆 eSIM 业务的电信运营商线下实体自营门店向其店员提出办理转为实体 SIM 业务的要求</p>
+<p>店员会为你完成接下来的一系列操作。请注意，如果存有中国大陆 eSIM 的该电信终端设备后续可能会被您出售或赠送，请<strong>明确</strong>要求店员在为你转为实体 SIM 的同时，将对应电信运营商系统中将被占用的设备 IMEI 和 EID <strong>解绑</strong>。只有如此才会不影响该电信终端和该电信运营商号卡对应的号码继续办理后续的中国大陆 eSIM 相关业务。仅在该电信终端设备中删除相关 eSIM 并不会影响该设备 IMEI 和 EID 与该电信运营商号卡对应的号码在该电信运营商系统中的绑定状态</p>
+<p>成功办理转为实体 SIM 后，你存有中国大陆 eSIM 的该电信终端设备将提示无信号、无服务或无 SIM 卡</p>
+<h3 id="买到或收到了一台-imei-和-eid-被绑定的电信终端设备该怎么办">买到或收到了一台 IMEI 和 EID 被绑定的电信终端设备，该怎么办</h3>
+<p>基于前述原因，当你买到货收到一台 IMEI 和 EID 被绑定的电信终端设备，请务必联系到原机主，确认其是否正确将中国大陆 eSIM 转为实体 SIM 并在对应电信运营商系统中将被占用的 IMEI 和 EID 进行解绑。若已完成上述操作，则可放心继续使用该电信终端设备</p>
+<p>若未完成上述操作中的任何其中一步，请原机主携带其有效的身份证明文件（一般是身份证）前往对应电信运营商线下实体自有门店办理相关业务</p>
+<p>如无法联络原机主，则后续该电信终端无法办理中国大陆 eSIM 开通业务。<strong>请不要轻信互联网上任何声称可协助你完成该操作的人员或组织，谨防上当受骗</strong></p>
+<h3 id="如果不确定该电信终端设备的-imei-和-eid-被绑定在哪一个受支持的电信运营商处该怎么办">如果不确定该电信终端设备的 IMEI 和 EID 被绑定在哪一个受支持的电信运营商处，该怎么办</h3>
+<p>中国移动、中国联通和中国电信已在其 App 中提供 eSIM 占用情况自助查询功能</p>
+<p>中国移动用户可在中国移动 App 中进入「首页」-「服务大厅」-「号卡服务」-「eSIM 绑号查询」中查询该电信终端在中国移动系统中已绑定的号码数量</p>
+<p>中国联通用户可在中国联通 App 中进入「首页」-「服务大厅」-「号卡套餐」-「eSIM 专区」-「服务」-「eSIM 手机绑定号码数量查询」中查询该电信终端在中国联通系统中已绑定的号码数量</p>
+<p>中国电信用户截止本文发稿时，未查询到如何在 App 内自助查询</p>
+<p>所有支持中国大陆 eSIM 业务的电信运营商线下自营门店均可查询所携带的电信终端在其系统中已绑定的号码数量。所有支持中国大陆 eSIM 业务的电信运营商的现有一支查询方式均只能查看该终端在其系统中的 eSIM 绑定/占用情况，但无法确定绑定/占用者是否为机主本人，亦无法进行在线解绑/解除占用操作。如果你买到或收到一台 IMEI 和 EID 被绑定的电信终端设备，且无法解除绑定/占用，请及时联系原机主解决。<strong>请不要轻信互联网上任何声称可协助你完成该操作的人员或组织，谨防上当受骗</strong></p>
+<h3 id="是否可以将电信终端-a-上的中国大陆-esim-直接转移至电信终端-b">是否可以将电信终端 A 上的中国大陆 eSIM 直接转移至电信终端 B</h3>
+<p>现阶段，暂不支持将电信终端 A 上的中国大陆 eSIM 直接转移至电信终端 B，请携带有效的身份证明文件（一般是身份证）和电信终端 A、B 设备前往支持办理中国大陆 eSIM 业务的电信运营商线下实体自营门店向其店员提出办理 eSIM 业务的要求</p>
+<h3 id="可穿戴终端上的中国大陆-esim-与数字移动电话机上的中国大陆-esim-有何异同">可穿戴终端上的中国大陆 eSIM 与数字移动电话机上的中国大陆 eSIM 有何异同</h3>
+<p>中国大陆可穿戴终端（这里以 Apple Watch 为例）上的中国大陆 eSIM，属于「一号双终端」业务或独立号业务。而数字移动电话机（即以手机为主的电信终端）上的中国大陆 eSIM属于传统的号卡业务。<strong>部分运营商可能不允许已开通一号双终端业务的号卡用户将实体 SIM 转为 eSIM</strong></p>
+<p>可穿戴终端可在激活设置过程中或激活设置完成后自行在可穿戴终端专属管理软件上自助开通一号双终端业务。部分电信运营商可办理独立号业务</p>
+<p>现阶段，可穿戴终端和数字移动电话机上的 eSIM 与终端绑定后不可分离，仅限在该终端上使用。可穿戴终端 eSIM 独立号业务如需找回终端上被删除的旧 eSIM 号码，可在支持的电信运营商 App 的 eSIM 专区上进行 eSIM 补换卡业务</p>
+<h3 id="如果我点击了设备上的删除-esim如何找回该-esim">如果我点击了设备上的「删除 eSIM」，如何找回该 eSIM</h3>
+<p>如果你惦记了设备上的「删除 eSIM」按钮，请放心，你与该电信运营商的合约关系并未发生任何变化。你可以携带身份证明文件（一般是身份证）前往该电信运营商的线下自营门店申请 eSIM 补卡业务</p>
+<p>如果你正在准备抹掉你的设备，设备系统会询问你如何处理该终端上保存的 eSIM。请点击「保留 eSIM」或类似选项。抹掉操作结束后，你的 eSIM 会在你完成后续的设备首次设置后，自动出现在终端设备上。如果你选择了删除该 eSIM。请在抹掉操作以及后续的设备首次设置完成后，携带身份证明文件（一般是身份证）前往该电信运营商的线下自营门店申请 eSIM 补卡业务</p>
+<h3 id="中国大陆版本电信终端设备如何添加境外-esim如旅行-esim">中国大陆版本电信终端设备如何添加境外 eSIM（如旅行 eSIM）</h3>
+<p>仅当电信终端设备实际定位处于境外时，才可通过扫描境外电信运营商提供的 QR Code 或其它方法等添加境外 eSIM（如旅行 eSIM）。当设备实际定位处于中国大陆时，中国大陆版本电信终端设备均无法添加境外 eSIM</p>
+<h3 id="中国大陆-esim-是否支持异地办理">中国大陆 eSIM 是否支持异地办理</h3>
+<p>现阶段，中国大陆 eSIM 暂不支持异地办理（异地至不在号码原归属地）该业务。部分地区用户可前往其电信运营商在当地的省厅或市厅等咨询是否可以异地办理</p>
+<h3 id="中国大陆-esim-是否支持非实名本人如实名认证者的亲属以及副卡办理">中国大陆 eSIM 是否支持非实名本人（如实名认证者的亲属）以及副卡办理</h3>
+<p>现阶段，中国大陆 eSIM 暂不支持非该卡的实名本人（如所实名认证者的亲属）以及副卡办理该业务。请实名认证者本人携带身份证明文件（一般是身份证）进行办理</p>
+<h3 id="对办理中国大陆-esim-业务还有一些疑问应如何咨询">对办理中国大陆 eSIM 业务还有一些疑问，应如何咨询</h3>
+<p>你可以直接联系中国移动（10086）、中国联通（10016）、中国电信（10000）以及其当地客服热线（区号+对应电信运营商客服电话，如 010-10086）的人工客服进行咨询</p>
+<p>业务上线初期，部分电信运营商线下自营门店店员可能对该业务的办理以及相关政策不熟悉，可酌情要求更有经验的店员帮助你办理该业务</p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Write To Gridea]]></title>
+        <id>https://yyl125.top/post/write_to_gridea/</id>
+        <link href="https://yyl125.top/post/write_to_gridea/">
+        </link>
+        <updated>2026-04-15T10:06:19.000Z</updated>
+        <summary type="html"><![CDATA[<p>最近看到 GitHub 有开发者基于 Gridea 开发了一个 Gridea Pro，突然有感而发</p>
+]]></summary>
+        <content type="html"><![CDATA[<p>最近看到 GitHub 有开发者基于 Gridea 开发了一个 Gridea Pro，突然有感而发</p>
+<!-- more -->
+<p>本文题图为 Gridea 初始化后的第一篇文章的封面图，版权归属 Gridea 及其创造者 @EryouHao 所有</p>
+<p>P.S. 本文提及的所有「Gridea」如无特别说明，均是指由 <a href="https://github.com/EryouHao" target="_blank">@EryouHao</a> 开发的 <a href="https://open.gridea.dev/" target="_blank">Gridea 开源客户端</a></p>
+<h2 id="初见-gridea">初见 Gridea</h2>
+<p>相信很多人知道 Gridea 是因为 Sspai 少数派的 <a href="https://sspai.com/post/54212" target="_blank">推荐文章</a>。这是一个曾经推荐过 VVebo、Bob 等神仙 App、出品过 Cuto 壁纸以及众多 Apple 生态效率内容的神奇网站</p>
+<p>我的相关需求其实非常简单。我想有个能写自己想法或者其它任何东西，并且能最大限度自己管理、再配合符合我审美的网站主题就可以对外发布的东西即可</p>
+<p>我并非有很多的相关专业知识，甚至压根就不是相关从业者。我的真正专业和工作内容，再大家印象里，是可能没什么文化但是工作岗位却是「人们想象中」的完全不累的「好工作」（具体你可以去看本站「关于」页面）</p>
+<p>Gridea 在当时很好的满足的基本需求</p>
+<p>第一是免费。尽管我已购买或订阅了众多我愿意支持的应用，如 Surge、Netflix 等，但对于一个新领域众多同类软件或App，我起初仍会保持谨慎。因此，「免费」是我首要考虑的一点</p>
+<p>第二是与我熟悉的内容搭配的很好。尽管我不是程序员，顶多算是个「数码内容爱好者」，GitHub 仍然是我常看常用的网站。它和 Cloudflare 一样，被很多人称为「赛博福利姬」。GitHub Pages 搭配 Gridea 和一点点基础的网络知识和 Markdown 这一简单的标记语言就能搭建一个简单的个人站点，确确实实是它最初真正吸引我的原因</p>
+<p>当时唯一的问题是，官方或GitHub上的开源主题选择并不丰富，至少与 Wordpress、Hexo 等相比，很少能合我眼缘。倒不是没有优点，而是我那时看到什么都想要，总之是个人问题。后来 Gridea 的作者发布了 Rocky 主题，总体符合我的审美，试了很多后，最终还是确定了我的博客主题为 Rocky</p>
+<p>填写完配置、测试、发布，很快我就完成了第一次 Git 提交，上线了一篇测试文章。左看右看，十分满意</p>
+<h2 id="漫漫折腾路">漫漫折腾路</h2>
+<p>从那之后，我就开始了使用 Gridea + GitHub Pages 的建站之路</p>
+<p>第一次让我折腾许久的，是当时另一篇在 Sspai 少数派出名的项目「<a href="https://sspai.com/post/60024" target="_blank">b言b语</a>」。对于第一次需要类似 LeanCloud 这种后端（应该是叫这个名字？）的项目，刚开始折腾确实在一些细节上耗了我非常大的功夫。不过好在最后项目还是成功被我「嫁接」在了我的这个个人博客上</p>
+<p>只不过后来随着 LeanCloud 不断的拉垮，以及某些相关规则和政策上等的转变（印象里是有的？），加之项目页面设计粗糙，与博客的整体风格不搭，因此我也是首次尝试自己修改前端 CSS，力求项目与网站其它部分至少在设计中更为协调</p>
+<p>这便是现在「随想」页面的雏形</p>
+<p>后来，随着知识需求增长，我访问和关注了更多作者的博客或内容。看到他们网站上的有趣设计，我会尝试自己动手实现，先找现成方案（我承认我挺懒的），没有就研究实现方法，看能否搬到我的博客上来。虽常因技术能力不足而失败，但至少学到了不少知识。经过多次比较和重试，我的博客终于变成了现在这个样子。它可能不完美，但至少表达了我的想法</p>
+<p>而这一切的基础，或者说让我轻松部署的，毫无疑问，始终是 Gridea</p>
+<h2 id="gridea-的现状">Gridea 的现状</h2>
+<p>这当然不是一篇全是夸赞的软文。下面我们来聊聊 Gridea 的现状</p>
+<p>正如 Gridea Pro 的 Readme 里说的那样，Gridea 最初的开源版本已经停止更新近 4 年之久了。虽然很多东西一直都能跑起来，但在如今的环境下，它依然有很多不完美的地方</p>
+<p>首先就是 Gridea 的启动速度。我并不十分了解架构等远超出我技术知识储备的内容，但我知道，这可能和站点包含文章数量和相关配置文件的内容有关。在如今的 M 系列 Mac 上，它可以说是我这台 M2 芯片至少看起来运行起来相当耗时的 App，它往往会在 Docker 上弹跳不少次</p>
+<p>Gridea 的作者 <a href="https://github.com/EryouHao" target="_blank">@EryouHao</a> 在后期推出了订阅制的 Gridea，并将先前的开源项目 Gridea 更名为 <a href="https://open.gridea.dev/" target="_blank">Gridea 开源客户端</a>。它补齐了 Gridea 的一些问题，比如 PWA（Progressive Web App，渐进式网络应用） 以及一些以往需要自己手搓的功能。我也曾经在早鸟体验期间试用了几次，但因为种种原因，最终还是继续选择了 Gridea 开源客户端</p>
+<p>相比较而言，我也有在 Windows PC 上安装 Gridea 辅以坚果云同步内容，Gridea 在 Windows 上的运行速度反而让我没那么难以接受。但高分屏支持问题却让我放弃在 Windows 上使用。仅在少数时候我会通过坚果云自动同步博客文件改动，再在 Windows 版 Gridea 上发布。这倒并不是 Gridea 本身的问题</p>
+<p>时至今日，我只将 Gridea 作为我博客的「管理和部署工具」来用了。文章由我在其它编辑器来写，最后通过 Gridea 部署并发布出去。编辑器部分，我最开始由 Gridea 换到了 Bear、付费的 Ulysses。后来换到了 IA Writer。我甚至还曾经在 Xcode 上坚持写了一段时间的 Markdown，后来又在 Microsoft VS Code 上来完成我的文章，再后来是 Typora、Obsidian……其实，不管用什么来写，我都觉得坚持写下去更为重要。我甚至会时不时修改一下我之前写的某一篇文章以弥补一些文章的时效性缺陷</p>
+<h2 id="gridea-pro">Gridea Pro</h2>
+<p><a href="https://github.com/Gridea-Pro/gridea-pro" target="_blank">Gridea Pro</a> 是近期在 GitHub 上开源的以 Gridea 为基础制作的一款静态博客写作客户端，意图延续 Gridea 的核心愿景：让每个人都能零门槛拥有自己的博客</p>
+<p>Gridea Pro 还被 @EryouHao 在 X 上提及</p>
+<blockquote>
+<p>看到有人基于 Gridea 之前的开源客户端，开发了一个新的，功能介绍还挺好的。<br>把记忆一下子拉回了 4 年前</p>
+</blockquote>
+<p>它采用 Go + Wails + Vue 3 构建，我也简单试用了一下。对于我比较在意的启动速度方面，确实是进步明显。但需要注意的是，它终究不是原版的 Gridea，甚至使用 Gridea Pro 会对原有的 Gridea 目录实行不可逆的迁移（当然你可以重开一个文件夹）</p>
+<p>Gridea Pro 目前仍在持续更新中，关于其后续的发展我也会持续关注，但为了项目的稳定性，我暂时还是不会迁移到 Gridea Pro 上去</p>
+<h2 id="题外话属于-apple-silicon-的时代mac-上的-x86-应用要何去何从">题外话：属于 Apple Silicon 的时代，Mac 上的 X86 应用要何去何从？</h2>
+<p>随着 Apple 将 Mac 从 Intel 成功带到了 Apple Silicon 的时代，macOS 也即将结束对基于 Intel 的 App 的支持<sup class="footnote-ref"><a href="#fn1" id="fnref1">[1]</a></sup></p>
+<p>据 Apple 官方的说法，后续的 macOS 版本会移除 Rosetta 2，仅会对某些依赖基于 Intel 的框架且没有维护过的较低版本的游戏生效</p>
+<blockquote>
+<p>Rosetta 目前适用于搭载 Apple 芯片的任一款 Mac，并且直到即将发布的下一个主要 macOS 版本 — macOS 27 都仍可使用。从使用 macOS 28 的电脑开始，Rosetta 功能将仅适用于某些依赖基于 Intel 的框架且没有维护过的较低版本的游戏<br><br>
+为了获得卓越性能和日后的兼容性，你应更新基于 Intel 的 App、插件、扩展和其他附加组件以适配 Apple 芯片</p>
+</blockquote>
+<p>就连每次启动 X86 应用，macOS 也会做出提示</p>
+<img src="https://personalblogmedia.oss-cn-hangzhou.aliyuncs.com/img/post/Small_Talk/Write_To_Gridea/Write_to_Gridea_01.png">
+<p class="media-description">每次打开 Gridea 开源客户端时 macOS 的提示</p>
+<p>目前还不清楚 Apple 会在未来的 macOS 28 中如何处理旧版的 X86 应用，但在这个 Apple Silicon 时代，X86 应用的前景无疑将越来越受限</p>
+<img src="https://personalblogmedia.oss-cn-hangzhou.aliyuncs.com/img/post/Small_Talk/Write_To_Gridea/Write_to_Gridea_02.png">
+<p class="media-description">我的 Mac 上唯二的 X86 应用：Gridea 和 Gridea Pro</p>
+<p>而后续 Apple 又是否会在某一天更进一步，对 Universal App「下手」呢？</p>
+<hr class="footnotes-sep">
+<section class="footnotes">
+<ol class="footnotes-list">
+<li id="fn1" class="footnote-item"><p><a href="https://support.apple.com/zh-cn/102527">在搭载 Apple 芯片的 Mac 上使用基于 Intel 的 App</a> <a href="#fnref1" class="footnote-backref">↩︎</a></p>
+</li>
+</ol>
+</section>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[最近买了啥 Vol.002]]></title>
+        <id>https://yyl125.top/post/bought_recently_002/</id>
+        <link href="https://yyl125.top/post/bought_recently_002/">
+        </link>
+        <updated>2025-01-23T15:08:18.000Z</updated>
+        <summary type="html"><![CDATA[<p>剁手，剁手～</p>
+]]></summary>
+        <content type="html"><![CDATA[<p>剁手，剁手～</p>
+<!-- more -->
+<div class="alert alert-warning">
+  <strong>注意</strong> 本文仅作内容分享，不作为购买建议
+</div>
+<h2 id="二手-dji-osmo-pocket-3">二手 DJI OSMO Pocket 3</h2>
+<p>入手渠道：转转自营<br>
+入手价格：CN¥3478</p>
+<p>其实自己也不是很喜欢拍 VLOG（主要是因为不愿意入镜），但还是在去日本前在转转收了一台二手的 DJI OSMO Pocket 3。到货后发现原机主还为其购买了 DJI 随心换</p>
+<p>出发日本前又去店里买了一套 ND 滤镜、续航手柄以及脚架。这东西现在离谱的程度不亚于某厂有电子茅台之称的手机，不过我的拍摄水平还得练练～</p>
+<h2 id="homepod-mini-散装国行">HomePod mini 散装国行</h2>
+<p>入手渠道：淘宝第三方<br>
+入手价格：CN¥538</p>
+<p>之前桌面上就有一只 HomePod mini 作为我的 Apple Music 「次音响」。因为 Apple TV 连接着显示器，通常我会使用 Apple TV 上的 Apple Music。之前有收到过 Apple Marketing 的问卷，询问 HomePod mini 的使用如何。按照惯例，这应该是会出新款的征兆</p>
+<p>按照我对 Apple 的了解，如果想要不同代际不同型号组成立体声组合应该是完全不可能的事情。遂趁价格合适，淘宝又买了一只散装的黑色 HomePod mini 补齐立体声组合。虽然是 mini，但一点也不比有些音响要差。到货后发现还是国行（型号 CH/A 结尾），但是插电后发现一直无法弹出配对浮窗，猜测应该是 audioOS 版本问题。无奈 Type-C 连接 MacBook 利用之前一直作为备份保存的 HomePod mini 固件进行更新</p>
+<p>组合成为立体声组合的 HomePod mini 确实表现不错，Siri 依旧很笨，但平时也就播放个歌。可能是因为距离的原因，坐在桌前玩手机有时就会突然弹出转移到 HomePod 的浮窗，索性关了转移到 HomePod 功能</p>
+<h2 id="补-apple-watch-series-9-applecare-2-年期计划">补 Apple Watch Series 9 AppleCare 2 年期计划</h2>
+<p>入手渠道：Apple Store 合肥万象城<br>
+入手价格：CN¥649</p>
+<p>12 月底趁京东特价将原先的 Apple Watch Series 8 GPS+Cellular 更换成了 Series 9 GPS+Cellular。另一个原因是因为 Series 8 的电池续航以及不足以撑一天的续航了，甚至入冬后气温的影响下，加上夜间睡眠监测后起床只剩 40% 电量的地步了</p>
+<p>合肥首家 Apple Store 合肥万象城刚好开业，早班下班后和同事去打卡，顺便去补 AC 并咨询一些相关的问题。无奈已经过期的 iPhone 15 Pro 的 AppleCare 被告知在店里没有权限继续续费，需要自己联系 400。最后只给刚买没多久的 Apple Watch Series 9 补了一个 2 年期的 AppleCare</p>
+<p>Apple Store 对我来说最大的作用就是在于售后。以往最近也需要去南京解决，现在直接在本地就能解决，无论店铺的规模大小，有总比没有好</p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[最近买了啥 Vol.001]]></title>
+        <id>https://yyl125.top/post/bought_recently_001/</id>
+        <link href="https://yyl125.top/post/bought_recently_001/">
+        </link>
+        <updated>2024-05-26T12:00:00.000Z</updated>
+        <summary type="html"><![CDATA[<p>剁手，剁手～</p>
+]]></summary>
+        <content type="html"><![CDATA[<p>剁手，剁手～</p>
+<!-- more -->
+<div class="alert alert-warning">
+  <strong>注意</strong> 本文仅作内容分享，不作为购买建议
+</div>
+<p>第一期「最近买了啥」内容为 2024 年 618 购物节期间相关内容</p>
+<h2 id="apple-watch-午夜色-45mm-回环式运动表带">Apple Watch 午夜色 45MM 回环式运动表带</h2>
+<p>入手渠道：京东备件库<sup class="footnote-ref"><a href="#fn1" id="fnref1">[1]</a></sup><br>
+入手价格：Apple Store 原价 CN¥379，备件库标准 9 成新 CN¥304</p>
+<p>Apple 官方的 Apple Watch 表带质量上乘、完善售后，一直是很多 Apple Watch 用户的首选。回环式运动表带因其采用柔软轻盈的精织尼龙材质，同时方便湿气排散，也是很多用户非常喜欢的一种表带款式</p>
+<p>一戴上手，回环式运动表带轻盈柔软的特点立刻就能让你感受到。透气性虽有待后续持续验证，但相比我原先使用的硅胶运动表带，以往流汗后湿粘的感觉确实减轻了不少</p>
+<img src="https://personalblogmedia.oss-cn-hangzhou.aliyuncs.com/img/post/New_Stuff/Bought_Recently/001/Bought_Recently_001_01.jpg">
+<p class="media-description">Apple Watch 午夜色 45MM 回环式运动表带新（左）旧（右）款对比。图片来源见水印</p>
+<p>需要注意的是，京东备件库中此款表带分为新、旧两款<sup class="footnote-ref"><a href="#fn2" id="fnref2">[2]</a></sup>。新款表带达成了 Apple 碳中和的目标，同时回环式扣件颜色改为了较为明亮的乳白色</p>
+<h2 id="airpods-pro-gen2-usb-c">AirPods Pro gen2 USB-C</h2>
+<p>入手渠道：App Store 天猫旗舰店<br>
+入手价格：Apple Store 原价 CN¥1899，天猫旗舰店 618 期间 CN¥1549，叠加 88VIP 优惠券实际到手 ¥1449</p>
+<p>如果说 AirPods 开创了 TWS 真无线耳机的潮流，那么 AirPods Pro 带来的通透模式等一系列体验可以说是将整个 AirPods 系列又推向了一个全新的高度</p>
+<p>虽然嘴上说着 AirPods 3 刚刚好够我用，但在获知 AirPods Pro gen2 USB-C 本次淘宝天猫 618 期间的优惠价后，还是「十分犹豫」地最终将其收入囊中。<s>（话说我几乎每一代 AirPods 都有，究竟是因为什么最终没有忍住呢？）</s></p>
+<p>AirPods Pro gen2 USB-C 和 gen1 以及 gen2 Lightning 最大的外观区别在于 AirPods 充电盒的充电方式改为了 USB-C 和 MagSafe（兼容 Qi 和 Apple Watch 充电线缆），另外还新增了挂绳孔和底部两侧的扬声器并搭载 U1 芯片。由于我没有用过 gen1，与前代的降噪体验相比有无明显进步因此便不得而知了。和我此前拥有的 Sony 头戴式降噪耳机相比，通透模式和全新的自适应噪声控制的体验绝对是一流的</p>
+<img src="https://personalblogmedia.oss-cn-hangzhou.aliyuncs.com/img/post/New_Stuff/Bought_Recently/001/Bought_Recently_001_02.png">
+<p class="media-description">适用于 AirPods Pro gen2 的两年期 AppleCare+ 服务的售价以及包含的内容</p>
+<p>结合以往型号的故障率以及合肥即将营业的 Apple Store（R765），在入手 AirPods Pro gen2 USB-C 后也是第一时间购买了适用于 AirPods Pro 的 AppleCare+</p>
+<h2 id="西昊-m59as">西昊 M59AS</h2>
+<p>入手渠道：京东<br>
+入手价格：原价 CN¥649，京东 PLUS 优惠价 CN¥641</p>
+<p>人体工学椅是如今久坐人士几大必备品之一。此前我使用的是京东某不知名品牌的某款「人体工学椅」，不仅毫无人体工学体验，最近还因为底部的升降调节开关出现问题而迫使我不得不更换一把新人体工学椅</p>
+<p>如果说我目前为止坐过的最舒服的椅子，还得是我们地铁<s>司机室的司机座椅</s>司机换乘/轮乘休息室的「办公椅」。只不过其「传闻报价」（公司招标采购价，懂的都懂）对我来说有点不切实际</p>
+<img src="https://personalblogmedia.oss-cn-hangzhou.aliyuncs.com/img/post/New_Stuff/Bought_Recently/001/Sihoo_M59AS.jpg">
+<p class="media-description">西昊 M59AS。图片来源于网络</p>
+<p>舒不舒服，还得自己屁股坐了才知道。这款西昊 M59AS 采用网面座，辅以腰靠和可调节头枕很快「赢」得了我屁股的「认可」。M59AS 120° 的俯仰角度也能给我在家观影带来全新的感受，日常休息时也可以提供基础的睡眠感受。虽然这款可以说是西昊人体工学椅的基础款，但对我来说，已然够用</p>
+<hr class="footnotes-sep">
+<section class="footnotes">
+<ol class="footnotes-list">
+<li id="fn1" class="footnote-item"><p>详见 <a href="https://www.zhihu.com/question/54745529/answer/507017812" target="_blank">对于京东备件库的商品，怎么看?</a> <a href="#fnref1" class="footnote-backref">↩︎</a></p>
+</li>
+<li id="fn2" class="footnote-item"><p>旧款目前仅有 XL 超大号（适合 170～245MM 腕围）型号。新款单一尺码（适合 145～220MM 腕围）和 XL 超大号两款型号均有库存。此数据截止发文时 <a href="#fnref2" class="footnote-backref">↩︎</a></p>
+</li>
+</ol>
+</section>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[折腾 Steam Deck 二三事]]></title>
+        <id>https://yyl125.top/post/some_things_happened_to_steam_deck/</id>
+        <link href="https://yyl125.top/post/some_things_happened_to_steam_deck/">
+        </link>
+        <updated>2024-03-25T13:43:17.000Z</updated>
+        <summary type="html"><![CDATA[<p>买 Steam Deck，学 Linux 技术</p>
+]]></summary>
+        <content type="html"><![CDATA[<p>买 Steam Deck，学 Linux 技术</p>
+<!-- more -->
+<p>Steam Deck 可谓是过去很长一段时间以来，游戏掌机市场的一个「里程碑式」产品。国内的 Steam Deck 玩家众多，我也<s>趁热</s>买了一台 Steam Deck 填补我在去年 4 月出售 AYANEO Air 后的游戏掌机空白</p>
+<p>但是，当我真正上手 Steam Deck 后，还是发现由于一些特殊的原因，国内的 Steam Deck 和 SteamOS 体验还是在很多方面需要作出改进，无法做到真正的「开箱即用」。以下是我记录的从我初次上手到目前位置共计一周左右时间对 Steam Deck 进行的一系列操作和调整</p>
+<h2 id="开机联网">开机联网</h2>
+<p>没错，我上手后遇到的第一个问题是无法联网</p>
+<p>原因是 Steam Deck 没有硬件上的键盘和鼠标，初次上手时也无法调用 SteamOS 内置的软键盘<sup class="footnote-ref"><a href="#fn1" id="fnref1">[1]</a></sup>。所以，初次开机时我还是通过 USB-C 扩展坞（<s>此时真庆幸我因为使用 MacBook 而拥有 USB-C 扩展坞</s>）连接了我的实体键盘来为 Steam Deck 连接 Wi-Fi 网络</p>
+<p>当然，你也可以通过购买带有 RJ45 端口的 USB-C 扩展坞来为 Steam Deck 连接以太网</p>
+<h2 id="为-discover-软件管理中心更换国内镜像软件包源地址">为 Discover 软件管理中心更换国内镜像软件包源地址</h2>
+<p>由于 SteamOS 其实是基于 Arch Linux 开发的，而「软件包」则是 Linux、BSD 以及其它类似操作系统中对于一种软件所进行打包的方式。在很多时候，善于使用 CLI 或 GUI 方式来为 Linux 安装软件不失为用户日常使用过程中的一种进阶操作（<s>其实应该算是基础操作</s>）</p>
+<p>而对于 Steam Deck 所搭载的 SteamOS 而言，显然其还需要在很多方面作出改进。比如，当你第一次在 Steam Deck 中退出 Steam 或者需要一些进阶操作而需要回到桌面模式时会发现，默认被固定在底部的 Firefox 居然只是一个「安装链接」。实际轻点底部的 Firefox 图标后只会打开 SteamOS 自带的 Discover 软件管理中心的 Firefox 安装界面。而因为一些特殊的原因，国内打开 Discover 软件管理中心通常来说都会失败，那么将系统默认的软件包源地址更改为国内镜像站的地址就是一项「基础中的基础操作」了</p>
+<p>在 SteamOS 中更换 Discover 软件管理中心的软件包源地址的方式比较特别，你需要按照如下的操作来进行：</p>
+<ol>
+<li>进入 Steam Deck 的桌面模式</li>
+<li>轻点 Steam Deck 左下角的 Deck 图标，在 App 分类中选择 System &gt; Konsole，打开 Terminal 终端</li>
+<li>输入 <code>passwd</code> 设置你的管理员密码并回车确认，提示 <code>passwd: password updated successfully</code> 即表明管理员密码设置成功</li>
+<li>输入 <code>sudo steamos-readonly disable</code>，回车确认并输入在前述步骤中设置的管理员密码来关闭 SteamOS 对于系统文件的只读权限</li>
+<li>输入 <code>flatpak remote-modify flathub --url=https://mirror.sjtu.edu.cn/flathub</code></li>
+<li>重新启动 Steam Deck</li>
+</ol>
+<p>如果需要恢复官方软件包源，可以输入 <code>sudo flatpak remote-modify flathub --url=https://flathub.org/repo</code></p>
+<p>更换完软件包源地址后，你就可以进入 Discover 软件管理中心安装 Firefox 等应用程序了。当然，你也可以通过透明代理等方式来解决 Discover 软件管理中心使用国外软件包源地址而导致的无法打开商店或下载速度慢等问题</p>
+<h2 id="为-steam-deck-安装插件">为 Steam Deck 安装插件</h2>
+<p>Steam Deck 中有很多社区开发者开发的十分好用的 Steam Deck 插件，但是这些插件由于并没有所谓的「官方商店」可供其上架，因此还需要我们为此进行一番折腾来将其启用</p>
+<p>以安装 TO MOON 插件为例，你需要按照如下的操作来进行：</p>
+<ol>
+<li>在 Steam Deck 的「Gaming Mode」（即 Steam Deck 开机自启的 Steam）界面下，按下 Steam Deck 的「Steam」键</li>
+<li>点选「设置」</li>
+<li>在设置中，继续选择「系统」</li>
+<li>向下滑动，在「系统设置」部分启用「启用开发者模式」</li>
+<li>在设置的汉堡菜单中点选新出现的「开发者」</li>
+<li>向下滑动，在「杂项」部分启用「CEF 远程调试」</li>
+<li>重新启动 Steam Deck，并在重启后进入桌面模式</li>
+<li>轻点 Steam Deck 左下角的 Deck 图标，在 App 分类中选择 System &gt; Konsole，打开 Terminal 终端</li>
+<li>输入 <code>curl -L http://dl.ohmydeck.net | sh</code> 安装 Plugin Loader 插件功能</li>
+<li>输入 <code>curl -L http://i.ohmydeck.net | sh</code> 安装 TO MOON 插件</li>
+<li>点击桌面的「Return to Gaming Mode」回到 Steam Deck 的 Gaming Mode</li>
+<li>按下 Steam Deck 的「…」键</li>
+<li>轻点左侧的 Plugin 图标，进入 Decky 插件页面</li>
+</ol>
+<p>这样，你就为 Steam Deck 启动了插件功能并安装了 TO MOON 插件。点击 Plugin 页面的商店图标，可以继续探索由社区开发者开发的各式各样的 Steam Deck 插件</p>
+<p>以下，为你推荐一些我安装的插件：</p>
+<ul>
+<li>To Moon：解决在无法进行透明代理的位置为 Steam Deck 进行代理</li>
+<li>ProtonDB Badges：在游戏详情页上显示其与 Steam Deck 的兼容情况，数据来源于此前的 ProtonDB</li>
+<li>Battery Tracker：跟踪 Steam Deck 的电量使用情况，辅助你更好的调整 Steam Deck 的能耗平衡</li>
+<li>Controller Tools：为 Steam Deck 引入第三方的控制器管理功能</li>
+<li>SteamGridDB：为你的游戏匹配更多适合的海报等内容</li>
+<li>Wine Cellar：获取你的 Steam Deck 所安装的所有支持的 Wine 等兼容层版本</li>
+</ul>
+<p>接下来，只管在 Steam Deck 中享受游戏即可～</p>
+<hr class="footnotes-sep">
+<section class="footnotes">
+<ol class="footnotes-list">
+<li id="fn1" class="footnote-item"><p>SteamOS 的软键盘需要在 Gaming Mode（或者说打开并登录 Steam）下才能通过「Steam」+「X」键打开 <a href="#fnref1" class="footnote-backref">↩︎</a></p>
+</li>
+</ol>
+</section>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[移除 macOS 无用的系统扩展和内核扩展]]></title>
+        <id>https://yyl125.top/post/remove_completely_macos_system_extensions_and_kext/</id>
+        <link href="https://yyl125.top/post/remove_completely_macos_system_extensions_and_kext/">
+        </link>
+        <updated>2023-10-31T13:28:56.000Z</updated>
+        <summary type="html"><![CDATA[<p>macOS 虽然安装 App 十分简单方便，但卸载起来真的是让人头大</p>
+]]></summary>
+        <content type="html"><![CDATA[<p>macOS 虽然安装 App 十分简单方便，但卸载起来真的是让人头大</p>
+<!-- more -->
+<p>一不小心安装了 Samsung 的 SSD 工具和某款同时还需要 macFUSE 搭配使用的 NTFS 工具。由于 macOS 中已不再推荐使用 Kext，需要用户手动降低设备安全策略并重启以启用系统扩展（系统扩展已被阻止）。之前还卸载了 AdGuard，但似乎还有部分系统扩展残留在系统中。而对于像我这种有「系统洁癖」的人来说，当务之急必然是尝试清除</p>
+<p>以前其实就尝试清理过 Samsung 的 SSD 工具所放入系统的系统扩展，当时还找到了源文件，删除后以为万事大吉，这次发现并非如此</p>
+<h2 id="开始之前">开始之前</h2>
+<p>在正式进行任何操作之前，我们需要确定我们需要修改的内容，以及<strong>对所修改的文件做好备份工作，条件允许时，应该进行整机 Time Machine 备份</strong></p>
+<p>对于 macOS，系统扩展和内核扩展一般在以下几个位置：</p>
+<ul>
+<li><code>/Library/StagedExtensions/Library/Extensions/</code> 这个位置一般包含了所有安装的 Kext<sup class="footnote-ref"><a href="#fn1" id="fnref1">[1]</a></sup></li>
+<li><code>/private/var/db/KernelExtensionManagement</code> 这个位置一般包含了诸如 AdGuard 网络系统扩展等内容，具体在其 <code>AuxKC</code> 目录中。可以先行在 Terminal 中通过 <code>systemextensionsctl list</code> 查询是否存在（比如 <code>com.adguard.mac.adguard.network-extension</code>）</li>
+<li><code>/Library/SystemExtensions</code> 这个位置一般包含了某些不在以上目录的扩展</li>
+</ul>
+<p>想要对 macOS 系统文件进行修改，则需要关闭 macOS 的系统完整性保护（System Integrity Protection，SIP）。具体方法为进入 macOS 的恢复模式，依次选择 Menu Bar 中的「实用工具」&gt;「终端」，然后在 Terminal 中输入 <code>csrutil disable</code> 关闭 SIP，随后重新启动 Mac 即可</p>
+<h2 id="移除-auxkc-目录下的系统扩展">移除 AuxKC 目录下的系统扩展</h2>
+<p>想要移除 AuxKC 目录下的系统扩展十分简单，只需要先使用 <code>systemextensionsctl list</code> 查询系统扩展的详细信息，随后在 Terminal 中输入 <code>systemextensionsctl uninstall &lt;teamID&gt; &lt;bundleID&gt;</code> 即可<sup class="footnote-ref"><a href="#fn2" id="fnref2">[2]</a></sup>。以移除 AdGuard 的网络系统扩展为例（此例中 teamID 为 <code>TC3Q7MAJXF</code>，具体请以 list 中所列信息为准）：</p>
+<p><code>systemextensionsctl uninstall TC3Q7MAJXF com.adguard.mac.adguard.network-extension</code></p>
+<p>等待 Terminal 完成操作（显示 <code>Successful</code>）后，重新启动 Mac。此系统扩展即将在重新启动过程中被移除</p>
+<h2 id="移除所有已安装的-kext">移除所有已安装的 Kext</h2>
+<p>开始之前，我们需要先修复 /S/L/E（System/Library/Extensions）和 /L/E（Library/Extensions）文件夹中的权限<sup class="footnote-ref"><a href="#fn3" id="fnref3">[3]</a></sup></p>
+<p>在 Terminal 中<strong>依次单独</strong>键入以下每个命令：</p>
+<ul>
+<li><code>sudo chmod -Rf 755 /S*/L*/E*</code></li>
+<li><code>sudo chmod -Rf 755 /L*/E*</code></li>
+<li><code>sudo chown -Rf 0:0 /S*/L*/E*</code></li>
+<li><code>sudo chown -Rf 0:0 /L*/E*</code></li>
+</ul>
+<p>随后在 Terminal 中键入以下命令后重新启动你的 Mac：</p>
+<p><code>sudo kextcache -i /</code></p>
+<p>最后，请记得在恢复模式的 Terminal 使用 <code>csrutil enable</code> 命令重新启用设备的系统完整性保护（SIP）</p>
+<h2 id="参考链接">参考链接</h2>
+<ul>
+<li><a href="https://support.apple.com/zh-cn/guide/security/secb7ea06b49/" target="_blank">系统完整性保护</a></li>
+<li><a href="https://support.apple.com/zh-cn/guide/deployment/depa5fb8376f/" target="_blank">macOS 中的系统和内核扩展</a></li>
+<li><a href="https://support.apple.com/zh-cn/guide/security/sec8e454101b/" target="_blank">macOS 中的内核扩展</a></li>
+</ul>
+<hr class="footnotes-sep">
+<section class="footnotes">
+<ol class="footnotes-list">
+<li id="fn1" class="footnote-item"><p>第三方内核扩展 <a href="#fnref1" class="footnote-backref">↩︎</a></p>
+</li>
+<li id="fn2" class="footnote-item"><p>亦可先使用 systemextensionsctl disable 命令将系统扩展反激活再进行后续操作  <a href="#fnref2" class="footnote-backref">↩︎</a></p>
+</li>
+<li id="fn3" class="footnote-item"><p>推荐在安全模式下操作 <a href="#fnref3" class="footnote-backref">↩︎</a></p>
+</li>
+</ol>
+</section>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[威联通 QNAP 内网无法访问的临时解决方法]]></title>
+        <id>https://yyl125.top/post/temporary_solution_to_inaccessible_intranet_of_QNAP/</id>
+        <link href="https://yyl125.top/post/temporary_solution_to_inaccessible_intranet_of_QNAP/">
+        </link>
+        <updated>2023-07-27T13:28:02.000Z</updated>
+        <summary type="html"><![CDATA[<p>解决了一个困扰许久的问题</p>
+]]></summary>
+        <content type="html"><![CDATA[<p>解决了一个困扰许久的问题</p>
+<!-- more -->
+<h2 id="背景">背景</h2>
+<p>最近打开了 QNAP 的 Virtualization Station，提示需要更改 QNAP 的虚拟交换机配置。谁曾想，QNAP 就此就再也连接不上了，不管是 QNAP 官方的 QFinder 还是 SSH 均提示找不到主机</p>
+<p>无意间发现 Qmanager 可以通过 myQNAPcloud Link 连接到 NAS，遂打算重新启动 QNAP 尝试是否能够解决连接问题。但除了 App Center 功能外，其它功能在长时间使用时都会提示数次「连接失败」，甚至之前下达的重新启动也并未执行</p>
+<p>联想到之前曾打开 QNAP 的 Virtualization Station，尝试在 Qmanager 中删除 Virtualization Station，却依旧无法连接</p>
+<h2 id="问题描述">问题描述</h2>
+<ol>
+<li>无法从任何本地设备上连接 QNAP，或者在刚开机时短暂连接后提示断开连接/页面无响应</li>
+<li>Qmanager 可以利用 myQNAPcloud Link 连接到 QNAP，证明 QNAP 硬件无问题</li>
+<li>AFP、Time Machine 等服务短暂地可被本地网络设备发现，但始终无法连接</li>
+<li>部分进程启动完成后，即出现无法响应、连接错误等错误提示，但全部进程启动结束前，QNAP 可以被正常访问。而且 NAS 刚启动的时候是可以访问到的，但是一些进程启动之后就拒绝访问了</li>
+</ol>
+<h2 id="问题排查">问题排查</h2>
+<p>既然 myQNAPcloud Link 能够连接到我的 NAS，则证明 QNAP 硬件和 QTS 系统固件本身没有问题，而且外网甚至是连通的（至少 DDNS 是通的）</p>
+<p>那就索性用 Qmanager 一个一个进程排查嘛，逐个关闭 QNAP 的各种服务呗。最后关闭到 QuFirewall 后，电脑网页端恢复正常自动刷新进入到了登录界面。最后经过测试，单独结束掉 QuFirewall 后，访问便可恢复正常</p>
+<p>好家伙，那就是你了 —— QuFirewall！</p>
+<h2 id="问题分析">问题分析</h2>
+<p>QuFirewall，是 QNAP 的防火墙进程。后期通过系统日志发现 Network &amp; Vitual Switch 频繁发出警告，QuFirewall 事件数量飙升，部分网络服务被拦截</p>
+<img src="https://personalblogmedia.oss-cn-hangzhou.aliyuncs.com/img/post/Ingenious_Skills/Temporary_Solution_To_Inaccessible_Intranet_of_QNAP/Temporary_Solution_To_Inaccessible_Intranet_of_QNAP_01.png">
+<p class="media-description">QuFirewall 在系统日志中事件数量飙升</p>
+<p>之前因为启用了 Virtualization Station，会改变 NAS 中的虚拟网络结构，从而触发 QuFirewall 的配置规则导致局域网访问被拒绝。而且需要注意的是 QNAP 中的三大操作（Virtualization Station、Container Station 以及 Ubuntu 工作站）都会改变 NAS 中的虚拟网络结构导致此问题的发生</p>
+<p>经过反复尝试发现，只要在开启 Virtualization Station、Container Station 以及 Ubuntu Linux Station 之前开启了 QuFirewall 都会导致无法访问的问题出现，不知道这算不算是 QTS 的一个 Bug，比较庆幸的是此时 QuFirewall 并没有拒绝 DDNS 访问，不然没有任何方式可以访问到 NAS 只能进行重置</p>
+<p>其次，还暴露出的 QNAP NAS 的一个安全问题。即 QuFirewall 在系统启动时并没有启动，此时系统并不受 QuFirewall 的保护，防火墙规则没有建立，存在被网络攻击的可能性。但是从 NAS 开机到 QuFirewall 启动之间的时间间隔很短，并且 NAS 的开关机频率极低，一般也不会造成很大的安全问题</p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Apple 测试版软件备忘录]]></title>
+        <id>https://yyl125.top/post/apple_beta_software_update_reminder/</id>
+        <link href="https://yyl125.top/post/apple_beta_software_update_reminder/">
+        </link>
+        <updated>2023-06-26T03:04:18.000Z</updated>
+        <summary type="html"><![CDATA[<p>尝鲜有风险，测试需谨慎</p>
+]]></summary>
+        <content type="html"><![CDATA[<p>尝鲜有风险，测试需谨慎</p>
+<!-- more -->
+<div class="alert alert-success">
+    <i class="ri-check-line"></i>
+    <strong>内容更新</strong> 本文内容将随状况的发展而更新
+</div>
+<p>Apple 如很多操作系统开发商一样，除了有用于正式环境的软件版本外，还有专供开发者做新功能适配和 App 机型测试的 Developer Beta（开发者测试版本，下文简称「DB」）以及面向普通消费者用户的 Public Beta（公众测试版本，下文简称「PB」）。每年的 WWDC（Apple 全球开发者大会）第一天的 Keynote 主旨演讲后，Apple 就会在其开发者网站上上线用户开发者的 DB 描述文件（Profile）用以开发者将自己的设备更新至新版本以为自己的 App 适配新系统做好准备</p>
+<p>而从 iOS/iPadOS 16.4、watchOS 9.5 以及 macOS 13.4 开始，Apple 引入了一种新的测试版软件获取方法，使用户能够在软件更新设置项目中直接获取 DB/PB 的 OTA 更新，并且在同一时间使传统的描述文件不再能够控制这一设置配置。Apple 还对能够获取 DB 和 PB 的用户做出了更进一步的细分，只有付费加入 Apple Developer Program 的 Apple ID 用户才能获取 DB 版本。但 Apple 随后在对 iOS/iPadOS 17 进行开发者测试时，宣布任何 Apple ID 均可免费获取 DB 更新</p>
+<h2 id="免责声明">免责声明</h2>
+<p>随着相关门槛的降低以及互联网探索精神，越来越多的人开始尝试在自己的设备上尝试使用最新的测试版本来体验新功能。但是本着认真负责的态度，还是应该再次说明一下，测试系统仍然有很多不太完善的地方，因此其仅应面向有一定技术实力的开发者推出（虽然也有很多方式能够让公众获得）。而测试系统之所以被称之为测试系统，一定是因为<strong>它的完善度等方面还远没有达到可以面向一般大众推出的水平，不然还测试干嘛，早就全量推送了</strong>。如果无脑的尝鲜的话，遇到问题时也往往会让你付出一定的代价。这个代价包括但不限于：你的<strong>时间成本</strong>和你的<strong>资料数据</strong>等内容。因此，请不要在自己的主用设备中使用测试版本的软件</p>
+<p>尝鲜有风险，测试需谨慎</p>
+<h2 id="db-和-pb-的相同之处">DB 和 PB 的相同之处</h2>
+<ol>
+<li>用户安装 DB 或 PB 参与测试均没有任何报酬，亦无需任何付费；</li>
+<li>严格来说，DB 和 PB 属于机密。Apple 指出，只有当 Apple 公开披露了有关 DB 或 PB 软件的技术信息时，这些才不再被视作机密信息；</li>
+<li>DB 和 PB 均为 Apple 软件正式发布前的测试版本，其稳定性和安全性通常不如正式发布版本；</li>
+<li>DB 和 PB 用户均可以使用反馈助理 App 向 Apple 反馈当前 DB 或 PB 中存在的问题；</li>
+<li>安装 DB 或 PB 软件均不会使你的硬件保修失效；</li>
+<li>一旦在 Apple Watch 中安装 DB 或 PB，Apple Watch 便无法恢复到之前正式发布的 watchOS 版本。如需恢复，请联系 Apple；</li>
+<li>用户均可在某一测试阶段选择让设备停止接收 DB 或 PB 版本，直至安装后续正式发布版本（watchOS 除外）；</li>
+<li>至当前版本测试收尾阶段，Apple 将发布 Gold Master（GM）<sup class="footnote-ref"><a href="#fn1" id="fnref1">[1]</a></sup>/Release Candidate（RC，发布候选）<sup class="footnote-ref"><a href="#fn2" id="fnref2">[2]</a></sup>，一般为该软件版本的 RTM（Release To Manufacture）</li>
+<li>其它未指明但客观存在的相同之处</li>
+</ol>
+<h2 id="db-与-pb-的不同之处">DB 与 PB 的不同之处</h2>
+<ol>
+<li>加入 Apple Developer Program 即可获取 DB，加入 Apple Beta 版软件计划即可获取 PB；</li>
+<li>PB 旨在收集预发布软件的反馈，PB 可能会收到与 DB 不同的软件版本；</li>
+<li>通常情况下，PB 可能是前一个 DB 的副本。而某一较大版本升级的前期测试时，PB 则可能是之前某一个 DB 的副本；</li>
+<li>一般而言，除某一较大版本升级的前期测试外，DB 和 PB 均为一周一更新（国际、美国法定节假日除外）。但 PB 一般与 DB 存在约一周左右的延迟。某一较大版本升级的前期测试时，DB 一般两周一更新，PB 则没有明确规律可言；</li>
+<li>其它未指明但客观存在的不同之处</li>
+</ol>
+<h2 id="如何开始进行测试">如何开始进行测试</h2>
+<p>DB 和 PB 开始测试的方法不尽相同。DB 无需任何多余的步骤，在任何 Apple 设备中登录自己已加入 <sup class="footnote-ref"><a href="#fn3" id="fnref3">[3]</a></sup> Apple Developer Program 的 Apple ID，即可在 Apple 设备的「软件更新」系统设置项目中更新 Developer Beta</p>
+<p>而获取 Public Beta 则需要使用你的 Apple ID 在 <a href="https://beta.apple.com/" target="_blank">Apple Beta 版软件计划</a> 中注册你的设备来获取 Public Beta 版并试用最新的功能</p>
+<h2 id="遇到问题怎么办">遇到问题怎么办</h2>
+<h3 id="我遇到的了一些问题想要反馈给-apple">我遇到的了一些问题，想要反馈给 Apple</h3>
+<p>iOS/iPadOS 安装测试版软件后，SpringBoard 会出现「反馈助理」App。轻点打开反馈助理 App，使用自己参加测试时所使用的 Apple ID 登录，并将问题反映给 Apple</p>
+<p>macOS 无论安装测试版软件与否，你都能在 <code>/System/Library/CoreServices/Applications</code> 目录下找到反馈助理（Feedback Assistant）App。你亦可以通过聚焦（Spotlight）搜索「反馈助理」打开反馈助理 App，使用自己参加测试时所使用的 Apple ID 登录，并将问题反映给 Apple</p>
+<p>使用与 Apple Watch 配对的 iPhone 上的反馈助理（方便提取日志文件等）将问题反映给 Apple。其它设备的反馈方式亦可参考 Apple Watch</p>
+<p>请尽量在反馈过程中做到逻辑清晰、信息提供到位，并友善发言，以便减少在反馈过程中所浪费的时间成本和所产生的负面情绪</p>
+<h3 id="我遇到了软件闪退-打不开-无法使用等问题">我遇到了软件闪退、打不开、无法使用等问题</h3>
+<p>一般而言，Apple 正常的软件更新不会对任何 App 造成这种「灾难级故障」，但诸如迭代版本的软件测试往往会出现此类问题</p>
+<p>当出现此类问题时，请将错误信息以合理合法的渠道向 App 开发者反馈，并等待 App 开发者修复</p>
+<h3 id="我不想使用测试版软件了如何将版本进行回滚">我不想使用测试版软件了，如何将版本进行回滚</h3>
+<p>请参考《<a href="https://yyl125.top/post/give_yourself_a_choose_for_regreting/" target="_blank">想要体验新功能？先给自己「留一手」吧</a>》</p>
+<p>我们不推荐其它非官方处理方式，特别是保留数据资料（易造成诸多错误）</p>
+<h3 id="我遇到了无法开机-数据丢失以及其它未指明但客观存在的较为严重的硬件软件问题">我遇到了无法开机、数据丢失以及其它未指明但客观存在的较为严重的硬件/软件问题</h3>
+<p>请联系 Apple</p>
+<hr class="footnotes-sep">
+<section class="footnotes">
+<ol class="footnotes-list">
+<li id="fn1" class="footnote-item"><p>现已废弃，不再使用 <a href="#fnref1" class="footnote-backref">↩︎</a></p>
+</li>
+<li id="fn2" class="footnote-item"><p>一般是 RTM 之前的最后一个或多个版本版本 <a href="#fnref2" class="footnote-backref">↩︎</a></p>
+</li>
+<li id="fn3" class="footnote-item"><p>WWDC 刚刚发布的迭代版本的预览版则不需要 <a href="#fnref3" class="footnote-backref">↩︎</a></p>
+</li>
+</ol>
+</section>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[macOS 下创建 Windows 启动介质]]></title>
+        <id>https://yyl125.top/post/create_windows_boot_media_under_macOS/</id>
+        <link href="https://yyl125.top/post/create_windows_boot_media_under_macOS/">
+        </link>
+        <updated>2023-05-04T11:06:17.000Z</updated>
+        <summary type="html"><![CDATA[<p>利用 wimlib 工具在 macOS 上轻松为 Windows PC 创建启动介质</p>
+]]></summary>
+        <content type="html"><![CDATA[<p>利用 wimlib 工具在 macOS 上轻松为 Windows PC 创建启动介质</p>
+<!-- more -->
+<h2 id="准备工作">准备工作</h2>
+<ul>
+<li>一个容量大于等于 8GB 的可移动介质</li>
+<li>你需要安装的 Windows 版本的 ISO 文件</li>
+</ul>
+<h2 id="开始行动">开始行动</h2>
+<p>首先，你需要使用「磁盘工具」将你准备的可移动介质彻底抹掉，并改为 MS—DOS（FAT32）格式。可移动介质的名称随意，但建议不要包含中文，以下以「UNKNOW」作为可移动介质的名称为例</p>
+<p>其次，你需要安装 Homebrew，并借助它来安装 wimlib</p>
+<p>在终端中输入 <code>/bin/bash -c &quot;$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)&quot;</code> 命令安装 Homebrew。随后需要按照出现的提示使用 <code>echo</code> 命令将 Homebrew 添加到你的 PATH（M 系列芯片）</p>
+<p>完成后，使用 <code>brew install wimlib</code> 命令使用 Homebrew 安装 wimlib 工具</p>
+<p>此时，你可以打开你下载好的对应 Windows 版本的 ISO，并记下其挂载后的名称，这里以「CCCOMA_X64FRE_ZH-CN_DV9」为例</p>
+<p>输入 <code>wimlib-imagex split /Volumes/CCCOMA_X64FRE_ZH-CN_DV9/sources/install.wim /Volumes/UNKNOW/sources/install.swm 4000</code> 命令开始创建 Windows 启动盘，并等待完成</p>
+<p>大功告成！</p>
+<h2 id="小彩蛋">小彩蛋</h2>
+<p>目前，Microsoft 已强制用户使用 Microsoft 账户在 OOBE 中设置 PC，十分恼人<sup class="footnote-ref"><a href="#fn1" id="fnref1">[1]</a></sup>。而有些方法如今已经失效</p>
+<p>如果你不慎已经为你的 PC 连接了互联网，那么你会发现再也无法跳过 Microsoft 账户登录步骤。此时，返回上一页，将「为个人设置的 PC」更改为「为你的组织设置的 PC」。随后，你会发现你已经跳过了恼人的 Microsoft 账户登录环节，OOBE 已要求你创建一个本地账户来登录 PC</p>
+<hr class="footnotes-sep">
+<section class="footnotes">
+<ol class="footnotes-list">
+<li id="fn1" class="footnote-item"><p>最恼人之处为 Windows 会自动取用 Microsoft 账户前几位作为登录后所创建的用户的用户名，且修改起来极其麻烦 <a href="#fnref1" class="footnote-backref">↩︎</a></p>
+</li>
+</ol>
+</section>
+]]></content>
+    </entry>
+</feed>

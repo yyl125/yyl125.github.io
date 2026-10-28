@@ -1,0 +1,474 @@
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+<meta name="referrer" content="same-origin">
+<title>中国大陆 eSIM 问题详解 - Benjamin&#39;s Blog</title>
+<link rel="shortcut icon" href="https://yyl125.top/favicon.ico">
+<link href="https://cdn.jsdelivr.net/npm/remixicon@latest/fonts/remixicon.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.7.2/animate.min.css">
+<link rel="stylesheet" href="https://yyl125.top/media/css/tailwind.css">
+<link rel="stylesheet" href="https://yyl125.top/styles/main.css">
+
+
+<script src="https://yyl125.top/media/scripts/livephotoskit.js"></script>
+<link rel="alternate" type="application/atom+xml" title="中国大陆 eSIM 问题详解 - Benjamin&#39;s Blog - Atom Feed" href="https://yyl125.top/atom.xml">
+
+
+
+  <script defer src="https://umami.yyl125.cc/feedback.js" data-website-id="7ac7b513-9366-4d64-ae65-0a97bf211058"></script>
+  <script type="text/javascript">
+    (() => {
+      const name = 'outbound-link-click';
+      document.querySelectorAll('a').forEach(a => {
+        if (a.host !== window.location.host && !a.getAttribute('data-umami-event')) {
+          a.setAttribute('data-umami-event', name);
+          a.setAttribute('data-umami-event-url', a.href);
+        }
+      });
+    })();
+  </script>
+
+<script defer>
+(function (document) {
+  const SOURCE = 'https://cdn.jsdelivr.net';
+  const DEST = 'https://gcore.jsdelivr.net';
+  const $ = document.querySelectorAll.bind(document);
+  const checkAvailable = (callback) => {
+    let timeoutId;
+    const newNode = document.createElement('link');
+    newNode.rel = 'stylesheet';
+    newNode.text = 'text/css';
+    const onError = () => {
+      if (!timeoutId) {
+        return;
+      }
+
+      clearTimeout(timeoutId);
+      timeoutId = 0;
+      newNode.href = 'about:blank';
+      newNode.remove();
+      callback(false);
+    };
+
+    timeoutId = setTimeout(onError, 2000);
+    newNode.addEventListener('error', onError);
+    newNode.addEventListener('load', function () {
+      newNode.remove();
+      clearTimeout(timeoutId);
+      callback(true);
+    });
+
+    newNode.href =
+      SOURCE +
+      '/gh/PipecraftNet/jsdelivr-auto-fallback@main/empty.css?' +
+      Date.now();
+    document.head.insertAdjacentElement('afterbegin', newNode);
+  };
+
+  const replaceElementSrc = () => {
+    for (const element of $('link[rel="stylesheet"]')) {
+      if (element.href && element.href.includes(SOURCE)) {
+        element.href = element.href.replace(SOURCE, DEST);
+      }
+    }
+
+    for (const element of $('script')) {
+      if (element.src && element.src.includes(SOURCE)) {
+        const newNode = document.createElement('script');
+        newNode.src = element.src.replace(SOURCE, DEST);
+        element.defer = true;
+        element.src = '';
+        element.before(newNode);
+        element.remove();
+      }
+    }
+
+    for (const element of $('img')) {
+      if (element.src && element.src.includes(SOURCE)) {
+        const source = element.src;
+        // Used to cancel loading. Without this line it will remain pending status.
+        element.src = '';
+        element.src = source.replace(SOURCE, DEST);
+      }
+    }
+  };
+
+  checkAvailable(function (isAvailable) {
+    if (isAvailable) {
+      return;
+    }
+
+    console.warn(SOURCE + ' is not available.');
+
+    replaceElementSrc();
+    // Replace dynamically added elements
+    setInterval(replaceElementSrc, 500);
+  });
+})(document);
+</script>
+  <meta name="description" content="尽可能试图让你了解现如今的中国大陆地区 eSIM
+
+
+由于本文涉及较多复杂内容，另后期可能涉及多项政策变化等情况，更新可能不及时，部分内容仍需以实际为准。如在使用中国大陆 eSIM 过程中遇到任何问题，请联系当地相关运营商了解详情
+
+eSI..." />
+  <meta property="og:title" content="中国大陆 eSIM 问题详解 - Benjamin&#39;s Blog">
+  <meta property="og:description" content="尽可能试图让你了解现如今的中国大陆地区 eSIM
+
+
+由于本文涉及较多复杂内容，另后期可能涉及多项政策变化等情况，更新可能不及时，部分内容仍需以实际为准。如在使用中国大陆 eSIM 过程中遇到任何问题，请联系当地相关运营商了解详情
+
+eSI..." />
+  <meta property="og:type" content="articles">
+  <meta property="og:url" content="https://yyl125.top/post/discuss_ablout_esim_of_china_mainland/" />
+  <meta property="og:image" content="https://personalblogmedia.oss-cn-hangzhou.aliyuncs.com/img/post/Vanguard_Report/Discuss_about_eSIM_of_China_Mainland/Discuss_about_eSIM_of_China_Mainland_Banner.jpg">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:width" content="1200">
+  <meta name="twitter:title" content="中国大陆 eSIM 问题详解 - Benjamin&#39;s Blog">
+  <meta name="twitter:description" content="尽可能试图让你了解现如今的中国大陆地区 eSIM
+
+
+由于本文涉及较多复杂内容，另后期可能涉及多项政策变化等情况，更新可能不及时，部分内容仍需以实际为准。如在使用中国大陆 eSIM 过程中遇到任何问题，请联系当地相关运营商了解详情
+
+eSI...">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="canonical" href="https://yyl125.top/post/discuss_ablout_esim_of_china_mainland/">
+
+  <script src="https://cdn.jsdelivr.net/npm/vanilla-lazyload@17.8.8/dist/lazyload.min.js"></script>
+
+  
+    <link rel="stylesheet" href="https://yyl125.top/media/css/prism-atom-dark.css">
+  
+
+  
+</head>
+
+<body>
+  <div class="antialiased flex flex-col min-h-screen" id="app">
+    <a href="https://yyl125.top" class="fixed top-0 left-0 mt-4 bg-black text-white dark:text-gray-700 dark:bg-yellow-50 dark:hover:bg-black dark:hover:text-white inline-flex p-2 pl-8 hover:text-gray-700 hover:bg-yellow-50 font-bold z-10 transition-fast animated fadeInLeft">
+      Benjamin&#39;s Blog
+    </a>
+    <div class="max-w-4xl w-full mx-auto">
+      <div class="shadow-box bg-white dark:bg-gray-600 rounded-lg pt-32 md:pt-64 px-4 md:px-8 pb-8 animated fadeIn mb-8">
+        <h1 class="text-5xl font-semibold leading-normal pb-8 mb-8 border-b-8 border-gray-700">
+          中国大陆 eSIM 问题详解
+        </h1>
+        
+          <img src="https://personalblogmedia.oss-cn-hangzhou.aliyuncs.com/img/post/Vanguard_Report/Discuss_about_eSIM_of_China_Mainland/Discuss_about_eSIM_of_China_Mainland_Banner.jpg" alt="中国大陆 eSIM 问题详解" class="block w-full mb-8">
+        
+        <div class="mb-8 flex flex-wrap">
+          <div class="text-gray-400 text-sm mr-4"><i class="ri-calendar-2-line"></i> 2026-10-23 · <i class="ri-timer-line"></i> 18 min read</div>
+          
+            <a href="https://yyl125.top/tag/vanguard_report/" class="text-gray-700 dark:text-gray-200 text-sm hover:transition-all duration-100 inline-flex mr-2">
+              <i class="ri-hashtag"></i>
+              Vanguard Report
+            </a>
+          
+        </div>
+        
+        <div class="jumbotron">
+          <div class="container">
+            <p><i class="ri-time-line"></i> 这是一篇发布于 5 天前的文章，其中的信息可能已经有所发展或是发生改变</p>
+          </div>
+        </div>
+
+        
+        
+        <div class="markdown mb-8" v-pre id="post-content">
+          <p>尽可能试图让你了解现如今的中国大陆地区 eSIM</p>
+<!-- more -->
+<div class="alert alert-warning" role="alert">
+<p>由于本文涉及较多复杂内容，另后期可能涉及多项政策变化等情况，更新可能不及时，部分内容仍需以实际为准。如在使用中国大陆 eSIM 过程中遇到任何问题，请联系当地相关运营商了解详情</p>
+</div>
+<h2 id="esim-是什么">eSIM 是什么</h2>
+<p>很多人看到 eSIM 这个名字，会误以为第一个「e」代表的是「电子的」。其实这个「e」是「embedded」（嵌入式的）的意思。所以 eSIM 也就是<strong>嵌入式 SIM</strong> 的意思。它是一种直接嵌入设备（一般焊接在 PCB 板上）的可编程 SIM 卡</p>
+<img src="https://personalblogmedia.oss-cn-hangzhou.aliyuncs.com/img/post/Vanguard_Report/Discuss_about_eSIM_of_China_Mainland/Discuss_about_eSIM_of_China_Mainland_01.png">
+<p class="media-description">不同 SIM 的规格和尺寸。图片来自 Wikipedia</p>
+<p>根据 Wikipedia 的资料，2015 年发布的 Samsung Gear S2 智能手表是首款能成功使用 eSIM 的商业化设备。而 eSIM 的第一版标准于 2016 年 3 月发布，第二版则于 2016 年 11 月发布。Apple 在其 2017 年 9 月公开的 Apple Watch Series 3 及以后之产品中加入了 eSIM 功能。此外，其 2018 年发表的第三代 iPad Pro 及后续每一台 iPad 都支持 eSIM。Apple 还在部分国家和地区销售的 iPhone Xs、iPhone Xs Max 和 iPhone XR 以及后来的双卡双待产品中加入了 eSIM 功能。自 2022 年起，于美国国内销售的 iPhone 14 则更是取消了传统的 SIM 卡槽，仅接受 eSIM</p>
+<h2 id="中国大陆-esim-业务的起起伏伏">中国大陆 eSIM 业务的起起伏伏</h2>
+<p>作为中国大陆三大国有电信服务运营商之一的中国联通，于 2015 年开始布局 eSIM，2017 年获批开展可穿戴设备业务试点，并与华为合作推出支持 eSIM 独立号码的智能手表</p>
+<p>2016 年，中国移动推出了针对 IoT 设备的eSIM服务，其面向远程抄表、车联网、智能家居、可穿戴、智能医疗、智能金融等应用场景。2017-2018 年，因应 Apple Watch Series 3 及华为手表等智能配件的应用，中国三大移动电话运营商曾经支持为这些设备申请 eSIM 开户作为蜂窝网联网服务，但随后于 2023 年前后暂停了 eSIM 手表的「一号双终端」业务及「独立 eSIM 卡」的办理申请。有观点认为其可能与中国的移动电话服务需要实名认证、允许 OTA 网络发卡带来的监管安全性、运营商之间由于用户争夺的博弈有关</p>
+<p>2025 年 10 月 13 日起，中国电信、中国移动、中国联通相继宣布获得工信部 eSIM 手机运营服务商用试验批复，并在全国上线相关业务办理服务。同时顺应 iPhone Air 的发售，中国大陆三大移动电话运营商均支持 eSIM 手机线下开户申请。但因法规限制，中国大陆 eSIM 并不像其他地区一样支持无缝切换不同电话卡，并且中国大陆行货的 iPhone Air 仅可绑定 2 个中国大陆电话号码，反之国外版本的 iPhone 也无法安装大陆号码 eSIM。根据中国信息通信研究院相关报告显示，截至 2026 年 7 月，中国大陆市场支持 eSIM 的手机已涵盖 Apple、华为、OPPO、荣耀、Samsung、联想等品牌，产品形态包括纯 eSIM、实体 SIM（pSIM）与 eSIM 混合方案</p>
+<h2 id="在中国大陆办理-esim-业务的流程">在中国大陆办理 eSIM 业务的流程</h2>
+<p>那么作为一名中国大陆 eSIM 的潜在客户，办理前你需要知道什么？</p>
+<p>因为一些众所周知的原因，中国大陆地区的 eSIM 相关业务只做到了「已经支持 eSIM」这一步，和「用户能够方便地使用 eSIM」并不是一回事。现如今你要办理中国大陆的 eSIM 业务，你需要先检查你的电信终端（这里指你的手机）是否支持 eSIM。支持 eSIM 的终端设备会在系统设置的「移动数据」或「蜂窝网络」部分显示「添加 eSIM」按钮</p>
+<img src="https://personalblogmedia.oss-cn-hangzhou.aliyuncs.com/img/post/Vanguard_Report/Discuss_about_eSIM_of_China_Mainland/Discuss_about_eSIM_of_China_Mainland_02.png">
+<p class="media-description">eSIM 的空中发卡。图片由 ChatGPT 绘制</p>
+<p>确定你的终端设备支持 eSIM 后，你需要携带你的有效身份证明文件（一般是<strong>身份证</strong>）和电信终端设备前往你要办理 eSIM 业务的具体通信运营商的线下自有门店。店员为你办理 eSIM 业务前，会先要求检查你的终端设备的  IMEI、EID 等信息，核实设备是否符合办理条件</p>
+<p>店员核对身份证件及本人身份完成实名实人认证后，会为你继续完成后续的新入网或补换卡操作，配置运营商 Profile。办理完成后，需要你通过扫描二维码等方式下载该配置文件，完成网络激活</p>
+<p>现阶段，你需要先将你的支持电信终端完成激活操作才可前往营业厅办理 eSIM 业务</p>
+<h2 id="现如今中国大陆-esim-业务的困境">现如今中国大陆 eSIM 业务的困境</h2>
+<p>通过前述在中国大陆办理 eSIM 业务的流程，不难看出现如今在中国大陆办理 eSIM 相关业务的最大问题不在于 eSIM 这一技术，而在于其办理流程过于繁琐，且需要终端和号卡主亲身前往线下实体电信运营商自有门店办理。2025 年工信部 eSIM 手机运营服务商用试验批复的意义在于开放手机业务，而并非是 eSIM 技术本身在当时取得了突然突破。手机商用试验改变了用户可使用 eSIM 的终端范围，但并没有自动消除所有开通与迁移限制</p>
+<p>例如，除了需要终端和号卡主亲身前往线下实体电信运营商自有门店办理外，单一终端仅可绑定最多 2 个中国大陆电话号码这一限制本身也制约了中国大陆 eSIM 业务的发展（部分终端设备可绑定最多 4 个中国大陆电话号码，但仅可同时启用 2 个）</p>
+<p>与国际大多数国家通用的 eSIM 标准不一样的是，中国大陆 eSIM 使用了一套完全不同于国际通用标准的 CI 证书文件。这使得除国行终端外，其余任何版本的终端设备均无法写入中国大陆 eSIM</p>
+<h2 id="关于中国大陆-esim-的常见问题解答">关于中国大陆 eSIM 的常见问题解答</h2>
+<p>中国大陆 eSIM 业务目前仍处于并将长期处于现如今的「探索」阶段。但随着政策更新，后续可能会与本文该部分有所出入，请以实际为准</p>
+<h3 id="中国大陆-esim-支持的电信运营商">中国大陆 eSIM 支持的电信运营商</h3>
+<p>目前，支持中国大陆 eSIM 的电信运营商仅有中国移动（China Mobile）、中国联通（China Union）和中国电信（China Telecom）。中国广电（China Broadnet）暂不支持</p>
+<h3 id="支持办理中国大陆-esim-业务的电信终端">支持办理中国大陆 eSIM 业务的电信终端</h3>
+<p>根据中国信息通信研究院相关报告显示，截至 2026 年 7 月，中国大陆市场支持 eSIM 的手机已涵盖 Apple、华为、OPPO、荣耀、Samsung、联想等品牌，产品形态包括纯 eSIM、实体 SIM 与 eSIM 混合方案</p>
+<p>对于 iPhone 而言，截至本文发稿时，仅中国大陆地区销售的 iPhone Air（型号 A3518）、iPhone 17e（型号 A3635）、iPhone 18 Pro（型号 A3715）、iPhone 18 Pro Max（型号 A3718）和 iPhone Duo（型号 A3721）机型支持在支持的电信运营商处办理 eSIM 业务</p>
+<p>支持的其它品牌电信终端设备，可在其品牌官网查询是否支持中国大陆 eSIM 业务办理。但原则上，如电信终端设备无工信部入网许可或进网试用资质，均无法写入中国大陆 eSIM</p>
+<h3 id="非中国大陆行货可否办理中国大陆-esim-业务">非中国大陆行货，可否办理中国大陆 eSIM 业务</h3>
+<p>不能</p>
+<p>以 iPhone 为例，除上述在中国大陆地区销售的 iPhone 机型外，其它 iPhone 机型都无法安装中国大陆运营商提供的 eSIM 描述文件，包括在中国大陆境外（包括中国香港和中国澳门地区）购买的 iPhone 机型。其它品牌的电信终端设备亦是如此</p>
+<h3 id="支持的中国大陆版本电信终端设备可最多储存多少-esim">支持的中国大陆版本电信终端设备可最多储存多少 eSIM？</h3>
+<p>在中国大陆购买且支持 eSIM 的同一台电信终端设备上，最多可以启用并储存两个 eSIM。仅中国大陆地区销售的 iPhone Air（型号 A3518）搭配 iOS 26.0 时，可在该设备上启用并储存多于两个 eSIM。但有消息称，在随后的服务端 OTA 更新后，该终端和该系统版本已不再支持启用并储存对于两个 eSIM</p>
+<p>现阶段，在单台中国大陆版本电信终端上使用中国大陆 eSIM，最多可同时使用 2 个号码。在部分中国大陆版本电信终端上，其单台设备可储存最多 4 个号码（包括 eSIM 和 pSIM），但同时仅可启用两个 eSIM</p>
+<p>包括 pSIM 在内，现有支持的中国大陆版本电信终端上可实现以下几种 pSIM 和/或 eSIM 组合：</p>
+<ul>
+<li>pSIM1+pSIM2，即正反两面均为实体卡</li>
+<li>pSIM+eSIM（China CI），即正面为实体 SIM，反面为中国大陆证书版本的 eSIM（即中国大陆 eSIM）</li>
+<li>eSIM（China CI）+eSIM（China CI），即正反两面均为中国大陆证书版本的 eSIM（即中国大陆 eSIM）</li>
+</ul>
+<p>以中国大陆版本的 iPhone 18 Pro 系列为例，激活 eSIM 后将占用 SIM2 卡槽。另现阶段无法自主选择要取消启用的 pSIM 号码</p>
+<p>同一台电信终端设备每自然月最多可新入网开通 2 次中国大陆电信运营商号码</p>
+<h3 id="办理中国大陆-esim-业务时你需要注意什么">办理中国大陆 eSIM 业务时，你需要注意什么</h3>
+<p>你必须携带有效的身份证明文件（一般是身份证）和电信终端设备前往支持办理中国大陆 eSIM 业务的电信运营商线下实体自营门店向其店员提出办理 eSIM 业务的要求</p>
+<p>店员会在办理过程中扫描你的电信终端设备的 IMEI 和 EID 条形码，将该电信终端设备的 IMEI 和 EID 与你所办理 eSIM 业务的电信运营商号卡所绑定。原则上，一台电信终端设备会有两组 IMEI 和 EID。成功办理中国大陆 eSIM 业务后，对应的的设备 IMEI 和 EID 在运营商系统中将被标记为「已占用」或「已绑定」状态</p>
+<p>基于前述内容，其设备 IMEI 和相关 EID 在相关电信运营商系统中除非将中国大陆 eSIM 转为实体 SIM，并在先前对应电信运营商系统中将被占用的设备 IMEI 和 EID <strong>解绑</strong>后，才会不影响该电信终端和该电信运营商号卡对应的号码继续办理后续的中国大陆 eSIM 相关业务。特别是该电信终端设备在被出售、赠送或折抵时，需要尤为注意检查。仅在该电信终端设备中删除相关 eSIM 并不会影响该设备 IMEI 和 EID 与该电信运营商号卡对应的号码在该电信运营商系统中的绑定状态</p>
+<p>该中国大陆 eSIM 不会被设备制造商的云服务或备份功能（包括但不限于云端备份和本地备份）备份或复制。如果你在该电信终端设备中删除相关 eSIM，你必须申请从该电信运营商处重新获取该号卡的 Profile。具体方法参考各电信运营商的相关技术支持</p>
+<h3 id="如何正确将中国大陆-esim-转为实体-sim">如何正确将中国大陆 eSIM 转为实体 SIM</h3>
+<p>由于前项问题，如果需要将中国大陆 eSIM 转为实体 SIM，请携带有效的身份证明文件（一般是身份证）和电信终端设备前往支持办理中国大陆 eSIM 业务的电信运营商线下实体自营门店向其店员提出办理转为实体 SIM 业务的要求</p>
+<p>店员会为你完成接下来的一系列操作。请注意，如果存有中国大陆 eSIM 的该电信终端设备后续可能会被您出售或赠送，请<strong>明确</strong>要求店员在为你转为实体 SIM 的同时，将对应电信运营商系统中将被占用的设备 IMEI 和 EID <strong>解绑</strong>。只有如此才会不影响该电信终端和该电信运营商号卡对应的号码继续办理后续的中国大陆 eSIM 相关业务。仅在该电信终端设备中删除相关 eSIM 并不会影响该设备 IMEI 和 EID 与该电信运营商号卡对应的号码在该电信运营商系统中的绑定状态</p>
+<p>成功办理转为实体 SIM 后，你存有中国大陆 eSIM 的该电信终端设备将提示无信号、无服务或无 SIM 卡</p>
+<h3 id="买到或收到了一台-imei-和-eid-被绑定的电信终端设备该怎么办">买到或收到了一台 IMEI 和 EID 被绑定的电信终端设备，该怎么办</h3>
+<p>基于前述原因，当你买到货收到一台 IMEI 和 EID 被绑定的电信终端设备，请务必联系到原机主，确认其是否正确将中国大陆 eSIM 转为实体 SIM 并在对应电信运营商系统中将被占用的 IMEI 和 EID 进行解绑。若已完成上述操作，则可放心继续使用该电信终端设备</p>
+<p>若未完成上述操作中的任何其中一步，请原机主携带其有效的身份证明文件（一般是身份证）前往对应电信运营商线下实体自有门店办理相关业务</p>
+<p>如无法联络原机主，则后续该电信终端无法办理中国大陆 eSIM 开通业务。<strong>请不要轻信互联网上任何声称可协助你完成该操作的人员或组织，谨防上当受骗</strong></p>
+<h3 id="如果不确定该电信终端设备的-imei-和-eid-被绑定在哪一个受支持的电信运营商处该怎么办">如果不确定该电信终端设备的 IMEI 和 EID 被绑定在哪一个受支持的电信运营商处，该怎么办</h3>
+<p>中国移动、中国联通和中国电信已在其 App 中提供 eSIM 占用情况自助查询功能</p>
+<p>中国移动用户可在中国移动 App 中进入「首页」-「服务大厅」-「号卡服务」-「eSIM 绑号查询」中查询该电信终端在中国移动系统中已绑定的号码数量</p>
+<p>中国联通用户可在中国联通 App 中进入「首页」-「服务大厅」-「号卡套餐」-「eSIM 专区」-「服务」-「eSIM 手机绑定号码数量查询」中查询该电信终端在中国联通系统中已绑定的号码数量</p>
+<p>中国电信用户截止本文发稿时，未查询到如何在 App 内自助查询</p>
+<p>所有支持中国大陆 eSIM 业务的电信运营商线下自营门店均可查询所携带的电信终端在其系统中已绑定的号码数量。所有支持中国大陆 eSIM 业务的电信运营商的现有一支查询方式均只能查看该终端在其系统中的 eSIM 绑定/占用情况，但无法确定绑定/占用者是否为机主本人，亦无法进行在线解绑/解除占用操作。如果你买到或收到一台 IMEI 和 EID 被绑定的电信终端设备，且无法解除绑定/占用，请及时联系原机主解决。<strong>请不要轻信互联网上任何声称可协助你完成该操作的人员或组织，谨防上当受骗</strong></p>
+<h3 id="是否可以将电信终端-a-上的中国大陆-esim-直接转移至电信终端-b">是否可以将电信终端 A 上的中国大陆 eSIM 直接转移至电信终端 B</h3>
+<p>现阶段，暂不支持将电信终端 A 上的中国大陆 eSIM 直接转移至电信终端 B，请携带有效的身份证明文件（一般是身份证）和电信终端 A、B 设备前往支持办理中国大陆 eSIM 业务的电信运营商线下实体自营门店向其店员提出办理 eSIM 业务的要求</p>
+<h3 id="可穿戴终端上的中国大陆-esim-与数字移动电话机上的中国大陆-esim-有何异同">可穿戴终端上的中国大陆 eSIM 与数字移动电话机上的中国大陆 eSIM 有何异同</h3>
+<p>中国大陆可穿戴终端（这里以 Apple Watch 为例）上的中国大陆 eSIM，属于「一号双终端」业务或独立号业务。而数字移动电话机（即以手机为主的电信终端）上的中国大陆 eSIM属于传统的号卡业务。<strong>部分运营商可能不允许已开通一号双终端业务的号卡用户将实体 SIM 转为 eSIM</strong></p>
+<p>可穿戴终端可在激活设置过程中或激活设置完成后自行在可穿戴终端专属管理软件上自助开通一号双终端业务。部分电信运营商可办理独立号业务</p>
+<p>现阶段，可穿戴终端和数字移动电话机上的 eSIM 与终端绑定后不可分离，仅限在该终端上使用。可穿戴终端 eSIM 独立号业务如需找回终端上被删除的旧 eSIM 号码，可在支持的电信运营商 App 的 eSIM 专区上进行 eSIM 补换卡业务</p>
+<h3 id="如果我点击了设备上的删除-esim如何找回该-esim">如果我点击了设备上的「删除 eSIM」，如何找回该 eSIM</h3>
+<p>如果你惦记了设备上的「删除 eSIM」按钮，请放心，你与该电信运营商的合约关系并未发生任何变化。你可以携带身份证明文件（一般是身份证）前往该电信运营商的线下自营门店申请 eSIM 补卡业务</p>
+<p>如果你正在准备抹掉你的设备，设备系统会询问你如何处理该终端上保存的 eSIM。请点击「保留 eSIM」或类似选项。抹掉操作结束后，你的 eSIM 会在你完成后续的设备首次设置后，自动出现在终端设备上。如果你选择了删除该 eSIM。请在抹掉操作以及后续的设备首次设置完成后，携带身份证明文件（一般是身份证）前往该电信运营商的线下自营门店申请 eSIM 补卡业务</p>
+<h3 id="中国大陆版本电信终端设备如何添加境外-esim如旅行-esim">中国大陆版本电信终端设备如何添加境外 eSIM（如旅行 eSIM）</h3>
+<p>仅当电信终端设备实际定位处于境外时，才可通过扫描境外电信运营商提供的 QR Code 或其它方法等添加境外 eSIM（如旅行 eSIM）。当设备实际定位处于中国大陆时，中国大陆版本电信终端设备均无法添加境外 eSIM</p>
+<h3 id="中国大陆-esim-是否支持异地办理">中国大陆 eSIM 是否支持异地办理</h3>
+<p>现阶段，中国大陆 eSIM 暂不支持异地办理（异地至不在号码原归属地）该业务。部分地区用户可前往其电信运营商在当地的省厅或市厅等咨询是否可以异地办理</p>
+<h3 id="中国大陆-esim-是否支持非实名本人如实名认证者的亲属以及副卡办理">中国大陆 eSIM 是否支持非实名本人（如实名认证者的亲属）以及副卡办理</h3>
+<p>现阶段，中国大陆 eSIM 暂不支持非该卡的实名本人（如所实名认证者的亲属）以及副卡办理该业务。请实名认证者本人携带身份证明文件（一般是身份证）进行办理</p>
+<h3 id="对办理中国大陆-esim-业务还有一些疑问应如何咨询">对办理中国大陆 eSIM 业务还有一些疑问，应如何咨询</h3>
+<p>你可以直接联系中国移动（10086）、中国联通（10016）、中国电信（10000）以及其当地客服热线（区号+对应电信运营商客服电话，如 010-10086）的人工客服进行咨询</p>
+<p>业务上线初期，部分电信运营商线下自营门店店员可能对该业务的办理以及相关政策不熟悉，可酌情要求更有经验的店员帮助你办理该业务</p>
+
+        </div>
+
+        <div class="applaudBox">
+          <button class="applaudBtn">
+            <i class="ri-thumb-up-line"></i> <span class="likeCount">0</span>
+          </button>
+        </div>
+
+        <div class="jumbotron">
+          <div class="container">
+            <p><i class="ri-article-line"></i> <a href="https://yyl125.top/post/discuss_ablout_esim_of_china_mainland/" target="_blank">中国大陆 eSIM 问题详解</a></p>
+            <p><i class="ri-creative-commons-line"></i> 许可协议：<a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" target="_blank">CC BY-NC-SA 4.0</a>。欲了解更多相关信息，详见 <a href="https://yyl125.top/copyright/" target="_blank">版权信息与资源使用说明</a> 页面</p>
+            <p><i class="ri-error-warning-line"></i> 本站所有文章除特别说明外，皆为原创发布。欢迎尊重原创作者版权的转载或引用。转载或引用时请注明出处</p>
+            <br>
+            <p><i class="ri-feedback-line"></i> 出现了影响阅读的问题？不妨 <a href="mailto:support@yyl125.cc?subject=Benjamin's%20Blog%20%E9%97%AE%E9%A2%98%E5%8F%8D%E9%A6%88" target="_blank" rel="noreferrer noopener">反馈</a> 一下吧</p>
+          </div>
+        </div>
+
+        
+          <div class="text-center text-gray-400">
+            <i class="ri-eye-line"></i> 本文已被阅读 <span id="twikoo_visitors">0</span> 次，该数据仅供参考
+          </div>
+        
+
+        
+        
+      </div>
+
+      <div class="jumbotron-comment">
+        <div class="container">
+          <p><i class="ri-message-3-line"></i> 欢迎任何与文章内容相关并保持尊重的评论，评论时请遵守 <a href="https://yyl125.top/comment_policy/">评论准则</a></p>
+        </div>
+      </div>
+
+      
+
+      
+        <div id="tcomment"></div>
+      
+      
+      <footer class="py-12 text-center px-4 md:px-0" v-pre>
+  共 27 篇文章｜<a href="https://yyl125.top/copyright" target="_blank">版权信息与资源使用说明</a>｜<i class="ri-rss-line"></i> <a href="https://yyl125.top/atom.xml" target="_blank">RSS</a><br>Copyright © 2026 Benjamin. CC BY-NC-SA 4.0
+</footer>
+
+
+    </div>
+
+    
+      <!-- Article table of contents -->
+      <button
+  class="article-toc-mobile-trigger"
+  type="button"
+  v-show="!showToc"
+  @click="toggleToc"
+  :aria-expanded="showToc ? 'true' : 'false'"
+  aria-controls="article-toc-content"
+  aria-label="打开文章目录"
+>
+  <i class="ri-file-list-line" aria-hidden="true"></i>
+</button>
+<button
+  class="article-toc-backdrop"
+  type="button"
+  v-show="showToc"
+  @click="dismissToc"
+  style="display: none;"
+  aria-label="关闭文章目录"
+></button>
+<aside
+  class="article-toc"
+  :class="{ 'is-open': showToc, 'is-pinned': tocPinned, 'is-closing': tocClosing }"
+  @pointerenter="openToc"
+  @pointerleave="closeToc"
+  @transitionend.self="refreshTocIndicator"
+  aria-label="文章目录"
+>
+  <button
+    class="article-toc-trigger"
+    type="button"
+    @click="toggleToc"
+    :aria-expanded="showToc ? 'true' : 'false'"
+    aria-controls="article-toc-content"
+  >
+    <span class="article-toc-collapsed-track" aria-hidden="true"></span>
+    <span class="article-toc-trigger-lines" aria-hidden="true"><i></i><i></i><i></i></span>
+    <span class="article-toc-title">目录</span>
+  </button>
+  <button
+    class="article-toc-pin"
+    type="button"
+    @click="toggleTocPin"
+    :aria-pressed="tocPinned ? 'true' : 'false'"
+    :aria-label="tocPinned ? '取消固定目录' : '固定目录'"
+    title="固定目录"
+  >
+    <i class="ri-pushpin-line" aria-hidden="true"></i>
+  </button>
+  <nav
+    class="post-toc-container"
+    id="article-toc-content"
+    aria-label="本文目录"
+    data-toc-auto="false"
+  >
+    <svg class="article-toc-tree" aria-hidden="true">
+      <path class="article-toc-tree-base"></path>
+      <path class="article-toc-tree-active"></path>
+    </svg>
+    <ul class="markdownIt-TOC">
+<li>
+<ul>
+<li><a href="#esim-%E6%98%AF%E4%BB%80%E4%B9%88">eSIM 是什么</a></li>
+<li><a href="#%E4%B8%AD%E5%9B%BD%E5%A4%A7%E9%99%86-esim-%E4%B8%9A%E5%8A%A1%E7%9A%84%E8%B5%B7%E8%B5%B7%E4%BC%8F%E4%BC%8F">中国大陆 eSIM 业务的起起伏伏</a></li>
+<li><a href="#%E5%9C%A8%E4%B8%AD%E5%9B%BD%E5%A4%A7%E9%99%86%E5%8A%9E%E7%90%86-esim-%E4%B8%9A%E5%8A%A1%E7%9A%84%E6%B5%81%E7%A8%8B">在中国大陆办理 eSIM 业务的流程</a></li>
+<li><a href="#%E7%8E%B0%E5%A6%82%E4%BB%8A%E4%B8%AD%E5%9B%BD%E5%A4%A7%E9%99%86-esim-%E4%B8%9A%E5%8A%A1%E7%9A%84%E5%9B%B0%E5%A2%83">现如今中国大陆 eSIM 业务的困境</a></li>
+<li><a href="#%E5%85%B3%E4%BA%8E%E4%B8%AD%E5%9B%BD%E5%A4%A7%E9%99%86-esim-%E7%9A%84%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98%E8%A7%A3%E7%AD%94">关于中国大陆 eSIM 的常见问题解答</a>
+<ul>
+<li><a href="#%E4%B8%AD%E5%9B%BD%E5%A4%A7%E9%99%86-esim-%E6%94%AF%E6%8C%81%E7%9A%84%E7%94%B5%E4%BF%A1%E8%BF%90%E8%90%A5%E5%95%86">中国大陆 eSIM 支持的电信运营商</a></li>
+<li><a href="#%E6%94%AF%E6%8C%81%E5%8A%9E%E7%90%86%E4%B8%AD%E5%9B%BD%E5%A4%A7%E9%99%86-esim-%E4%B8%9A%E5%8A%A1%E7%9A%84%E7%94%B5%E4%BF%A1%E7%BB%88%E7%AB%AF">支持办理中国大陆 eSIM 业务的电信终端</a></li>
+<li><a href="#%E9%9D%9E%E4%B8%AD%E5%9B%BD%E5%A4%A7%E9%99%86%E8%A1%8C%E8%B4%A7%E5%8F%AF%E5%90%A6%E5%8A%9E%E7%90%86%E4%B8%AD%E5%9B%BD%E5%A4%A7%E9%99%86-esim-%E4%B8%9A%E5%8A%A1">非中国大陆行货，可否办理中国大陆 eSIM 业务</a></li>
+<li><a href="#%E6%94%AF%E6%8C%81%E7%9A%84%E4%B8%AD%E5%9B%BD%E5%A4%A7%E9%99%86%E7%89%88%E6%9C%AC%E7%94%B5%E4%BF%A1%E7%BB%88%E7%AB%AF%E8%AE%BE%E5%A4%87%E5%8F%AF%E6%9C%80%E5%A4%9A%E5%82%A8%E5%AD%98%E5%A4%9A%E5%B0%91-esim">支持的中国大陆版本电信终端设备可最多储存多少 eSIM？</a></li>
+<li><a href="#%E5%8A%9E%E7%90%86%E4%B8%AD%E5%9B%BD%E5%A4%A7%E9%99%86-esim-%E4%B8%9A%E5%8A%A1%E6%97%B6%E4%BD%A0%E9%9C%80%E8%A6%81%E6%B3%A8%E6%84%8F%E4%BB%80%E4%B9%88">办理中国大陆 eSIM 业务时，你需要注意什么</a></li>
+<li><a href="#%E5%A6%82%E4%BD%95%E6%AD%A3%E7%A1%AE%E5%B0%86%E4%B8%AD%E5%9B%BD%E5%A4%A7%E9%99%86-esim-%E8%BD%AC%E4%B8%BA%E5%AE%9E%E4%BD%93-sim">如何正确将中国大陆 eSIM 转为实体 SIM</a></li>
+<li><a href="#%E4%B9%B0%E5%88%B0%E6%88%96%E6%94%B6%E5%88%B0%E4%BA%86%E4%B8%80%E5%8F%B0-imei-%E5%92%8C-eid-%E8%A2%AB%E7%BB%91%E5%AE%9A%E7%9A%84%E7%94%B5%E4%BF%A1%E7%BB%88%E7%AB%AF%E8%AE%BE%E5%A4%87%E8%AF%A5%E6%80%8E%E4%B9%88%E5%8A%9E">买到或收到了一台 IMEI 和 EID 被绑定的电信终端设备，该怎么办</a></li>
+<li><a href="#%E5%A6%82%E6%9E%9C%E4%B8%8D%E7%A1%AE%E5%AE%9A%E8%AF%A5%E7%94%B5%E4%BF%A1%E7%BB%88%E7%AB%AF%E8%AE%BE%E5%A4%87%E7%9A%84-imei-%E5%92%8C-eid-%E8%A2%AB%E7%BB%91%E5%AE%9A%E5%9C%A8%E5%93%AA%E4%B8%80%E4%B8%AA%E5%8F%97%E6%94%AF%E6%8C%81%E7%9A%84%E7%94%B5%E4%BF%A1%E8%BF%90%E8%90%A5%E5%95%86%E5%A4%84%E8%AF%A5%E6%80%8E%E4%B9%88%E5%8A%9E">如果不确定该电信终端设备的 IMEI 和 EID 被绑定在哪一个受支持的电信运营商处，该怎么办</a></li>
+<li><a href="#%E6%98%AF%E5%90%A6%E5%8F%AF%E4%BB%A5%E5%B0%86%E7%94%B5%E4%BF%A1%E7%BB%88%E7%AB%AF-a-%E4%B8%8A%E7%9A%84%E4%B8%AD%E5%9B%BD%E5%A4%A7%E9%99%86-esim-%E7%9B%B4%E6%8E%A5%E8%BD%AC%E7%A7%BB%E8%87%B3%E7%94%B5%E4%BF%A1%E7%BB%88%E7%AB%AF-b">是否可以将电信终端 A 上的中国大陆 eSIM 直接转移至电信终端 B</a></li>
+<li><a href="#%E5%8F%AF%E7%A9%BF%E6%88%B4%E7%BB%88%E7%AB%AF%E4%B8%8A%E7%9A%84%E4%B8%AD%E5%9B%BD%E5%A4%A7%E9%99%86-esim-%E4%B8%8E%E6%95%B0%E5%AD%97%E7%A7%BB%E5%8A%A8%E7%94%B5%E8%AF%9D%E6%9C%BA%E4%B8%8A%E7%9A%84%E4%B8%AD%E5%9B%BD%E5%A4%A7%E9%99%86-esim-%E6%9C%89%E4%BD%95%E5%BC%82%E5%90%8C">可穿戴终端上的中国大陆 eSIM 与数字移动电话机上的中国大陆 eSIM 有何异同</a></li>
+<li><a href="#%E5%A6%82%E6%9E%9C%E6%88%91%E7%82%B9%E5%87%BB%E4%BA%86%E8%AE%BE%E5%A4%87%E4%B8%8A%E7%9A%84%E5%88%A0%E9%99%A4-esim%E5%A6%82%E4%BD%95%E6%89%BE%E5%9B%9E%E8%AF%A5-esim">如果我点击了设备上的「删除 eSIM」，如何找回该 eSIM</a></li>
+<li><a href="#%E4%B8%AD%E5%9B%BD%E5%A4%A7%E9%99%86%E7%89%88%E6%9C%AC%E7%94%B5%E4%BF%A1%E7%BB%88%E7%AB%AF%E8%AE%BE%E5%A4%87%E5%A6%82%E4%BD%95%E6%B7%BB%E5%8A%A0%E5%A2%83%E5%A4%96-esim%E5%A6%82%E6%97%85%E8%A1%8C-esim">中国大陆版本电信终端设备如何添加境外 eSIM（如旅行 eSIM）</a></li>
+<li><a href="#%E4%B8%AD%E5%9B%BD%E5%A4%A7%E9%99%86-esim-%E6%98%AF%E5%90%A6%E6%94%AF%E6%8C%81%E5%BC%82%E5%9C%B0%E5%8A%9E%E7%90%86">中国大陆 eSIM 是否支持异地办理</a></li>
+<li><a href="#%E4%B8%AD%E5%9B%BD%E5%A4%A7%E9%99%86-esim-%E6%98%AF%E5%90%A6%E6%94%AF%E6%8C%81%E9%9D%9E%E5%AE%9E%E5%90%8D%E6%9C%AC%E4%BA%BA%E5%A6%82%E5%AE%9E%E5%90%8D%E8%AE%A4%E8%AF%81%E8%80%85%E7%9A%84%E4%BA%B2%E5%B1%9E%E4%BB%A5%E5%8F%8A%E5%89%AF%E5%8D%A1%E5%8A%9E%E7%90%86">中国大陆 eSIM 是否支持非实名本人（如实名认证者的亲属）以及副卡办理</a></li>
+<li><a href="#%E5%AF%B9%E5%8A%9E%E7%90%86%E4%B8%AD%E5%9B%BD%E5%A4%A7%E9%99%86-esim-%E4%B8%9A%E5%8A%A1%E8%BF%98%E6%9C%89%E4%B8%80%E4%BA%9B%E7%96%91%E9%97%AE%E5%BA%94%E5%A6%82%E4%BD%95%E5%92%A8%E8%AF%A2">对办理中国大陆 eSIM 业务还有一些疑问，应如何咨询</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+  </nav>
+</aside>
+
+    
+
+    <!-- Back to top -->
+    <div class="fixed right-0 bottom-0 mb-4 mr-4 shadow w-8 h-8 rounded-full flex justify-center items-center z-10 cursor-pointer bg-white hover:shadow-lg transition-all dark:bg-gray-500 dark:text-gray-200" @click="backToUp" v-show="scrolled">
+      <i class="ri-arrow-up-line"></i>
+    </div>
+
+  </div>
+
+<!--  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script> -->
+  <script src="https://yyl125.top/media/scripts/vue.js"></script>
+  <script src="https://yyl125.top/media/scripts/main.js"></script>
+  <script src="https://yyl125.top/media/scripts/linkcard.js"></script>
+  <script src="https://yyl125.top/media/scripts/applaud.js"></script>
+  <script src="https://yyl125.top/media/scripts/post-image-layout.js"></script>
+  <script src="https://yyl125.top/media/scripts/view-image.min.js"></script>
+  <script>
+    window.ViewImage && ViewImage.init('.markdown img');
+    var lazyLoadInstance = new LazyLoad({});
+    lazyLoadInstance.update();
+  </script>
+  
+  <script src="https://yyl125.top/media/scripts/marked.min.js"></script>
+  <script src="https://yyl125.top/media/scripts/lately.min.js"></script>
+  <script>
+    window.bbMemos = {
+      memos: 'https://memos.yyl125.cc/',
+      detailPageUrl: 'https://yyl125.top/reflection-detail/',
+      reactions: false
+    };
+  </script>
+  <script src="https://yyl125.top/media/scripts/memos.js"></script>
+
+  <!-- Mermaid -->
+  
+
+  <!-- Code Highlight -->
+  
+    <script src="https://yyl125.top/media/scripts/prism.js"></script>
+    <script>
+      Prism.highlightAll()
+    </script>
+  
+
+  <!-- Twikoo -->
+  
+    <script src="https://cdn.jsdelivr.net/npm/twikoo@2.0.17/dist/twikoo.min.js"></script>
+<script>
+  function normalizeTwikooMacOS() {
+    document.querySelectorAll('#tcomment .tk-extra-text').forEach(function (element) {
+      const text = element.textContent.trim()
+
+      if (/^macOS(?:\s|$)/i.test(text)) {
+        element.textContent = '\u00a0macOS'
+      }
+    })
+  }
+
+  twikoo.init({
+    envId: 'https://twikoo-deploy-one.vercel.app',
+    el: '#tcomment',
+    onCommentLoaded: normalizeTwikooMacOS
+  })
+</script>
+  
+
+</body>
+
+</html>

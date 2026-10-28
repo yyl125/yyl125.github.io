@@ -1,0 +1,437 @@
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+<meta name="referrer" content="same-origin">
+<title>Metro Vol.001｜普通人如何开地铁 - Benjamin&#39;s Blog</title>
+<link rel="shortcut icon" href="https://yyl125.top/favicon.ico">
+<link href="https://cdn.jsdelivr.net/npm/remixicon@latest/fonts/remixicon.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.7.2/animate.min.css">
+<link rel="stylesheet" href="https://yyl125.top/media/css/tailwind.css">
+<link rel="stylesheet" href="https://yyl125.top/styles/main.css">
+
+
+<script src="https://yyl125.top/media/scripts/livephotoskit.js"></script>
+<link rel="alternate" type="application/atom+xml" title="Metro Vol.001｜普通人如何开地铁 - Benjamin&#39;s Blog - Atom Feed" href="https://yyl125.top/atom.xml">
+
+
+
+  <script defer src="https://umami.yyl125.cc/feedback.js" data-website-id="7ac7b513-9366-4d64-ae65-0a97bf211058"></script>
+  <script type="text/javascript">
+    (() => {
+      const name = 'outbound-link-click';
+      document.querySelectorAll('a').forEach(a => {
+        if (a.host !== window.location.host && !a.getAttribute('data-umami-event')) {
+          a.setAttribute('data-umami-event', name);
+          a.setAttribute('data-umami-event-url', a.href);
+        }
+      });
+    })();
+  </script>
+
+<script defer>
+(function (document) {
+  const SOURCE = 'https://cdn.jsdelivr.net';
+  const DEST = 'https://gcore.jsdelivr.net';
+  const $ = document.querySelectorAll.bind(document);
+  const checkAvailable = (callback) => {
+    let timeoutId;
+    const newNode = document.createElement('link');
+    newNode.rel = 'stylesheet';
+    newNode.text = 'text/css';
+    const onError = () => {
+      if (!timeoutId) {
+        return;
+      }
+
+      clearTimeout(timeoutId);
+      timeoutId = 0;
+      newNode.href = 'about:blank';
+      newNode.remove();
+      callback(false);
+    };
+
+    timeoutId = setTimeout(onError, 2000);
+    newNode.addEventListener('error', onError);
+    newNode.addEventListener('load', function () {
+      newNode.remove();
+      clearTimeout(timeoutId);
+      callback(true);
+    });
+
+    newNode.href =
+      SOURCE +
+      '/gh/PipecraftNet/jsdelivr-auto-fallback@main/empty.css?' +
+      Date.now();
+    document.head.insertAdjacentElement('afterbegin', newNode);
+  };
+
+  const replaceElementSrc = () => {
+    for (const element of $('link[rel="stylesheet"]')) {
+      if (element.href && element.href.includes(SOURCE)) {
+        element.href = element.href.replace(SOURCE, DEST);
+      }
+    }
+
+    for (const element of $('script')) {
+      if (element.src && element.src.includes(SOURCE)) {
+        const newNode = document.createElement('script');
+        newNode.src = element.src.replace(SOURCE, DEST);
+        element.defer = true;
+        element.src = '';
+        element.before(newNode);
+        element.remove();
+      }
+    }
+
+    for (const element of $('img')) {
+      if (element.src && element.src.includes(SOURCE)) {
+        const source = element.src;
+        // Used to cancel loading. Without this line it will remain pending status.
+        element.src = '';
+        element.src = source.replace(SOURCE, DEST);
+      }
+    }
+  };
+
+  checkAvailable(function (isAvailable) {
+    if (isAvailable) {
+      return;
+    }
+
+    console.warn(SOURCE + ' is not available.');
+
+    replaceElementSrc();
+    // Replace dynamically added elements
+    setInterval(replaceElementSrc, 500);
+  });
+})(document);
+</script>
+  <meta name="description" content="是的，没错，普通人也是有可能开上地铁的
+
+
+本文是一篇轨道交通相关科普文章。为便于理解，本文在部分细节上有所简化
+
+地铁是人开的
+不知道有多少次在饭局上，我的一些朋友听闻我的职业后，或多或少都会发出像《潜伏》里翠屏那样的疑问（注：原台词是飞..." />
+  <meta property="og:title" content="Metro Vol.001｜普通人如何开地铁 - Benjamin&#39;s Blog">
+  <meta property="og:description" content="是的，没错，普通人也是有可能开上地铁的
+
+
+本文是一篇轨道交通相关科普文章。为便于理解，本文在部分细节上有所简化
+
+地铁是人开的
+不知道有多少次在饭局上，我的一些朋友听闻我的职业后，或多或少都会发出像《潜伏》里翠屏那样的疑问（注：原台词是飞..." />
+  <meta property="og:type" content="articles">
+  <meta property="og:url" content="https://yyl125.top/post/how_to_drive_the_metro/" />
+  <meta property="og:image" content="https://personalblogmedia.oss-cn-hangzhou.aliyuncs.com/img/post/Metro/How_to_Drive_the_Metro/How_to_Drive_the_Metro_Banner.jpg">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:width" content="1200">
+  <meta name="twitter:title" content="Metro Vol.001｜普通人如何开地铁 - Benjamin&#39;s Blog">
+  <meta name="twitter:description" content="是的，没错，普通人也是有可能开上地铁的
+
+
+本文是一篇轨道交通相关科普文章。为便于理解，本文在部分细节上有所简化
+
+地铁是人开的
+不知道有多少次在饭局上，我的一些朋友听闻我的职业后，或多或少都会发出像《潜伏》里翠屏那样的疑问（注：原台词是飞...">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="canonical" href="https://yyl125.top/post/how_to_drive_the_metro/">
+
+  <script src="https://cdn.jsdelivr.net/npm/vanilla-lazyload@17.8.8/dist/lazyload.min.js"></script>
+
+  
+    <link rel="stylesheet" href="https://yyl125.top/media/css/prism-atom-dark.css">
+  
+
+  
+</head>
+
+<body>
+  <div class="antialiased flex flex-col min-h-screen" id="app">
+    <a href="https://yyl125.top" class="fixed top-0 left-0 mt-4 bg-black text-white dark:text-gray-700 dark:bg-yellow-50 dark:hover:bg-black dark:hover:text-white inline-flex p-2 pl-8 hover:text-gray-700 hover:bg-yellow-50 font-bold z-10 transition-fast animated fadeInLeft">
+      Benjamin&#39;s Blog
+    </a>
+    <div class="max-w-4xl w-full mx-auto">
+      <div class="shadow-box bg-white dark:bg-gray-600 rounded-lg pt-32 md:pt-64 px-4 md:px-8 pb-8 animated fadeIn mb-8">
+        <h1 class="text-5xl font-semibold leading-normal pb-8 mb-8 border-b-8 border-gray-700">
+          Metro Vol.001｜普通人如何开地铁
+        </h1>
+        
+          <img src="https://personalblogmedia.oss-cn-hangzhou.aliyuncs.com/img/post/Metro/How_to_Drive_the_Metro/How_to_Drive_the_Metro_Banner.jpg" alt="Metro Vol.001｜普通人如何开地铁" class="block w-full mb-8">
+        
+        <div class="mb-8 flex flex-wrap">
+          <div class="text-gray-400 text-sm mr-4"><i class="ri-calendar-2-line"></i> 2026-10-28 · <i class="ri-timer-line"></i> 8 min read</div>
+          
+            <a href="https://yyl125.top/tag/metro/" class="text-gray-700 dark:text-gray-200 text-sm hover:transition-all duration-100 inline-flex mr-2">
+              <i class="ri-hashtag"></i>
+              Metro
+            </a>
+          
+        </div>
+        
+        <div class="jumbotron">
+          <div class="container">
+            <p><i class="ri-time-line"></i> 这是一篇发布于 1 小时前的文章，其中的信息可能已经有所发展或是发生改变</p>
+          </div>
+        </div>
+
+        
+        
+        <div class="markdown mb-8" v-pre id="post-content">
+          <p>是的，没错，普通人也是有可能开上地铁的</p>
+<!-- more -->
+<div class="alert alert-info" role="alert">
+<p>本文是一篇轨道交通相关科普文章。为便于理解，本文在部分细节上有所简化</p>
+</div>
+<h2 id="地铁是人开的">地铁是人开的</h2>
+<p>不知道有多少次在饭局上，我的一些朋友听闻我的职业后，或多或少都会发出像《潜伏》里翠屏那样的疑问（注：原台词是飞机）：</p>
+<blockquote>
+<p>啊？地铁是人开的啊？</p>
+</blockquote>
+<p>是的，地铁是人开的。准确说，哪怕是目前最高运行等级 GoA4 级别的地铁列车，法规上也是要求其驾驶室要有一名司乘人员的</p>
+<p>但是说到「开」，很多时候其实和你想象的不同。至少如今我们大部分时间是无需一直人工驾驶的</p>
+<p>前面我们提到「GoA4」这一运行等级，它有点像咱们现在在汽车上所说的 LX 级别。具体来说，根据国际公共交通协会（UITP）的定义，自动运行等级（Grades of Automation，GoA）分成五等：</p>
+<ul>
+<li>第零等（GoA0）：目视运行，主要是有轨电车、轻轨使用。驾驶员负责控制列车的运行、停止、开关乘降门和处理突发事件；</li>
+<li>第一等（GoA1）：手动运行（Manual Train Operation, MTO），驾驶员负责控制列车的运行、停止、开关乘降门和处理突发事件。人为操作失误时（如超速等）ATP 会介入控制；</li>
+<li>第二等（GoA2）：半自动运行（Semi-automatic Train Operation, STO），列车自动运行及停止，但需要驾驶员开关乘降门和处理突发事件，大多数的列车自动运行系统均是第二等；</li>
+<li>第三等（GoA3）：无驾驶员运行（Fully-Automatic Driverless Train Operation, DTO），列车自动运行、停止和开关乘降门（部分设计需要由工作人员手动开门），但在个别情况下需要列车助理（驾驶员）开关乘降门和处理突发事件，列车上有人员在驾驶室内值守；</li>
+<li>第四等（GoA4）：无人看守运行（Fully-Automatic Unattended Train Operation, UTO），列车运行、停止、开关乘降门和突发事件的处理均完全自动化，列车上无人员值守，通常此类列车传统驾驶室部分与客室之间不设屏障，乘客可观看列车前后的隧道和风景</li>
+</ul>
+<p>目前在国内，你能坐到的地铁线路，至少都已经达到了 GoA2 等级。个别较为先进的线路则是已经做到了 GoA3 甚至 GoA4 等级</p>
+<figure data-type="image" tabindex="1"><img src="https://personalblogmedia.oss-cn-hangzhou.aliyuncs.com/img/post/Metro/How_to_Drive_the_Metro/How_to_Drive_the_Metro_01.jpg" alt="" loading="lazy"></figure>
+<figure data-type="image" tabindex="2"><img src="https://personalblogmedia.oss-cn-hangzhou.aliyuncs.com/img/post/Metro/How_to_Drive_the_Metro/How_to_Drive_the_Metro_02.jpg" alt="" loading="lazy"></figure>
+<figure data-type="image" tabindex="3"><img src="https://personalblogmedia.oss-cn-hangzhou.aliyuncs.com/img/post/Metro/How_to_Drive_the_Metro/How_to_Drive_the_Metro_03.jpg" alt="" loading="lazy"></figure>
+<p class="media-description">图片分别是东京地铁 10000 系电力动车组的驾驶台、深圳地铁 12 号线使用 GoA4 自动驾驶系统列车的前端以及南京地铁 7 号线的驾驶室。图片来自网络</p>
+<h2 id="怎么开地铁">怎么开地铁</h2>
+<p>知道了地铁是人开的之后，你可能就会想要了解驾驶员是怎么开地铁的了</p>
+<p>首先，回忆一下，在我们考驾照时，教练是怎么教我们的？这是方向盘，这是油门，这是刹车，这是离合，这是……</p>
+<p>等一下，开地铁时有会有方向吗？好问题</p>
+<p>但是你见过地铁往前开，偶尔可能见到过地铁往后缓慢的退，那么你直接见过地铁往左往右转吗？</p>
+<p>似乎没有。那地铁是怎么在线路上左右转向的？仔细观察运动中的地铁你会发现，地铁列车运行时并非是一直笔直一条的。在明显有弯道的地方，地铁列车才会跟着一起转弯</p>
+<p>是的，地铁转弯靠的是地上铺设的轨道。轨道往哪里走，车就往哪里走</p>
+<p>但轨道不可能永远以线段方式铺设，如果我们要发明一种装置，让行走在轨道上的列车能够在这一装置的控制下在两个不同方向的轨道上运行呢？这一装置，就是道岔</p>
+<figure data-type="image" tabindex="4"><img src="https://personalblogmedia.oss-cn-hangzhou.aliyuncs.com/img/post/Metro/How_to_Drive_the_Metro/How_to_Drive_the_Metro_04.jpg" alt="" loading="lazy"></figure>
+<p class="media-description">道岔。图片来自于网络</p>
+<p>那么道岔是怎么控制列车运行方向的呢？很简单，给你上个图你就明白了</p>
+<figure data-type="image" tabindex="5"><img src="https://personalblogmedia.oss-cn-hangzhou.aliyuncs.com/img/post/Metro/How_to_Drive_the_Metro/How_to_Drive_the_Metro_05.gif" alt="" loading="lazy"></figure>
+<p class="media-description">道岔原理图。图片来自网络</p>
+<p>那么油门和刹车呢？</p>
+<p>仔细观察上方东京地铁 10000 系电力动车组的驾驶台，你会发现一个很像街机摇杆的手柄，它就是司机控制器，简称司控器。列车的加速和制动全是由它进行控制的</p>
+<figure data-type="image" tabindex="6"><img src="https://personalblogmedia.oss-cn-hangzhou.aliyuncs.com/img/post/Metro/How_to_Drive_the_Metro/How_to_Drive_the_Metro_06.jpg" alt="" loading="lazy"></figure>
+<p class="media-description">一种品牌的司机控制器。图片来自网络</p>
+<p>那地铁列车有离合器吗？现代地铁列车往往通过受电弓或者集电靴来获取电力以为整辆车供电。和如今的电动汽车一样，地铁列车其实并没有离合器这一东西</p>
+<p>驾校司机还会告诉你开车时要注意的另一个东西——红绿灯。那地铁里有红绿灯吗？有类似的，它也遵循「红灯停，绿灯行」的基本常识。那黄灯呢？和马路上的汽车交规不一样，在这里黄灯你依然可以正常通过。那它和绿灯的区别是什么呢？此时，你只需要简单地知道黄灯和绿灯代表不同的方向即可。你可能还会在其它地方见到白灯和蓝灯，他们都有他们各自的含义。这个我们暂且按下不表</p>
+<figure data-type="image" tabindex="7"><img src="https://personalblogmedia.oss-cn-hangzhou.aliyuncs.com/img/post/Metro/How_to_Drive_the_Metro/How_to_Drive_the_Metro_07.jpg" alt="" loading="lazy"></figure>
+<p class="media-description">信号机。图片来自网络，图源见水印</p>
+<p>之所以说在通常情况下，大部分时间是无需一直人工驾驶的。那么，地铁能够实现「自动驾驶」？</p>
+<p>当然，至少对于 GoA2 及以上等级的运营线路来说，你只需要同时按下两个按钮——ATO<sup class="footnote-ref"><a href="#fn1" id="fnref1">[1]</a></sup>，即可启动列车并让他按照既定程序自动在站台启停</p>
+<h2 id="如何实现精准停车">如何实现精准停车</h2>
+<p>在日常乘坐地铁时，你会发现到站停妥后，地铁列车通常总是会和站台门一一对应。那么，地铁是如何实现精准停车的呢？难道是拼运气？</p>
+<p>当然不是。如果你仔细观察，包括高速铁路机车，在各个站台的最前端，均有一个「停车位置」指示牌。在人工驾驶时，驾驶员根据判断列车车头与该停车位置标的距离，即可实现精准停车。这一操作叫做「对标停车」。在 ATO 情况下，列车会通过其信号系统内的停车标位置进行自动对标停车</p>
+<h2 id="如何才能开上地铁">如何才能开上地铁</h2>
+<p>现在你已经了解了有关驾驶地铁列车的最基本的知识，那么，你要如何才能开上地铁呢？</p>
+<p>首先，很多现代交通工具都需要你持合格的有效证件才允许你驾驶。飞机、轮船、汽车等均是如此。地铁也是一样</p>
+<p>简单来说，你需要先在高考时报考拥有相关专业的学校，通过大学阶段的学习，逐步学习相关知识，并等待相关地铁运营公司前往你们学校。再通过公司的面试，进入相关岗位进行正式学习。在这个过程中，你将学习具体线路的相关知识并学习亲自驾驶载客的地铁列车。决定你能够留下来继续工作的，是一场考试，通过该考试，你便取得了一张电客车司机上岗证。它是你在该地铁公司能够合法驾驶的有效证明</p>
+<p>听起来还是有些复杂？没事，哪怕不按照上述的流程取得上岗证，你也依旧能在模拟环境下开上地铁。不少地铁运营公司都有类似的研学游和科普项目可以报名，在那里你可以操作与真实驾驶台相似度 99% 的模拟器，在模拟环境中开上地铁</p>
+<p>驾驶任何一种公共交通均需要强大的责任心作为支撑，虽然现代地铁列车已逐步向 GoA4 等级进化发展，但驾驶员在此的作用却仍然不可忽视。哪怕是最高等级的 GoA4 等级亦是如此</p>
+<hr class="footnotes-sep">
+<section class="footnotes">
+<ol class="footnotes-list">
+<li id="fn1" class="footnote-item"><p>列车自动运行系统 <a href="#fnref1" class="footnote-backref">↩︎</a></p>
+</li>
+</ol>
+</section>
+
+        </div>
+
+        <div class="applaudBox">
+          <button class="applaudBtn">
+            <i class="ri-thumb-up-line"></i> <span class="likeCount">0</span>
+          </button>
+        </div>
+
+        <div class="jumbotron">
+          <div class="container">
+            <p><i class="ri-article-line"></i> <a href="https://yyl125.top/post/how_to_drive_the_metro/" target="_blank">Metro Vol.001｜普通人如何开地铁</a></p>
+            <p><i class="ri-creative-commons-line"></i> 许可协议：<a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" target="_blank">CC BY-NC-SA 4.0</a>。欲了解更多相关信息，详见 <a href="https://yyl125.top/copyright/" target="_blank">版权信息与资源使用说明</a> 页面</p>
+            <p><i class="ri-error-warning-line"></i> 本站所有文章除特别说明外，皆为原创发布。欢迎尊重原创作者版权的转载或引用。转载或引用时请注明出处</p>
+            <br>
+            <p><i class="ri-feedback-line"></i> 出现了影响阅读的问题？不妨 <a href="mailto:support@yyl125.cc?subject=Benjamin's%20Blog%20%E9%97%AE%E9%A2%98%E5%8F%8D%E9%A6%88" target="_blank" rel="noreferrer noopener">反馈</a> 一下吧</p>
+          </div>
+        </div>
+
+        
+          <div class="text-center text-gray-400">
+            <i class="ri-eye-line"></i> 本文已被阅读 <span id="twikoo_visitors">0</span> 次，该数据仅供参考
+          </div>
+        
+
+        
+        
+      </div>
+
+      <div class="jumbotron-comment">
+        <div class="container">
+          <p><i class="ri-message-3-line"></i> 欢迎任何与文章内容相关并保持尊重的评论，评论时请遵守 <a href="https://yyl125.top/comment_policy/">评论准则</a></p>
+        </div>
+      </div>
+
+      
+
+      
+        <div id="tcomment"></div>
+      
+      
+      <footer class="py-12 text-center px-4 md:px-0" v-pre>
+  共 27 篇文章｜<a href="https://yyl125.top/copyright" target="_blank">版权信息与资源使用说明</a>｜<i class="ri-rss-line"></i> <a href="https://yyl125.top/atom.xml" target="_blank">RSS</a><br>Copyright © 2026 Benjamin. CC BY-NC-SA 4.0
+</footer>
+
+
+    </div>
+
+    
+      <!-- Article table of contents -->
+      <button
+  class="article-toc-mobile-trigger"
+  type="button"
+  v-show="!showToc"
+  @click="toggleToc"
+  :aria-expanded="showToc ? 'true' : 'false'"
+  aria-controls="article-toc-content"
+  aria-label="打开文章目录"
+>
+  <i class="ri-file-list-line" aria-hidden="true"></i>
+</button>
+<button
+  class="article-toc-backdrop"
+  type="button"
+  v-show="showToc"
+  @click="dismissToc"
+  style="display: none;"
+  aria-label="关闭文章目录"
+></button>
+<aside
+  class="article-toc"
+  :class="{ 'is-open': showToc, 'is-pinned': tocPinned, 'is-closing': tocClosing }"
+  @pointerenter="openToc"
+  @pointerleave="closeToc"
+  @transitionend.self="refreshTocIndicator"
+  aria-label="文章目录"
+>
+  <button
+    class="article-toc-trigger"
+    type="button"
+    @click="toggleToc"
+    :aria-expanded="showToc ? 'true' : 'false'"
+    aria-controls="article-toc-content"
+  >
+    <span class="article-toc-collapsed-track" aria-hidden="true"></span>
+    <span class="article-toc-trigger-lines" aria-hidden="true"><i></i><i></i><i></i></span>
+    <span class="article-toc-title">目录</span>
+  </button>
+  <button
+    class="article-toc-pin"
+    type="button"
+    @click="toggleTocPin"
+    :aria-pressed="tocPinned ? 'true' : 'false'"
+    :aria-label="tocPinned ? '取消固定目录' : '固定目录'"
+    title="固定目录"
+  >
+    <i class="ri-pushpin-line" aria-hidden="true"></i>
+  </button>
+  <nav
+    class="post-toc-container"
+    id="article-toc-content"
+    aria-label="本文目录"
+    data-toc-auto="false"
+  >
+    <svg class="article-toc-tree" aria-hidden="true">
+      <path class="article-toc-tree-base"></path>
+      <path class="article-toc-tree-active"></path>
+    </svg>
+    <ul class="markdownIt-TOC">
+<li>
+<ul>
+<li><a href="#%E5%9C%B0%E9%93%81%E6%98%AF%E4%BA%BA%E5%BC%80%E7%9A%84">地铁是人开的</a></li>
+<li><a href="#%E6%80%8E%E4%B9%88%E5%BC%80%E5%9C%B0%E9%93%81">怎么开地铁</a></li>
+<li><a href="#%E5%A6%82%E4%BD%95%E5%AE%9E%E7%8E%B0%E7%B2%BE%E5%87%86%E5%81%9C%E8%BD%A6">如何实现精准停车</a></li>
+<li><a href="#%E5%A6%82%E4%BD%95%E6%89%8D%E8%83%BD%E5%BC%80%E4%B8%8A%E5%9C%B0%E9%93%81">如何才能开上地铁</a></li>
+</ul>
+</li>
+</ul>
+
+  </nav>
+</aside>
+
+    
+
+    <!-- Back to top -->
+    <div class="fixed right-0 bottom-0 mb-4 mr-4 shadow w-8 h-8 rounded-full flex justify-center items-center z-10 cursor-pointer bg-white hover:shadow-lg transition-all dark:bg-gray-500 dark:text-gray-200" @click="backToUp" v-show="scrolled">
+      <i class="ri-arrow-up-line"></i>
+    </div>
+
+  </div>
+
+<!--  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script> -->
+  <script src="https://yyl125.top/media/scripts/vue.js"></script>
+  <script src="https://yyl125.top/media/scripts/main.js"></script>
+  <script src="https://yyl125.top/media/scripts/linkcard.js"></script>
+  <script src="https://yyl125.top/media/scripts/applaud.js"></script>
+  <script src="https://yyl125.top/media/scripts/post-image-layout.js"></script>
+  <script src="https://yyl125.top/media/scripts/view-image.min.js"></script>
+  <script>
+    window.ViewImage && ViewImage.init('.markdown img');
+    var lazyLoadInstance = new LazyLoad({});
+    lazyLoadInstance.update();
+  </script>
+  
+  <script src="https://yyl125.top/media/scripts/marked.min.js"></script>
+  <script src="https://yyl125.top/media/scripts/lately.min.js"></script>
+  <script>
+    window.bbMemos = {
+      memos: 'https://memos.yyl125.cc/',
+      detailPageUrl: 'https://yyl125.top/reflection-detail/',
+      reactions: false
+    };
+  </script>
+  <script src="https://yyl125.top/media/scripts/memos.js"></script>
+
+  <!-- Mermaid -->
+  
+
+  <!-- Code Highlight -->
+  
+    <script src="https://yyl125.top/media/scripts/prism.js"></script>
+    <script>
+      Prism.highlightAll()
+    </script>
+  
+
+  <!-- Twikoo -->
+  
+    <script src="https://cdn.jsdelivr.net/npm/twikoo@2.0.17/dist/twikoo.min.js"></script>
+<script>
+  function normalizeTwikooMacOS() {
+    document.querySelectorAll('#tcomment .tk-extra-text').forEach(function (element) {
+      const text = element.textContent.trim()
+
+      if (/^macOS(?:\s|$)/i.test(text)) {
+        element.textContent = '\u00a0macOS'
+      }
+    })
+  }
+
+  twikoo.init({
+    envId: 'https://twikoo-deploy-one.vercel.app',
+    el: '#tcomment',
+    onCommentLoaded: normalizeTwikooMacOS
+  })
+</script>
+  
+
+</body>
+
+</html>
